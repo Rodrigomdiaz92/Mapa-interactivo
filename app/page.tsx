@@ -1,22 +1,24 @@
-import InteractiveMap from "@/components/layout/map/InteractiveMap";
+import InteractiveMap from "@/components/map/InteractiveMap";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-100">
+    <main className="h-screen w-screen flex flex-col">
 
-      <header className="p-8">
+      <header className="h-16 flex items-center justify-between px-6 bg-white shadow-md z-10">
 
-        <h1 className="text-5xl font-bold">
-          Sailing The World
-        </h1>
+        <div>
+          <h1 className="text-2xl font-bold text-black">
+            Sailing The World
+          </h1>
 
-        <p className="text-slate-600 mt-2">
-          Explore Guna Yala
-        </p>
+          <p className="text-sm text-gray-600">
+            Interactive Map - Guna Yala
+          </p>
+        </div>
 
       </header>
 
-      <section className="px-8 pb-8">
+      <section className="flex-1 overflow-hidden">
 
         <InteractiveMap />
 
