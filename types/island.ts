@@ -1,8 +1,11 @@
 export interface Island {
   id: number;
+
   name: string;
-  latitude: number;
-  longitude: number;
+
+  x: number;
+
+  y: number;
 
   description: string;
 
