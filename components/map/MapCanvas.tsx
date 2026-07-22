@@ -39,7 +39,7 @@ export default function MapCanvas({
 }}
     >
       <ImageOverlay
-        url="/images/guna-yala-map.png"
+        url="/map-imgs/guna-yala-map.png"
         bounds={bounds}
       />
       <IslandMarkers

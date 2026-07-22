@@ -1,11 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import MapCanvas from "./MapCanvas";
+//import MapCanvas from "./MapCanvas";
 import { Island } from "@/types/island";
 import SidePanel from "../panel/SidePanel";
 import SearchBar from "../ui/SearchBar";
 import MapControls from "../ui/MapControls";
+import dynamic from "next/dynamic";
+
+const MapCanvas = dynamic(
+  () => import("./MapCanvas"),
+  {
+    ssr: false,
+  }
+);
 
 export default function InteractiveMap() {
 
@@ -16,8 +24,7 @@ export default function InteractiveMap() {
 
   return (
 
-<div className="relative w-full h-full">
-  <SearchBar />
+<div className="relative w-full h-full">  
   <MapControls />
 
     <MapCanvas

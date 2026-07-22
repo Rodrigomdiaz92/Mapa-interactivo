@@ -1,4 +1,5 @@
 export interface Island {
+
   id: number;
 
   name: string;
@@ -11,5 +12,10 @@ export interface Island {
 
   images: string[];
 
+  videos: string[];
+
+  socialReel: string;
+
   activities: string[];
+
 }

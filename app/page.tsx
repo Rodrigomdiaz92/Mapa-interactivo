@@ -1,29 +1,39 @@
-import InteractiveMap from "@/components/map/InteractiveMap";
+"use client";
+//import InteractiveMap from "@/components/map/InteractiveMap";
+import ImageGallery from "@/components/panel/ImageGallery";
+import CardCarousel from "@/components/ui/CardCarrousel";
+import type { GalleryItem, ImageGalleryRef } from "react-image-gallery";
+import { useRef } from "react";
+import CarrouselHome from "@/components/ui/CarrouselHome";
+import Experiencias from "@/components/ui/Experiencias";
+import Categorias from "@/components/ui/Categorias";
+import { FAQ } from "@/components/ui/FAQ";
+
+
 
 export default function Home() {
+
+ 
+  
   return (
+    
     <main className="h-screen w-screen flex flex-col">
-
-      <header className="h-16 flex items-center justify-between px-6 bg-white shadow-md z-10">
-
-        <div>
-          <h1 className="text-2xl font-bold text-black">
-            Sailing The World
-          </h1>
-
-          <p className="text-sm text-gray-600">
-            Interactive Map - Guna Yala
-          </p>
-        </div>
-
-      </header>
-
-      <section className="flex-1 overflow-hidden">
-
-        <InteractiveMap />
-
+      <section className="flex-1">
+        {/*<InteractiveMap />*/}
       </section>
-
+      <section className="flex-1">
+        <CarrouselHome />      
+      </section>
+      <section>
+        <Experiencias />
+      </section>
+      <section>
+        <Categorias />        
+      </section>
+      <section>
+        <CardCarousel/>
+      </section>
+      <section><FAQ /></section>
     </main>
   );
 }
