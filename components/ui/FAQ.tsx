@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Plus, X } from 'lucide-react';
+import { Plus, X, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface FAQItem {
   question: string;
@@ -166,12 +166,22 @@ const faqData: FAQCategory[] = [
 ];
 
 export const FAQ = () => {
-  // Guarda la clave de la pregunta activa (ej: "0-1" para categoría 0, ítem 1)
   const [openKey, setOpenKey] = useState<string | null>(null);
+  const [showFullFAQ, setShowFullFAQ] = useState(false);
 
   const toggleFAQ = (key: string) => {
     setOpenKey(openKey === key ? null : key);
   };
+
+  // Prepara los datos iniciales (solo las primeras 3 preguntas de la primera categoría)
+  const displayedCategories = showFullFAQ
+    ? faqData
+    : [
+        {
+          ...faqData[0],
+          items: faqData[0].items.slice(0, 3),
+        },
+      ];
 
   return (
     <section className="py-20 bg-[#F9F6EE] text-slate-800 font-sans px-4 sm:px-6 lg:px-8">
@@ -189,15 +199,12 @@ export const FAQ = () => {
 
         {/* Lista de Categorías y Preguntas */}
         <div className="space-y-12">
-          {faqData.map((cat, catIdx) => (
+          {displayedCategories.map((cat, catIdx) => (
             <div key={cat.category} className="space-y-4">
-              
-              {/* Nombre de la Categoría */}
               <h3 className="text-sm font-bold uppercase tracking-wider text-slate-500 border-b border-slate-200/80 pb-2">
                 {cat.category}
               </h3>
 
-              {/* Acordeones de la categoría */}
               <div className="space-y-3">
                 {cat.items.map((item, itemIdx) => {
                   const key = `${catIdx}-${itemIdx}`;
@@ -223,7 +230,6 @@ export const FAQ = () => {
                         </span>
                       </button>
 
-                      {/* Contenido Desplegable */}
                       {isOpen && (
                         <div className="px-5 pb-6 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 pt-4 animate-in fade-in duration-200">
                           {item.answer}
@@ -235,6 +241,17 @@ export const FAQ = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Botón Ver Más / Ver Menos */}
+        <div className="flex justify-center mt-12">
+          <button
+            onClick={() => setShowFullFAQ(!showFullFAQ)}
+            className="flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white font-medium px-8 py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg"
+          >
+            <span>{showFullFAQ ? 'Ver menos preguntas' : 'Ver más preguntas'}</span>
+            {showFullFAQ ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+          </button>
         </div>
 
       </div>

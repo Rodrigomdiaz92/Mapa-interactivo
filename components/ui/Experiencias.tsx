@@ -1,5 +1,7 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+'use client';
+
+import React, { useState } from 'react';
+import { ArrowUpRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface Activity {
   id: string;
@@ -55,6 +57,11 @@ const activities: Activity[] = [
 ];
 
 export const Experiencias = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  // En pantallas grandes (3 cols), 2 filas equivalen a 6 items
+  const visibleActivitiesDesktop = showAll ? activities : activities.slice(0, 6);
+
   return (
     <section className="py-16 bg-[#F9F6EE] px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
@@ -71,30 +78,52 @@ export const Experiencias = () => {
           </p>
         </div>
 
-        {/* Grid de Experiencias / Actividades */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* VISTA MOBILE: Carrusel Horizontal (se desplaza a la derecha) */}
+        <div className="flex md:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-none -mx-4 px-4">
           {activities.map((item) => (
+            <a
+              key={item.id}
+              href={item.link || '#'}
+              className="group relative h-80 min-w-[80vw] sm:min-w-[300px] snap-center rounded-2xl overflow-hidden shadow-md block flex-shrink-0"
+            >
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
+              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white">
+                <ArrowUpRight className="w-4 h-4" />
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col justify-end">
+                <h3 className="text-base font-bold uppercase tracking-wide mb-2 leading-snug drop-shadow-sm">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-200 line-clamp-2 font-light">
+                  {item.description}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* VISTA DESKTOP: Grid (2 filas por defecto = max 6 items) */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+          {visibleActivitiesDesktop.map((item) => (
             <a
               key={item.id}
               href={item.link || '#'}
               className="group relative h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 block"
             >
-              {/* Imagen de fondo con Zoom al Hover */}
               <img
                 src={item.imageUrl}
                 alt={item.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-
-              {/* Degradado oscuro para lectura del texto */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-colors" />
-
-              {/* Icono circular de la esquina */}
               <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:bg-white group-hover:text-slate-900 transition-all duration-300">
                 <ArrowUpRight className="w-4 h-4" />
               </div>
-
-              {/* Textos inferiores */}
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col justify-end">
                 <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide mb-2 leading-snug drop-shadow-sm">
                   {item.title}
@@ -106,6 +135,19 @@ export const Experiencias = () => {
             </a>
           ))}
         </div>
+
+        {/* Botón "Ver más" para Desktop cuando hay más de 6 items */}
+        {activities.length > 6 && (
+          <div className="hidden md:flex justify-center mt-10">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3 rounded-full transition-colors shadow-md"
+            >
+              <span>{showAll ? 'Ver menos' : 'Ver más actividades'}</span>
+              {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ import CarrouselHome from "@/components/ui/CarrouselHome";
 import Experiencias from "@/components/ui/Experiencias";
 import Categorias from "@/components/ui/Categorias";
 import { FAQ } from "@/components/ui/FAQ";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 
 
@@ -33,7 +34,10 @@ export default function Home() {
       <section>
         <CardCarousel/>
       </section>
-      <section><FAQ /></section>
+      <section>
+        <FAQ />
+      </section>
+      <WhatsAppButton />
     </main>
   );
 }
