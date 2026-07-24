@@ -17,8 +17,7 @@ export default function Home() {
  
   
   return (
-    
-    <main className="h-screen w-screen flex flex-col">
+    <div >    
       <section className="flex-1">
         {/*<InteractiveMap />*/}
       </section>
@@ -37,7 +36,12 @@ export default function Home() {
       <section>
         <FAQ />
       </section>
-      <WhatsAppButton />
-    </main>
+      <WhatsAppButton 
+  phoneNumber="50761234567" 
+  message="Hola, me gustaría consultar la disponibilidad para un catamarán."
+  tooltipText="¡Escríbenos directamente por WhatsApp!"
+/>
+    </div>
+    
   );
 }

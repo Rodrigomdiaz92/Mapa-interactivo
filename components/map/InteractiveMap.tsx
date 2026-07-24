@@ -25,7 +25,7 @@ export default function InteractiveMap() {
   return (
 
 <div className="relative w-full h-full">  
-  <MapControls />
+  {/* <MapControls /> */}
 
     <MapCanvas
         selectedIsland={selectedIsland}

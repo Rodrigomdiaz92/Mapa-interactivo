@@ -1,17 +1,21 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { MessageCircle } from 'lucide-react';
 
 interface WhatsAppButtonProps {
+  /** Número de teléfono con código de país (sin el signo + ni espacios). Ej: "50761234567" */
   phoneNumber?: string;
+  /** Mensaje predeterminado que se abrirá en el chat de WhatsApp */
   message?: string;
+  /** Texto del tooltip que aparece junto al botón */
   tooltipText?: string;
 }
 
 export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
-  phoneNumber = '1234567890',
-  message = 'Hola, quisiera solicitar información sobre Sailing The World.',
-  tooltipText = '¡Chatea con nosotros por WhatsApp!',
+  phoneNumber = '50760000000',
+  message = 'Hola! Quisiera más información sobre los charters en San Blas.',
+  tooltipText = '¿Tienes dudas? ¡Chatea con nosotros!',
 }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
@@ -28,24 +32,29 @@ export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
   )}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3">
-      {/* Mensaje emergente después de 3 segundos */}
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col sm:flex-row items-end sm:items-center gap-3 font-sans">
+      {/* Tooltip visible en Mobile (arriba del botón) y Desktop (a la izquierda) */}
       {showTooltip && (
-        <div className="relative bg-white text-slate-800 text-xs sm:text-sm font-medium px-4 py-2.5 rounded-xl shadow-xl border border-slate-100 animate-in fade-in slide-in-from-right-4 duration-500 max-w-[200px] sm:max-w-[240px]">
-          {tooltipText}
-          {/* Flecha del tooltip */}
-          <div className="absolute top-1/2 -right-2 -translate-y-1/2 border-y-8 border-y-transparent border-l-8 border-l-white" />
+        <div className="flex items-center bg-white text-slate-800 text-xs sm:text-sm font-medium px-4 py-2.5 rounded-2xl shadow-xl border border-slate-100 animate-in fade-in slide-in-from-bottom-2 sm:slide-in-from-right-4 duration-500 relative max-w-[220px] sm:max-w-xs text-right sm:text-left">
+          <span>{tooltipText}</span>
+          
+          {/* Flecha apuntando al botón: abajo en mobile, a la derecha en desktop */}
+          <div className="absolute -bottom-1.5 right-5 sm:bottom-auto sm:-right-1.5 sm:top-1/2 sm:-translate-y-1/2 w-3 h-3 bg-white rotate-45 border-b border-r sm:border-b-0 sm:border-t border-slate-100" />
         </div>
       )}
 
-      {/* Botón flotante de WhatsApp */}
+      {/* Botón flotante con animación Ping / Pulse */}
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar por WhatsApp"
-        className="flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full shadow-lg hover:shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex-shrink-0"
+        className="relative group flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 flex-shrink-0"
       >
+        {/* Onda de pulso animada */}
+        <span className="absolute inset-0 rounded-full bg-emerald-500 opacity-75 animate-ping -z-10 group-hover:animate-none" />
+
+        {/* Icono de WhatsApp */}
         <svg
           className="w-8 h-8 fill-current"
           viewBox="0 0 24 24"

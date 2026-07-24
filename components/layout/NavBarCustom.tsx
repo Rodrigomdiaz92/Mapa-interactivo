@@ -1,18 +1,19 @@
 'use client';
-import React, { useState } from 'react';
-import { Menu, X, Globe, ChevronDown } from 'lucide-react';
 
-const NavbarCustom = () => {
+import React, { useState } from 'react';
+import { Menu, X, Globe, ChevronDown, Anchor } from 'lucide-react';
+
+export const NavbarCustom = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState('ES');
   const [isLangOpen, setIsLangOpen] = useState(false);
 
-  // Links de navegación principales
   const navLinks = [
-    { name: 'Inicio', href: '#inicio' },
-    { name: 'Nuestra Flota', href: '#flota' },
-    { name: 'Destinos', href: '#destinos' },
-    { name: 'Contacto', href: '#contacto' },
+    { name: 'Nosotros', href: './navegacionynaturaleza' },
+    { name: 'Experiencias', href: '/charters' },
+    { name: 'Ventas', href: '/boatsonsale' },
+    { name: 'Actividades', href: './boat' },
+    { name: 'Contacto', href: './contacto' },
   ];
 
   const languages = [
@@ -21,56 +22,61 @@ const NavbarCustom = () => {
     { code: 'FR', label: 'Français' },
   ];
 
-  /*const handleLangChange = (code) => {
+  const handleLangSelect = (code: string) => {
     setCurrentLang(code);
     setIsLangOpen(false);
-    // Aquí puedes disparar tu lógica de i18n / cambio de idioma
-  };*/
+  };
 
   return (
-    <nav className="bg-slate-900 text-white fixed w-full top-0 left-0 z-50 shadow-md font-sans">
+    <header className="sticky top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm font-sans transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
           {/* Logo / Nombre de la marca */}
-          <div className="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-            <span className="text-2xl font-bold tracking-wider text-cyan-400 uppercase">
-              Sailing <span className="text-white font-light">The World</span>
+          <a href="/" className="flex items-center gap-2.5 group">
+            <div className="w-9 h-9 rounded-full bg-[#0F1E2E] flex items-center justify-center text-amber-100 group-hover:bg-emerald-800 transition-colors">
+              <Anchor className="w-5 h-5" />
+            </div>
+            <span className="text-lg sm:text-xl font-serif font-bold tracking-wider text-[#0F1E2E] uppercase">
+              Sailing <span className="text-emerald-700 font-light">The World</span>
             </span>
-          </div>
+          </a>
 
-          {/* Menú Desktop (Navegación + Selector Idioma) */}
+          {/* Menú Desktop */}
           <div className="hidden md:flex items-center gap-8">
-            <div className="flex gap-6">
+            <nav className="flex gap-6">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-cyan-400 font-medium transition-colors duration-200"
+                  className="text-slate-600 hover:text-[#0F1E2E] text-sm font-medium tracking-wide uppercase transition-colors"
                 >
                   {link.name}
                 </a>
               ))}
-            </div>
-            {/* Selector de Idioma (Desktop) */}
+            </nav>
+
+            {/* Selector de Idioma */}
             <div className="relative">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-sm font-medium px-3 py-2 rounded-lg border border-slate-700 transition-all"
+                className="flex items-center gap-2 bg-[#F9F6EE] hover:bg-slate-200/60 text-slate-700 text-xs font-bold uppercase tracking-wider px-3 py-2 rounded-full border border-slate-200 transition-all"
               >
-                <Globe className="w-4 h-4 text-cyan-400" />
+                <Globe className="w-3.5 h-3.5 text-emerald-700" />
                 <span>{currentLang}</span>
-                <ChevronDown className="w-3.5 h-3.5 text-gray-400" />
+                <ChevronDown className="w-3 h-3 text-slate-400" />
               </button>
 
               {isLangOpen && (
-                <div className="absolute right-0 mt-2 w-36 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-1 z-50">
+                <div className="absolute right-0 mt-2 w-36 bg-white rounded-xl shadow-lg border border-slate-100 py-1.5 z-50 animate-in fade-in duration-150">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
-                      //onClick={() => handleLangChange(lang.code)}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-slate-700 transition-colors ${
-                        currentLang === lang.code ? 'text-cyan-400 font-semibold' : 'text-gray-300'
+                      onClick={() => handleLangSelect(lang.code)}
+                      className={`w-full text-left px-4 py-2 text-xs font-medium tracking-wider uppercase transition-colors ${
+                        currentLang === lang.code
+                          ? 'bg-slate-50 text-emerald-800 font-bold'
+                          : 'text-slate-600 hover:bg-slate-50'
                       }`}
                     >
                       {lang.label}
@@ -83,21 +89,20 @@ const NavbarCustom = () => {
 
           {/* Botón Menú Mobile */}
           <div className="md:hidden flex items-center gap-3">
-            {/* Selector rápido de idioma en Mobile */}
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="flex items-center gap-1 bg-slate-800 text-xs font-medium px-2.5 py-1.5 rounded-md border border-slate-700"
+              className="flex items-center gap-1 bg-[#F9F6EE] text-slate-700 text-xs font-bold px-2.5 py-1.5 rounded-full border border-slate-200"
             >
-              <Globe className="w-3.5 h-3.5 text-cyan-400" />
+              <Globe className="w-3.5 h-3.5 text-emerald-700" />
               <span>{currentLang}</span>
             </button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 rounded-md focus:outline-none"
+              className="text-slate-700 hover:text-slate-900 p-1.5 rounded-lg focus:outline-none"
               aria-label="Abrir menú"
             >
-              {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
@@ -106,29 +111,28 @@ const NavbarCustom = () => {
 
       {/* Menú Desplegable Mobile */}
       {isOpen && (
-        <div className="md:hidden bg-slate-800 border-t border-slate-700 px-4 pt-2 pb-6 space-y-3">
+        <div className="md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 animate-in slide-in-from-top-2 duration-200">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all"
+              className="block px-3 py-2 rounded-lg text-sm font-semibold tracking-wider uppercase text-slate-700 hover:bg-[#F9F6EE] hover:text-emerald-800 transition-all"
             >
               {link.name}
             </a>
           ))}
 
-          {/* Opciones de Idioma Mobile (si despliega la opción) */}
           {isLangOpen && (
-            <div className="pt-2 border-t border-slate-700 flex gap-2">
+            <div className="pt-3 border-t border-slate-100 flex gap-2">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
-                  //onClick={() => handleLangChange(lang.code)}
-                  className={`flex-1 py-1.5 text-xs text-center rounded-md border ${
+                  onClick={() => handleLangSelect(lang.code)}
+                  className={`flex-1 py-1.5 text-xs text-center rounded-lg border uppercase tracking-wider font-semibold ${
                     currentLang === lang.code
-                      ? 'bg-cyan-500/20 text-cyan-400 border-cyan-500/50 font-semibold'
-                      : 'bg-slate-900 text-gray-400 border-slate-700'
+                      ? 'bg-emerald-800 text-white border-emerald-800'
+                      : 'bg-slate-50 text-slate-600 border-slate-200'
                   }`}
                 >
                   {lang.label}
@@ -138,7 +142,7 @@ const NavbarCustom = () => {
           )}
         </div>
       )}
-    </nav>
+    </header>
   );
 };
 

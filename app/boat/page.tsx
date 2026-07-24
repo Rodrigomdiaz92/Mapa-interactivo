@@ -7,14 +7,19 @@ import FAQ from "@/components/ui/FAQ";
 
 export default function Boat() {
   return (
-    <main className="h-screen w-screen flex flex-col"> 
+    <div>
      <Includes />
      <Experiencias />
      <FAQ /> 
      <Reseñas />
-     <FloatingCTA />
-     <Catalogo />   
+     <FloatingCTA 
+  text="Consultar disponibilidad"
+  phoneNumber="50761234567"
+  whatsappMessage="Hola, me gustaría consultar precios y fechas disponibles."
+/>
+     
+     </div>  
 
-    </main>
+    
   );
 }

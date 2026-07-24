@@ -321,7 +321,7 @@ export default function Catalogo() {
             >
               <div>
                 {/* Visual / Imagen */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                <div className="relative aspect-16/10 overflow-hidden bg-neutral-100">
                   <img
                     src={item.image}
                     alt={item.name}

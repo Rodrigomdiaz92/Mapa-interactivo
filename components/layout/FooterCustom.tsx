@@ -1,36 +1,40 @@
 import React from 'react';
+import { ChevronRight } from 'lucide-react';
 
 export const FooterCustom = () => {
   return (
-    <footer className="w-full bg-slate-50 text-slate-700 border-t border-slate-200 font-sans">
-      {/* Contenido Principal */}
-      <div className="max-w-7xl mx-auto px-6 py-12 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+    <footer className="relative w-full bg-[#F9F6EE] text-slate-700 border-t border-slate-200/80 font-sans mt-auto">
+      {/* Contenido del Footer */}
+      <div className="max-w-7xl mx-auto px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           
-          {/* Columna 1: Sailing The World */}
+          {/* Columna 1 */}
           <div>
-            <h3 className="text-slate-900 font-bold text-base mb-4">
+            <h3 className="text-slate-900 font-serif font-bold text-lg uppercase tracking-wider mb-4">
               Sailing The World
             </h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-4">
+              Experiencias únicas de navegación privada y chárter en el archipiélago de San Blas.
+            </p>
             <ul className="space-y-2 text-sm text-slate-600">
               <li>
-                <a href="#" className="hover:text-slate-900 transition-colors">
+                <a href="#charters" className="hover:text-emerald-700 font-medium transition-colors">
                   Charters in San Blas
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Columna 2: Categories */}
+          {/* Columna 2 */}
           <div>
-            <h3 className="text-slate-900 font-bold text-base mb-4">
-              Categories
+            <h3 className="text-slate-900 font-serif font-bold text-lg uppercase tracking-wider mb-4">
+              Categorías
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-600">
               {['Sailboat', 'Catamaran', 'Yacht'].map((item) => (
                 <li key={item}>
-                  <a href="#" className="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
-                    <span className="text-slate-400 text-xs font-mono">&gt;</span>
+                  <a href={`#${item.toLowerCase()}`} className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 transition-colors" />
                     {item}
                   </a>
                 </li>
@@ -38,10 +42,10 @@ export const FooterCustom = () => {
             </ul>
           </div>
 
-          {/* Columna 3: Blog */}
+          {/* Columna 3 */}
           <div>
-            <h3 className="text-slate-900 font-bold text-base mb-4">
-              Blog
+            <h3 className="text-slate-900 font-serif font-bold text-lg uppercase tracking-wider mb-4">
+              Blog & Info
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-600">
               {[
@@ -49,12 +53,12 @@ export const FooterCustom = () => {
                 'Boats on Sale',
                 'How to Get to San Blas',
                 'Info',
-                'San blas',
+                'San Blas',
                 'Tips',
               ].map((item) => (
                 <li key={item}>
-                  <a href="#" className="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
-                    <span className="text-slate-400 text-xs font-mono">&gt;</span>
+                  <a href="#" className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 transition-colors" />
                     {item}
                   </a>
                 </li>
@@ -62,22 +66,22 @@ export const FooterCustom = () => {
             </ul>
           </div>
 
-          {/* Columna 4: Social */}
+          {/* Columna 4 */}
           <div>
-            <h3 className="text-slate-900 font-bold text-base mb-4">
+            <h3 className="text-slate-900 font-serif font-bold text-lg uppercase tracking-wider mb-4">
               Social
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-600">
               {[
                 'Instagram',
                 'Facebook',
-                'Whatsapp',
+                'WhatsApp',
                 'LinkTree',
                 'E-Mail',
               ].map((item) => (
                 <li key={item}>
-                  <a href="#" className="flex items-center gap-1.5 hover:text-slate-900 transition-colors">
-                    <span className="text-slate-400 text-xs font-mono">&gt;</span>
+                  <a href="#" className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
+                    <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 transition-colors" />
                     {item}
                   </a>
                 </li>
@@ -88,10 +92,10 @@ export const FooterCustom = () => {
         </div>
       </div>
 
-      {/* Barra Inferior (Copyright y Políticas) */}
-      <div className="border-t border-slate-200 py-6 px-6 lg:px-8">
+      {/* Barra Inferior */}
+      <div className="border-t border-slate-200 py-6 px-6 lg:px-8 bg-[#FAF8F5]">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs tracking-wider text-slate-500 uppercase">
-          <p>© 2025 Sailing The World</p>
+          <p>© {new Date().getFullYear()} Sailing The World. Todos los derechos reservados.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-slate-800 transition-colors">
               Privacy Policy

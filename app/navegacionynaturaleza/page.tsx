@@ -10,7 +10,11 @@ export default function NavegacionYNaturaleza() {
      <div style={{ display: 'flex', justifyContent: 'center' }}>
       <InstagramEmbed url="https://www.instagram.com/reel/DXMnGfbAFRa" width={328}  />
     </div>
-    <WhatsAppButton />
+    <WhatsAppButton 
+  phoneNumber="50761234567" 
+  message="Hola, me gustaría consultar la disponibilidad para un catamarán."
+  tooltipText="¡Escríbenos directamente por WhatsApp!"
+/>
     </main>
   );
 }
