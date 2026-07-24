@@ -9,6 +9,7 @@ import Experiencias from "@/components/ui/Experiencias";
 import Categorias from "@/components/ui/Categorias";
 import { FAQ } from "@/components/ui/FAQ";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import ScrollCharters from "@/components/boatdetail/ScrollCharters";
 
 
 
@@ -17,23 +18,27 @@ export default function Home() {
  
   
   return (
-    <div >    
-      <section className="flex-1">
+    <article >    
+      <section id="map" className="flex-1">
         {/*<InteractiveMap />*/}
       </section>
-      <section className="flex-1">
+      <section id="carousel" className="flex-1">
         <CarrouselHome />      
       </section>
-      <section>
+      <section id="experiences">
         <Experiencias />
       </section>
-      <section>
+      <section id="categories">
         <Categorias />        
       </section>
-      <section>
-        <CardCarousel/>
+      <section id="testimonials">
+        {/* <CardCarousel/> */}
+        <ScrollCharters 
+        title="Catamaranes destacados en San Blas" 
+         
+      />
       </section>
-      <section>
+      <section id="faq">
         <FAQ />
       </section>
       <WhatsAppButton 
@@ -41,7 +46,7 @@ export default function Home() {
   message="Hola, me gustaría consultar la disponibilidad para un catamarán."
   tooltipText="¡Escríbenos directamente por WhatsApp!"
 />
-    </div>
+    </article>
     
   );
 }

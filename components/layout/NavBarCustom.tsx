@@ -12,8 +12,8 @@ export const NavbarCustom = () => {
     { name: 'Nosotros', href: './navegacionynaturaleza' },
     { name: 'Experiencias', href: '/charters' },
     { name: 'Ventas', href: '/boatsonsale' },
-    { name: 'Actividades', href: './boat' },
-    { name: 'Contacto', href: './contacto' },
+    { name: 'Actividades', href: './gunayalamap' },
+    { name: 'Contacto', href: './boat' },
   ];
 
   const languages = [
