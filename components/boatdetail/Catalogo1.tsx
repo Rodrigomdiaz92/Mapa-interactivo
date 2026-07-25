@@ -1,26 +1,115 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { CatalogItem, CategoryType } from "@/types/catalog";
 import { Users, Lock, Bed, UsersRound, ArrowRight, Search, Anchor, SlidersHorizontal, ChevronDown, ChevronUp, Home } from "lucide-react";
 
-interface CatalogoProps {
-  /** Lista completa de barcos y hospedajes a mostrar */
-  items: CatalogItem[];
-  /** Callback para notificar cuando se selecciona una embarcación enviando su id */
-  onSelectBoat?: (id: string) => void;
-  /** Título opcional del catálogo */
-  title?: string;
-  /** Subtítulo opcional del catálogo */
-  subtitle?: string;
+export type CategoryType = "Sailboat" | "Catamaran" | "IslandLodge";
+
+export interface CatalogItem {
+  id: string;
+  name: string;
+  subtitle: string;
+  category: CategoryType;
+  captainOrHost: string;
+  image: string;
+  maxGuests: number;
+  isPrivate: boolean;
+  isSharedAllowed: boolean;
+  featureBadge: string;
+  description: string;
+  pricePerPersonPerDay: number; // USD por día por persona
+  pricingNote?: string;
 }
 
-export default function Catalogo({
-  items,
-  onSelectBoat,
-  title = "Explora la Flota y Hospedajes",
-  subtitle = "Encuentra el catamarán, velero o hospedaje en la isla ideal para tu próxima aventura en San Blas.",
-}: CatalogoProps) {
+// Datos de ejemplo
+const INITIAL_ITEMS: CatalogItem[] = [
+  {
+    id: "leopard-40",
+    name: "LEOPARD 40 (2018)",
+    subtitle: "UNMATCHED COMFORT & FRONT DECK ACCESS",
+    category: "Catamaran",
+    captainOrHost: "Capt. Thomas",
+    image: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    maxGuests: 8,
+    isPrivate: true,
+    isSharedAllowed: true,
+    featureBadge: "3 Double Cabins",
+    description: "Modern Leopard catamaran offering a unique front door connecting saloon to deck. Exceptional value & comfort for San Blas.",
+    pricePerPersonPerDay: 220,
+  },
+  {
+    id: "overwater-cabin-san-blas",
+    name: "CABANA SOBRE EL AGUA - ISLA KIKIRGUP",
+    subtitle: "TRADITIONAL OVERWATER LODGE",
+    category: "IslandLodge",
+    captainOrHost: "Familia Guna",
+    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+    maxGuests: 4,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: "Private Balcony & Sea View",
+    description: "Auténtica experiencia sobre el mar Caribe. Incluye todas las comidas tradicionales, baño privado y acceso directo al arrecife.",
+    pricePerPersonPerDay: 130,
+  },
+  {
+    id: "lagoon-421",
+    name: "LAGOON 421 (2024 REFIT)",
+    subtitle: "VIP LUXURY & STARLINK CONNECTED",
+    category: "Catamaran",
+    captainOrHost: "Capt. Jean-Christophe",
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+    maxGuests: 6,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: "VIP Owner Suite",
+    description: "Refurbished in 2024 with high-end luxury finishes, Starlink high-speed internet, and gourmet dining.",
+    pricePerPersonPerDay: 290,
+  },
+  {
+    id: "oceanis-58",
+    name: "BLUE MARYS (58FT)",
+    subtitle: "PREMIUM MONOHULL ELEGANCE",
+    category: "Sailboat",
+    captainOrHost: "Capt. Nico",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
+    maxGuests: 6,
+    isPrivate: true,
+    isSharedAllowed: true,
+    featureBadge: "Ensuite Cabins",
+    description: "Spacious Beneteau sailboat for authentic luxury sailing in San Blas. High stability and unmatched elegance.",
+    pricePerPersonPerDay: 195,
+  },
+  {
+    id: "eco-lodge-island",
+    name: "ECO-ECO LODGE ISLA PALMA",
+    subtitle: "ISLAND BUNGALOW EXPERIENCE",
+    category: "IslandLodge",
+    captainOrHost: "Anfitrión Local",
+    image: "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80",
+    maxGuests: 10,
+    isPrivate: false,
+    isSharedAllowed: true,
+    featureBadge: "Includes Meals & Tours",
+    description: "Bungalows ecológicos en isla privada con playas de arena blanca. Ideal para grupos grandes o viajeros individuales.",
+    pricePerPersonPerDay: 95,
+  },
+  {
+    id: "vintage-sailboat",
+    name: "CAPTAIN ROBERTO VINTAGE",
+    subtitle: "CLASSIC DOUBLE-MAST EXPERIENCE",
+    category: "Sailboat",
+    captainOrHost: "Capt. Roberto",
+    image: "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=800&q=80",
+    maxGuests: 5,
+    isPrivate: false,
+    isSharedAllowed: true,
+    featureBadge: "Italian-Caribbean Cuisine",
+    description: "Classic wooden sailboat with over 20 years of experience sailing San Blas. Warm, rustic, and peaceful atmosphere.",
+    pricePerPersonPerDay: 160,
+  },
+];
+
+export default function Catalogo() {
   // Filtros principales (Siempre Visibles)
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<"ALL" | CategoryType>("ALL");
@@ -33,11 +122,11 @@ export default function Catalogo({
 
   // Lógica de filtrado
   const filteredItems = useMemo(() => {
-    return items.filter((item) => {
-      // 1. Categoría
+    return INITIAL_ITEMS.filter((item) => {
+      // 1. Categoria (Visión Siempre)
       if (selectedCategory !== "ALL" && item.category !== selectedCategory) return false;
 
-      // 2. Búsqueda por texto
+      // 2. Búsqueda por texto (Visión Siempre)
       if (searchQuery.trim() !== "") {
         const query = searchQuery.toLowerCase();
         const matchesName = item.name.toLowerCase().includes(query);
@@ -46,19 +135,19 @@ export default function Catalogo({
         if (!matchesName && !matchesHost && !matchesDesc) return false;
       }
 
-      // 3. Filtro por Precio Máximo
+      // 3. Filtro por Precio Máximo (Avanzado)
       if (item.pricePerPersonPerDay > maxPrice) return false;
 
-      // 4. Filtro por Huéspedes Mínimos
+      // 4. Filtro por Huéspedes Mínimos (Avanzado)
       if (item.maxGuests < minGuests) return false;
 
-      // 5. Filtro por Modalidad
+      // 5. Filtro por Modalidad (Avanzado)
       if (modalityFilter === "Private" && !item.isPrivate) return false;
       if (modalityFilter === "Shared" && !item.isSharedAllowed) return false;
 
       return true;
     });
-  }, [items, selectedCategory, searchQuery, maxPrice, minGuests, modalityFilter]);
+  }, [selectedCategory, searchQuery, maxPrice, minGuests, modalityFilter]);
 
   // Contar cuántos filtros avanzados están activos
   const activeAdvancedFiltersCount = useMemo(() => {
@@ -77,25 +166,16 @@ export default function Catalogo({
     setModalityFilter("ALL");
   };
 
-  const handleItemClick = (id: string) => {
-    if (onSelectBoat) {
-      onSelectBoat(id);
-    } else {
-      // Navegación por defecto si no se pasa callback
-      window.location.href = `/charters/${id}`;
-    }
-  };
-
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-neutral-50/50 font-sans">
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-neutral-50/50">
       
       {/* Encabezado */}
       <div className="text-center mb-8">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-emerald-950 font-semibold tracking-tight">
-          {title}
+          Explora la Flota y Hospedajes
         </h2>
         <p className="mt-2 text-sm sm:text-base text-neutral-600 max-w-2xl mx-auto">
-          {subtitle}
+          Encuentra el catamarán, velero o hospedaje en la isla ideal para tu próxima aventura en San Blas.
         </p>
       </div>
 
@@ -117,7 +197,7 @@ export default function Catalogo({
             />
           </div>
 
-          {/* 2. Filtro por Categorías */}
+          {/* 2. Filtro por Categorías (Barra Always Visible) */}
           <div className="flex items-center gap-1 bg-neutral-100 p-1 rounded-xl overflow-x-auto">
             {[
               { id: "ALL", label: "Todos" },
@@ -220,7 +300,7 @@ export default function Catalogo({
 
       </div>
 
-      {/* GRID RESPONSIVE */}
+      {/* GRID RESPONSIVE (1 col móvil, 2 tablet, 3 PC) */}
       {filteredItems.length === 0 ? (
         <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-neutral-300">
           <Anchor className="w-10 h-10 text-neutral-400 mx-auto mb-3 stroke-[1.5]" />
@@ -237,8 +317,7 @@ export default function Catalogo({
           {filteredItems.map((item) => (
             <article
               key={item.id}
-              onClick={() => handleItemClick(item.id)}
-              className="group bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer transform hover:-translate-y-1"
+              className="group bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Visual / Imagen */}
@@ -324,17 +403,13 @@ export default function Catalogo({
                   </span>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleItemClick(item.id);
-                  }}
+                <a
+                  href={`/catalogo/${item.id}`}
                   className="w-full inline-flex items-center justify-between pt-2 text-xs font-bold tracking-wider uppercase text-emerald-800 hover:text-emerald-950 transition-colors group/btn"
                 >
                   <span>SEE MORE</span>
                   <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
-                </button>
+                </a>
               </div>
             </article>
           ))}

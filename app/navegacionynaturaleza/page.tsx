@@ -8,6 +8,7 @@ import HistoryLeftEmbed from "@/components/navegacionynaturaleza/HistoryLeftEmbe
 import HistoryMediaCarousel from "@/components/navegacionynaturaleza/HistoryMediaCarousel";
 import HistoryMediaLeft from "@/components/navegacionynaturaleza/HistoryMediaLeft";
 import HistoryRightEmbed from "@/components/navegacionynaturaleza/HistoryRightEmbed";
+import NauticalTimelineNav from "@/components/navegacionynaturaleza/NauticalTimelineNav";
 import InstagramReel from "@/components/ui/InstagramReel";
 import { InstagramEmbed } from "react-social-media-embed/dist/components/embeds/InstagramEmbed";
 
@@ -17,7 +18,9 @@ export default function NavegacionYNaturaleza() {
     
      <article >
       {/* <InstagramEmbed url="https://www.instagram.com/reel/DXMnGfbAFRa" width={328}  /> */}
+      <NauticalTimelineNav />
       <section>
+        
       {/* 1. Inicio del viaje */}
       <HistoryLeftEmbed
         badge="El Comienzo"
