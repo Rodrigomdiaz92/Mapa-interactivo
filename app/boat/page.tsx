@@ -1,4 +1,4 @@
-import Catalogo from "@/components/boatdetail/Catalogo";
+//import Catalogo from "@/components/boatdetail/Catalogo";
 import FloatingCTA from "@/components/boatdetail/FloatingCTA";
 import Includes from "@/components/boatdetail/Includes";
 import Reseñas from "@/components/boatdetail/Reseñas";

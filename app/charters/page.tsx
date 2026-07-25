@@ -30,10 +30,10 @@ export default function Charters() {
         message="Hola, me gustaría consultar la disponibilidad para un catamarán."
         tooltipText="¡Escríbenos directamente por WhatsApp!"
       /> 
-      {/* <ScrollCharters 
+       <ScrollCharters 
         title="Catamaranes destacados en San Blas" 
         category="Catamaran" 
-      /> */}
+      /> 
 
     </article>
   );

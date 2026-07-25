@@ -9,11 +9,11 @@ export const NavbarCustom = () => {
   const [isLangOpen, setIsLangOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Nosotros', href: './navegacionynaturaleza' },
+    { name: 'Nosotros', href: '/navegacionynaturaleza' },
     { name: 'Experiencias', href: '/charters' },
     { name: 'Ventas', href: '/boatsonsale' },
-    { name: 'Actividades', href: './gunayalamap' },
-    { name: 'Contacto', href: './boat' },
+    { name: 'Actividades', href: '/gunayalamap' },
+    { name: 'Contacto', href: '/boat' },
   ];
 
   const languages = [

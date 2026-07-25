@@ -54,9 +54,9 @@ export default function CatalogoVentaPage() {
     switch (cat) {
       case "Catamaran": return "Catamarán";
       case "Sailboat": return "Velero";
-      //case "Monohull": return "Monocasco";
+      // case "Monohull": return "Monocasco";
       case "Trimaran": return "Trimarán";
-      //case "IslandLodge": return "Propiedad";
+      // case "IslandLodge": return "Propiedad";
       default: return cat;
     }
   };
@@ -67,10 +67,10 @@ export default function CatalogoVentaPage() {
       {/* Encabezado */}
       <div className="text-center mb-8">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-slate-900 font-semibold tracking-tight">
-          Embarcaciones y Propiedades en Venta
+          Embarcaciones en Venta
         </h2>
         <p className="mt-2 text-sm sm:text-base text-neutral-600 max-w-2xl mx-auto">
-          Encuentra tu próximo velero, monocasco, trimarán, catamarán o propiedad insular.
+          Tu nueva experiencia comienza aquí.
         </p>
       </div>
 
@@ -93,10 +93,10 @@ export default function CatalogoVentaPage() {
             {[
               { id: "ALL", label: "Todos" },
               { id: "Catamaran", label: "Catamarán" },
-              { id: "Monohull", label: "Monocasco" },
-              { id: "Trimaran", label: "Trimarán" },
+              // { id: "Monohull", label: "Monocasco" },
+              // { id: "Trimaran", label: "Trimarán" },
               { id: "Sailboat", label: "Velero" },
-              { id: "IslandLodge", label: "Propiedad" },
+              // { id: "IslandLodge", label: "Propiedad" },
             ].map((cat) => (
               <button
                 key={cat.id}
@@ -195,81 +195,81 @@ export default function CatalogoVentaPage() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {filteredItems.map((item) => (
-            <article
+            <Link
               key={item.id}
-              className="group bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              href={`/boatsonsale/${item.id}`}
+              className="group block h-full focus:outline-none"
             >
-              <div>
-                <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                  />
-                  
-                  <div className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-md text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-md flex items-center gap-1">
-                    {item.category === "IslandLodge" && <Home className="w-3 h-3 text-amber-400" />}
-                    <span>{getCategoryBadgeLabel(item.category)}</span>
-                  </div>
+              <article className="bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between h-full cursor-pointer">
+                <div>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    />
+                    
+                    <div className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-md text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full shadow-md flex items-center gap-1">
+                      {item.category === "IslandLodge" && <Home className="w-3 h-3 text-amber-400" />}
+                      <span>{getCategoryBadgeLabel(item.category)}</span>
+                    </div>
 
-                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-semibold px-2.5 py-1 rounded-full shadow-md">
-                    {item.location}
-                  </div>
-                </div>
-
-                <div className="p-5 sm:p-6">
-                  <h3 className="text-lg font-serif tracking-wide text-neutral-900 font-semibold group-hover:text-slate-900 transition-colors">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-[11px] font-bold tracking-wider text-slate-700 uppercase mt-0.5">
-                    {item.subtitle}
-                  </p>
-
-                  <div className="flex flex-wrap items-center gap-2 mt-4">
-                    {item.lengthFT && (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold">
-                        <Ruler className="w-3.5 h-3.5 text-slate-500" />
-                        {item.lengthFT} FT
-                      </span>
-                    )}
-
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700 text-xs font-medium">
-                      <Calendar className="w-3.5 h-3.5 text-neutral-500" />
-                      Año {item.year}
-                    </span>
-
-                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-medium border border-amber-200/60">
-                      {item.featureBadge}
-                    </span>
-                  </div>
-
-                  <p className="mt-4 text-xs sm:text-sm text-neutral-600 line-clamp-3 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-
-              <div className="px-5 sm:px-6 pb-5 pt-3 border-t border-neutral-100 mt-2 bg-neutral-50/40">
-                <div className="flex items-baseline justify-between mb-3">
-                  <div>
-                    <span className="text-xs text-neutral-500 block">Precio de venta</span>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-xl font-bold text-slate-950">${item.priceUSD.toLocaleString()}</span>
-                      <span className="text-xs font-semibold text-neutral-600">USD</span>
+                    <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-slate-900 text-[10px] font-semibold px-2.5 py-1 rounded-full shadow-md">
+                      {item.location}
                     </div>
                   </div>
+
+                  <div className="p-5 sm:p-6">
+                    <h3 className="text-lg font-serif tracking-wide text-neutral-900 font-semibold group-hover:text-slate-900 transition-colors">
+                      {item.title}
+                    </h3>
+
+                    <p className="text-[11px] font-bold tracking-wider text-slate-700 uppercase mt-0.5">
+                      {item.subtitle}
+                    </p>
+
+                    <div className="flex flex-wrap items-center gap-2 mt-4">
+                      {item.lengthFT && (
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-semibold">
+                          <Ruler className="w-3.5 h-3.5 text-slate-500" />
+                          {item.lengthFT} FT
+                        </span>
+                      )}
+
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-700 text-xs font-medium">
+                        <Calendar className="w-3.5 h-3.5 text-neutral-500" />
+                        Año {item.year}
+                      </span>
+
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 text-xs font-medium border border-amber-200/60">
+                        {item.featureBadge}
+                      </span>
+                    </div>
+
+                    <p className="mt-4 text-xs sm:text-sm text-neutral-600 line-clamp-3 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
 
-                <Link
-                  href={`/boatsonsale/${item.id}`}
-                  className="w-full inline-flex items-center justify-between pt-2 text-xs font-bold tracking-wider uppercase text-slate-800 hover:text-slate-950 transition-colors group/btn"
-                >
-                  <span>VER FICHA TÉCNICA Y DETALLES</span>
-                  <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            </article>
+                <div className="px-5 sm:px-6 pb-5 pt-3 border-t border-neutral-100 mt-2 bg-neutral-50/40">
+                  <div className="flex items-baseline justify-between mb-3">
+                    <div>
+                      <span className="text-xs text-neutral-500 block">Precio de venta</span>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-xl font-bold text-slate-950">${item.priceUSD.toLocaleString()}</span>
+                        <span className="text-xs font-semibold text-neutral-600">USD</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="w-full inline-flex items-center justify-between pt-2 text-xs font-bold tracking-wider uppercase text-slate-800 group-hover:text-slate-950 transition-colors">
+                    <span>VER FICHA TÉCNICA Y DETALLES</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+              </article>
+            </Link>
           ))}
         </div>
       )}

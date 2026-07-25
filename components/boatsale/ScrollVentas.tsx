@@ -2,62 +2,13 @@
 
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight, Ruler, Calendar, ArrowRight } from "lucide-react";
-import { CategoryVentaType, SaleItem } from "./CatalogoVenta";
+import Link from "next/link";
 
-// Datos de referencia para embarcaciones/propiedades en venta
-const SALE_DATA: SaleItem[] = [
-  {
-    id: "leopard-40-2018-sale",
-    title: "LEOPARD 40",
-    subtitle: "CATAMARÁN EN EXCELENTE ESTADO",
-    category: "Catamaran",
-    priceUSD: 385000,
-    lengthFT: 40,
-    year: 2018,
-    location: "San Blas, Panamá",
-    image: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
-    featureBadge: "3 Cabinas",
-    description: "Equipado para navegación oceánica, paneles solares.",
-  },
-  {
-    id: "lagoon-421-2024-sale",
-    title: "LAGOON 421",
-    subtitle: "REFURBISHED 2024",
-    category: "Catamaran",
-    priceUSD: 420000,
-    lengthFT: 42,
-    year: 2013,
-    location: "San Blas, Panamá",
-    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-    featureBadge: "Versión VIP",
-    description: "Suite de propietario completa, Starlink instalado.",
-  },
-  {
-    id: "oceanis-58-sale",
-    title: "BENETEAU OCEANIS 58",
-    subtitle: "GRAN PERFORMANCE",
-    category: "Sailboat",
-    priceUSD: 490000,
-    lengthFT: 58,
-    year: 2016,
-    location: "Mar Caribe",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
-    featureBadge: "3 Cabinas En-Suite",
-    description: "Velero de gran eslora con acabados de lujo.",
-  },
-  {
-    id: "private-island-cabin-sale",
-    title: "CABAÑA TROPICAL",
-    subtitle: "PROPIEDAD EN ISLA",
-    category: "IslandLodge",
-    priceUSD: 210000,
-    year: 2021,
-    location: "Archipiélago San Blas",
-    image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
-    featureBadge: "Frente al Mar",
-    description: "Cabaña autosustentable con muelle privado.",
-  },
-];
+// 1. Importación de Tipos desde la carpeta 'types'
+//import { CategoryVentaType, SaleItem } from "@/types/sale";
+
+// 2. Importación de Datos desde la carpeta 'data'
+import { INITIAL_SALE_ITEMS, CategoryVentaType, SaleItem } from "@/data/saleData";
 
 export interface ScrollVentasProps {
   title?: string;
@@ -78,8 +29,8 @@ export default function ScrollVentas({
 }: ScrollVentasProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // Filtrado dinamico basado en las props
-  const items = SALE_DATA.filter((item) => {
+  // Filtrado dinámico basado en las props
+  const items = INITIAL_SALE_ITEMS.filter((item) => {
     if (category && item.category !== category) return false;
     if (minYear !== undefined && item.year < minYear) return false;
     if (maxPriceUSD !== undefined && item.priceUSD > maxPriceUSD) return false;
@@ -131,21 +82,34 @@ export default function ScrollVentas({
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {items.map((item) => (
-          <div
+          <Link
             key={item.id}
-            className="snap-start shrink-0 w-[280px] sm:w-[320px] bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm hover:shadow-lg transition flex flex-col justify-between"
+            href={`/boatsonsale/${item.id}`}
+            className="group snap-start shrink-0 w-[280px] sm:w-[320px] bg-white rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between cursor-pointer focus:outline-none"
           >
             <div>
               <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
-                <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
-                <span className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-md text-white text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">
-                  {item.category === "Catamaran" ? "CATAMARAN" : item.category === "Sailboat" ? "SAILBOAT" : "PROPIEDAD"}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                />
+                <span className="absolute top-3 left-3 bg-slate-900/85 backdrop-blur-md text-white text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full shadow-md">
+                  {item.category === "Catamaran"
+                    ? "CATAMARAN"
+                    : item.category === "Sailboat"
+                    ? "SAILBOAT"
+                    : "PROPIEDAD"}
                 </span>
               </div>
 
               <div className="p-4">
-                <h4 className="font-serif font-semibold text-slate-900 text-base line-clamp-1">{item.title}</h4>
-                <p className="text-[10px] font-bold text-slate-600 tracking-wider uppercase mt-0.5">{item.subtitle}</p>
+                <h4 className="font-serif font-semibold text-slate-900 text-base line-clamp-1 group-hover:text-slate-700 transition-colors">
+                  {item.title}
+                </h4>
+                <p className="text-[10px] font-bold text-slate-600 tracking-wider uppercase mt-0.5">
+                  {item.subtitle}
+                </p>
 
                 <div className="flex items-center gap-2 mt-3 text-xs text-neutral-600">
                   {item.lengthFT && (
@@ -165,15 +129,12 @@ export default function ScrollVentas({
                 <span className="text-[10px] text-neutral-400 block">Precio de venta</span>
                 <span className="font-bold text-slate-950 text-base">${item.priceUSD.toLocaleString()} USD</span>
               </div>
-              <a
-                href={`/venta/${item.id}`}
-                className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 hover:text-slate-950 uppercase"
-              >
+              <div className="inline-flex items-center gap-1 text-xs font-bold text-slate-800 group-hover:text-slate-950 uppercase transition-colors">
                 <span>FICHA</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+                <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" />
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
