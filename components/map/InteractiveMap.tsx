@@ -63,7 +63,7 @@ export default function InteractiveMap() {
         </div>
 
       </div>
-      <FloatingCTA/>
+      {/* <FloatingCTA/> */}
     </section>
   );
 }

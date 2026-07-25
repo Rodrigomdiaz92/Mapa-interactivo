@@ -1,154 +1,124 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { ArrowUpRight, ChevronDown, ChevronUp } from 'lucide-react';
-
-interface Activity {
-  id: string;
-  title: string;
-  description: string;
-  imageUrl: string;
-  link?: string;
-}
-
-const activities: Activity[] = [
-  {
-    id: '1',
-    title: 'SLOW DAILY SAILING AMONG CORAL REEFS',
-    description: 'Gentle daily navigation through turquoise waters and living coral reefs.',
-    imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: '2',
-    title: 'GUNA PEOPLE — CULTURAL CONNECTION',
-    description: 'Share respectful moments and learn about local island life.',
-    imageUrl: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: '3',
-    title: 'ISLAND HOPPING & UNTOUCHED BEACHES',
-    description: 'Discover remote islands and white-sand beaches far from the crowds.',
-    imageUrl: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: '4',
-    title: 'SNORKELING IN CRYSTAL-CLEAR REEFS',
-    description: 'Swim among colorful fish and healthy coral in clear, warm waters.',
-    imageUrl: 'https://images.unsplash.com/photo-1544551763-77ef2d0cfc23?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: '5',
-    title: 'KAYAKING & PADDLEBOARD',
-    description: 'Glide quietly across calm seas and explore at your own pace.',
-    imageUrl: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: '6',
-    title: 'BEACH TIME & SUNSETS',
-    description: 'Volleyball in the sand, salt on your skin, and a sunset made just for you.',
-    imageUrl: 'https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800&auto=format&fit=crop',
-  },
-  {
-    id: '7',
-    title: 'SLOW MORNINGS, OCEAN SWIMS & RELAXATION',
-    description: 'Start the day slowly with ocean swims, rest, and simple pleasures.',
-    imageUrl: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=800&auto=format&fit=crop',
-  },
-];
+import React, { useState } from "react";
+import Link from "next/link";
+import { ArrowUpRight, ChevronDown, ChevronUp } from "lucide-react";
+import { EXPERIENCES_DATA } from "@/data/experiencesData";
 
 export const Experiencias = () => {
   const [showAll, setShowAll] = useState(false);
 
-  // En pantallas grandes (3 cols), 2 filas equivalen a 6 items
-  const visibleActivitiesDesktop = showAll ? activities : activities.slice(0, 6);
+  // En desktop mostramos 6 elementos por defecto o la totalidad
+  const visibleExperiencesDesktop = showAll
+    ? EXPERIENCES_DATA
+    : EXPERIENCES_DATA.slice(0, 6);
 
   return (
-    <section className="py-16 bg-[#F9F6EE] px-4 sm:px-6 lg:px-8 font-sans">
-      <div className="max-w-7xl mx-auto">
-        {/* Encabezado */}
-        <div className="text-center mb-12">
-          <span className="text-xs sm:text-sm uppercase tracking-widest text-emerald-700 font-semibold block mb-2">
-            WHAT YOU'LL DO
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-serif text-slate-800 tracking-tight uppercase mb-3">
-            ACTIVITIES
-          </h2>
-          <p className="text-slate-600 text-sm sm:text-base">
-            These are the activities included in the experience:
-          </p>
-        </div>
-
-        {/* VISTA MOBILE: Carrusel Horizontal (se desplaza a la derecha) */}
-        <div className="flex md:hidden overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-none -mx-4 px-4">
-          {activities.map((item) => (
-            <a
-              key={item.id}
-              href={item.link || '#'}
-              className="group relative h-80 min-w-[80vw] sm:min-w-[300px] snap-center rounded-2xl overflow-hidden shadow-md block flex-shrink-0"
-            >
-              <img
-                src={item.imageUrl}
-                alt={item.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10" />
-              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white">
-                <ArrowUpRight className="w-4 h-4" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col justify-end">
-                <h3 className="text-base font-bold uppercase tracking-wide mb-2 leading-snug drop-shadow-sm">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-slate-200 line-clamp-2 font-light">
-                  {item.description}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {/* VISTA DESKTOP: Grid (2 filas por defecto = max 6 items) */}
-        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleActivitiesDesktop.map((item) => (
-            <a
-              key={item.id}
-              href={item.link || '#'}
-              className="group relative h-80 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 block"
-            >
-              <img
-                src={item.imageUrl}
-                alt={item.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 group-hover:from-black/90 transition-colors" />
-              <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:bg-white group-hover:text-slate-900 transition-all duration-300">
-                <ArrowUpRight className="w-4 h-4" />
-              </div>
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-white flex flex-col justify-end">
-                <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide mb-2 leading-snug drop-shadow-sm">
-                  {item.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-200 line-clamp-2 font-light">
-                  {item.description}
-                </p>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        {/* Botón "Ver más" para Desktop cuando hay más de 6 items */}
-        {activities.length > 6 && (
-          <div className="hidden md:flex justify-center mt-10">
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-medium px-6 py-3 rounded-full transition-colors shadow-md"
-            >
-              <span>{showAll ? 'Ver menos' : 'Ver más actividades'}</span>
-              {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            </button>
-          </div>
-        )}
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 bg-neutral-50/50">
+      {/* Encabezado */}
+      <div className="text-center mb-10">
+        <span className="text-xs font-bold uppercase tracking-widest text-emerald-800 block mb-2">
+          Lo que vivirás
+        </span>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-slate-900 font-semibold tracking-tight uppercase">
+          Experiencias & Actividades
+        </h2>
+        <p className="mt-2 text-sm sm:text-base text-neutral-600 max-w-xl mx-auto">
+          Todas estas vivencias forman parte del viaje a bordo de nuestros barcos.
+        </p>
       </div>
+
+      {/* VISTA MOBILE: Carrusel Horizontal con ancho reducido (se distingue el siguiente elemento) */}
+      <div
+        className="flex md:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scrollbar-none"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+      >
+        {EXPERIENCES_DATA.map((item) => (
+          <Link
+            key={item.id}
+            href={`/actividades/${item.slug}`}
+            className="group relative h-72 w-[220px] sm:w-[250px] shrink-0 snap-start rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm transition-transform active:scale-[0.98]"
+          >
+            <img
+              src={item.imageUrl}
+              alt={item.title}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-transparent" />
+
+            {/* Botón flotante de acción */}
+            <div className="absolute top-3 right-3 w-7 h-7 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white">
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </div>
+
+            {/* Información básica */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+              {item.subtitle && (
+                <span className="text-[10px] font-bold tracking-widest uppercase text-emerald-300 block mb-1">
+                  {item.subtitle}
+                </span>
+              )}
+              <h3 className="text-sm font-serif font-semibold leading-tight mb-1.5 line-clamp-2">
+                {item.title}
+              </h3>
+              <p className="text-[11px] text-neutral-200 line-clamp-2 font-light leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* VISTA DESKTOP: Grid de tarjetas */}
+      <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-6">
+        {visibleExperiencesDesktop.map((item) => (
+          <Link
+            key={item.id}
+            href={`/actividades/${item.slug}`}
+            className="group relative h-80 rounded-2xl overflow-hidden border border-neutral-200/80 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 block"
+          >
+            <img
+              src={item.imageUrl}
+              alt={item.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-900/30 to-transparent group-hover:from-slate-950/95 transition-colors" />
+
+            {/* Icono interactivo */}
+            <div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center text-white group-hover:bg-white group-hover:text-slate-900 transition-all duration-300">
+              <ArrowUpRight className="w-4 h-4" />
+            </div>
+
+            {/* Textos */}
+            <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+              {item.subtitle && (
+                <span className="text-[10px] font-bold tracking-widest uppercase text-emerald-300 block mb-1">
+                  {item.subtitle}
+                </span>
+              )}
+              <h3 className="text-base sm:text-lg font-serif font-semibold leading-tight mb-1.5">
+                {item.title}
+              </h3>
+              <p className="text-xs text-neutral-200 line-clamp-2 font-light leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Botón Ver Más (Desktop) */}
+      {EXPERIENCES_DATA.length > 6 && (
+        <div className="hidden md:flex justify-center mt-10">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-6 py-3 rounded-xl transition-all shadow-sm hover:shadow-md"
+          >
+            <span>{showAll ? "Mostrar menos" : "Ver más actividades"}</span>
+            {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+          </button>
+        </div>
+      )}
     </section>
   );
 };
