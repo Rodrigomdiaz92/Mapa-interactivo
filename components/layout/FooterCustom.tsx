@@ -97,10 +97,10 @@ export const FooterCustom = () => {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs tracking-wider text-slate-500 uppercase">
           <p>© {new Date().getFullYear()} Sailing The World. Todos los derechos reservados.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-slate-800 transition-colors">
+            <a href="./privacypolicy" className="hover:text-slate-800 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-slate-800 transition-colors">
+            <a href="./termsofservice" className="hover:text-slate-800 transition-colors">
               Terms of Service
             </a>
           </div>

@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { CatalogItem, CategoryType } from "@/types/catalog";
 import { Users, Lock, Bed, UsersRound, ArrowRight, Search, Anchor, SlidersHorizontal, ChevronDown, ChevronUp, Home } from "lucide-react";
 
@@ -21,9 +22,22 @@ export default function Catalogo({
   title = "Explora la Flota y Hospedajes",
   subtitle = "Encuentra el catamarán, velero o hospedaje en la isla ideal para tu próxima aventura en San Blas.",
 }: CatalogoProps) {
+  // Lectura del parámetro de búsqueda en URL (?category=Catamaran, etc.)
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
+
   // Filtros principales (Siempre Visibles)
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<"ALL" | CategoryType>("ALL");
+
+  // Sincronizar el filtro de categoría si viene un valor válido por URL
+  useEffect(() => {
+    if (categoryParam) {
+      if (["Catamaran", "Sailboat", "IslandLodge"].includes(categoryParam)) {
+        setSelectedCategory(categoryParam as CategoryType);
+      }
+    }
+  }, [categoryParam]);
 
   // Filtros Avanzados (Colapsables)
   const [showAdvancedFilters, setShowAdvancedFilters] = useState(false);
