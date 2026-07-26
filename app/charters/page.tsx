@@ -6,7 +6,8 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import InteractiveMap from "@/components/map/InteractiveMap";
 import Categorias from "@/components/ui/Categorias";
 import { INITIAL_CATALOG_ITEMS } from "@/data/catalogData";
-import { useRouter } from "next/navigation";  
+import { useRouter } from "next/navigation";
+import { Suspense } from 'react';  
 
 
 
@@ -21,19 +22,21 @@ export default function Charters() {
   return (
     <article>
      {/* <Catalogo /> */}
-     <Catalogo 
+     <Suspense fallback={<div>Loading...</div>}><Catalogo 
         items={INITIAL_CATALOG_ITEMS} 
         onSelectBoat={handleSelectBoat} 
-      />
+      /></Suspense>
+     
      <WhatsAppButton 
         phoneNumber="50761234567" 
         message="Hola, me gustaría consultar la disponibilidad para un catamarán."
         tooltipText="¡Escríbenos directamente por WhatsApp!"
-      /> 
-       <ScrollCharters 
+      />
+      <Suspense fallback={<div>Loading...</div>}><ScrollCharters 
         title="Catamaranes destacados en San Blas" 
         category="Catamaran" 
-      /> 
+      /></Suspense> 
+        
 
     </article>
   );
