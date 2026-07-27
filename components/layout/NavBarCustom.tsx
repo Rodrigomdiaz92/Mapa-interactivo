@@ -2,13 +2,33 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Globe, ChevronDown, Anchor, MapPin, Sparkles } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { Menu, X, Globe, ChevronDown, Anchor, Compass, MapPin, Sparkles } from 'lucide-react';
 
 export const NavbarCustom = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [currentLang, setCurrentLang] = useState('ES');
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isLocationOpen, setIsLocationOpen] = useState(false);
+
+  // Evaluamos en qué ruta nos encontramos
+  const isNavegacionYNaturaleza = pathname === '/navegacionynaturaleza';
+
+  // Obtener la bajada/subtítulo inspirador según la URL actual
+  const getSubheadline = () => {
+    switch (pathname) {
+      case '/charters':
+      case '/charter':
+        return 'Hospédate en Guna Yala & Vive San Blas';
+      case '/boatsonsale':
+        return 'Boats on Sale • Encuentra tu Embarcación Ideal';
+      case '/actividades':
+        return 'Actividades & Aventuras a tu Medida';
+      default:
+        return 'by Navegación y Naturaleza';
+    }
+  };
 
   const navLinks = [
     { name: 'Nosotros', href: '/navegacionynaturaleza' },
@@ -29,6 +49,8 @@ export const NavbarCustom = () => {
     setIsLangOpen(false);
   };
 
+  const currentSubheadline = getSubheadline();
+
   return (
     <header className="sticky top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm font-sans transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -36,20 +58,46 @@ export const NavbarCustom = () => {
         {/* Contenedor Principal */}
         <div className="flex items-center justify-between py-3.5 sm:h-20">
           
-          {/* Logo / Marca + Ubicación debajo en Mobile */}
+          {/* Logo / Marca Dinámica + Ubicación en Mobile */}
           <div className="flex flex-col items-start gap-1.5">
             <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0F1E2E] flex items-center justify-center text-amber-100 group-hover:bg-emerald-800 transition-colors shrink-0">
-                <Anchor className="w-4 h-4 sm:w-5 sm:h-5" />
+              
+              {/* Animación del Icono/Logo */}
+              <div key={isNavegacionYNaturaleza ? 'ny-logo' : 'stw-logo'} className="animate-in fade-in zoom-in-95 duration-300">
+                {isNavegacionYNaturaleza ? (
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-emerald-800 flex items-center justify-center text-emerald-100 group-hover:bg-[#0F1E2E] transition-colors shrink-0 shadow-sm">
+                    <Compass className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                ) : (
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0F1E2E] flex items-center justify-center text-amber-100 group-hover:bg-emerald-800 transition-colors shrink-0">
+                    <Anchor className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </div>
+                )}
               </div>
+
+              {/* Animación del Texto de la Marca */}
               <div className="flex flex-col">
-                <span className="text-sm sm:text-lg font-serif font-bold tracking-wider text-[#0F1E2E] uppercase leading-tight">
-                  Sailing <span className="text-emerald-700 font-light">The World</span>
-                </span>
-                <span className="text-[9px] sm:text-[10px] font-medium tracking-widest text-slate-500 uppercase">
-                  by Navegación y Naturaleza
-                </span>
+                {isNavegacionYNaturaleza ? (
+                  <div key="ny-text" className="animate-in fade-in duration-300">
+                    <span className="text-sm sm:text-lg font-serif font-bold tracking-wider text-emerald-900 uppercase leading-tight block">
+                      Navegación <span className="text-[#0F1E2E] font-light">&amp; Naturaleza</span>
+                    </span>
+                    <span className="text-[9px] sm:text-[10px] font-medium tracking-widest text-slate-500 uppercase block">
+                      Experiencias &amp; Expediciones
+                    </span>
+                  </div>
+                ) : (
+                  <div>
+                    <span className="text-sm sm:text-lg font-serif font-bold tracking-wider text-[#0F1E2E] uppercase leading-tight block">
+                      Sailing <span className="text-emerald-700 font-light">The World</span>
+                    </span>
+                    <span key={currentSubheadline} className="text-[9px] sm:text-[10px] font-medium tracking-widest text-slate-500 uppercase block animate-in fade-in duration-300">
+                      {currentSubheadline}
+                    </span>
+                  </div>
+                )}
               </div>
+
             </Link>
 
             {/* Selector Ubicación - Debajo de la marca en pantallas pequeñas (Mobile) */}
@@ -124,15 +172,22 @@ export const NavbarCustom = () => {
 
             {/* Links Desktop */}
             <nav className="flex gap-5 lg:gap-6">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-slate-600 hover:text-[#0F1E2E] text-xs lg:text-sm font-medium tracking-wide uppercase transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`text-xs lg:text-sm font-medium tracking-wide uppercase transition-colors ${
+                      isActive
+                        ? 'text-emerald-800 font-bold border-b-2 border-emerald-800 pb-0.5'
+                        : 'text-slate-600 hover:text-[#0F1E2E]'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
             </nav>
 
             {/* Idioma (Desktop) */}
@@ -189,16 +244,23 @@ export const NavbarCustom = () => {
           
           {/* Links de Navegación */}
           <nav className="space-y-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 rounded-lg text-xs font-semibold tracking-wider uppercase text-slate-700 hover:bg-[#F9F6EE] hover:text-emerald-800 transition-all"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`block px-3 py-2 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all ${
+                    isActive
+                      ? 'bg-emerald-50 text-emerald-800 font-bold'
+                      : 'text-slate-700 hover:bg-[#F9F6EE] hover:text-emerald-800'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Selector de Idioma en Menú Mobile */}

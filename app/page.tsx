@@ -14,6 +14,7 @@ import WidgetCarousel from "@/components/layout/WidgetCarousel";
 import HistoryGridCard from "@/components/navegacionynaturaleza/HistoryGridCard";
 import ActivitiesPromoWidget from "@/components/navegacionynaturaleza/ActivitiesPromoWidget";
 import CharterPromoWidget from "@/components/navegacionynaturaleza/CharterPromoWidget";
+import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
 
 
 
@@ -63,6 +64,9 @@ export default function Home() {
       </section>
       <section id="faq">
         <FAQ />
+      </section>
+      <section id="asistencia-viajero">
+        <AsistenciaViajeroWidget />
       </section>
       <WhatsAppButton 
   phoneNumber="50761234567" 
