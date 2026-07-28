@@ -57,9 +57,11 @@ export default function Home() {
       </section>
       <section id="testimonials">
         {/* <CardCarousel/> */}
-        <ScrollCharters 
-        title="Catamaranes destacados en San Blas" 
-         
+        
+      <ScrollCharters 
+        title="Catamaranes Exclusivos"
+        subtitle="Espacio y confort superior para navegar el Caribe"
+        category="Catamaran"
       />
       </section>
       <section id="faq">
@@ -69,10 +71,10 @@ export default function Home() {
         <AsistenciaViajeroWidget />
       </section>
       <WhatsAppButton 
-  phoneNumber="50761234567" 
-  message="Hola, me gustaría consultar la disponibilidad para un catamarán."
-  tooltipText="¡Escríbenos directamente por WhatsApp!"
-/>
+        phoneNumber="50761234567" 
+        message="Hola, me gustaría consultar la disponibilidad para un catamarán."
+        tooltipText="¡Escríbenos directamente por WhatsApp!"
+      />
     </article>
     
   );
