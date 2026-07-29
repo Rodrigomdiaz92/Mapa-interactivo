@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { CatalogItem } from "@/types/catalog";
+import CarrouselHome from "../ui/CarrouselHome";
 
 function ImageCarousel({ images, altPrefix }: { images: string[]; altPrefix: string }) {
   if (!images || images.length === 0) return null;
@@ -149,6 +150,7 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
         {boatAllPhotos.length > 0 && (
           <ImageCarousel images={boatAllPhotos} altPrefix={item.boatName} />
         )}
+        
 
         {/* Grid Contenido */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

@@ -14,16 +14,19 @@ export default function CarrouselHome() {
 
   const images: GalleryItem[] = [
   {
-    original: "https://picsum.photos/id/1018/1000/600/",
+    original: "https://i.ibb.co/WvdsXYk4/barcoba-o.jpg",
     thumbnail: "https://picsum.photos/id/1018/250/150/",
   },
   {
-    original: "https://picsum.photos/id/1015/1000/600/",
+    original: "https://i.ibb.co/KjwNFfdx/barcoexterior.jpg",
     thumbnail: "https://picsum.photos/id/1015/250/150/",
   },
   {
-    original: "https://picsum.photos/id/1019/1000/600/",
+    original: "https://i.ibb.co/KjwNFfdx/barcoexterior.jpg",
     thumbnail: "https://picsum.photos/id/1019/250/150/",
+
+    
+
   },
 ];
 const galleryRef = useRef<ImageGalleryRef>(null);

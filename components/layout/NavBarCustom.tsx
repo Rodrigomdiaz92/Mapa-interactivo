@@ -2,8 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Globe, ChevronDown, Anchor, Compass, MapPin, Sparkles } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown, MapPin, Sparkles } from 'lucide-react';
 
 export const NavbarCustom = () => {
   const pathname = usePathname();
@@ -33,15 +34,15 @@ export const NavbarCustom = () => {
   const navLinks = [
     { name: 'Nosotros', href: '/navegacionynaturaleza' },
     { name: 'Experiencias', href: '/charters' },
-    { name: 'Ventas', href: '/boatsonsale' },
+    //{ name: 'Ventas', href: '/boatsonsale' },
     { name: 'Actividades', href: '/actividades' },
     { name: 'Contacto', href: '/contacto' },
   ];
 
   const languages = [
     { code: 'ES', label: 'Español' },
-    { code: 'EN', label: 'English' },
-    { code: 'FR', label: 'Français' },
+    //{ code: 'EN', label: 'English' },
+    //{ code: 'FR', label: 'Français' },
   ];
 
   const handleLangSelect = (code: string) => {
@@ -62,18 +63,32 @@ export const NavbarCustom = () => {
           <div className="flex flex-col items-start gap-1.5">
             <Link href="/" className="flex items-center gap-2.5 sm:gap-3 group shrink-0">
               
-              {/* Animación del Icono/Logo */}
-              <div key={isNavegacionYNaturaleza ? 'ny-logo' : 'stw-logo'} className="animate-in fade-in zoom-in-95 duration-300">
-                {isNavegacionYNaturaleza ? (
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-emerald-800 flex items-center justify-center text-emerald-100 group-hover:bg-[#0F1E2E] transition-colors shrink-0 shadow-sm">
-                    <Compass className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </div>
-                ) : (
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#0F1E2E] flex items-center justify-center text-amber-100 group-hover:bg-emerald-800 transition-colors shrink-0">
-                    <Anchor className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </div>
-                )}
-              </div>
+             {/* Animación del Icono/Logo SVG */}
+<div key={isNavegacionYNaturaleza ? 'ny-logo' : 'stw-logo'} className="animate-in fade-in zoom-in-95 duration-300 shrink-0">
+  {isNavegacionYNaturaleza ? (
+    <div className="relative w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center">
+      <Image
+        src="/icons/2.svg"
+        alt="Navegación y Naturaleza Logo"
+        width={96}
+        height={96}
+        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+        priority
+      />
+    </div>
+  ) : (
+    <div className="relative w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center">
+      <Image
+        src="/icons/1.svg"
+        alt="Sailing the World Logo"
+        width={96}
+        height={96}
+        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+        priority
+      />
+    </div>
+  )}
+</div>
 
               {/* Animación del Texto de la Marca */}
               <div className="flex flex-col">

@@ -1,20 +1,4 @@
-/*export type CategoryType = "Sailboat" | "Catamaran" | "IslandLodge";
 
-export interface CatalogItem {
-  id: string;
-  name: string;
-  subtitle: string;
-  category: CategoryType;
-  captainOrHost: string;
-  image: string;
-  maxGuests: number;
-  isPrivate: boolean;
-  isSharedAllowed: boolean;
-  featureBadge: string;
-  description: string;
-  pricePerPersonPerDay: number; // USD por día por persona
-  pricingNote?: string;
-}*/
 
 export type CategoryType = "Catamaran" | "Sailboat" | "IslandLodge";
 
@@ -92,6 +76,7 @@ export interface CatalogItem {
   id: number;                          // 🔢 Identificador numérico único
   slug: string;                        // URL amigable para Next.js (ej. "leopard-40-2018")
   category: CategoryType;
+  isAvailable: boolean,
   location: LocalizedString;
 
   // 🔍 SEO / Metadata

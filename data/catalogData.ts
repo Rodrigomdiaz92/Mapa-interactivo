@@ -1,207 +1,3 @@
-/*
-
-import { CatalogItem } from "@/types/catalog";
-
-export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
-  {
-  id: 1,
-  slug: "leopard-40-2018",
-  category: "Catamaran",
-  location: {
-    es: "Islas San Blas, Panamá",
-    en: "San Blas Islands, Panama",
-  },
-
-  // 🔍 SEO & Metadata
-  seo: {
-    title: {
-      es: "Alquiler Catamarán Leopard 40 en San Blas | Sailing the World",
-      en: "Charter Leopard 40 Catamaran in San Blas | Sailing the World",
-    },
-    description: {
-      es: "Alquila el catamarán Leopard 40 (2018) en San Blas. Capacidad para 8 personas, 3 camarotes dobles, pensión completa y capitán. ¡Reserva hoy!",
-      en: "Rent the Leopard 40 (2018) catamaran in San Blas. Capacity for 8 guests, 3 double cabins, full board, and captain included. Book today!",
-    },
-    keywords: [
-      { es: "alquiler catamaran san blas", en: "san blas catamaran charter" },
-      { es: "charter privado panama", en: "private boat charter panama" },
-    ],
-    openGraph: {
-      title: {
-        es: "Catamarán Leopard 40 en San Blas - Experiencia All Inclusive",
-        en: "Leopard 40 Catamaran in San Blas - All Inclusive Experience",
-      },
-      description: {
-        es: "Navega las islas San Blas a bordo del Leopard 40 con capitán y todas las comidas incluidas.",
-        en: "Sail the San Blas islands aboard the Leopard 40 with captain and all meals included.",
-      },
-      images: [
-        "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
-      ],
-    },
-  },
-
-  // 🚢 Datos del Barco
-  boatName: "LEOPARD 40 (2018)",
-  boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
-  boatGalleryPhotos: [
-    "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-  ],
-  boatDescription: {
-    es: "Catamarán moderno Leopard que ofrece una puerta frontal única que conecta el salón con la cubierta de proa.",
-    en: "Modern Leopard catamaran offering a unique front door connecting saloon to deck.",
-  },
-  boatLongDescription: {
-    es: "El Leopard 40 combina confort de lujo y navegación ágil. Su innovador diseño con acceso directo a la cubierta de proa brinda una excelente ventilación en el Caribe.",
-    en: "The Leopard 40 combines luxury comfort and agile sailing. Its innovative bow access design provides excellent Caribbean ventilation.",
-  },
-  specs: {
-    lengthFeet: 40,
-    cabins: 3,
-    bathrooms: 2,
-    doubleBeds: 3,
-    singleBeds: 2,
-  },
-
-  // 👨‍✈️ Capitán
-  captain: {
-    name: "Capt. Thomas",
-    role: { es: "Capitán Profesional", en: "Professional Captain" },
-    photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
-    description: {
-      es: "Capitán certificado Capitaine 200 con más de 5 años navegando por San Blas.",
-      en: "Capitaine 200 certified captain with over 5 years sailing San Blas.",
-    },
-    languages: ["English", "Français", "Español"],
-    certifications: ["Capitaine 200"],
-  },
-
-  // 🍽️ Comida
-  dining: {
-    description: {
-      es: "Menú gourmet caribeño preparado a bordo con marisco fresco local (langosta, pesca del día), frutas tropicales y pastas.",
-      en: "Gourmet Caribbean menu prepared onboard featuring fresh local seafood (lobster, catch of the day), tropical fruits, and pasta.",
-    },
-    photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
-  },
-
-  // 🏄‍♂️ Actividades
-  activities: {
-    description: {
-      es: "Snorkel en arrecifes coralinos, exploración en Paddleboard (SUP) y pesca deportiva ligera.",
-      en: "Coral reef snorkeling, Stand-Up Paddleboarding (SUP), and light sport fishing.",
-    },
-    photoUrls: [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
-    ],
-  },
-
-  // 💰 Precios e Inserción de Tabla HTML
-  pricing: {
-    currency: "USD",
-    basePricePerPersonPerDay: 220,
-    discountPricePerPersonPerDay: 195,
-    tiers: [
-      {
-        seasonOrType: { es: "Charter Privado", en: "Private Charter" },
-        guestsCount: 6,
-        pricePerNight: 1300,
-        discountPricePerNight: 1150,
-        notes: { es: "Mínimo 2 noches", en: "2 nights minimum" },
-      },
-    ],
-    htmlTableContent: {
-      es: `
-        <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-          <thead>
-            <tr class="bg-slate-100">
-              <th class="p-3 border">Modalidad / Huéspedes</th>
-              <th class="p-3 border">Precio Regular</th>
-              <th class="p-3 border">Precio Oferta</th>
-              <th class="p-3 border">Notas</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="p-3 border">Charter Privado (2-4 pers.)</td>
-              <td class="p-3 border">$1,100 / noche</td>
-              <td class="p-3 border font-bold text-green-600">$980 / noche</td>
-              <td class="p-3 border">Mínimo 2 noches</td>
-            </tr>
-            <tr>
-              <td class="p-3 border">Charter Privado (5-8 pers.)</td>
-              <td class="p-3 border">$1,400 / noche</td>
-              <td class="p-3 border font-bold text-green-600">$1,250 / noche</td>
-              <td class="p-3 border">Mínimo 2 noches</td>
-            </tr>
-            <tr>
-              <td class="p-3 border">Camarote Compartido</td>
-              <td class="p-3 border">$220 / pers. / día</td>
-              <td class="p-3 border font-bold text-green-600">$195 / pers. / día</td>
-              <td class="p-3 border">Sujeto a disponibilidad</td>
-            </tr>
-          </tbody>
-        </table>
-      `,
-      en: `
-        <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-          <thead>
-            <tr class="bg-slate-100">
-              <th class="p-3 border">Type / Guests</th>
-              <th class="p-3 border">Regular Price</th>
-              <th class="p-3 border">Promo Price</th>
-              <th class="p-3 border">Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="p-3 border">Private Charter (2-4 guests)</td>
-              <td class="p-3 border">$1,100 / night</td>
-              <td class="p-3 border font-bold text-green-600">$980 / night</td>
-              <td class="p-3 border">2 nights minimum</td>
-            </tr>
-            <tr>
-              <td class="p-3 border">Private Charter (5-8 guests)</td>
-              <td class="p-3 border">$1,400 / night</td>
-              <td class="p-3 border font-bold text-green-600">$1,250 / night</td>
-              <td class="p-3 border">2 nights minimum</td>
-            </tr>
-            <tr>
-              <td class="p-3 border">Shared Cabin</td>
-              <td class="p-3 border">$220 / guest / day</td>
-              <td class="p-3 border font-bold text-green-600">$195 / guest / day</td>
-              <td class="p-3 border">Subject to availability</td>
-            </tr>
-          </tbody>
-        </table>
-      `,
-    },
-  },
-
-  // ✅ Incluye
-  includes: [
-    { es: "Capitán y Tripulación profesional", en: "Professional Captain and Crew" },
-    { es: "3 comidas diarias y snacks", en: "3 daily meals and snacks" },
-    { es: "Bebidas (Agua, jugos, cervezas y vino moderado)", en: "Drinks (Water, juices, beers, and moderate wine)" },
-  ],
-  excludes: [
-    { es: "No incluye transporte al lugar de destino", en: "Does not include transportation to destination" },
-    { es: "No incluye seguros de viaje", en: "Does not include travel insurance" },
-  ],
-
-  // 🔗 Experiencias Relacionadas por ID numérico
-  relatedExperienceIds: [2, 3],
-
-  // Capacidad y Flags
-  maxGuests: 8,
-  isPrivate: true,
-  isSharedAllowed: true,
-  featureBadge: { es: "3 Camarotes Dobles", en: "3 Double Cabins" },
-  isFeatured: true,
-  hasDiscount: true,
-}];*/
-
 import { CatalogItem } from "@/types/catalog";
 
 export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
@@ -212,6 +8,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 1,
     slug: "lupa-jeanneau-sun-odyssey-40ft",
     category: "Sailboat",
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -239,15 +36,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Explore San Blas with marine biologists Nico & Belu aboard a 40ft Jeanneau Sun Odyssey.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/veleros/Lupa/catalogo/1.png",
+          "/contenido/veleros/Lupa/catalogo/2.png",
+          "/contenido/veleros/Lupa/catalogo/3.png",
+          "/contenido/veleros/Lupa/catalogo/4.png",
+          "/contenido/veleros/Lupa/catalogo/5.png",
+          "/contenido/veleros/Lupa/catalogo/6.png",
+          "/contenido/veleros/Lupa/catalogo/7.png",
         ],
       },
     },
     boatName: "LUPA (Jeanneau Sun Odyssey 40FT)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/veleros/Lupa/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/veleros/Lupa/catalogo/1.png",
+      "/contenido/veleros/Lupa/catalogo/2.png",
+      "/contenido/veleros/Lupa/catalogo/3.png",
+      "/contenido/veleros/Lupa/catalogo/4.png",
+      "/contenido/veleros/Lupa/catalogo/5.png",
+      "/contenido/veleros/Lupa/catalogo/6.png",
+      "/contenido/veleros/Lupa/catalogo/7.png",
     ],
     boatDescription: {
       es: "Expedición guiada por biólogos marinos en San Blas a bordo de un acogedor Jeanneau Sun Odyssey de 40 pies.",
@@ -269,7 +77,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Biólogos Marinos y Capitanes",
         en: "Marine Biologists & Expert Captains",
       },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/veleros/Lupa/capitan/1.png",
       description: {
         es: "Biólogos marinos profesionales y navegantes expertos que han recorrido desde el Caribe hasta la Polinesia Francesa.",
         en: "Professional marine biologists and expert sailors who have navigated from the Caribbean to French Polynesia.",
@@ -281,7 +89,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Gastronomía basada en marisco fresco del día o productos adquiridos directamente a los pescadores locales Guna. Incluye 3 comidas diarias, snacks y bebidas.",
         en: "Fresh daily seafood gastronomy featuring the catch of the day or direct purchases from local Guna fishermen. Includes 3 daily meals, snacks, and drinks.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/veleros/Lupa/comidas/1.png",
     },
     activities: {
       description: {
@@ -289,7 +97,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Biologist-guided snorkeling, interactive onboard microscope sessions, and daily island hopping across Guna Yala.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/veleros/Lupa/experiencia/1.png",
       ],
     },
     pricing: {
@@ -402,6 +210,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 2,
     slug: "thyra-danish-handcrafted-monohull",
     category: "Sailboat",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -429,15 +238,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "A private handcrafted Danish Caribbean hideaway with mahogany interiors in San Blas.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/veleros/Thyra/catalogo/1.png",
+          "/contenido/veleros/Thyra/catalogo/2.png",
+          "/contenido/veleros/Thyra/catalogo/3.png",
+          "/contenido/veleros/Thyra/catalogo/4.png",
+           "/contenido/veleros/Thyra/catalogo/5.png",
+           "/contenido/veleros/Thyra/catalogo/6.png",
+           "/contenido/veleros/Thyra/catalogo/7.png",
         ],
       },
     },
     boatName: "THYRA (Danish Handcrafted Monohull)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/veleros/Thyra/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+          "/contenido/veleros/Thyra/catalogo/1.png",
+          "/contenido/veleros/Thyra/catalogo/2.png",
+          "/contenido/veleros/Thyra/catalogo/3.png",
+          "/contenido/veleros/Thyra/catalogo/4.png",
+          "/contenido/veleros/Thyra/catalogo/5.png",
+          "/contenido/veleros/Thyra/catalogo/6.png",
+          "/contenido/veleros/Thyra/catalogo/7.png",
     ],
     boatDescription: {
       es: "Embarcación artesanal danesa con elegantes interiores en caoba. Ideal para parejas o grupos reducidos.",
@@ -454,9 +274,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       singleBeds: 1,
     },
     captain: {
-      name: "THYRA Host & Captain",
+      name: "Leo",
       role: { es: "Anfitrión y Capitán", en: "Host & Captain" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/veleros/Thyra/capitan/1.png",
       description: {
         es: "Anfitrión dedicado a ofrecer hospitalidad excepcional y una navegación auténtica por el Caribe.",
         en: "Dedicated host offering exceptional hospitality and an authentic Caribbean sailing experience.",
@@ -467,7 +287,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Tres comidas diarias incluidas (desayuno, almuerzo y cena) preparadas a bordo.",
         en: "Three daily meals included (breakfast, lunch, dinner) served onboard.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/veleros/Thyra/comidas/1.png",
     },
     activities: {
       description: {
@@ -475,7 +295,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Snorkel and Paddleboard (SUP) equipment available to explore pristine reefs and islands.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/veleros/Thyra/experiencia/1.png"
       ],
     },
     pricing: {
@@ -549,6 +369,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 3,
     slug: "bluemarys-beneteau-oceanis",
     category: "Sailboat",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -576,15 +397,24 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Magnificent 58ft Beneteau Oceanis sailboat featuring 3 double cabins with private bathrooms.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/veleros/BlueMarys/catalogo/1.png",
+          "/contenido/veleros/BlueMarys/catalogo/2.png",
+          "/contenido/veleros/BlueMarys/catalogo/3.png",
+          "/contenido/veleros/BlueMarys/catalogo/4.png", 
+          "/contenido/veleros/BlueMarys/catalogo/5.png",
+          "/contenido/veleros/BlueMarys/catalogo/6.png", 
         ],
       },
     },
     boatName: "BlueMarys (Beneteau Oceanis)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/veleros/BlueMarys/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/veleros/BlueMarys/catalogo/1.png",
+          "/contenido/veleros/BlueMarys/catalogo/2.png",
+          "/contenido/veleros/BlueMarys/catalogo/3.png",
+          "/contenido/veleros/BlueMarys/catalogo/4.png", 
+          "/contenido/veleros/BlueMarys/catalogo/5.png",
+          "/contenido/veleros/BlueMarys/catalogo/6.png",
     ],
     boatDescription: {
       es: "Espacioso velero Beneteau Oceanis de 58 pies con 3 camarotes dobles, cada uno con su propio baño privado.",
@@ -603,7 +433,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Captain & Family Crew",
       role: { es: "Capitán Profesional y Chef", en: "Professional Captain & Chef" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/veleros/BlueMarys/capitan/1.png",
       description: {
         es: "Capitán profesional y chef/marinera junto a su hija Franchesca de 8 años, creando un ambiente familiar cálido y seguro.",
         en: "Professional captain and chef/sailor accompanied by their 8-year-old daughter Franchesca, creating a warm family atmosphere.",
@@ -614,7 +444,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Tres comidas diarias a base de pescado y marisco fresco local. Incluye barra libre moderada (refrescos, cerveza, vino y agua). Se adaptan restricciones dietéticas.",
         en: "Three daily meals centered around fresh local fish and seafood. Moderate open bar included (soft drinks, beer, wine, water). Dietary needs accommodated.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/veleros/BlueMarys/comidas/1.png",
     },
     activities: {
       description: {
@@ -622,7 +452,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Flexible daily sailing, snorkeling, Stand-Up Paddleboard (SUP), and dinghy rides to beaches and reefs.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/veleros/BlueMarys/experiencias/1.png" ,
       ],
     },
     pricing: {
@@ -723,6 +553,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 4,
     slug: "naboa-bavaria-39-cruiser",
     category: "Sailboat",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -750,15 +581,28 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Enjoy Brazilian hospitality with Captain Marcelo aboard a Bavaria 39 featuring Starlink.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/veleros/Naboa/catalogo/1.png",
+          "/contenido/veleros/Naboa/catalogo/2.png",
+          "/contenido/veleros/Naboa/catalogo/3.png",
+          "/contenido/veleros/Naboa/catalogo/4.png", 
+          "/contenido/veleros/Naboa/catalogo/5.png",
+          "/contenido/veleros/Naboa/catalogo/6.png",
+          "/contenido/veleros/Naboa/catalogo/7.png",
+          "/contenido/veleros/Naboa/catalogo/8.png",
         ],
       },
     },
     boatName: "Naboa (Bavaria 39 Cruiser)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/veleros/Naboa/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/veleros/Naboa/catalogo/1.png",
+          "/contenido/veleros/Naboa/catalogo/2.png",
+          "/contenido/veleros/Naboa/catalogo/3.png",
+          "/contenido/veleros/Naboa/catalogo/4.png", 
+          "/contenido/veleros/Naboa/catalogo/5.png",
+          "/contenido/veleros/Naboa/catalogo/6.png",
+          "/contenido/veleros/Naboa/catalogo/7.png",
+          "/contenido/veleros/Naboa/catalogo/8.png",
     ],
     boatDescription: {
       es: "Velero de alta estabilidad y confort operado con cálida hospitalidad brasileña por el Capitán Marcelo.",
@@ -777,7 +621,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Capt. Marcelo & First Mate",
       role: { es: "Capitán y Primer Oficial", en: "Captain and First Mate" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/veleros/Naboa/capitan/1.png",
       description: {
         es: "Capitán Marcelo y su primer oficial brindan una atención personalizada y alegre al estilo brasileño.",
         en: "Captain Marcelo and his first mate offer personalized, warm Brazilian hospitality.",
@@ -789,7 +633,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Menú gourmet con mariscos, pescado fresco, arroces, pastas, aperitivos y frutas tropicales. Incluye barra libre con bebidas y cócteles (consumo moderado).",
         en: "Gourmet menu featuring seafood, fresh fish, rice, pasta, appetizers, and tropical fruits. Open bar with drinks and cocktails included (moderate consumption).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/veleros/Naboa/comidas/1.png",
     },
     activities: {
       description: {
@@ -797,7 +641,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Daily island navigation, snorkeling, Stand Up Paddle (SUP), fishing gear, and Starlink internet onboard.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/veleros/Naboa/experiencia/1.png",
       ],
     },
     pricing: {
@@ -877,6 +721,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 5,
     slug: "splendid-cheoy-lee-classic-yawl",
     category: "Sailboat",
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -904,15 +749,28 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "A marine masterpiece with classic teak wood detailing built in 1973.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/veleros/Splendid/catalogo/1.png",
+          "/contenido/veleros/Splendid/catalogo/2.png",
+          "/contenido/veleros/Splendid/catalogo/3.png",
+          "/contenido/veleros/Splendid/catalogo/4.png", 
+          "/contenido/veleros/Splendid/catalogo/5.png",
+          "/contenido/veleros/Splendid/catalogo/6.png",
+          "/contenido/veleros/Splendid/catalogo/7.png",
+          "/contenido/veleros/Splendid/catalogo/8.png",
         ],
       },
     },
     boatName: "Splendid (Cheoy Lee Classic Yawl 1973)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/veleros/Splendid/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/veleros/Splendid/catalogo/1.png",
+          "/contenido/veleros/Splendid/catalogo/2.png",
+          "/contenido/veleros/Splendid/catalogo/3.png",
+          "/contenido/veleros/Splendid/catalogo/4.png", 
+          "/contenido/veleros/Splendid/catalogo/5.png",
+          "/contenido/veleros/Splendid/catalogo/6.png",
+          "/contenido/veleros/Splendid/catalogo/7.png",
+          "/contenido/veleros/Splendid/catalogo/8.png",
     ],
     boatDescription: {
       es: "Joya náutica de estilo Yawl (1973) en madera teca que combina elegancia atemporal y navegación suave.",
@@ -930,7 +788,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Splendid Host",
       role: { es: "Capitán y Anfitrión", en: "Captain & Host" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl:"/contenido/veleros/Splendid/capitan/1.png",
       description: {
         es: "Capitán experto dedicado a preservar el estilo clásico y la navegación auténtica a vela.",
         en: "Expert captain passionate about classic sailing tradition and hospitality.",
@@ -941,7 +799,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Incluye 3 comidas preparadas a bordo diariamente con ingredientes frescos locales.",
         en: "Includes 3 daily meals prepared onboard featuring fresh local ingredients.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl:"/contenido/veleros/Splendid/comidas/1.png",
     },
     activities: {
       description: {
@@ -949,7 +807,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Daily sailing, snorkeling, visits to natural swimming pools and untouched islands.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/veleros/Splendid/experiencia/1.png"
       ],
     },
     pricing: {
@@ -1024,6 +882,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 6,
     slug: "youth-jeanneau-sun-odyssey-45",
     category: "Sailboat",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1051,15 +910,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Modern and dynamic sailing across Guna Yala archipelago for up to 6 guests.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/veleros/Youth/catalogo/1.png",
+          "/contenido/veleros/Youth/catalogo/2.png",
+          "/contenido/veleros/Youth/catalogo/3.png",
+          "/contenido/veleros/Youth/catalogo/4.png", 
+          "/contenido/veleros/Youth/catalogo/5.png",
+          "/contenido/veleros/Youth/catalogo/6.png",
+          
         ],
       },
     },
     boatName: "Youth (Jeanneau Sun Odyssey 45)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/veleros/Youth/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+          "/contenido/veleros/Youth/catalogo/1.png",
+          "/contenido/veleros/Youth/catalogo/2.png",
+          "/contenido/veleros/Youth/catalogo/3.png",
+          "/contenido/veleros/Youth/catalogo/4.png", 
+          "/contenido/veleros/Youth/catalogo/5.png",
+          "/contenido/veleros/Youth/catalogo/6.png",
+          "/contenido/veleros/Youth/catalogo/7.png",
     ],
     boatDescription: {
       es: "Velero moderno de 45 pies con amplio solárium de cubierta, ideal para grupos sociales o familias.",
@@ -1078,7 +948,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Youth Crew",
       role: { es: "Capitán y Tripulación", en: "Captain and Crew" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/veleros/Youth/capitan/1.png",
       description: {
         es: "Tripulación joven y enérgica comprometida con una experiencia segura, divertida y confortable.",
         en: "Dynamic crew focused on providing a fun, high-energy, and comfortable sailing tour.",
@@ -1089,7 +959,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Tres comidas diarias junto con bebidas alcohólicas y no alcohólicas incluidas (bebidas con alcohol servidas bajo consumo moderado).",
         en: "Three daily meals with alcoholic and non-alcoholic beverages included (alcoholic drinks provided for moderate consumption).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/veleros/Youth/comidas/1.png",
     },
     activities: {
       description: {
@@ -1097,7 +967,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "High-energy island hopping, snorkeling in top reef spots, Stand-Up Paddleboard, and sunbathing deck.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/veleros/Youth/experiencia/1.png",
       ],
     },
     pricing: {
@@ -1195,6 +1065,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 7,
     slug: "mola-mola-beneteau-411",
     category: "Sailboat",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1222,15 +1093,28 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Inspired by traditional Guna textiles. Authentic cultural connection and hammock lounging area.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/veleros/Mola mola/catalogo/1.png",
+          "/contenido/veleros/Mola mola/catalogo/2.png",
+          "/contenido/veleros/Mola mola/catalogo/3.png",
+          "/contenido/veleros/Mola mola/catalogo/4.png", 
+          "/contenido/veleros/Mola mola/catalogo/5.png",
+          "/contenido/veleros/Mola mola/catalogo/6.png",
+          "/contenido/veleros/Mola mola/catalogo/7.png",
+          "/contenido/veleros/Mola mola/catalogo/8.png",
         ],
       },
     },
     boatName: "Mola Mola (Beneteau 411)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/veleros/Mola mola/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/veleros/Mola mola/catalogo/1.png",
+          "/contenido/veleros/Mola mola/catalogo/2.png",
+          "/contenido/veleros/Mola mola/catalogo/3.png",
+          "/contenido/veleros/Mola mola/catalogo/4.png", 
+          "/contenido/veleros/Mola mola/catalogo/5.png",
+          "/contenido/veleros/Mola mola/catalogo/6.png",
+          "/contenido/veleros/Mola mola/catalogo/7.png",
+          "/contenido/veleros/Mola mola/catalogo/8.png",
     ],
     boatDescription: {
       es: "Velero relajado y conectado con la cultura autóctona Guna, equipado con zona de red hamaca para descanso.",
@@ -1249,7 +1133,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Mola Mola Captain & Local Guide",
       role: { es: "Capitán y Guía Local Guna", en: "Captain and Local Guna Guide" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/veleros/Mola mola/capitan/1.png",
       description: {
         es: "Anfitriones locales con profundo conocimiento del mar y las tradiciones del pueblo Guna.",
         en: "Local hosts with deep knowledge of the sea and local Guna traditions.",
@@ -1260,7 +1144,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Pensión completa: 3 comidas al día más bebidas alcohólicas (consumo moderado) y no alcohólicas.",
         en: "Three daily meals, alcoholic and non-alcoholic beverages included (moderate consumption).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/veleros/Mola mola/comidas/1.png",
     },
     activities: {
       description: {
@@ -1268,7 +1152,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Snorkel gear, local guide services for cultural exchange, and lounging in the hammock netting.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/veleros/Mola mola/experiencia/1.png"
       ],
     },
     pricing: {
@@ -1350,6 +1234,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 8,
     slug: "zenith-deluxe-catamaran",
     category: "Catamaran",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1377,15 +1262,27 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Exclusive sailing across Guna Yala archipelago aboard Zenith with 3-person crew and 5-star service.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/Zenith/catalogo/1.png",
+          "/contenido/catamaranes/Zenith/catalogo/2.png",
+          "/contenido/catamaranes/Zenith/catalogo/3.png",
+          "/contenido/catamaranes/Zenith/catalogo/4.png", 
+          "/contenido/catamaranes/Zenith/catalogo/5.png",
+          "/contenido/catamaranes/Zenith/catalogo/6.png",
+          "/contenido/catamaranes/Zenith/catalogo/7.png",
+
         ],
       },
     },
     boatName: "Zenith Deluxe Catamaran",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/Zenith/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/Zenith/catalogo/1.png",
+          "/contenido/catamaranes/Zenith/catalogo/2.png",
+          "/contenido/catamaranes/Zenith/catalogo/3.png",
+          "/contenido/catamaranes/Zenith/catalogo/4.png", 
+          "/contenido/catamaranes/Zenith/catalogo/5.png",
+          "/contenido/catamaranes/Zenith/catalogo/6.png",
+          "/contenido/catamaranes/Zenith/catalogo/7.png",
     ],
     boatDescription: {
       es: "Catamarán deluxe all-inclusive diseñado para grandes grupos y familias con servicio vip de 3 tripulantes.",
@@ -1403,7 +1300,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Zenith VIP Crew (Captain, Chef, Stewardess)",
       role: { es: "Tripulación Profesional VIP", en: "Professional VIP Crew" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/Zenith/capitan/1.png",
       description: {
         es: "Tripulación completa dedicada a brindar servicio gastronómico, hospitalidad de primera clase y gestión náutica sin preocupaciones.",
         en: "Full crew dedicated to providing fine dining, first-class hospitality, and seamless sailing.",
@@ -1415,7 +1312,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Pensión completa deluxe (4 comidas diarias): desayuno, almuerzo, merienda y cena gourmet elaborada por chef a bordo. Opciones Kosher, No Alcohol o No Food con ajuste de precio.",
         en: "Deluxe full board (4 meals per day): breakfast, lunch, afternoon snack, and chef-prepared gourmet dinner. Kosher, No Alcohol, or No Food options available with price adjustments.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/Zenith/comidas/1.png",
     },
     activities: {
       description: {
@@ -1423,7 +1320,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Private island hopping, premium snorkeling, paddleboarding, and full transfer assistance in Guna Yala.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/Zenith/experiencias/1.png",
       ],
     },
     pricing: {
@@ -1505,6 +1402,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 9,
     slug: "mbr-lagoon-42ft",
     category: "Catamaran",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1532,15 +1430,27 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Sail on the refurbished Owner's Version Lagoon 42 with Starlink, espresso machine, A/C, and water toys.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/mbr/catalogo/1.png",
+          "/contenido/catamaranes/mbr/catalogo/2.png",
+          "/contenido/catamaranes/mbr/catalogo/3.png",
+          "/contenido/catamaranes/mbr/catalogo/4.png", 
+          "/contenido/catamaranes/mbr/catalogo/5.png",
+          "/contenido/catamaranes/mbr/catalogo/6.png",
+          "/contenido/catamaranes/mbr/catalogo/7.png",
+
         ],
       },
     },
     boatName: "MBR (Lagoon 42 FT)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/mbr/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/mbr/catalogo/1.png",
+          "/contenido/catamaranes/mbr/catalogo/2.png",
+          "/contenido/catamaranes/mbr/catalogo/3.png",
+          "/contenido/catamaranes/mbr/catalogo/4.png", 
+          "/contenido/catamaranes/mbr/catalogo/5.png",
+          "/contenido/catamaranes/mbr/catalogo/6.png",
+          "/contenido/catamaranes/mbr/catalogo/7.png",
     ],
     boatDescription: {
       es: "Lagoon 42 Owner's Version remodelado con Suite VIP, Starlink High-Speed, proyector de cine y alfombra flotante gigante.",
@@ -1559,7 +1469,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Capt. & First Mate (MBR Crew)",
       role: { es: "Capitán y Primer Oficial", en: "Captain & First Mate" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/mbr/capitan/1.png",
       description: {
         es: "Tripulación profesional dedicada a llevarte a los mejores arrecifes de Guna Yala con servicio de primera.",
         en: "Professional crew dedicated to guiding you to Guna Yala's top reefs with premium service.",
@@ -1571,7 +1481,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "3 comidas diarias de alta calidad con mariscos frescos, pescados locales, arroces, pastas y frutas tropicales. Barra libre incluida (consumo moderado de alcohol). Cocina equipada con espresso e hielera.",
         en: "3 high-quality daily meals with fresh seafood, local fish, pasta, and tropical fruits. Open bar included (moderate alcohol). Galley with espresso machine & ice maker.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/mbr/comidas/1.png",
     },
     activities: {
       description: {
@@ -1579,7 +1489,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Starlink Satellite Internet, onboard movie projector, SUPs, giant 10x10ft floating water mat, pro snorkeling gear, and fishing gear.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/mbr/experiencias/1.png",
       ],
     },
     pricing: {
@@ -1671,6 +1581,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 10,
     slug: "yoyo-catamaran-guna-yala",
     category: "Catamaran",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1698,15 +1609,23 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Your private sanctuary in San Blas. Cozy saloon, personalized service, and pristine island hopping.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/YOYO/catalogo/1.png",
+      "/contenido/catamaranes/YOYO/catalogo/2.png",
+      "/contenido/catamaranes/YOYO/catalogo/3.png",
+      "/contenido/catamaranes/YOYO/catalogo/4.png", 
+      "/contenido/catamaranes/YOYO/catalogo/5.png",
         ],
       },
     },
     boatName: "Catamarán YOYO",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/YOYO/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/YOYO/catalogo/1.png",
+      "/contenido/catamaranes/YOYO/catalogo/2.png",
+      "/contenido/catamaranes/YOYO/catalogo/3.png",
+      "/contenido/catamaranes/YOYO/catalogo/4.png", 
+      "/contenido/catamaranes/YOYO/catalogo/5.png",
+
     ],
     boatDescription: {
       es: "Santuario privado e íntimo en Guna Yala ideal para parejas o grupos reducidos de hasta 4 personas.",
@@ -1724,7 +1643,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "YOYO Host & Captain",
       role: { es: "Capitán y Anfitrión", en: "Captain & Host" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/YOYO/capitan/1.png",
       description: {
         es: "Atención cálida y personalizada para hacerte sentir como en casa en medio del mar.",
         en: "Warm, personalized attention to ensure a seamless home-away-from-home feel.",
@@ -1736,7 +1655,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Gastronomía All-Inclusive: desayunos frescos, snacks tropicales, almuerzos y cenas elaboradas con insumos locales. Barra libre completa de bebidas incluida.",
         en: "All-Inclusive Dining: fresh breakfast, daily tropical snacks, delicious lunch and dinner prepared with local ingredients. Full open bar included.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/YOYO/comidas/1.png",
     },
     activities: {
       description: {
@@ -1744,7 +1663,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Daily sailing between secluded islands, coral reef snorkeling, kayaks/SUPs, and Guna community visits.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/YOYO/experiencias/1.png"
       ],
     },
     pricing: {
@@ -1819,6 +1738,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 11,
     slug: "yoli-lagoon-440",
     category: "Catamaran",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1846,15 +1766,32 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Spacious Lagoon 440 featuring Starlink, panoramic lounge deck, and delicious cuisine.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/Yoli/catalogo/1.png",
+          "/contenido/catamaranes/Yoli/catalogo/2.png",
+          "/contenido/catamaranes/Yoli/catalogo/3.png",
+          "/contenido/catamaranes/Yoli/catalogo/4.png", 
+          "/contenido/catamaranes/Yoli/catalogo/5.png",
+          "/contenido/catamaranes/Yoli/catalogo/6.png",
+          "/contenido/catamaranes/Yoli/catalogo/7.png",
+          "/contenido/catamaranes/Yoli/catalogo/8.png",
+          "/contenido/catamaranes/Yoli/catalogo/9.png",
+
         ],
       },
     },
     boatName: "Yoli (Lagoon 440)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/Yoli/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/Yoli/catalogo/1.png",
+      "/contenido/catamaranes/Yoli/catalogo/2.png",
+      "/contenido/catamaranes/Yoli/catalogo/3.png",
+      "/contenido/catamaranes/Yoli/catalogo/4.png", 
+      "/contenido/catamaranes/Yoli/catalogo/5.png",
+      "/contenido/catamaranes/Yoli/catalogo/6.png",
+      "/contenido/catamaranes/Yoli/catalogo/7.png",
+      "/contenido/catamaranes/Yoli/catalogo/8.png",
+      "/contenido/catamaranes/Yoli/catalogo/9.png",
+
     ],
     boatDescription: {
       es: "Clásico de gran confort y estabilidad con 4 camarotes privados, Starlink Wi-Fi y la calidez del Capitán Gabriel.",
@@ -1873,7 +1810,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Capt. Gabriel (Argentina)",
       role: { es: "Capitán y Chef", en: "Captain & Chef" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/Yoli/capitan/1.png",
       description: {
         es: "Apasionado del mar y la gastronomía con más de tres años capitaneando en San Blas.",
         en: "Passionate sailor and chef with over 3 years navigating the San Blas archipelago.",
@@ -1885,7 +1822,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "3 comidas diarias nutritivas y sabrosas con ingredientes frescos. Barra libre completa con refrescos (Coca Zero/Reg, Ginger Ale), jugos, cervezas nacionales, vino (blanco/tinto), vodka, ron y ginebra (consumo moderado).",
         en: "3 daily healthy and delicious meals. Full open bar including soft drinks, natural juices, national beer, wine (white/red), vodka, rum, and gin (moderate consumption).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/Yoli/comidas/1.png" ,
     },
     activities: {
       description: {
@@ -1893,7 +1830,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "High-speed Starlink Wi-Fi, SUP paddleboard, floating mat, snorkeling, and beach excursions.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/Yoli/experiencia/1.png" ,
       ],
     },
     pricing: {
@@ -1972,6 +1909,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 12,
     slug: "don-c-lagoon-400s2",
     category: "Catamaran",
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1999,15 +1937,25 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Fully modernized in 2024 with new aft deck, Starlink, and exquisite grilled cuisine.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/Don c/catalogo/1.png",
+          "/contenido/catamaranes/Don c/catalogo/2.png",
+          "/contenido/catamaranes/Don c/catalogo/3.png",
+          "/contenido/catamaranes/Don c/catalogo/4.png", 
+          "/contenido/catamaranes/Don c/catalogo/5.png",
+          "/contenido/catamaranes/Don c/catalogo/6.png",
+
         ],
       },
     },
     boatName: "Don C (Lagoon 400S2)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/Don c/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/Don c/catalogo/1.png",
+          "/contenido/catamaranes/Don c/catalogo/2.png",
+          "/contenido/catamaranes/Don c/catalogo/3.png",
+          "/contenido/catamaranes/Don c/catalogo/4.png", 
+          "/contenido/catamaranes/Don c/catalogo/5.png",
+          "/contenido/catamaranes/Don c/catalogo/6.png",
     ],
     boatDescription: {
       es: "Lagoon 400S2 reeditado en 2024 con nueva cubierta de popa, Starlink y dúo de tripulación experto (Brasil/Argentina).",
@@ -2026,7 +1974,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Marcos & Melisa",
       role: { es: "Capitán y Chef Profesional", en: "Captain & Professional Chef" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/Don c/capitan/1.png",
       description: {
         es: "Marcos (Capitán/Buzo) y Melisa (Chef profesional con 16 años de trayectoria). Hablan español, inglés y portugués.",
         en: "Marcos (Captain/Diver) and Melisa (Pro Chef with 16 yrs experience). Trilingual in Spanish, English, Portuguese.",
@@ -2038,7 +1986,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Pensión completa por la Chef Melisa: parrilladas, cenas en la playa y postres gourmet. Barra libre de bebidas alcohólicas y refrescos bajo consumo moderado.",
         en: "Full board by Chef Melisa: beach BBQs, gourmet desserts, and grilled meals. Open bar with wines, spirits, and soft drinks (moderate consumption).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/Don c/comidas/1.png",
     },
     activities: {
       description: {
@@ -2046,7 +1994,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Starlink Wi-Fi, Kayak, SUP, floating water mat, snorkeling gear, and reef exploration.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/Don c/experiencia/1.png",
       ],
     },
     pricing: {
@@ -2141,6 +2089,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 13,
     slug: "coolcat-catamaran-40ft",
     category: "Catamaran",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2168,15 +2117,33 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Total flexibility for solo travelers, couples, or small groups. All-inclusive with drinks and nautical gear.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/coolcat/catalogo/1.png",
+          "/contenido/catamaranes/coolcat/catalogo/2.png",
+          "/contenido/catamaranes/coolcat/catalogo/3.png",
+          "/contenido/catamaranes/coolcat/catalogo/4.png", 
+          "/contenido/catamaranes/coolcat/catalogo/5.png",
+          "/contenido/catamaranes/coolcat/catalogo/6.png",
+          "/contenido/catamaranes/coolcat/catalogo/7.png",
+          "/contenido/catamaranes/coolcat/catalogo/8.png",
+          "/contenido/catamaranes/coolcat/catalogo/9.png",
+          "/contenido/catamaranes/coolcat/catalogo/10.png",
+
         ],
       },
     },
     boatName: "Coolcat (40 FT)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/coolcat/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/coolcat/catalogo/1.png",
+          "/contenido/catamaranes/coolcat/catalogo/2.png",
+          "/contenido/catamaranes/coolcat/catalogo/3.png",
+          "/contenido/catamaranes/coolcat/catalogo/4.png", 
+          "/contenido/catamaranes/coolcat/catalogo/5.png",
+          "/contenido/catamaranes/coolcat/catalogo/6.png",
+          "/contenido/catamaranes/coolcat/catalogo/7.png",
+          "/contenido/catamaranes/coolcat/catalogo/8.png",
+          "/contenido/catamaranes/coolcat/catalogo/9.png",
+          "/contenido/catamaranes/coolcat/catalogo/10.png",
     ],
     boatDescription: {
       es: "Catamarán de 40 pies con opciones flexibles de reserva por camarote o barco completo para hasta 6 personas.",
@@ -2195,7 +2162,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Coolcat Crew",
       role: { es: "Capitán y Tripulación", en: "Captain & Crew" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/coolcat/capitan/1.png",
       description: {
         es: "Tripulación atenta enfocada en una navegación amigable, segura y relajada.",
         en: "Attentive crew focused on friendly, safe, and relaxing sailing.",
@@ -2207,7 +2174,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "3 comidas diarias (desayuno, almuerzo, cena) y snacks. Barra libre de bebidas no alcohólicas y alcohólicas (con consumo moderado y cócteles especiales).",
         en: "3 daily meals (breakfast, lunch, dinner) and snacks. Open bar with non-alcoholic and alcoholic beverages (moderate consumption and special cocktails).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/coolcat/comidas/1.png",
     },
     activities: {
       description: {
@@ -2215,7 +2182,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Snorkeling gear, SUP paddleboard, and dinghy rides to San Blas beaches and islets.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/coolcat/experiencia/1.png",
       ],
     },
     pricing: {
@@ -2310,6 +2277,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 14,
     slug: "nomade-lagoon-570-owners-edition",
     category: "Catamaran",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2337,15 +2305,25 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "San Blas's premier yacht: A/C in every cabin, unlimited watermaker, Starlink, and underwater scooters.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/Nomade/catalogo/1.png",
+          "/contenido/catamaranes/Nomade/catalogo/2.png",
+          "/contenido/catamaranes/Nomade/catalogo/3.png",
+          "/contenido/catamaranes/Nomade/catalogo/4.png", 
+          "/contenido/catamaranes/Nomade/catalogo/5.png",
+          "/contenido/catamaranes/Nomade/catalogo/6.png",
+
         ],
       },
     },
     boatName: "Nomade (Lagoon 570 Owner's Edition)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/Nomade/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/Nomade/catalogo/1.png",
+          "/contenido/catamaranes/Nomade/catalogo/2.png",
+          "/contenido/catamaranes/Nomade/catalogo/3.png",
+          "/contenido/catamaranes/Nomade/catalogo/4.png", 
+          "/contenido/catamaranes/Nomade/catalogo/5.png",
+          "/contenido/catamaranes/Nomade/catalogo/6.png",
     ],
     boatDescription: {
       es: "Exclusivo Lagoon 570 con casco de Kevlar, aire acondicionado en cada camarote, máquinas de helado y juguetes de alta tecnología.",
@@ -2364,7 +2342,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Nomade Trilingual Crew",
       role: { es: "Tripulación Trilingüe VIP", en: "Trilingual VIP Crew" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/Nomade/capitan/1.png",
       description: {
         es: "Tripulación trilingüe (Español, Inglés, Portugués) dedicada a ofrecer una experiencia impecable de nivel resort.",
         en: "Trilingual crew (English, Spanish, Portuguese) delivering resort-level hospitality.",
@@ -2376,7 +2354,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Gastronomía gourmet All-Inclusive: carnes rojas, pescados y mariscos frescos, jugos naturales, menú infantil personalizado y barra libre. Incluye máquina de helados y tragos congelados.",
         en: "Gourmet All-Inclusive: red meats, fresh local fish/seafood, natural juices, custom kids menu, open bar, plus ice cream & frozen drink machines.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/Nomade/comidas/1.png",
     },
     activities: {
       description: {
@@ -2384,7 +2362,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "2 Underwater water scooters, 2 SUPs, 2 Kayaks, rod & spear fishing equipment, Karaoke, TV, and Starlink.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/Nomade/experiencia/1.png",
       ],
     },
     pricing: {
@@ -2478,6 +2456,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 15,
     slug: "kaya-caribbean-catamaran",
     category: "Catamaran",
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2505,15 +2484,33 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Cozy Caribbean sailing with Captain Ahielen (8+ yrs in San Blas) and Chef Gastón.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/KAYA/catalogo/1.png",
+          "/contenido/catamaranes/KAYA/catalogo/2.png",
+          "/contenido/catamaranes/KAYA/catalogo/3.png",
+          "/contenido/catamaranes/KAYA/catalogo/4.png", 
+          "/contenido/catamaranes/KAYA/catalogo/5.png",
+          "/contenido/catamaranes/KAYA/catalogo/6.png",
+          "/contenido/catamaranes/KAYA/catalogo/7.png",
+          "/contenido/catamaranes/KAYA/catalogo/8.png",
+          "/contenido/catamaranes/KAYA/catalogo/9.png",
+          "/contenido/catamaranes/KAYA/catalogo/10.png",
+
         ],
       },
     },
     boatName: "Kaya Catamaran",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/KAYA/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/catamaranes/KAYA/catalogo/1.png",
+          "/contenido/catamaranes/KAYA/catalogo/2.png",
+          "/contenido/catamaranes/KAYA/catalogo/3.png",
+          "/contenido/catamaranes/KAYA/catalogo/4.png", 
+          "/contenido/catamaranes/KAYA/catalogo/5.png",
+          "/contenido/catamaranes/KAYA/catalogo/6.png",
+          "/contenido/catamaranes/KAYA/catalogo/7.png",
+          "/contenido/catamaranes/KAYA/catalogo/8.png",
+          "/contenido/catamaranes/KAYA/catalogo/9.png",
+          "/contenido/catamaranes/KAYA/catalogo/10.png",
     ],
     boatDescription: {
       es: "Catamarán acogedor y robusto con tripulación argentina experta (Capitana Ahielen y Chef Gastón) y Starlink.",
@@ -2532,7 +2529,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Ahielen & Gastón",
       role: { es: "Capitana y Chef Profesional", en: "Captain & Professional Chef" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/KAYA/capitan/1.png",
       description: {
         es: "Ahielen (Capitana con 8+ años en San Blas) y Gastón (Chef profesional argentino).",
         en: "Ahielen (Captain with 8+ years in San Blas) and Gastón (Professional Argentine Chef).",
@@ -2544,7 +2541,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "3 comidas diarias preparadas por Chef profesional con productos locales frescos. Barra libre con bebidas no alcohólicas, cervezas, vinos y cócteles especiales (consumo moderado).",
         en: "3 daily gourmet meals prepared by professional chef using fresh local ingredients. Open bar with soft drinks, beer, wine, and cocktails (moderate consumption).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/KAYA/comidas/1.png",
     },
     activities: {
       description: {
@@ -2552,7 +2549,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Starlink Wi-Fi, 2 Paddleboards, snorkeling gear, fishing rods, and dinghy excursions.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/KAYA/experiencia/1.png",
       ],
     },
     pricing: {
@@ -2631,6 +2628,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     id: 16,
     slug: "berenice-leopard-40-2018",
     category: "Catamaran",
+    isAvailable: true, 
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2658,16 +2656,29 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Modern layout with front door, upper deck sunpads, silent A/C generator, and French captains.",
         },
         images: [
-          "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/catamaranes/Berenice/catalogo/1.png",
+          "/contenido/catamaranes/Berenice/catalogo/2.png",
+          "/contenido/catamaranes/Berenice/catalogo/3.png",
+          "/contenido/catamaranes/Berenice/catalogo/4.png", 
+          "/contenido/catamaranes/Berenice/catalogo/5.png",
+          "/contenido/catamaranes/Berenice/catalogo/6.png",
+          "/contenido/catamaranes/Berenice/catalogo/7.png",
+          "/contenido/catamaranes/Berenice/catalogo/8.png",
+
         ],
       },
     },
     boatName: "Berenice (Leopard 40 2018)",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/catamaranes/Berenice/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1500514966906-fe245eea9344?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-    ],
+          "/contenido/catamaranes/Berenice/catalogo/1.png",
+          "/contenido/catamaranes/Berenice/catalogo/2.png",
+          "/contenido/catamaranes/Berenice/catalogo/3.png",
+          "/contenido/catamaranes/Berenice/catalogo/4.png", 
+          "/contenido/catamaranes/Berenice/catalogo/5.png",
+          "/contenido/catamaranes/Berenice/catalogo/6.png",
+          "/contenido/catamaranes/Berenice/catalogo/7.png",
+          "/contenido/catamaranes/Berenice/catalogo/8.png",    ],
     boatDescription: {
       es: "Leopard 40 del 2018 con acceso frontal directo a proa, A/C con generador silencioso y tripulación francesa experimentada.",
       en: "2018 Leopard 40 featuring forward cockpit door, silent generator A/C, and experienced French crew.",
@@ -2686,7 +2697,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Captain Thomas & Captain JC",
       role: { es: "Capitanes Franceses Certificados", en: "Certified French Captains" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/catamaranes/Berenice/capitan/1.png",
       description: {
         es: "Capt. Thomas (Bretania, Capitaine 200, 5 años en San Blas) y Capt. JC (Veterano de la Marina Francesa, políglota habla 6 idiomas).",
         en: "Capt. Thomas (Capitaine 200 certified, 5 yrs in San Blas) & Capt. JC (French Navy veteran, speaks 6 languages).",
@@ -2698,7 +2709,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Comidas gourmet caribeñas preparadas por la tripulación. Barra libre incluida (refrescos, cervezas, vinos y licores bajo consumo moderado).",
         en: "Gourmet Caribbean meals prepared by crew. Open bar included (soft drinks, beers, wines, and spirits in moderation).",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/catamaranes/Berenice/comidas/1.png",
     },
     activities: {
       description: {
@@ -2706,7 +2717,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Front deck sunbeds, bean bags, upper deck sunpads, snorkeling gear, kayaks/SUPs, and fishing gear.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/catamaranes/Berenice/experiencia/1.png",
       ],
     },
     pricing: {
@@ -2781,12 +2792,13 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: false,
   },
   // ---------------------------------------------------------------------------
-  // 12. Cayos Holandeses - Hospedaje en Isla
+  // 17. Cayos Holandeses - Hospedaje en Isla
   // ---------------------------------------------------------------------------
-  {
+  /*{
     id: 17,
     slug: "cayos-holandeses-private-bungalows",
     category: "IslandLodge",
+    isAvailable: true, 
     location: {
       es: "Cayos Holandeses, Islas San Blas, Panamá",
       en: "Dutch Cays, San Blas Islands, Panama",
@@ -2816,17 +2828,22 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           en: "Luxury beachfront lodging in one of the most exclusive areas of San Blas with full board included.",
         },
         images: [
-          "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&h=630&q=80",
+          "/contenido/islas/Ibin/catalogo/1.png",
+          "/contenido/islas/Ibin/catalogo/2.png",
+          "/contenido/islas/Ibin/catalogo/3.png",
+          "/contenido/islas/Ibin/catalogo/4.png", 
         ],
       },
     },
 
     // 🚢 Datos del Hospedaje en Isla
     boatName: "Cayos Holandeses - Private Bungalows & Lux Cabañas",
-    boatCoverPhoto: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80",
+    boatCoverPhoto: "/contenido/islas/Ibin/catalogo/1.png",
     boatGalleryPhotos: [
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
+      "/contenido/islas/Ibin/catalogo/1.png",
+          "/contenido/islas/Ibin/catalogo/2.png",
+          "/contenido/islas/Ibin/catalogo/3.png",
+          "/contenido/islas/Ibin/catalogo/4.png",
     ],
     boatDescription: {
       es: "Cabañas de lujo frente al mar en Cayos Holandeses con pensión completa y experiencia insular exclusiva.",
@@ -2846,7 +2863,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     captain: {
       name: "Staff Cayos Holandeses",
       role: { es: "Anfitriones y Guías Locales Guna", en: "Hosts & Local Guna Guides" },
-      photoUrl: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+      photoUrl: "/contenido/islas/Ibin/capitan/1.png",
       description: {
         es: "Anfitriones locales comprometidos con brindar hospitalidad de primera clase y guiado en la isla.",
         en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
@@ -2860,7 +2877,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Pensión completa incluida: desayunos tropicales, almuerzos y cenas a base de pesca fresca del día, mariscos y opciones locales, además de cóctel de bienvenida.",
         en: "Full board included: tropical breakfasts, lunches, and dinners featuring daily catch seafood, local dishes, and a welcome cocktail.",
       },
-      photoUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
+      photoUrl: "/contenido/islas/Ibin/comidas/1.png",
     },
 
     // 🏄‍♂️ Actividades
@@ -2870,7 +2887,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Pristine reef snorkeling, beach walks, oceanfront hammock lounging, and optional island tours.",
       },
       photoUrls: [
-        "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80",
+        "/contenido/islas/Ibin/experiencia/1.png",
       ],
     },
 
@@ -2948,6 +2965,172 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     featureBadge: { es: "Cabañas de Lujo Frente al Mar", en: "Luxury Beachfront Bungalows" },
 
     isFeatured: true,
+    hasDiscount: false,
+  },*/
+  // ---------------------------------------------------------------------------
+  // 18. Falkor
+  // ---------------------------------------------------------------------------
+  {
+    id: 18,
+    slug: "falkor-sailboat-san-blas",
+    category: "Sailboat",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Falkor en San Blas | Sailing the World",
+        en: "Charter Falkor Sailboat in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Navega a bordo del velero Falkor en San Blas. Disfruta de una experiencia inolvidable con pensión completa, snorkel y paseos por las islas.",
+        en: "Sail aboard the Falkor sailboat in San Blas. Enjoy an unforgettable experience with full board, snorkeling, and island hopping.",
+      },
+      keywords: [
+        { es: "velero Falkor san blas", en: "Falkor sailboat san blas" },
+        { es: "charter velero san blas", en: "sailboat charter panama" },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Falkor en San Blas - Experiencia Única en el Caribe",
+          en: "Falkor Sailboat in San Blas - Unique Caribbean Experience",
+        },
+        description: {
+          es: "Explora las aguas cristalinas de Guna Yala a bordo del velero Falkor con atención personalizada.",
+          en: "Explore the crystal-clear waters of Guna Yala aboard the Falkor sailboat with personalized service.",
+        },
+        images: [
+          "/contenido/veleros/Falkor/catalogo/1.png",
+          "/contenido/veleros/Falkor/catalogo/2.png",
+          "/contenido/veleros/Falkor/catalogo/3.png",
+          "/contenido/veleros/Falkor/catalogo/4.png",
+          "/contenido/veleros/Falkor/catalogo/5.png",
+          "/contenido/veleros/Falkor/catalogo/6.png",
+          "/contenido/veleros/Falkor/catalogo/7.png",
+          "/contenido/veleros/Falkor/catalogo/8.png",
+        ],
+      },
+    },
+    boatName: "Falkor",
+    boatCoverPhoto: "/contenido/veleros/Falkor/catalogo/1.png",
+    boatGalleryPhotos: [
+          "/contenido/veleros/Falkor/catalogo/1.png",
+          "/contenido/veleros/Falkor/catalogo/2.png",
+          "/contenido/veleros/Falkor/catalogo/3.png",
+          "/contenido/veleros/Falkor/catalogo/4.png",
+          "/contenido/veleros/Falkor/catalogo/5.png",
+          "/contenido/veleros/Falkor/catalogo/6.png",
+          "/contenido/veleros/Falkor/catalogo/7.png",
+          "/contenido/veleros/Falkor/catalogo/8.png",
+    ],
+    boatDescription: {
+      es: "Acogedor velero diseñado para ofrecer comodidad, navegación fluida y una estancia inolvidable en San Blas.",
+      en: "Cozy sailboat designed to offer comfort, smooth navigation, and an unforgettable stay in San Blas.",
+    },
+    boatLongDescription: {
+      es: "El velero Falkor ofrece una combinación perfecta de confort y aventura en el archipiélago de San Blas. Diseñado para quienes buscan relajarse entre islas paradisíacas con pensión completa y servicio cálido a bordo.",
+      en: "The Falkor sailboat delivers the perfect mix of comfort and adventure in the San Blas archipelago. Designed for guests seeking relaxation among paradise islands with full board and warm hospitality.",
+    },
+    specs: {
+      lengthFeet: 40, // Ajustar según PDF
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 2,
+    },
+    captain: {
+      name: "Falkor Captain & Crew",
+      role: {
+        es: "Capitán y Anfitrión",
+        en: "Captain & Host",
+      },
+      photoUrl: "/contenido/veleros/Falkor/capitan/1.png",
+      description: {
+        es: "Tripulación experimentada enfocada en brindar una navegación segura y una cálida atención.",
+        en: "Experienced crew dedicated to providing safe navigation and warm hospitality.",
+      },
+      languages: ["Español", "English"],
+    },
+    dining: {
+      description: {
+        es: "Pensión completa: 3 comidas diarias elaboradas a bordo con ingredientes frescos y mariscos locales, además de bebidas y snacks.",
+        en: "Full board: 3 daily meals prepared onboard with fresh local ingredients and seafood, plus drinks and snacks.",
+      },
+      photoUrl: "/contenido/veleros/Falkor/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Navegación diaria entre islas, equipo de snorkel, paddleboard y paseos a playas vírgenes de Guna Yala.",
+        en: "Daily island hopping, snorkeling gear, paddleboard, and trips to pristine Guna Yala beaches.",
+      },
+      photoUrls: [
+        "/contenido/veleros/Falkor/experiencia/1.png",
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 300,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          guestsCount: 2,
+          pricePerNight: 600,
+          notes: { es: "Precio por noche para 2 personas", en: "Price per night for 2 guests" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Modalidad / Ocupación</th>
+                <th class="p-3 border">Precio (USD / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Charter Privado (2 Huéspedes)</td>
+                <td class="p-3 border font-bold text-green-600">$600 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Type / Occupancy</th>
+                <th class="p-3 border">Price (USD / Night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Private Charter (2 Guests)</td>
+                <td class="p-3 border font-bold text-green-600">$600 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Servicio de capitán y tripulación", en: "Captain and crew service" },
+      { es: "Pensión completa (3 comidas diarias, snacks y bebidas)", en: "Full board (3 daily meals, snacks, and drinks)" },
+      { es: "Uso de equipos de snorkel y paddleboard", en: "Use of snorkeling and paddleboard equipment" },
+      { es: "Ropa de cama y toallas de baño", en: "Bed linens and bath towels" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
+      { es: "Impuestos de entrada a Guna Yala", en: "Guna Yala entrance fees" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [1, 4, 7],
+    maxGuests: 4,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Velero Clásico", en: "Classic Sailboat" },
+    isFeatured: false,
     hasDiscount: false,
   },
 ];
