@@ -42,7 +42,7 @@ export default function NavegacionYNaturaleza() {
         title="Primera navegación caribeña"
         subtitle="Aprendizaje y puesta a punto en aguas tropicales"
         text="Invitados por un vecino de amarra, tuvieron su debut navegando en aguas costarricenses y venezolanas. Entre brisas calmas y vientos fuertes, pusieron en práctica sus conocimientos náuticos mientras continuaban trabajando a diario para dejar el barco en óptimas condiciones."
-        instagramUrl="https://www.instagram.com/p/Cm27QWKLsu5/"
+        instagramUrl="https://www.instagram.com/reel/CnvU2rhImGp/"
         quote="Nico y Belu"
       />
       <HistoryRightEmbed
@@ -60,13 +60,7 @@ export default function NavegacionYNaturaleza() {
         instagramUrl="https://www.instagram.com/reel/CrbTZOtgLxA/"
         quote="Nico y Belu"
       />
-      <HistoryRightEmbed
-        badge="Vida a bordo"
-        title="Primeros sabores a bordo"
-        subtitle="La cocina del velero se pone en marcha"
-        text="La cocina del Franca Austral se estrenó oficialmente con un banquete de frutos de mar recolectados por ellos mismos. Tener el océano como patio trasero empezó a dar sus primeros y deliciosos frutos."
-        instagramUrl="https://www.instagram.com/reel/Co2yVGDgcs4/"
-      />
+      
       <HistoryCenterBanner
         badge="Tramites y gestiones"
         title="¡Dueños oficiales del Franca Austral!"
