@@ -19,7 +19,7 @@ export default function NavegacionYNaturaleza() {
      <article >
       {/* <InstagramEmbed url="https://www.instagram.com/reel/DXMnGfbAFRa" width={328}  /> */}
       <NauticalTimelineNav />
-      <section>        
+      <section id="origen">        
       {/* 1. Inicio del viaje */}
       <HistoryLeftEmbed
         badge="Argentina / Inicio de viaje"
@@ -29,15 +29,16 @@ export default function NavegacionYNaturaleza() {
         instagramUrl="https://www.instagram.com/p/Cm27QWKLsu5/"
         quote="Nico y Belu"
       />
+      <span id="venezuela"></span>
       <HistoryRightEmbed
-       // badge="Venezuela / Lechería"
+       badge="Venezuela / Lechería"
         title="Llegada a Lechería y al Franca Austral"
         subtitle="El primer contacto con su nuevo hogar"
         text="Tras un largo trayecto entre micros y aviones, desembarcaron en la costa caribeña de Venezuela. Allí los esperaba su velero (entonces llamado Tinta China), el cual bautizarían como Franca Austral para dar inicio oficialmente a su vida sobre el mar."
         instagramUrl="https://www.instagram.com/p/Cm-Y_hOrUbA/"
       />
       <HistoryLeftEmbed
-        //badge="Bautismo de mar caribeño"
+        badge="Bautismo de mar caribeño"
         title="Primera navegación caribeña"
         subtitle="Aprendizaje y puesta a punto en aguas tropicales"
         text="Invitados por un vecino de amarra, tuvieron su debut navegando en aguas costarricenses y venezolanas. Entre brisas calmas y vientos fuertes, pusieron en práctica sus conocimientos náuticos mientras continuaban trabajando a diario para dejar el barco en óptimas condiciones."
@@ -45,7 +46,7 @@ export default function NavegacionYNaturaleza() {
         quote="Nico y Belu"
       />
       <HistoryRightEmbed
-        //badge="Vida a bordo"
+        badge="Vida a bordo"
         title="Primeros sabores a bordo"
         subtitle="La cocina del velero se pone en marcha"
         text="La cocina del Franca Austral se estrenó oficialmente con un banquete de frutos de mar recolectados por ellos mismos. Tener el océano como patio trasero empezó a dar sus primeros y deliciosos frutos."
@@ -74,7 +75,7 @@ export default function NavegacionYNaturaleza() {
         instagramUrl="https://www.instagram.com/reel/Cse-AHygEaa/"
       />
       </section>
-      <section>
+      <section id="zarpe">
       {/* 2. Zarpe Venezuela */}
       <HistoryRightEmbed
         badge="Preparando velas"
@@ -99,7 +100,7 @@ export default function NavegacionYNaturaleza() {
         instagramUrl="https://www.instagram.com/p/CvImDoWPz3X/"
       />
       </section>
-      <section>
+      <section id="navegando">
       {/* 3. El Franca Navegando */}
       <HistoryLeftEmbed
         badge="Venezuela / Isla La Tortuga"
@@ -127,7 +128,7 @@ export default function NavegacionYNaturaleza() {
       
       </section>
       {/* 5. Curazao */}
-      <section>
+      <section id="curazao">
       <HistoryCenterBanner
         badge="Bienvenido Curazao"
         title="Arribo al primer objetivo"
@@ -144,7 +145,7 @@ export default function NavegacionYNaturaleza() {
       />
       </section>
       {/* 5. Canala de panama */}
-      <section>
+      <section id="canal">
       <HistoryCenterBanner
         badge="Paso clave"
         title="Del Caribe al Océano Pacífico"
@@ -162,7 +163,7 @@ export default function NavegacionYNaturaleza() {
       />
       </section>
       {/* 6. Cruce Pacifico */}
-      <section>
+      <section id="cruce">
         <HistoryLeftEmbed
         badge="Vida marina en Galápago"
         title="Avistamientos junto a Galápagos"
@@ -204,7 +205,7 @@ export default function NavegacionYNaturaleza() {
 
       </section>
       
-      <section>
+      <section id="polinesia">
         {/* 7. Polinesia */}
         <HistoryCenterBanner
         badge="Polinesia a la vista"

@@ -20,12 +20,14 @@ interface NauticalTimelineNavProps {
 }
 
 const DEFAULT_MILESTONES: TimelineMilestone[] = [
-  { id: "curazao", label: "Curazao", yearOrTag: "Origen" },
-  { id: "venezuela", label: "Venezuela", yearOrTag: "Costas" },
-  { id: "sailing-the-world", label: "Sailing the World", yearOrTag: "Proyecto" },
-  { id: "san-blas", label: "San Blas", yearOrTag: "Presente" },
-  { id: "cruce-pacifico", label: "Cruce Pacífico", yearOrTag: "Desafío" },
-  { id: "polinesia-francesa", label: "Polinesia Francesa", yearOrTag: "Destino" },
+  { id: "origen", label: "Origen", yearOrTag: "Origen" },
+  { id: "venezuela", label: "Venezuela", yearOrTag: "Inicios" },
+  { id: "zarpe", label: "Zarpe", yearOrTag: "Desafio" },
+  { id: "navegando", label: "Navegando", yearOrTag: "Nuevo Destino" },
+  { id: "curazao", label: "Curazao", yearOrTag: "Curazao" },
+  { id: "canal", label: "Canal", yearOrTag: "Panamá" },
+  { id: "curce", label: "Pacifico", yearOrTag: "Cruce" },
+  { id: "polinesia", label: "Polinesia Francesa", yearOrTag: "🤩" },
 ];
 
 export default function NauticalTimelineNav({
