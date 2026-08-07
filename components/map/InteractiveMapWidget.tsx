@@ -74,7 +74,7 @@ export const InteractiveMapWidget: React.FC<InteractiveMapWidgetProps> = ({
               <span>Toca cualquier punto del mapa para ver detalles y fotos.</span>
             </div>
 
-            {/* Botón CTA opcional */}
+            {/* Botón CTA opcional
             {buttonHref && (
               <div className="pt-2">
                 <a
@@ -85,7 +85,7 @@ export const InteractiveMapWidget: React.FC<InteractiveMapWidgetProps> = ({
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Bloque del Mapa Interactivo (Caja delimitada) */}

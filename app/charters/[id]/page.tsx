@@ -118,20 +118,21 @@ export default async function BoatDetailPage({ params, searchParams }: PageProps
       
       {/* Renderizado de la UI de Cliente */}
       <BoatDetailClient item={item} lang={lang} />
+      <HistoryGridCard
+              badge="GUÍA DE VIAJE"
+              title="¿Cómo llegar al paraíso de San Blas?"
+              text="Te mostramos el paso a paso para llegar a nuestras embarcaciones y empezar la aventura. Nuestros queridos amigos de @flotandoando_ te cuentan de primera mano cómo es la experiencia para llegar a tu proximo hospedaje en el archipiélago de San Blas."
+              instagramUrl="https://www.instagram.com/reel/DVRn9SHDgzv"
+              quote="El viaje hacia el paraíso también es parte de la aventura."
+            />
       <ScrollCharters 
-              title="Catamaranes Exclusivos"
-              subtitle="Espacio y confort superior para navegar el Caribe"
-              category="Catamaran"
+              title="Otras opciones recomendadas en San Blas"
+              subtitle="Confort superior para navegar el Caribe"
+              category={item.category}
             />
             <InteractiveMapWidget />
             
-      <HistoryGridCard
-              badge="Nuestra Filosofía"
-              title="Navegación Consciente y Sostenible"
-              text="Cuidamos el entorno que nos rodea. Colaboramos con las comunidades locales y promovemos un turismo respetuoso que cuide los arrecifes de San Blas."
-              instagramUrl="https://www.instagram.com/reel/DVRn9SHDgzv"
-              quote="Preservamos el paraíso que nos acoge."
-            />
+      
             <section id="asistencia-viajero">
                     <AsistenciaViajeroWidget />
                   </section>

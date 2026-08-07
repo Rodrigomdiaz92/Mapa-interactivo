@@ -110,14 +110,14 @@ export const Reseñas = () => {
           {/* Estadísticas y Botón */}
           <div className="flex flex-wrap items-center justify-center gap-6">
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-serif font-bold text-emerald-800">50</span>
+              <span className="text-3xl font-serif font-bold text-emerald-800">+50</span>
               <span className="text-sm text-slate-600 font-medium">
-                Reseñas en Airbnb, Google & Booking.com
+                Reseñas en Trip Advisor, Airbnb, Google & Booking.com
               </span>
             </div>
 
             <a
-              href="https://google.com"
+              href="https://linktr.ee/sailingtheworld"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 bg-[#0F1E2E] hover:bg-[#182C40] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-sm"
