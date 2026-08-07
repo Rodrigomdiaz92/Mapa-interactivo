@@ -1,4 +1,5 @@
 'use client';
+import { Reseñas } from "@/components/boatdetail/Reseñas";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import ActivitiesPromoWidget from "@/components/navegacionynaturaleza/ActivitiesPromoWidget";
 import CharterPromoWidget from "@/components/navegacionynaturaleza/CharterPromoWidget";
@@ -9,6 +10,9 @@ import HistoryMediaCarousel from "@/components/navegacionynaturaleza/HistoryMedi
 import HistoryMediaLeft from "@/components/navegacionynaturaleza/HistoryMediaLeft";
 import HistoryRightEmbed from "@/components/navegacionynaturaleza/HistoryRightEmbed";
 import NauticalTimelineNav from "@/components/navegacionynaturaleza/NauticalTimelineNav";
+import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
+import { Categorias } from "@/components/ui/Categorias";
+import { FAQ } from "@/components/ui/FAQ";
 import InstagramReel from "@/components/ui/InstagramReel";
 import { InstagramEmbed } from "react-social-media-embed/dist/components/embeds/InstagramEmbed";
 
@@ -223,6 +227,23 @@ export default function NavegacionYNaturaleza() {
         text="Al recorrer la última isla del archipiélago de las Marquesas, reflexionaron sobre el largo camino recorrido desde que salieron de Argentina con tres bolsos. Con el Franca Austral resguardado en Panamá, reafirmaron la satisfacción de vivir intensamente su espíritu aventurero."
         instagramUrl="https://www.instagram.com/p/C7hpzUkygd_/"
       />
+      </section>
+      <section id="reseñas">
+      <Reseñas />
+      </section>
+      <section id="faq">
+        <FAQ />
+      </section>
+      <section id="asistencia-viajero">
+        <AsistenciaViajeroWidget />
+      </section>      
+      <section id="categories">
+        <Categorias />        
+      </section>
+      <section id="whatsapp">
+      <WhatsAppButton />
+      </section> 
+      {/*
       <hr />
       <hr />
 
@@ -285,7 +306,7 @@ Aprender a convivir con el viento, respetar los tiempos del mar y descubrir rinc
         mediaAlt="Catamarán navegando en San Blas"
         quote="Navegar no es solo desplazarse, es aprender a vivir en armonía con el entorno."
       />
-      </section>
+      </section>*/}
     </article>
     
     

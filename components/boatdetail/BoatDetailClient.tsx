@@ -18,7 +18,6 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { CatalogItem } from "@/types/catalog";
-import CarrouselHome from "../ui/CarrouselHome";
 
 function ImageCarousel({ images, altPrefix }: { images: string[]; altPrefix: string }) {
   if (!images || images.length === 0) return null;
@@ -47,7 +46,7 @@ function ImageCarousel({ images, altPrefix }: { images: string[]; altPrefix: str
           >
             <img
               src={imgUrl}
-              alt={`${altPrefix} - Foto ${idx + 1}`}
+              alt={`${altPrefix} - Foto${idx + 1}`}
               className="w-full h-full object-cover"
             />
             {images.length > 1 && (
@@ -100,8 +99,8 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
   )}`;
 
   return (
-    <main className="min-h-screen bg-neutral-50/60 pb-20 pt-8 font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <main className="min-h-screen bg-neutral-50/60 pb-20 pt-8 font-sans overflow-visible">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 overflow-visible">
         
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-xs font-medium text-neutral-500">
@@ -146,16 +145,17 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
           )}
         </div>
 
-        {/* Carrusel Principal */}
-        {boatAllPhotos.length > 0 && (
-          <ImageCarousel images={boatAllPhotos} altPrefix={item.boatName} />
-        )}
-        
-
-        {/* Grid Contenido */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="lg:col-span-2 space-y-8">
+        {/* Grid Contenido Principal */}
+        <div className="flex flex-col lg:flex-row gap-10 items-start overflow-visible">
+          
+          {/* Columna Izquierda (Galería + Información) */}
+          <div className="w-full lg:w-2/3 space-y-8 shrink-0">
             
+            {/* Carrusel Principal */}
+            {boatAllPhotos.length > 0 && (
+              <ImageCarousel images={boatAllPhotos} altPrefix={item.boatName} />
+            )}
+
             {/* Especificaciones */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 p-6 bg-white rounded-2xl border border-neutral-200/80 shadow-sm">
               <div className="flex items-center gap-3">
@@ -292,7 +292,7 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
             {/* Tarifas */}
             {item.pricing?.htmlTableContent?.[lang] && (
               <div className="bg-white p-6 sm:p-8 rounded-2xl border border-neutral-200/80 shadow-sm space-y-4">
-                <h2 className="text-xl font-serif font-semibold text-neutral-900">Estructura de Tarifas</h2>
+                <h2 className="text-xl font-serif font-semibold text-neutral-900">Estructura de Tarifas / Temporada baja</h2>
                 <div className="w-full overflow-x-auto rounded-xl border border-neutral-200/60 p-2 sm:p-4 bg-neutral-50/50">
                   <div 
                     className="prose prose-sm max-w-none 
@@ -340,9 +340,9 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
 
           </div>
 
-          {/* Sidebar Sticky */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-24 bg-white p-6 sm:p-8 rounded-3xl border border-neutral-200 shadow-lg space-y-6">
+          {/* Columna Derecha (Sidebar Sticky Forzado) */}
+          <div className="w-full lg:w-1/3 lg:sticky lg:top-24 space-y-6">
+            <div className="bg-white p-6 sm:p-8 rounded-3xl border border-neutral-200 shadow-lg space-y-6">
               <div>
                 <span className="text-xs text-neutral-500 font-medium">Precio estimado desde</span>
                 <div className="flex items-baseline gap-1.5 mt-1">
@@ -350,7 +350,7 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
                   {hasPromo && item.pricing?.basePricePerPersonPerDay && (
                     <span className="text-sm text-neutral-400 line-through">${item.pricing.basePricePerPersonPerDay}</span>
                   )}
-                  <span className="text-xs font-semibold text-neutral-600">USD / día</span>
+                  <span className="text-xs font-semibold text-neutral-600">USD / día / persona</span>
                 </div>
               </div>
 
@@ -384,6 +384,7 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
               </p>
             </div>
           </div>
+
         </div>
 
       </div>

@@ -3,6 +3,15 @@ import { notFound } from "next/navigation";
 import { INITIAL_CATALOG_ITEMS } from "@/data/catalogData";
 import { CatalogItem } from "@/types/catalog";
 import BoatDetailClient from "@/components/boatdetail/BoatDetailClient";
+import FloatingCTA from "@/components/boatdetail/FloatingCTA";
+import HistoryGridCard from "@/components/navegacionynaturaleza/HistoryGridCard";
+import HistoryMediaCarousel from "@/components/navegacionynaturaleza/HistoryMediaCarousel";
+import ScrollCharters from "@/components/boatdetail/ScrollCharters";
+import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
+import { FAQ } from "@/components/ui/FAQ";
+import { InteractiveMapWidget } from "@/components/map/InteractiveMapWidget";
+import { CardCarousel } from "@/components/ui/CardCarrousel";
+import Reseñas from "@/components/boatdetail/Reseñas";
 
 interface PageProps {
   params: Promise<{ id: string }> | { id: string };
@@ -109,6 +118,49 @@ export default async function BoatDetailPage({ params, searchParams }: PageProps
       
       {/* Renderizado de la UI de Cliente */}
       <BoatDetailClient item={item} lang={lang} />
+      <ScrollCharters 
+              title="Catamaranes Exclusivos"
+              subtitle="Espacio y confort superior para navegar el Caribe"
+              category="Catamaran"
+            />
+            <InteractiveMapWidget />
+            
+      <HistoryGridCard
+              badge="Nuestra Filosofía"
+              title="Navegación Consciente y Sostenible"
+              text="Cuidamos el entorno que nos rodea. Colaboramos con las comunidades locales y promovemos un turismo respetuoso que cuide los arrecifes de San Blas."
+              instagramUrl="https://www.instagram.com/reel/DVRn9SHDgzv"
+              quote="Preservamos el paraíso que nos acoge."
+            />
+            <section id="asistencia-viajero">
+                    <AsistenciaViajeroWidget />
+                  </section>
+                  
+                  <section id="faq">
+                          <FAQ />
+                        </section>
+                        <Reseñas />
+            <HistoryMediaCarousel
+                    badge="Momentos Inolvidables"
+                    title="La Magia de la Vida a Bordo"
+                    subtitle="Fotografías que capturan la esencia de San Blas"
+                    text="Cada jornada en el archipiélago ofrece una perspectiva única: desde amaneceres sobre aguas cristalinas hasta tardes compartiendo la cultura con la comunidad Guna Yala."
+                    images={[
+                      {
+                        src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=600&auto=format&fit=crop",
+                        alt: "Snorkel en arrecife de coral",
+                      },
+                      {
+                        src: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=600&auto=format&fit=crop",
+                        alt: "Playa en cayo deshabitado",
+                      },
+                      {
+                        src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop",
+                        alt: "Atardecer marino en San Blas",
+                      },
+                    ]}
+                  />
+      <FloatingCTA />
     </>
   );
 }

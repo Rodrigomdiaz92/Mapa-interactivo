@@ -15,6 +15,7 @@ import HistoryGridCard from "@/components/navegacionynaturaleza/HistoryGridCard"
 import ActivitiesPromoWidget from "@/components/navegacionynaturaleza/ActivitiesPromoWidget";
 import CharterPromoWidget from "@/components/navegacionynaturaleza/CharterPromoWidget";
 import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
+import { Reseñas } from "@/components/boatdetail/Reseñas";
 
 
 
@@ -49,14 +50,14 @@ export default function Home() {
         />
       </WidgetCarousel>
       </section>
-      <section id="experiences">
-        <Experiencias />
-      </section>
       <section id="categories">
         <Categorias />        
       </section>
-      <section id="testimonials">
-        {/* <CardCarousel/> */}
+      <section id="experiences">
+        <Experiencias />
+      </section>
+      
+      <section id="testimonials">       
         
       <ScrollCharters 
         title="Catamaranes Exclusivos"
@@ -70,6 +71,7 @@ export default function Home() {
       <section id="asistencia-viajero">
         <AsistenciaViajeroWidget />
       </section>
+      <Reseñas />
       <WhatsAppButton 
         phoneNumber="50761234567" 
         message="Hola, me gustaría consultar la disponibilidad para un catamarán."

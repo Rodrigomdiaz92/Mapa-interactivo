@@ -2081,7 +2081,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: true,
     hasDiscount: false,
   },
-
+/*
   // ---------------------------------------------------------------------------
   // 13. Coolcat
   // ---------------------------------------------------------------------------
@@ -2269,7 +2269,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: false,
     hasDiscount: false,
   },
-
+*/
   // ---------------------------------------------------------------------------
   // 14. Nomade - Lagoon 570 Owner's Edition
   // ---------------------------------------------------------------------------
