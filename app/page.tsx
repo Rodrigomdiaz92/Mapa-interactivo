@@ -16,6 +16,7 @@ import ActivitiesPromoWidget from "@/components/navegacionynaturaleza/Activities
 import CharterPromoWidget from "@/components/navegacionynaturaleza/CharterPromoWidget";
 import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
 import { Reseñas } from "@/components/boatdetail/Reseñas";
+import HeroVideo from "@/components/layout/HeroVideo";
 
 
 
@@ -27,6 +28,7 @@ export default function Home() {
     <article >    
       <section id="map" className="flex-1">
         {/*<InteractiveMap />*/}
+        <HeroVideo />
       </section>
       <section id="carousel" className="flex-1">
         {/* <CarrouselHome />       */}
