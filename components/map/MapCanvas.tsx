@@ -30,7 +30,7 @@ export default function MapCanvas({
       crs={L.CRS.Simple}
       bounds={bounds}
       maxBounds={bounds}
-      minZoom={0}
+      minZoom={-0.5}
       maxZoom={4}
       zoomSnap={0.25}
       style={{

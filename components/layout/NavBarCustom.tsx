@@ -79,10 +79,10 @@ export const NavbarCustom = () => {
   ) : (
     <div className="relative w-16 h-16 sm:w-24 sm:h-24 flex items-center justify-center">
       <Image
-        src="/icons/1.svg"
+        src="/icons/3.svg"
         alt="Sailing the World Logo"
-        width={96}
-        height={96}
+        width={80}
+        height={80}
         className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
         priority
       />
