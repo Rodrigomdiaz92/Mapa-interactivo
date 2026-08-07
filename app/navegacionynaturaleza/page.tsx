@@ -241,7 +241,11 @@ export default function NavegacionYNaturaleza() {
         <Categorias />        
       </section>
       <section id="whatsapp">
-      <WhatsAppButton />
+      <WhatsAppButton 
+        phoneNumber="+50766302038" 
+        message="(NN)Hola, me gustaría recibir más información sobre las experiencias en San Blas."
+        tooltipText="Vivi con nosotros esta experiencia.¡Escríbenos!"
+      />
       </section> 
       {/*
       <hr />

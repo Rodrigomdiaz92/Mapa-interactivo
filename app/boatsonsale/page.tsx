@@ -45,10 +45,10 @@ export default function BoatsOnSale() {
     <DestacadoBarcoFotosWidget {...barcoDestacado} />
     
     <WhatsAppButton 
-      phoneNumber="50761234567" 
-      message="Hola, me gustaría consultar la disponibilidad para un catamarán."
-      tooltipText="¡Escríbenos directamente por WhatsApp!"
-    />
+        phoneNumber="+50766302038" 
+        message="(BS)Hola, necesito ayuda para elegir un barco."
+        tooltipText="Te ayudamos a elegir tu barco ideal.¡Escríbenos!"
+      />
     </article>
   );
 }

@@ -147,20 +147,23 @@ export default async function BoatDetailPage({ params, searchParams }: PageProps
                     text="Cada jornada en el archipiélago ofrece una perspectiva única: desde amaneceres sobre aguas cristalinas hasta tardes compartiendo la cultura con la comunidad Guna Yala."
                     images={[
                       {
-                        src: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=600&auto=format&fit=crop",
+                        src: "/contenido/experiencias/snorkel/1.jpg",
                         alt: "Snorkel en arrecife de coral",
                       },
                       {
-                        src: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?q=80&w=600&auto=format&fit=crop",
+                        src: "/contenido/experiencias/explorar/1.jpg",
                         alt: "Playa en cayo deshabitado",
                       },
                       {
-                        src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=600&auto=format&fit=crop",
+                        src: "/contenido/experiencias/atardecer/1.jpg",
                         alt: "Atardecer marino en San Blas",
                       },
                     ]}
                   />
-      <FloatingCTA />
+      <FloatingCTA
+        text = 'Consultar disponibilidad'
+        phoneNumber = '+50766302038'
+        whatsappMessage = {`(CDF)¡Hola! Quisiera consultar disponibilidad para: ${item.boatName} (ID: ${item.id})`} />
     </>
   );
 }

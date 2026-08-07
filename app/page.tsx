@@ -73,9 +73,9 @@ export default function Home() {
       </section>
       <Reseñas />
       <WhatsAppButton 
-        phoneNumber="50761234567" 
-        message="Hola, me gustaría consultar la disponibilidad para un catamarán."
-        tooltipText="¡Escríbenos directamente por WhatsApp!"
+        phoneNumber="+50766302038" 
+        message="(H)Hola, me gustaría conocer mas sobre su servicio."
+        tooltipText="¿Dudas?¡Escríbenos por WhatsApp!"
       />
     </article>
     

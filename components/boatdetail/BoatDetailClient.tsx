@@ -94,8 +94,8 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
     ...(item.boatGalleryPhotos || []),
   ];
 
-  const whatsappUrl = `https://wa.me/50761234567?text=${encodeURIComponent(
-    `¡Hola! Quisiera consultar disponibilidad para: ${item.boatName} (ID: ${item.id})`
+  const whatsappUrl = `https://wa.me/+50766302038?text=${encodeURIComponent(
+    `(CDB)¡Hola! Quisiera consultar disponibilidad para: ${item.boatName} (ID: ${item.id})`
   )}`;
 
   return (

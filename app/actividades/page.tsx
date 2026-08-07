@@ -10,12 +10,12 @@ export default function GunayalaMap() {
      <InteractiveMap />
      <Experiencias />
      <FAQ /> 
-     {/* <InteractiveMapWidget /> */}
+     
      <WhatsAppButton 
-  phoneNumber="50761234567" 
-  message="Hola, me gustaría consultar la disponibilidad para un catamarán."
-  tooltipText="¡Escríbenos directamente por WhatsApp!"
-/>    
+        phoneNumber="+50766302038" 
+        message="(E)Hola, me gustaría recibir más información sobre las experiencias en San Blas."
+        tooltipText="Te ayudamos a elegir tu experiencia.¡Escríbenos!"
+      />  
 
     </div>
   );

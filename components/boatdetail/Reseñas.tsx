@@ -104,15 +104,15 @@ export const Reseñas = () => {
           
           {/* Título */}
           <h2 className="text-3xl sm:text-5xl font-serif text-slate-800 uppercase tracking-tight text-center md:text-left">
-            What our passengers say
+            Lo que dicen nuestros clientes
           </h2>
 
           {/* Estadísticas y Botón */}
           <div className="flex flex-wrap items-center justify-center gap-6">
             <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-serif font-bold text-emerald-800">137</span>
+              <span className="text-3xl font-serif font-bold text-emerald-800">50</span>
               <span className="text-sm text-slate-600 font-medium">
-                reviews across Airbnb, Google & Booking.com
+                Reseñas en Airbnb, Google & Booking.com
               </span>
             </div>
 
@@ -123,7 +123,7 @@ export const Reseñas = () => {
               className="flex items-center gap-2 bg-[#0F1E2E] hover:bg-[#182C40] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-sm"
             >
               {renderPlatformLogo('google')}
-              <span>Write a review</span>
+              <span>Escribir una reseña</span>
             </a>
           </div>
         </div>

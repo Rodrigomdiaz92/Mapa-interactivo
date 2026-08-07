@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, CheckCircle2, MessageCircle, Anchor, Calendar, Compass } from "lucide-react";
 import { EXPERIENCES_DATA } from "@/data/experiencesData";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 interface PageProps {
   params: Promise<{
@@ -144,7 +145,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
             </div>
 
             <a
-              href="https://wa.me/tu-numero-whatsapp"
+              href="https://wa.me/+50766302038?text=(EB)Hola!%20Quisiera%20más%20información%20sobre%20esta%20experiencia%20en%20San%20Blas."
               target="_blank"
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-xl transition-all shadow-sm hover:shadow-md"
@@ -155,6 +156,11 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
           </aside>
         </div>
       </article>
+      <WhatsAppButton 
+              phoneNumber="+50766302038" 
+              message="(EF)Hola, me gustaría recibir más información sobre esta experiencias en San Blas."
+              tooltipText="Te ayudamos a elegir tu experiencia.¡Escríbenos!"
+            />
     </main>
   );
 }

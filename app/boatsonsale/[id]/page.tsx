@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { INITIAL_SALE_ITEMS, CategoryVentaType } from "@/data/saleData";
 import { MapPin, Calendar, Ruler, ShieldCheck, CheckCircle2, Home, Anchor, Compass } from "lucide-react";
 import Link from "next/link";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 
 interface PageProps {
   params: Promise<{ id: string }> | { id: string };
@@ -233,6 +234,11 @@ export default async function SaleDetailPage({ params }: PageProps) {
         </div>
 
       </div>
+      <WhatsAppButton 
+              phoneNumber="+50766302038" 
+              message="(BS)Hola, quisiera más información sobre este barco."
+              tooltipText="Te ayudamos a elegir tu barco ideal.¡Escríbenos!"
+            />
     </main>
   );
 }

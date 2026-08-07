@@ -17,7 +17,7 @@ interface FloatingCTAProps {
 export default function FloatingCTA({
   onConsult,
   text = 'Consultar disponibilidad',
-  phoneNumber = '50760000000',
+  phoneNumber = '+50766302038',
   whatsappMessage = 'Hola! Quisiera consultar disponibilidad para un charter en San Blas.',
 }: FloatingCTAProps) {
   // Construcción del enlace directo a WhatsApp

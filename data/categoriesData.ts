@@ -14,7 +14,7 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     categoryFilter: "Catamaran",
     benefitText: "Espacio amplio, máxima estabilidad y confort superior para familias o grupos.",
     listingsCount: 9,
-    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/contenido/catamaranes/Zenith/catalogo/1.png",
   },
   {
     id: "sailboat",
@@ -22,7 +22,7 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     categoryFilter: "Sailboat",
     benefitText: "Auténtica experiencia de navegación a vela, íntima y de espíritu aventurero.",
     listingsCount: 8,
-    imageUrl: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/contenido/veleros/Mola mola/catalogo/1.png",
   },
   {
     id: "island-stay",
@@ -30,6 +30,6 @@ export const CATEGORIES_DATA: CategoryItem[] = [
     categoryFilter: "IslandLodge",
     benefitText: "Hospedaje en cabañas tradicionales sobre la playa en contacto directo con la comunidad.",
     listingsCount: 3,
-    imageUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=800&auto=format&fit=crop",
+    imageUrl: "/contenido/experiencias/explorar/1.jpg",
   },
 ];

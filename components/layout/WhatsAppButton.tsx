@@ -13,7 +13,7 @@ interface WhatsAppButtonProps {
 }
 
 export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
-  phoneNumber = '50760000000',
+  phoneNumber = '+50766302038',
   message = 'Hola! Quisiera más información sobre los charters en San Blas.',
   tooltipText = '¿Tienes dudas? ¡Chatea con nosotros!',
 }) => {

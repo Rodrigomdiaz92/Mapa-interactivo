@@ -13,9 +13,9 @@ export default function AsistenciaViajeroWidget({
   customWhatsappLink,
 }: AsistenciaViajeroWidgetProps) {
   const defaultWhatsappLink =
-    "https://wa.me/50760000000?text=" +
+    "https://wa.me/+50766302038?text=" +
     encodeURIComponent(
-      "Hola Sailing the World, me gustaría recibir más información y cotizar una asistencia al viajero para mi viaje."
+      "(AV)Hola Sailing the World, me gustaría recibir más información y cotizar una asistencia al viajero para mi viaje."
     );
 
   const targetLink = customWhatsappLink || defaultWhatsappLink;

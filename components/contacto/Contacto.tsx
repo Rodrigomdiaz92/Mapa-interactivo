@@ -16,11 +16,11 @@ interface ContactoProps {
 export default function Contacto({
   title = "Ponte en Contacto",
   subtitle = "Estamos aquí para ayudarte a planificar tu próxima travesía en San Blas. Escríbenos por tu canal preferido o envíanos un mensaje directo.",
-  whatsappNumber = "+50760000000",
-  whatsappMessage = "Hola Sailing the World, me gustaría recibir más información sobre los charters en San Blas.",
-  instagramHandle = "@sailingtheworld.panama",
-  instagramUrl = "https://instagram.com",
-  emailAddress = "contacto@sailingtheworld.com",
+  whatsappNumber = "+50766302038",
+  whatsappMessage = "(C)Hola Sailing the World, me gustaría recibir más información sobre los charters en San Blas.",
+  instagramHandle = "@sailingthe.world",
+  instagramUrl = "https://instagram.com/sailingthe.world",
+  emailAddress = "contacto@sailingtheworld.net",
 }: ContactoProps) {
   const [formData, setFormData] = useState({
     name: "",

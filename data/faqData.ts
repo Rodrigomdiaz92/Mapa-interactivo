@@ -116,7 +116,7 @@ export const FAQ_DATA: FAQCategory[] = [
       {
         question: "¿Dónde está la ducha?",
         paragraphs: [
-          "Cada barco cuenta con baños con ducha interior y duchas al aire libre en la plataforma de popa, ideales para quitarse la sal tras nadar."
+          "Cada barco cuenta con baños con ducha interior o duchas al aire libre en la plataforma de popa."
         ],
       },
       {
@@ -139,7 +139,7 @@ export const FAQ_DATA: FAQCategory[] = [
       {
         question: "¿Qué no está incluido?",
         paragraphs: [
-          "Impuestos de entrada a la comarca Guna Yala y los traslados terrestres o aéreos hacia el puerto."
+          "Impuestos de entrada a la comarca Guna Yala y los traslados terrestres o aéreos hacia la embarcacion."
         ],
       },
       {
@@ -156,7 +156,7 @@ export const FAQ_DATA: FAQCategory[] = [
       {
         question: "¿Qué métodos de pago aceptan?",
         paragraphs: [
-          "Aceptamos transferencias, Wise, PayPal o tarjetas. Se requiere un depósito inicial para bloquear las fechas y el saldo restante se abona según las condiciones acordadas."
+          "Aceptamos transferencias, Wise y otras billeteras digitales. Se requiere un depósito inicial para bloquear las fechas y el saldo restante se abona según las condiciones acordadas."
         ],
       },
     ],

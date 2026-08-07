@@ -18,7 +18,7 @@ export const EXPERIENCES_DATA: ExperienceItem[] = [
     longDescription:
       "Disfruta del ritmo del viento sin prisas. Navegamos entre islas cada día explorando cayos remotos y fondeaderos tranquilos.",
     imageUrl:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop",
+      "/contenido/experiencias/navegacion/1.jpg",
   },
   {
     id: "2",
@@ -29,7 +29,7 @@ export const EXPERIENCES_DATA: ExperienceItem[] = [
     longDescription:
       "Conoce de primera mano la cultura Guna, sus tradiciones, artesanías (molas) y su forma de vida en armonía con el mar.",
     imageUrl:
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=800&auto=format&fit=crop",
+      "/contenido/experiencias/guna/1.jpg",
   },
   {
     id: "3",
@@ -40,7 +40,7 @@ export const EXPERIENCES_DATA: ExperienceItem[] = [
     longDescription:
       "Cada jornada ofrece una nueva isla por descubrir. Camina por playas vírgenes, nada en piscinas naturales y desconéctate.",
     imageUrl:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop",
+      "/contenido/experiencias/explorar/1.jpg",
   },
   {
     id: "4",
@@ -51,7 +51,7 @@ export const EXPERIENCES_DATA: ExperienceItem[] = [
     longDescription:
       "Equipamiento completo a bordo para explorar la abundante vida marina de San Blas: rayas, estrellas de mar y peces de arrecife.",
     imageUrl:
-      "https://images.unsplash.com/photo-1544551763-77ef2d0cfc23?q=80&w=800&auto=format&fit=crop",
+      "/contenido/experiencias/snorkel/1.jpg",
   },
   {
     id: "5",
@@ -62,7 +62,7 @@ export const EXPERIENCES_DATA: ExperienceItem[] = [
     longDescription:
       "Disponibles en todo momento a bordo para explorar las orillas, ejercitarte o simplemente remar al atardecer.",
     imageUrl:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=800&auto=format&fit=crop",
+      "/contenido/experiencias/paddle/1.jpg",
   },
   {
     id: "6",
@@ -73,7 +73,7 @@ export const EXPERIENCES_DATA: ExperienceItem[] = [
     longDescription:
       "Finaliza el día disfrutando de bebidas heladas, juegos en la playa o contemplando la puesta de sol desde la proa.",
     imageUrl:
-      "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?q=80&w=800&auto=format&fit=crop",
+      "/contenido/experiencias/atardecer/1.jpg",
   },
   {
     id: "7",
@@ -84,6 +84,6 @@ export const EXPERIENCES_DATA: ExperienceItem[] = [
     longDescription:
       "Sin horarios estrictos. Despiértate con el sonido del agua y disfruta de mañanas tranquilas bajo el sol.",
     imageUrl:
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=800&auto=format&fit=crop",
+      "/contenido/experiencias/desayuno/1.jpg",
   },
 ];
