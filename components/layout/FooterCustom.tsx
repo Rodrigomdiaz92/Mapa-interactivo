@@ -18,7 +18,7 @@ export const FooterCustom = () => {
             </p>
             <ul className="space-y-2 text-sm text-slate-600">
               <li>
-                <a href="#charters" className="hover:text-emerald-700 font-medium transition-colors">
+                <a href="/charters" className="hover:text-emerald-700 font-medium transition-colors">
                   Charters in San Blas
                 </a>
               </li>
@@ -28,14 +28,19 @@ export const FooterCustom = () => {
           {/* Columna 2 */}
           <div>
             <h3 className="text-slate-900 font-serif font-bold text-lg uppercase tracking-wider mb-4">
-              Categorías
+              ¡Hospedate con nosotros!
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-600">
-              {['Sailboat', 'Catamaran', 'Yacht'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase()}`} className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
+              {[
+                {categoria: 'Veleros',
+                href: '/charters?category=Sailboat' },
+                {categoria: 'Catamaranes',
+                href: '/charters?category=Catamaran'},
+              ].map((item) => (
+                <li key={item.categoria}>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 transition-colors" />
-                    {item}
+                    {item.categoria}
                   </a>
                 </li>
               ))}
@@ -45,21 +50,30 @@ export const FooterCustom = () => {
           {/* Columna 3 */}
           <div>
             <h3 className="text-slate-900 font-serif font-bold text-lg uppercase tracking-wider mb-4">
-              Blog & Info
+              Info
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-600">
               {[
-                'Activities',
-                'Boats on Sale',
-                'How to Get to San Blas',
-                'Info',
-                'San Blas',
-                'Tips',
+                {titulo: 'Actividades en San Blas',
+                href: '/actividades#experiencias'},
+                /*{titulo: 'Barcos a Venta',
+                href: '/barcos-a-venta'},*/
+                {titulo: 'Mapa Interactivo',
+                href: '/actividades#mapa-interactivo'},
+                {titulo: 'FAQs',
+                href: '/actividades#faqs'},
+                {titulo: 'Reseñas',
+                href: '/actividades#resenas'},
+                {titulo: 'Como Llegar a San Blas',
+                href: '/actividades#como-llegar'},
+                {titulo: 'Contacto',
+                href: '/contacto'},
+                
               ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
+                <li key={item.titulo}>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 transition-colors" />
-                    {item}
+                    {item.titulo}
                   </a>
                 </li>
               ))}
@@ -73,16 +87,16 @@ export const FooterCustom = () => {
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-600">
               {[
-                'Instagram',
-                'Facebook',
-                'WhatsApp',
-                'LinkTree',
-                'E-Mail',
+                {titulo: 'Instagram', href: 'https://www.instagram.com/sailingthe.world/'},
+                {titulo: 'Facebook', href: 'https://www.facebook.com/sailingtheworld25'},
+                {titulo: 'WhatsApp', href: 'https://wa.me/+50766302038?text=(F)Hola! Quisiera más información sobre los charters en San Blas.'},
+                {titulo: 'LinkTree', href: 'https://linktr.ee/sailingtheworld'},
+                {titulo: 'E-Mail', href: 'mailto:contacto@sailingtheworld.net'},
               ].map((item) => (
-                <li key={item}>
-                  <a href="#" className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
+                <li key={item.titulo}>
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" className="group flex items-center gap-1.5 hover:text-emerald-700 transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-700 transition-colors" />
-                    {item}
+                    {item.titulo}
                   </a>
                 </li>
               ))}

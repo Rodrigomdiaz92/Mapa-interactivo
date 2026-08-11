@@ -4,6 +4,7 @@ import DestacadoBarcoReelWidget from "@/components/boatsale/DestacadoBarcoReelWi
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import InteractiveMap from "@/components/map/InteractiveMap";
 import { InteractiveMapWidget } from "@/components/map/InteractiveMapWidget";
+import HistoryGridCard from "@/components/navegacionynaturaleza/HistoryGridCard";
 import DecisionButtons from "@/components/ui/DecisionButtons";
 import Experiencias from "@/components/ui/Experiencias";
 import FAQ from "@/components/ui/FAQ";
@@ -36,27 +37,48 @@ export default function GunayalaMap() {
   ],
 };
   return (
-    <div> 
-     <InteractiveMap />
-     <Experiencias />
-     <DecisionButtons
-  optionPrimary={{
-    label: "Paseos & Charters",
-    href: "/charters",
-    description: "Navega por las islas de San Blas a bordo de nuestras embarcaciones.",
-    icon: Anchor,
-  }}
-  optionSecondary={{
-    label: "Quienes somos",
-    href: "/navegacionynaturaleza",
-    description: "Conoce nuestra historia y cómo surgió Sailing the World.",
-    icon: Sparkles,
-  }}
-/>
-     <FAQ />
-     <Reseñas/>
-     <DestacadoBarcoReelWidget {...barcoDestacadoReel} /> 
-     
+    <div>
+      <section id="mapa-interactivo">
+        <InteractiveMap />
+      </section>
+      <section id="experiencias">
+        <Experiencias />
+      </section>
+      <section id="como-llegar">
+        <HistoryGridCard
+                   badge="GUÍA DE VIAJE"
+                   title="¿Cómo llegar al paraíso de San Blas?"
+                   text="Te mostramos el paso a paso para llegar a nuestras embarcaciones y empezar la aventura. Nuestros queridos amigos de @flotandoando_ te cuentan de primera mano cómo es la experiencia para llegar a tu proximo hospedaje en el archipiélago de San Blas."
+                   instagramUrl="https://www.instagram.com/reel/DVRn9SHDgzv"
+                   quote="El viaje hacia el paraíso también es parte de la aventura."
+                 />
+      </section>
+      <section id="desicion">
+        <DecisionButtons
+          optionPrimary={{
+            label: "Paseos & Charters",
+            href: "/charters",
+            description: "Navega por las islas de San Blas a bordo de nuestras embarcaciones.",
+            icon: Anchor,
+          }}
+          optionSecondary={{
+            label: "Quienes somos",
+            href: "/navegacionynaturaleza",
+            description: "Conoce nuestra historia y cómo surgió Sailing the World.",
+            icon: Sparkles,
+          }}
+        />
+      </section>
+      <section id="faqs">
+        <FAQ />
+      </section>
+      <section id="resenas">
+        <Reseñas/>
+      </section>
+      <section id="destacado-barco">
+        <DestacadoBarcoReelWidget {...barcoDestacadoReel} /> 
+      </section>
+      
      <WhatsAppButton 
         phoneNumber="+50766302038" 
         message="(E)Hola, me gustaría recibir más información sobre las experiencias en San Blas."
