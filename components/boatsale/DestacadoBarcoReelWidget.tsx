@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import {
-  ChevronLeft,
-  ChevronRight,
   Tag,
   Calendar,
   Compass,
@@ -12,10 +11,20 @@ import {
   Anchor,
   Sparkles,
   ArrowRight,
-  
   CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
-import { InstagramEmbed } from "react-social-media-embed";
+
+const InstagramEmbedWrapper = dynamic(
+  () => import("@/components/navegacionynaturaleza/InstagramEmbedWrapper"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[480px] bg-slate-900 animate-pulse rounded-2xl border border-slate-800" />
+    ),
+  }
+);
 
 export interface DestacadoBarcoProps {
   id: string;
@@ -24,18 +33,18 @@ export interface DestacadoBarcoProps {
   precio: string;
   ubicacion: string;
   anio: number;
-  eslora: string; // ej: "40 ft / 12.2m"
-  capacidad: string; // ej: "6 + 2 Pax"
-  imagenes: string[];
-  destacados?: string[]; // Lista de specs destacadas
-  badgeText?: string; // ej: "Destacado", "Oportunidad"
-  instagramReelUrl?: string; // Link directo al Reel/Publicación si aplica
+  eslora: string;
+  capacidad: string;
+  imagenes?: string[];
+  destacados?: string[];
+  badgeText?: string;
+  instagramReelUrl?: string;
   whatsappMessage?: string;
 }
 
 export default function DestacadoBarcoReelWidget({
   titulo,
-  subtitulo = "Oportunidad Exclusiva de Compra",
+  subtitulo = "Oportunidad Exclusiva",
   precio,
   ubicacion,
   anio,
@@ -43,7 +52,7 @@ export default function DestacadoBarcoReelWidget({
   capacidad,
   imagenes = [],
   destacados = [],
-  badgeText = "Destacado en Venta",
+  badgeText = "Destacado",
   instagramReelUrl,
   whatsappMessage,
 }: DestacadoBarcoProps) {
@@ -57,7 +66,7 @@ export default function DestacadoBarcoReelWidget({
     setCurrentImgIndex((prev) => (prev === imagenes.length - 1 ? 0 : prev + 1));
   };
 
-  const defaultMessage = `Hola Sailing the World, me interesa recibir más información y coordinar una visita sobre el barco en venta: ${titulo}`;
+  const defaultMessage = `Hola Sailing the World, me interesa recibir más información sobre: ${titulo}`;
   const encodedWhatsappMsg = encodeURIComponent(whatsappMessage || defaultMessage);
   const whatsappUrl = `https://wa.me/50760000000?text=${encodedWhatsappMsg}`;
 
@@ -71,15 +80,45 @@ export default function DestacadoBarcoReelWidget({
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-0">
           
-          {/* LADO IZQUIERDO: Carrusel / Reel de Imágenes (Proporción vertical tipo Reel 4:5 / Aspect Ratio) */}
-          <div className="lg:col-span-5 relative bg-slate-950 flex items-center justify-center min-h-[380px] sm:min-h-[440px] group overflow-hidden">
-            <InstagramEmbed url="https://www.instagram.com/reel/DXPgIORgKix" height="75%"  />
+          {/* LADO IZQUIERDO: Reel de Instagram O Carrusel de Fotos */}
+          <div className="lg:col-span-5 relative bg-slate-950 flex items-center justify-center min-h-[400px] sm:min-h-[480px] p-2 overflow-hidden">
+            {instagramReelUrl ? (
+              <div className="w-full max-w-[328px] my-auto">
+                <InstagramEmbedWrapper url={instagramReelUrl} />
+              </div>
+            ) : imagenes.length > 0 ? (
+              <div className="relative w-full h-full min-h-[400px]">
+                <Image
+                  src={imagenes[currentImgIndex]}
+                  alt={titulo}
+                  fill
+                  className="object-cover"
+                />
+                {imagenes.length > 1 && (
+                  <>
+                    <button
+                      onClick={prevSlide}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition"
+                    >
+                      <ChevronLeft className="w-5 h-5" />
+                    </button>
+                    <button
+                      onClick={nextSlide}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full bg-black/50 text-white hover:bg-black/80 transition"
+                    >
+                      <ChevronRight className="w-5 h-5" />
+                    </button>
+                  </>
+                )}
+              </div>
+            ) : (
+              <div className="text-slate-500 text-sm">Sin multimedia disponible</div>
+            )}
           </div>
 
-          {/* LADO DERECHO: Detalles de la Embarcación */}
+          {/* LADO DERECHO: Información Dinámica */}
           <div className="lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between space-y-6">
             
-            {/* Header / Badge + Título */}
             <div className="space-y-3">
               <div className="flex flex-wrap items-center justify-between gap-2">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-500/10 border border-amber-500/30 text-amber-300 rounded-full text-[11px] font-bold uppercase tracking-wider">
@@ -103,7 +142,7 @@ export default function DestacadoBarcoReelWidget({
               </div>
             </div>
 
-            {/* Grid de Especificaciones Clave */}
+            {/* Grid de Specs */}
             <div className="grid grid-cols-3 gap-2 sm:gap-3 py-3 border-y border-slate-800">
               <div className="bg-white/5 border border-white/5 rounded-xl p-2.5 text-center sm:text-left">
                 <span className="text-[10px] uppercase font-bold text-slate-400 block flex items-center justify-center sm:justify-start gap-1">
@@ -133,7 +172,7 @@ export default function DestacadoBarcoReelWidget({
               </div>
             </div>
 
-            {/* Lista de Destacados/Specs (si existen) */}
+            {/* Puntos destacados */}
             {destacados.length > 0 && (
               <div className="space-y-2">
                 <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
@@ -150,11 +189,11 @@ export default function DestacadoBarcoReelWidget({
               </div>
             )}
 
-            {/* Footer / Precio + CTA */}
+            {/* Precio y WhatsApp CTA */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
-                  Precio de Venta
+                  Precio
                 </span>
                 <p className="text-2xl sm:text-3xl font-serif font-bold text-emerald-400">
                   {precio}

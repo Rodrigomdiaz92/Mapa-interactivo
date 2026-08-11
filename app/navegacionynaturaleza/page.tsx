@@ -12,8 +12,11 @@ import HistoryRightEmbed from "@/components/navegacionynaturaleza/HistoryRightEm
 import NauticalTimelineNav from "@/components/navegacionynaturaleza/NauticalTimelineNav";
 import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
 import { Categorias } from "@/components/ui/Categorias";
+import DecisionButtons from "@/components/ui/DecisionButtons";
 import { FAQ } from "@/components/ui/FAQ";
 import InstagramReel from "@/components/ui/InstagramReel";
+import Titles from "@/components/ui/Titles";
+import { Anchor, Compass, Home, Sparkles } from "lucide-react";
 import { InstagramEmbed } from "react-social-media-embed/dist/components/embeds/InstagramEmbed";
 
 
@@ -21,9 +24,91 @@ export default function NavegacionYNaturaleza() {
   return (
     
      <article >
-      {/* <InstagramEmbed url="https://www.instagram.com/reel/DXMnGfbAFRa" width={328}  /> */}
-      <NauticalTimelineNav />
-      <section id="origen">        
+      <section>
+        <HistoryMediaLeft
+        badge="SOBRE NOSOTROS"
+        title="El Origen de Sailing the World"
+        subtitle="De una travesía personal a una pasión compartida"
+        text={`Sailing the World nació del sueño de Nico y Belu, dos biólogos que decidieron dejar la rutina en Buenos Aires para abrazar la vida en el mar a bordo del Franca Austral.
+
+Tras años de navegación libre, explorando las costas del Caribe, sorteando desafíos en alta mar y descubriendo el paraíso de San Blas, comprendieron que la verdadera riqueza del mar está en ser compartido. Así transformaron su bitácora de viaje en un proyecto de charters náuticos diseñado para conectar a otros viajeros con la esencia pura del océano.`}
+        mediaType="image"
+        mediaSrc="/contenido/veleros/Lupa/capitan/1.png"
+        mediaAlt="founders sailing the world"
+        quote="Nuestra historia no empezó como un negocio, sino como una búsqueda de libertad que hoy se convirtió en nuestra forma de vida."
+      />
+      </section>
+      <section>
+        <HistoryMediaCarousel
+        badge="NUESTRA PROPUESTA"
+        title="Experiencias Auténticas en Navegación"
+        subtitle="Más que un charter, una expedición a medida"
+        text="Ofrecemos hospedajes privados y de grupo a bordo de veleros y catamaranes equipados con todas las comodidades, combinando seguridad, confort y una profunda conexión con la naturaleza.
+
+Nuestro compromiso es brindar una experiencia náutica genuina y responsable. Como amantes del mar y biólogos de vocación, promovemos el respeto por la vida marina, la cultura local de cada destino y la sostenibilidad en cada milla navegada."
+        images={[
+          {
+            src: "/contenido/otros/1.jpg",
+            alt: "navegando en velero",
+          },
+          {
+            src: "/contenido/otros/2.jpg",
+            alt: "diversion en catamaran",
+          },
+          {
+            src: "/contenido/otros/3.jpg",
+            alt: "comida a bordo",
+          },
+        ]}
+      />
+      
+      </section>
+      <DecisionButtons
+  optionPrimary={{
+    label: "Paseos & Charters",
+    href: "/charters",
+    description: "Navega por las islas de San Blas a bordo de nuestras embarcaciones.",
+    icon: Anchor,
+  }}
+  optionSecondary={{
+    label: "Experiencias & Actividades",
+    href: "/actividades",
+    description: "Conéctate con la naturaleza y la cultura local.",
+    icon: Sparkles,
+  }}
+/>
+<NauticalTimelineNav />
+
+      <section>
+        <HistoryMediaLeft
+        badge="NUESTRA TRAYECTORIA"
+        title="Explora Nuestra Bitácora de Viaje"
+        subtitle="De Buenos Aires al Pacífico: revive el camino recorrido"
+        text={`Desde la preparación del Franca Austral en Venezuela y los primeros fondeos en Curazao, hasta la travesía del Canal de Panamá y el mítico cruce del Pacífico hacia la Polinesia Francesa.
+
+Te invitamos a recorrer los hitos que marcaron el rumbo de nuestra vida y que dieron origen a todo lo que hoy es Sailing the World.`}
+        mediaType="image"
+        mediaSrc="/contenido/otros/4.jpg"
+        mediaAlt="founders sailing the world"
+        quote="Hacé clic en la línea de tiempo y navega por cada hito de nuestra historia"
+      />
+      </section>
+      
+
+      <section>
+        
+      </section>
+      
+      {/* <Titles
+  id="experiencias"
+  badge="San Blas Exclusivo"
+  badgeIcon={Sparkles}
+  title="Descubre Nuestras Actividades"
+  subtitle="Elige la modalidad que mejor se adapte a tu itinerario de viaje."
+  align="center"
+/> */}
+      <section id="origen">
+                
       {/* 1. Inicio del viaje */}
       <HistoryLeftEmbed
         badge="Argentina / Inicio de viaje"
@@ -247,6 +332,7 @@ export default function NavegacionYNaturaleza() {
         tooltipText="Vivi con nosotros esta experiencia.¡Escríbenos!"
       />
       </section> 
+      
       {/*
       <hr />
       <hr />
@@ -261,11 +347,7 @@ export default function NavegacionYNaturaleza() {
         quote="Preservamos el paraíso que nos acoge."
       />
       </section>
-      <WhatsAppButton 
-        phoneNumber="50761234567" 
-        message="Hola, me gustaría consultar la disponibilidad para un catamarán."
-        tooltipText="¡Escríbenos directamente por WhatsApp!"
-      />
+      
       <section>
         <CharterPromoWidget
         title="¿Listo para escribir tu propia historia en el paraíso?"

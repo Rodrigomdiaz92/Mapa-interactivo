@@ -1,9 +1,20 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import { HistorySectionProps } from "@/types/history";
 import { Waves } from "lucide-react";
-import { InstagramEmbed } from "react-social-media-embed";
+
+// Importación dinámica sin SSR
+const InstagramEmbedWrapper = dynamic(
+  () => import("@/components/navegacionynaturaleza/InstagramEmbedWrapper"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[440px] bg-slate-800 animate-pulse rounded-xl border border-slate-700" />
+    ),
+  }
+);
 
 export default function HistoryGridCard({
   title,
@@ -25,7 +36,7 @@ export default function HistoryGridCard({
           {/* Embed */}
           <div className="lg:col-span-5 flex justify-center w-full">
             <div className="w-full max-w-[328px] bg-slate-800 p-2 rounded-2xl shadow-lg border border-slate-700 overflow-hidden">
-              <InstagramEmbed url={instagramUrl} width="100%" />
+              <InstagramEmbedWrapper url={instagramUrl} />
             </div>
           </div>
 

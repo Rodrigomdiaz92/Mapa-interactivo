@@ -14,7 +14,7 @@ export default function CharterPromoWidget({
   title = "Siente la experiencia de navegar San Blas en un Catamarán Privado",
   description = "Conoce nuestra flota seleccionada con capitanes experimentados. Incluye todas las comidas, bebidas e itinerarios personalizados.",
   buttonText = "Explorar Flota y Charters",
-  buttonHref = "#charters",
+  buttonHref = "/charters",
 }: CharterPromoProps) {
   return (
     <div className="my-12 max-w-5xl mx-auto px-4 font-sans">

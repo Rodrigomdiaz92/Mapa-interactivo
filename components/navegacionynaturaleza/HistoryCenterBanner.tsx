@@ -1,9 +1,20 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import { HistorySectionProps } from "@/types/history";
 import { Sparkles } from "lucide-react";
-import { InstagramEmbed } from "react-social-media-embed";
+
+// Importación dinámica para desactivar SSR en el Embed de Instagram
+const InstagramEmbedWrapper = dynamic(
+  () => import("@/components/navegacionynaturaleza/InstagramEmbedWrapper"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[440px] bg-slate-100 animate-pulse rounded-xl border border-slate-200" />
+    ),
+  }
+);
 
 export default function HistoryCenterBanner({
   title,
@@ -37,7 +48,7 @@ export default function HistoryCenterBanner({
         {/* Instagram Centrado */}
         <div className="flex justify-center w-full my-6">
           <div className="w-full max-w-[328px] bg-slate-50 p-2 rounded-2xl shadow-md border border-slate-200 overflow-hidden">
-            <InstagramEmbed url={instagramUrl} width="100%" />
+            <InstagramEmbedWrapper url={instagramUrl} />
           </div>
         </div>
 

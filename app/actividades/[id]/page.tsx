@@ -1,10 +1,15 @@
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, CheckCircle2, MessageCircle, Anchor, Calendar, Compass } from "lucide-react";
+import { ArrowLeft, CheckCircle2, MessageCircle, Anchor, Calendar, Compass, Sparkles } from "lucide-react";
 import { EXPERIENCES_DATA } from "@/data/experiencesData";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import { Reseñas } from "@/components/boatdetail/Reseñas";
+import DestacadoBarcoReelWidget from "@/components/boatsale/DestacadoBarcoReelWidget";
+import DecisionButtons from "@/components/ui/DecisionButtons";
+import CharterPromoWidget from "@/components/navegacionynaturaleza/CharterPromoWidget";
 
 interface PageProps {
   params: Promise<{
@@ -30,6 +35,31 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
   if (!experience) {
     notFound();
   }
+  const barcoDestacadoReel = {
+  id: "Franca Austral",
+  titulo: "Franca Austral a la Venta (Dufour 4800)",
+  subtitulo: "Listo para navegar o continuar negocio de Charter en San Blas",
+  precio: "$30,000 USD",
+  ubicacion: "San Blas, Panamá",
+  anio: 1982,
+  eslora: "34,94 pies / 10,65 metros",
+  capacidad: " 6 Pax aprox",
+  badgeText: "Vendemos nuestra casa flotante ❤️",
+  // Se define la URL del Reel para que el componente muestre Instagram
+  instagramReelUrl: "https://www.instagram.com/reel/DXPgIORgKix/", 
+  whatsappMessage: "Hola Sailing the World, me interesa recibir más información sobre el Franca Austral",
+  destacados: [
+    "Volvo Penta. MD11C, 25 HP",
+    "380 litros (2 tanque de inoxidable)",
+    "Ecosonda: fishfinder Garmin",
+    "radio VHF Unidem",
+    "2 Camarotes + cabina central ",
+    "Paneles solares ",
+    "Excelente estado de mantenimiento",
+    "Mantenimiento al día",
+    "Consultanos por mas especificaciones y fotos de la embarcación",
+  ],
+};
 
   return (
     <main className="min-h-screen bg-neutral-50/50 pb-24 font-sans">
@@ -156,6 +186,13 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
           </aside>
         </div>
       </article>
+      <CharterPromoWidget
+                title="Reserva tu Embarcación"
+                description="Navega por San Blas con todo incluido."
+                buttonText="Ver Flota"
+              />
+      <Reseñas/>
+           <DestacadoBarcoReelWidget {...barcoDestacadoReel} />
       <WhatsAppButton 
               phoneNumber="+50766302038" 
               message="(EF)Hola, me gustaría recibir más información sobre esta experiencias en San Blas."

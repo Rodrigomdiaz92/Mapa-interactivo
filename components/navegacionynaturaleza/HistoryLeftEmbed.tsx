@@ -1,11 +1,19 @@
 "use client";
 
 import React from "react";
+import dynamic from "next/dynamic";
 import { HistorySectionProps } from "@/types/history";
 import { Compass, Quote } from "lucide-react";
 
-// Asumimos la existencia de InstagramEmbed o un placeholder mientras carga
-import { InstagramEmbed } from "react-social-media-embed";
+const InstagramEmbedWrapper = dynamic(
+  () => import("@/components/navegacionynaturaleza/InstagramEmbedWrapper"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-[440px] bg-slate-100 animate-pulse rounded-xl border border-slate-200" />
+    ),
+  }
+);
 
 export default function HistoryLeftEmbed({
   title,
@@ -22,7 +30,7 @@ export default function HistoryLeftEmbed({
         {/* Instagram Embed (Izquierda en Desktop) */}
         <div className="lg:col-span-5 flex justify-center w-full">
           <div className="w-full max-w-[328px] bg-white p-2 rounded-2xl shadow-xl border border-slate-200/80 overflow-hidden">
-            <InstagramEmbed url={instagramUrl} width="100%" />
+            <InstagramEmbedWrapper url={instagramUrl} />
           </div>
         </div>
 

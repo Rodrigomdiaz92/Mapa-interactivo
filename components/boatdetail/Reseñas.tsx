@@ -3,7 +3,7 @@ import { Star } from 'lucide-react';
 
 interface Review {
   id: string;
-  platform: 'airbnb' | 'booking' | 'google';
+  platform: 'airbnb' | 'booking' | 'google' | 'tripadvisor';
   rating: number;
   comment: string;
   author: string;
@@ -15,48 +15,169 @@ interface Review {
 const reviewsData: Review[] = [
   {
     id: '1',
-    platform: 'airbnb',
+    platform: 'google',
     rating: 5,
     comment:
-      '"Best trip I\'ve ever taken! I came with my mom and sister and this was a perfect family trip, very low stress with healthy food and lots of activities like snorkeling and visiting islands. Guadalupe is an amazing cook and has good relationships with many Guna people — a true cultural experience."',
-    author: 'Thyra S.',
-    initial: 'T',
-    location: 'United States',
-    year: '2024',
+      '"Nos hospedamos en el velero Youth,  gran atención de Nicolas y Belén, atentos a todos los detalles. Nos mostraron todos los detalles de San blas. 100% recomendable esta experiencia  🥳"',
+    author: 'Rodrigo D.',
+    initial: 'R',
+    location: 'Argentina',
+    year: '2026',
   },
   {
     id: '2',
-    platform: 'booking',
+    platform: 'google',
     rating: 5,
     comment:
-      '"Without a doubt, one of the best trips I\'ve ever taken. The San Blas Archipelago is a true Caribbean paradise. This trip with Guadalupe was so much more — you genuinely feel like part of their community and get a glimpse of what it\'s like to live on a boat."',
-    author: 'Sarah M.',
-    initial: 'S',
-    location: 'Canada',
-    year: '2024',
+      '"Navegar con Belu y Nico es como irte de vacaciones con tus amigos de toda la vida, literalmente. Estuvimos 3 días y nos quedamos con ganas de más, estuvieron en todos los detalles. Desde que llegamos nos explicaron todo, respondieron todas nuestras preguntas y nos invitaron a compartir momentos que terminaron siendo los favoritos en nuestra estadía en Panamá. La comida es increíble, el velero está en perfectas condiciones y los planes que nos propusieron hacer fueron increíbles, es un plus a la experiencia hacerlo de la mano de biólogos porque aprovechas la naturaleza que te rodea. Hacen que valga la pena cada minuto, son apasionados y su entrega es absoluta. Gracias por acompañarnos a vivir su vida unos días, esperamos volver"',
+    author: 'Maria Emilia Cajal',
+    initial: 'M',
+    location: 'Argentina',
+    year: '2025',
   },
   {
     id: '3',
     platform: 'google',
     rating: 5,
     comment:
-      '"Four of us stayed with Guadalupe for three nights and it was an unforgettable experience. She is a very warm person and an excellent cook, and took us to the most beautiful and remote places. Highly recommended to everyone who wants to visit San Blas."',
-    author: 'Johannes S.',
-    initial: 'J',
-    location: 'Germany',
+      '"Ha sido una experiencia genial conocer un poquito de San Blas de la mano de Nico y Belén a bordo de un velero. Hemos hecho snorkel en zonas preciosas, visitado varias islas y hemos comido espectacular, Nico y Belén cocinan muy rico. La experiencia con ellos sin duda volvería a repetirla, son anfitriones muy buenos y muy cercanos. Gracias por estos 3 días!"',
+    author: 'Beatriz Rubio Páramo',
+    initial: 'B',
+    location: 'Argentina',
     year: '2024',
   },
   {
     id: '4',
-    platform: 'airbnb',
+    platform: 'google',
     rating: 5,
     comment:
-      '"Loved everything about this trip! Guadalupe was fantastic, the food was delicious and the scenery breathtaking. She found wonderful snorkeling spots, sailed between islands, beautiful sunsets — just fantastic!"',
-    author: 'James R.',
-    initial: 'J',
-    location: 'United Kingdom',
-    year: '2024',
+      '"Nico y Belu son los mejores capitanes, anfitriones y cocineros! En su barco estás como en casa, y nunca pasarás hambre ni te faltará una cerveza fresquita! Han sido 3 días increíbles!"',
+    author: 'Rocio Mangana',
+    initial: 'R',
+    location: 'Argentina',
+    year: '2025',
   },
+  {
+    id: '5',
+    platform: 'google',
+    rating: 5,
+    comment:
+      '"Magníficos 3dias en el velero con Nico y Belén. Son una pareja excelente, muy agradables, simpaticos, hacen muy bien de comer, pescamos juntos, Nico nos llevó a hacer snorkel, tocamos un tiburón, 3 dias de ensueño por San Blas, nunca me olvidaré de la experiencia, para mí, lo más destacable de Panamá"',
+    author: 'Tania Fernández Salgado',
+    initial: 'T',
+    location: 'Argentina',
+    year: '2025',
+  },
+  {
+    id: '6',
+    platform: 'google',
+    rating: 5,
+    comment:
+      '"Mi primera experiencia en este tipo de viajes y la verdad que ha sido una maravilla! Lo mejor de todas las vacaciones sin duda. Nico y Belen son personas increibles, te hacen sentir como  en casa. Te tratan bien, se preocupan y cuidan de todo. Gratamente sorprendida por su nivel en todos los sentidos. Admirable todo lo que hacen ♥️"',
+    author: 'Marta Gábana',
+    initial: 'M',
+    location: 'España',
+    year: '2025',
+  },
+  {
+    id: '7',
+    platform: 'google',
+    rating: 5,
+    comment:
+      '"La mejor experiencia humana y natural que podrás encontrar en uno de los paraísos naturales más bellos del mundo!"',
+    author: 'Kevin Pons',
+    initial: 'K',
+    location: 'Australia',
+    year: '2025',
+  },
+  {
+    id: '8',
+    platform: 'google',
+    rating: 5,
+    comment:
+      '"Una experiencia inolvidable. Fuimos con mi mujer, Estela, y pasamos cuatro noches a bordo del LUPA. Desde el primer momento, Nico y Belu nos hicieron sentir como en casa. Son excelentes navegantes y anfitriones, pero, por sobre todo, personas maravillosas. Y eso hace la diferencia.La gastronomía fue espectacular. Comimos el pulpo y la langosta más ricos, frescos y abundantes que recordamos. Cada comida fue un lujo. Los desayunos , increíbles! Siempre estuvieron atentos a que disfrutáramos cada momento y compartieron con nosotros su enorme pasión por el mar. Como ambos son biólogos, cada salida de snorkel se transforma en una experiencia única: no solo recorrés lugares increíbles, sino que aprendés sobre corales, peces, estrellas de mar y todo el ecosistema marino. Es como hacer una excursión con dos científicos apasionados por lo que hacen. El Velero , es muy cómodo y seguro y está muy bien equipado : equipo de snorkel, tabla , dingui , linternas , microscopio óptico, etc. Si buscan conocer San Blas de una forma auténtica, navegando por lugares paradisíacos, con excelente comida, atención personalizada y personas que realmente aman lo que hacen, no duden en elegir a Nico y Belu. ¡Gracias por regalarnos una experiencia que vamos a recordar para toda la vida! Marcelo y Estela !"',
+    author: 'Dr MArcelo Nahin',
+    initial: 'K',
+    location: 'Brasil',
+    year: '2026',
+  },
+  {
+    id: '9',
+    platform: 'google',
+    rating: 5,
+    comment:
+      '"Fue una experiencia increíble, los nativos parecían poco amigables y al final eran super amigables, sin dudas uno de los lugares más bonitos y salvaje a los que viaje"',
+    author: 'Santiago Palmero',
+    initial: 'K',
+    location: 'España',
+    year: '2026',
+  },
+  {
+    id: '10',
+    platform: 'google',
+    rating: 5,
+    comment:
+      '"Tuve un viaje en velero absolutamente increíble en San Blas con Nicolás y Belu como anfitriones. ¡Fue inolvidable desde el momento en que subí al barco hasta que desembarcamos! Las impresionantes islas, las aguas cristalinas y la sensación de aventura lo convirtieron en una experiencia de ensueño. Nicolás y Belu son unos anfitriones maravillosos y navegantes con mucha experiencia; su calidez, experiencia y entusiasmo crearon un ambiente muy positivo y acogedor para todos. Se esforzaron al máximo para asegurarse de que todos nos sintiéramos cómodos y pasáramos el mejor rato posible. :) Las comodidades a bordo fueron perfectas y la gastronomía fue excepcional, ¡casi digna de una estrella Michelin! Me sorprendieron las comidas frescas y sabrosas que prepararon en una cocina tan compacta, utilizando ingredientes locales con una creatividad increíble. Si buscas una aventura en velero auténtica y mágica, te recomiendo encarecidamente reservar con Nicolás y Belu. ¡Gracias por los recuerdos! ¡Sin duda volveré!"',
+    author: 'Georgios Apostolopoulos',
+    initial: 'K',
+    location: 'Reino Unido',
+    year: '2025',
+  },
+  {
+    id: '11',
+    platform: 'google',
+    rating: 5,
+    comment:
+      '"Nuestro chárter en San Blas fue absolutamente mágico gracias a nuestra increíble tripulación: Belén, Vicky y los dos Nicos. Desde el momento en que subimos a bordo, nos hicieron sentir como en casa con su trato cálido y personal. Lo más destacado fue, sin duda, el snorkel y las excursiones por la isla. Su conocimiento de la vida marina es impresionante y nos enseñaron muchísimo sobre el mundo submarino. Mención especial merece su interacción con los niños: fueron pacientes, divertidos y los mantuvieron entretenidos todo el tiempo. Además, la comida fue simplemente excepcional: ¡cada plato fue una delicia! Si buscas un equipo profesional y a la vez cercano que te muestre este paraíso, no busques más. ¡Gracias por todo"',
+    author: 'Pablo Ayestaran',
+    initial: 'K',
+    location: 'Reino Unido',
+    year: '2025',
+  },
+  {
+    id: '12',
+    platform: 'tripadvisor',
+    rating: 5,
+    comment:
+      '"It has been a great experience to meet a little San Blas from Nico and Bethlehem on board a sailboat. We have snorkeled in beautiful areas, visited several islands and eaten spectacularly, Nico and Bethlehem cook very rich. The experience with them would definitely repeat it again, they are very good hosts and very close. Thanks for these 3 days!"',
+    author: 'Bea Rubio',
+    initial: 'B',
+    location: 'Reino Unido',
+    year: '2025',
+  },
+  {
+    id: '13',
+    platform: 'tripadvisor',
+    rating: 5,
+    comment:
+      '"The best patterns to visit a wonderful place. Sometimes, however much you seek, you are not right and in this case looking for little we find the experience of the trip First time living on a boat and we will repeat, 3 days dream mostly by the bosses Nico and Belu who are great professionals and even better people, explain the marine fauna and flora, be able to catch your dinner and visit locals away from touristic. We even played volleyball on the islands. The boat and the islands were already waiting for it but the good energy of the skippers was the icing. Search for them if you want excellence and get carried away by their vibe"',
+    author: 'Loureiroo',
+    initial: 'L',
+    location: 'España',
+    year: '2025',
+  },
+  {
+    id: '14',
+    platform: 'tripadvisor',
+    rating: 5,
+    comment:
+      '"An unforgettable family adventure in Guna Yala! Our sailing charter in San Blas was absolutely magical, thanks to our incredible crew: Belén, Vicky, and the two Nicos. From the moment we stepped on board, they made us feel at home with their warm and personal touch. The highlights were definitely the snorkeling and the island excursions. Their knowledge of marine life is impressive, and they taught us so much about the underwater world. A special mention goes to how they interacted with the children; they were patient, fun, and kept them engaged the whole time. Also, the food was simply outstanding—every meal was a delight! If you are looking for a professional yet close-knit team to show you this paradise, look no further. Thank you for everything!"',
+    author: 'Pablo A.',
+    initial: 'P',
+    location: 'España',
+    year: '2026',
+  },
+  /*{
+    id: '12',
+    platform: 'tripadvisor',
+    rating: 5,
+    comment:
+      '""',
+    author: '',
+    initial: '',
+    location: '',
+    year: '',
+  },*/
 ];
 
 export const Reseñas = () => {
@@ -71,6 +192,8 @@ export const Reseñas = () => {
         );
       case 'booking':
         return <span className="text-xl font-bold text-[#003580] tracking-tighter">B.</span>;
+      case 'tripadvisor':
+        return <span className="text-xl font-bold text-[#33993f] tracking-tighter">TA.</span>;
       case 'google':
         return (
           <svg className="w-6 h-6" viewBox="0 0 24 24">
