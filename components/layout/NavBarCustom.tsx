@@ -33,7 +33,7 @@ export const NavbarCustom = () => {
 
   const navLinks = [
     { name: 'Nosotros', href: '/navegacionynaturaleza' },
-    { name: 'Experiencias', href: '/charters' },
+    { name: 'Hospedajes', href: '/charters' },
     //{ name: 'Ventas', href: '/boatsonsale' },
     { name: 'Actividades', href: '/actividades' },
     { name: 'Contacto', href: '/contacto' },
