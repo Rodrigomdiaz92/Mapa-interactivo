@@ -17,13 +17,13 @@ export default function HeroVideo({
   const isEs = lang === "es";
 
   const content = {
-    badge: isEs ? "ISLAS • SELVA • AVENTURAS ECOLÓGICAS" : "ISLANDS • JUNGLE • ECO ADVENTURES",
-    title: isEs ? "Siente el verdadero San Blas" : "Sail the Real San Blas",
+    badge: isEs ? "NAVEGA EN GUNA YALA • AVENTURAS ECOLÓGICAS " : "ISLANDS • JUNGLE • ECO ADVENTURES",
+    title: isEs ? "Vive el verdadero San Blas" : "Sail the Real San Blas",
     description: isEs
       ? "Navega por el archipiélago más virgen del Caribe panameño a bordo de nuestros catamaranes y veleros exclusivos."
       : "Navigate through the most pristine archipelago in the Panamanian Caribbean aboard our exclusive catamarans and sailboats.",
-    btnReserve: isEs ? "Reservar Experiencia" : "Book Experience",
-    btnDetails: isEs ? "Ver Embarcaciones" : "Yacht & Price",
+    btnReserve: isEs ? "RESERVA AHORA" : "Book Experience",
+    btnDetails: isEs ? "QUIENES SOMOS" : "Yacht & Price",
     reviewsText: isEs ? "Más de 135 reseñas de 5 estrellas" : "137 five-star reviews",
   };
 
@@ -65,20 +65,20 @@ export default function HeroVideo({
         </p>
 
         {/* Badge opcional de valoración (estilo imagen de referencia) */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/40 backdrop-blur-sm rounded-full border border-white/10 text-xs text-amber-300 font-medium">
+        {/* <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/40 backdrop-blur-sm rounded-full border border-white/10 text-xs text-amber-300 font-medium">
           <div className="flex text-amber-400">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-3.5 h-3.5 fill-amber-400 stroke-amber-400" />
             ))}
           </div>
           <span className="text-white/90">{content.reviewsText}</span>
-        </div>
+        </div> */}
 
         {/* Botones de Acción */}
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
           {/* Botón Principal: Reservar Experiencia */}
           <Link
-            href="/reserva"
+            href="/charters"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-emerald-900 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-xl hover:shadow-emerald-900/30 transition-all duration-200 transform hover:-translate-y-0.5"
           >
             <Calendar className="w-4 h-4" />
@@ -87,7 +87,7 @@ export default function HeroVideo({
 
           {/* Botón Secundario: Ver Detalle / Embarcaciones */}
           <Link
-            href="/charters"
+            href="/navegacionynaturaleza"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/15 hover:bg-white/25 text-white font-bold text-xs uppercase tracking-wider rounded-xl backdrop-blur-md border border-white/20 transition-all duration-200 transform hover:-translate-y-0.5"
           >
             <span>{content.btnDetails}</span>

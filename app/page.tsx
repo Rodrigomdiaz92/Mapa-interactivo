@@ -56,28 +56,32 @@ export default function Home() {
       <section id="map" className="flex-1">
         <HeroVideo />
       </section>
-      <section id="carousel" >
-        <DestacadoBarcoReelWidget {...barcoDestacadoReel} />
-        
-        <WidgetCarousel title="Destacados de la Semana">
+      <section id="about-us" >
+                
+        <WidgetCarousel title="¿Quienes Somos?">
         {/* Widget 1 */}
-        <CharterPromoWidget
-          title="Reserva tu Catamarán Privado"
-          description="Navega por San Blas con todo incluido."
-          buttonText="Ver Flota"
-        />
+        <HistoryGridCard
+          title="Viví San Blas con Nico, Belu y Nuestra Flota Aliada"
+          text={`Somos Nico y Belu, biólogos y navegantes. Después de recorrer el mundo a vela, hoy te abrimos las puertas de nuestro barco para que vivas San Blas de forma auténtica: playas vírgenes, gastronomía fresca y una conexión real con la cultura local.\n \n ** ¿Buscás otra fecha o un barco diferente? ** \n Si nuestro barco no tiene disponibilidad, trabajamos junto a una red de embarcaciones y capitanes aliados de total confianza, garantizando los mismos estándares de seguridad, confort y atención personalizada que definen a Sailing the World.`}
+          instagramUrl="https://www.instagram.com/reel/DXMnGfbAFRa/"
+          badge="ANFITRIONES & FLOTA"
+        />       
 
         {/* Widget 2 */}
-        <ActivitiesPromoWidget buttonHref="/actividades" />
+        
+        
+        
 
         {/* Widget 3 */}
-        <HistoryGridCard
-          title="Nuestra Filosofía a Bordo"
-          text="Navegación consciente, gastronomía fresca y respeto por la cultura Guna Yala."
-          instagramUrl="https://www.instagram.com/p/EXAMPLE/"
-          badge="Filosofía"
-        />
+        <DestacadoBarcoReelWidget {...barcoDestacadoReel} />
+        
       </WidgetCarousel>
+      <CharterPromoWidget
+          title="Hospedate con Nico y Belu"
+          description="Viví la experiencia San Blas a bordo de nuestro velero."
+          buttonText="Conocer Barco"
+          buttonHref = "/charters/1"
+        />
       </section>
       <section id="categories">
         <Categorias />        
@@ -86,21 +90,28 @@ export default function Home() {
         <Experiencias />
       </section>
       
-      <section id="testimonials">       
-        
+      <section id="catalogo">
+        <ScrollCharters 
+        title="Veleros Recomendados"
+        subtitle="Tu proxima aventura navegando por el Caribe Panameño"
+        category="Sailboat"
+      />  
       <ScrollCharters 
         title="Catamaranes Exclusivos"
         subtitle="Espacio y confort superior para navegar el Caribe"
         category="Catamaran"
       />
+      <ActivitiesPromoWidget buttonHref="/actividades" />
       </section>
-      <section id="faq">
+      <section id="faqs">
         <FAQ />
       </section>
       <section id="asistencia-viajero">
         <AsistenciaViajeroWidget />
       </section>
       <Reseñas />
+      
+      
       <WhatsAppButton 
         phoneNumber="+50766302038" 
         message="(H)Hola, me gustaría conocer mas sobre su servicio."

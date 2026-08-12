@@ -17,7 +17,7 @@ interface WidgetCarouselProps {
 export default function WidgetCarousel({
   title,
   badgeText = "Sailing the World",
-  autoPlayInterval = 2000,
+  autoPlayInterval = 3000,
   children,
 }: WidgetCarouselProps) {
   const scrollRef = useRef<HTMLDivElement>(null);

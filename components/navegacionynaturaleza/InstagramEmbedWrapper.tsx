@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { InstagramEmbed } from "react-social-media-embed";
 
 interface InstagramEmbedWrapperProps {
@@ -9,21 +9,30 @@ interface InstagramEmbedWrapperProps {
 
 export default function InstagramEmbedWrapper({ url }: InstagramEmbedWrapperProps) {
   const [isMounted, setIsMounted] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+  // Limpieza manual de nodos al desmontar para evitar que React ejecute removeChild en nodos huérfanos
+  useEffect(() => {
+    const currentContainer = containerRef.current;
+    return () => {
+      if (currentContainer) {
+        // Vaciamos el innerHTML manualmente antes de que React intente desmontar el árbol virtual
+        currentContainer.innerHTML = "";
+      }
+    };
+  }, [url]);
 
   if (!isMounted || !url) {
     return <InstagramSkeleton />;
   }
 
   return (
-    // La clave key={url} fuerza a React a desmontar y volver a montar el div limpiamente si la URL cambia
-    // suppressHydrationWarning evita colisiones si scripts de terceros inyectan nodos extra
-    <div
-      key={url}
-      suppressHydrationWarning
+    <div 
+      ref={containerRef} 
       className="w-full flex justify-center min-h-[440px]"
     >
       <InstagramEmbed url={url} width="100%" />

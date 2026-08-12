@@ -2,6 +2,7 @@
 
 import Catalogo from "@/components/boatdetail/Catalogo";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
+import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
 import { INITIAL_CATALOG_ITEMS } from "@/data/catalogData";
 import { useRouter } from "next/navigation";
 import { Suspense } from 'react';  
@@ -22,6 +23,9 @@ export default function Charters() {
           onSelectBoat={handleSelectBoat} 
         />
       </Suspense>
+      <section id="asistencia-viajero">
+              <AsistenciaViajeroWidget />
+            </section>
      
       <WhatsAppButton 
         phoneNumber="+50766302038" 

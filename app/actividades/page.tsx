@@ -5,6 +5,7 @@ import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import InteractiveMap from "@/components/map/InteractiveMap";
 import { InteractiveMapWidget } from "@/components/map/InteractiveMapWidget";
 import HistoryGridCard from "@/components/navegacionynaturaleza/HistoryGridCard";
+import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
 import DecisionButtons from "@/components/ui/DecisionButtons";
 import Experiencias from "@/components/ui/Experiencias";
 import FAQ from "@/components/ui/FAQ";
@@ -69,6 +70,9 @@ export default function GunayalaMap() {
           }}
         />
       </section>
+      <section id="asistencia-viajero">
+              <AsistenciaViajeroWidget />
+            </section>
       <section id="faqs">
         <FAQ />
       </section>

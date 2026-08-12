@@ -28,7 +28,7 @@ export const FooterCustom = () => {
           {/* Columna 2 */}
           <div>
             <h3 className="text-slate-900 font-serif font-bold text-lg uppercase tracking-wider mb-4">
-              ¡Hospedate con nosotros!
+              Hospedate con nosotros
             </h3>
             <ul className="space-y-2.5 text-sm text-slate-600">
               {[
@@ -60,6 +60,8 @@ export const FooterCustom = () => {
                 href: '/barcos-a-venta'},*/
                 {titulo: 'Mapa Interactivo',
                 href: '/actividades#mapa-interactivo'},
+                {titulo: 'Asistencia al Viajero',
+                href: '/actividades#asistencia-viajero'},
                 {titulo: 'FAQs',
                 href: '/actividades#faqs'},
                 {titulo: 'Reseñas',
