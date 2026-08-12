@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   // Ejemplo si tus charters vienen de una API/array dinámico (ej. IDs del 1 al 6 + Zenith)
-  const boatIds = ['1', '2', '3', '4', '5', '6', 'zenith'];
+  const boatIds = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', /*'13',*/ '14', '15', '16',/* '17', '18'*/];
   const boatRoutes = boatIds.map((id) => ({
     url: `${baseUrl}/charters/${id}`,
     lastModified: new Date(),

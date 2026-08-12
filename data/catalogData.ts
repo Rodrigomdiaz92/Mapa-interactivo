@@ -2970,7 +2970,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // ---------------------------------------------------------------------------
   // 18. Falkor
   // ---------------------------------------------------------------------------
-  {
+  /*{
     id: 18,
     slug: "falkor-sailboat-san-blas",
     category: "Sailboat",
@@ -3132,5 +3132,5 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     featureBadge: { es: "Velero Clásico", en: "Classic Sailboat" },
     isFeatured: false,
     hasDiscount: false,
-  },
+  },*/
 ];
