@@ -1,94 +1,92 @@
-'use client';
-import Reseñas from "@/components/boatdetail/Reseñas";
-import DestacadoBarcoReelWidget from "@/components/boatsale/DestacadoBarcoReelWidget";
-import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-import InteractiveMap from "@/components/map/InteractiveMap";
-import { InteractiveMapWidget } from "@/components/map/InteractiveMapWidget";
-import HistoryGridCard from "@/components/navegacionynaturaleza/HistoryGridCard";
-import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
-import DecisionButtons from "@/components/ui/DecisionButtons";
-import Experiencias from "@/components/ui/Experiencias";
-import FAQ from "@/components/ui/FAQ";
-import { Anchor, Sparkles } from "lucide-react";
+
+import ActividadesClient from "@/components/urls/ActividadesClient";
+
+
+// app/actividades/page.tsx
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Mapa Interactivo de San Blas (Guna Yala) & Experiencias a Vela | Sailing the World',
+  description: 'Explora nuestro mapa interactivo de las Islas San Blas. Descubre puntos de snorkel, navegación en arrecifes, islas vírgenes y actividades culturales en Guna Yala.',
+  keywords: [
+    'mapa interactivo san blas',
+    'mapa guna yala panama',
+    'que hacer en san blas',
+    'san blas interactive map',
+    'snorkeling reef san blas',
+    'island hopping guna yala map',
+    'actividades velero san blas',
+    'paddleboard san blas islands'
+  ],
+  alternates: {
+    canonical: 'https://sailingtheworld.net/actividades',
+  },
+  openGraph: {
+    title: 'Mapa Interactivo de San Blas (Guna Yala) & Experiencias | Sailing the World',
+    description: 'Navega en nuestro mapa interactivo y planifica tus actividades en San Blas: snorkel en arrecifes, kayak, atardeceres y conexión cultural Guna.',
+    url: 'https://sailingtheworld.net/actividades',
+    siteName: 'Sailing the World',
+    locale: 'es_PA',
+    type: 'website',
+    images: [
+      {
+        url: 'https://sailingtheworld.net/contenido/experiencias/explorar/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mapa interactivo y experiencias de exploración en las Islas San Blas Guna Yala',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mapa Interactivo de San Blas & Experiencias en Velero',
+    description: 'Explora las Islas San Blas con nuestro mapa interactivo: arrecifes de snorkel, playas vírgenes y cultura Guna Yala.',
+    images: ['https://sailingtheworld.net/contenido/experiencias/explorar/1.jpg'],
+  },
+  other: {
+    'geo.region': 'PA-KY', // Código ISO de Guna Yala, Panamá
+    'geo.placename': 'San Blas Islands, Guna Yala',
+    'geo.position': '9.5541;-78.9619',
+    'ICBM': '9.5541, -78.9619',
+  },
+};
 
 export default function GunayalaMap() {
-  const barcoDestacadoReel = {
-  id: "Franca Austral",
-  titulo: "Franca Austral a la Venta (Dufour 4800)",
-  subtitulo: "Listo para navegar o continuar negocio de Charter en San Blas",
-  precio: "$30,000 USD",
-  ubicacion: "San Blas, Panamá",
-  anio: 1982,
-  eslora: "34,94 pies / 10,65 metros",
-  capacidad: " 6 Pax aprox",
-  badgeText: "Vendemos nuestra casa flotante ❤️",
-  // Se define la URL del Reel para que el componente muestre Instagram
-  instagramReelUrl: "https://www.instagram.com/reel/DXPgIORgKix/", 
-  whatsappMessage: "Hola Sailing the World, me interesa recibir más información sobre el Franca Austral",
-  destacados: [
-    "Volvo Penta. MD11C, 25 HP",
-    "380 litros (2 tanque de inoxidable)",
-    "Ecosonda: fishfinder Garmin",
-    "radio VHF Unidem",
-    "2 Camarotes + cabina central ",
-    "Paneles solares ",
-    "Excelente estado de mantenimiento",
-    "Mantenimiento al día",
-    "Consultanos por mas especificaciones y fotos de la embarcación",
-  ],
-};
+  
+const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TouristAttraction',
+    'name': 'Mapa Interactivo y Experiencias en San Blas (Guna Yala)',
+    'description': 'Navega de forma interactiva por los mejores puntos de snorkel, islas vírgenes y rutas de navegación en el archipiélago de San Blas.',
+    'touristType': ['EcoTourism', 'Adventure', 'Sailing'],
+    'location': {
+      '@type': 'Place',
+      'name': 'Islas San Blas (Guna Yala)',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Guna Yala',
+        'addressCountry': 'PA'
+      },
+      'geo': {
+        '@type': 'GeoCoordinates',
+        'latitude': 9.5541,
+        'longitude': -78.9619
+      }
+    },
+    'provider': {
+      '@type': 'TravelAgency',
+      'name': 'Sailing the World',
+      'url': 'https://sailingtheworld.net'
+    }
+  };
   return (
-    <div>
-      <section id="mapa-interactivo">
-        <InteractiveMap />
-      </section>
-      <section id="experiencias">
-        <Experiencias />
-      </section>
-      <section id="como-llegar">
-        <HistoryGridCard
-                   badge="GUÍA DE VIAJE"
-                   title="¿Cómo llegar al paraíso de San Blas?"
-                   text="Te mostramos el paso a paso para llegar a nuestras embarcaciones y empezar la aventura. Nuestros queridos amigos de @flotandoando_ te cuentan de primera mano cómo es la experiencia para llegar a tu proximo hospedaje en el archipiélago de San Blas."
-                   instagramUrl="https://www.instagram.com/reel/DVRn9SHDgzv"
-                   quote="El viaje hacia el paraíso también es parte de la aventura."
-                 />
-      </section>
-      <section id="desicion">
-        <DecisionButtons
-          optionPrimary={{
-            label: "Paseos & Charters",
-            href: "/charters",
-            description: "Navega por las islas de San Blas a bordo de nuestras embarcaciones.",
-            icon: Anchor,
-          }}
-          optionSecondary={{
-            label: "Quienes somos",
-            href: "/navegacionynaturaleza",
-            description: "Conoce nuestra historia y cómo surgió Sailing the World.",
-            icon: Sparkles,
-          }}
-        />
-      </section>
-      <section id="asistencia-viajero">
-              <AsistenciaViajeroWidget />
-            </section>
-      <section id="faqs">
-        <FAQ />
-      </section>
-      <section id="resenas">
-        <Reseñas/>
-      </section>
-      <section id="destacado-barco">
-        <DestacadoBarcoReelWidget {...barcoDestacadoReel} /> 
-      </section>
-      
-     <WhatsAppButton 
-        phoneNumber="+50766302038" 
-        message="(E)Hola, me gustaría recibir más información sobre las experiencias en San Blas."
-        tooltipText="Te ayudamos a elegir tu experiencia.¡Escríbenos!"
-      />  
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <ActividadesClient/>
 
-    </div>
+    </>
   );
 }

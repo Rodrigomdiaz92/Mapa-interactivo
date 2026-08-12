@@ -7,6 +7,40 @@ import ScrollVentas from "@/components/boatsale/ScrollVentas";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { InstagramEmbed } from "react-social-media-embed";
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Venta de Barcos en San Blas | Velero Dufour 4800 Franca Austral',
+  description: 'Oportunidad de compra: Velero Franca Austral (Dufour 4800, año 1982). Listo para navegar o continuar negocio de charter en San Blas, Panamá por $30,000 USD.',
+  keywords: [
+    'velero en venta panama',
+    'dufour 4800 for sale',
+    'franca austral dufour',
+    'comprar barco en san blas',
+    'sailboat for sale panama',
+    'negocio charter san blas venta'
+  ],
+  alternates: {
+    canonical: 'https://sailingtheworld.net/boatsonsale',
+  },
+  openGraph: {
+    title: 'Velero Franca Austral en Venta (Dufour 4800) | San Blas, Panamá',
+    description: 'Velero equipadísimo listo para navegar o seguir trabajando de charter en San Blas. Precio: $30,000 USD.',
+    url: 'https://sailingtheworld.net/boatsonsale',
+    siteName: 'Sailing the World',
+    locale: 'es_PA',
+    type: 'website',
+    images: [
+      {
+        url: 'https://sailingtheworld.net/contenido/experiencias/explorar/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Velero Franca Austral Dufour 4800 en venta en San Blas',
+      },
+    ],
+  },
+};
+
 
 
 export default function BoatsOnSale() {
@@ -62,8 +96,31 @@ const barcoDestacadoReel = {
     "Consultanos por mas especificaciones y fotos de la embarcación",
   ],
 };
+const boatOnSaleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    'name': 'Franca Austral (Dufour 4800) - Velero en Venta',
+    'description': 'Velero Dufour 4800 de 1982 (34.94 pies / 10.65m), con motor Volvo Penta MD11C 25HP, paneles solares y equipado para charter en San Blas.',
+    'category': 'Sailboat',
+    'offers': {
+      '@type': 'Offer',
+      'url': 'https://sailingtheworld.net/boatsonsale',
+      'priceCurrency': 'USD',
+      'price': '30000.00',
+      'itemCondition': 'https://schema.org/UsedCondition',
+      'availability': 'https://schema.org/InStock',
+      'seller': {
+        '@type': 'Organization',
+        'name': 'Sailing the World'
+      }
+    }
+  };
   return (
-    <article > 
+    <article >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(boatOnSaleSchema) }}
+      /> 
       <DestacadoBarcoReelWidget {...barcoDestacadoCarrousel} />
      <CatalogoVenta />     
      <ScrollVentas 

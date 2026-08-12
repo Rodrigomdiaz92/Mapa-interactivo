@@ -1,123 +1,101 @@
-"use client";
-//import InteractiveMap from "@/components/map/InteractiveMap";
-import ImageGallery from "@/components/panel/ImageGallery";
-import CardCarousel from "@/components/ui/CardCarrousel";
-import type { GalleryItem, ImageGalleryRef } from "react-image-gallery";
-import { useRef } from "react";
-import CarrouselHome from "@/components/ui/CarrouselHome";
-import Experiencias from "@/components/ui/Experiencias";
-import Categorias from "@/components/ui/Categorias";
-import { FAQ } from "@/components/ui/FAQ";
-import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-import ScrollCharters from "@/components/boatdetail/ScrollCharters";
-import WidgetCarousel from "@/components/layout/WidgetCarousel";
-import HistoryGridCard from "@/components/navegacionynaturaleza/HistoryGridCard";
-import ActivitiesPromoWidget from "@/components/navegacionynaturaleza/ActivitiesPromoWidget";
-import CharterPromoWidget from "@/components/navegacionynaturaleza/CharterPromoWidget";
-import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
-import { Reseñas } from "@/components/boatdetail/Reseñas";
-import HeroVideo from "@/components/layout/HeroVideo";
-import DestacadoBarcoReelWidget from "@/components/boatsale/DestacadoBarcoReelWidget";
 
+
+import { Metadata } from 'next';
+import HomeClient from "@/components/urls/HomeClient";
+
+export const metadata: Metadata = {
+  title: 'Sailing the World | Charters & Hospedaje en Catamarán y Velero en San Blas',
+  description: 'Vive el verdadero San Blas en el archipiélago de Guna Yala. Alquiler de catamaranes y veleros privados con Nico, Belu y flota aliada. Biología, navegación y hospedaje exclusivo.',
+  keywords: [
+    'san blas catamaran charter',
+    'alquiler velero san blas',
+    'charter guna yala',
+    'hospedaje en velero panama',
+    'san blas sailboat rental',
+    'private boat charter guna yala',
+    'sailing the world san blas',
+    'franca austral dufour 4800'
+  ],
+  alternates: {
+    canonical: 'https://sailingtheworld.net',
+  },
+  openGraph: {
+    title: 'Sailing the World | Hospedaje y Charters en Catamarán en San Blas, Panamá',
+    description: 'Navega por el archipiélago de San Blas a bordo de veleros y catamaranes exclusivos. Guías locales, biólogos y tripulación experta.',
+    url: 'https://sailingtheworld.net',
+    siteName: 'Sailing the World',
+    locale: 'es_PA',
+    type: 'website',
+    images: [
+      {
+        url: 'https://sailingtheworld.net/contenido/experiencias/explorar/1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Catamarán navegando en las aguas turquesas de San Blas Guna Yala',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sailing the World | Veleros & Catamaranes en San Blas',
+    description: 'Explora San Blas Guna Yala a bordo de nuestros catamaranes y veleros privados.',
+    images: ['https://sailingtheworld.net/contenido/experiencias/explorar/1.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 
 export default function Home() {
 
-  const barcoDestacadoReel = {
-  id: "Franca Austral",
-  titulo: "Franca Austral a la Venta (Dufour 4800)",
-  subtitulo: "Listo para navegar o continuar negocio de Charter en San Blas",
-  precio: "$30,000 USD",
-  ubicacion: "San Blas, Panamá",
-  anio: 1982,
-  eslora: "34,94 pies / 10,65 metros",
-  capacidad: " 6 Pax aprox",
-  badgeText: "Vendemos nuestra casa flotante ❤️",
-  // Se define la URL del Reel para que el componente muestre Instagram
-  instagramReelUrl: "https://www.instagram.com/reel/DXPgIORgKix/", 
-  whatsappMessage: "Hola Sailing the World, me interesa recibir más información sobre el Franca Austral",
-  destacados: [
-    "Volvo Penta. MD11C, 25 HP",
-    "380 litros (2 tanque de inoxidable)",
-    "Ecosonda: fishfinder Garmin",
-    "radio VHF Unidem",
-    "2 Camarotes + cabina central ",
-    "Paneles solares ",
-    "Excelente estado de mantenimiento",
-    "Mantenimiento al día",
-    "Consultanos por mas especificaciones y fotos de la embarcación",
-  ],
-};
+  
+const homeSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TravelAgency',
+    'name': 'Sailing the World',
+    'alternateName': 'Sailing the World by Navegación y Naturaleza',
+    'url': 'https://sailingtheworld.net',
+    'logo': 'https://sailingtheworld.net/icons/3.svg',
+    'image': 'https://sailingtheworld.net/contenido/experiencias/explorar/1.jpg',
+    'description': 'Charters y hospedajes exclusivos en catamarán y velero en las Islas San Blas (Guna Yala), Panamá. Experiencias de navegación ecológica guiadas por biólogos y tripulación local.',
+    'telephone': '+50766302038',
+    'priceRange': '$$$',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressRegion': 'Guna Yala',
+      'addressCountry': 'PA'
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 9.5541,
+      'longitude': -78.9619
+    },
+    'sameAs': [
+      'https://www.instagram.net/sailingtheworld',
+       'https://www.instagram.com/sailingthe.world/',
+       'https://www.facebook.com/sailingtheworld25', // Agregar redes sociales
+    ]
+  };
 
  
   
   return (
-    <article >    
-      <section id="map" className="flex-1">
-        <HeroVideo />
-      </section>
-      <section id="about-us" >
-                
-        <WidgetCarousel title="¿Quienes Somos?">
-        {/* Widget 1 */}
-        <HistoryGridCard
-          title="Viví San Blas con Nico, Belu y Nuestra Flota Aliada"
-          text={`Somos Nico y Belu, biólogos y navegantes. Después de recorrer el mundo a vela, hoy te abrimos las puertas de nuestro barco para que vivas San Blas de forma auténtica: playas vírgenes, gastronomía fresca y una conexión real con la cultura local.\n \n ** ¿Buscás otra fecha o un barco diferente? ** \n Si nuestro barco no tiene disponibilidad, trabajamos junto a una red de embarcaciones y capitanes aliados de total confianza, garantizando los mismos estándares de seguridad, confort y atención personalizada que definen a Sailing the World.`}
-          instagramUrl="https://www.instagram.com/reel/DXMnGfbAFRa/"
-          badge="ANFITRIONES & FLOTA"
-        />       
-
-        {/* Widget 2 */}
-        
-        
-        
-
-        {/* Widget 3 */}
-        <DestacadoBarcoReelWidget {...barcoDestacadoReel} />
-        
-      </WidgetCarousel>
-      <CharterPromoWidget
-          title="Hospedate con Nico y Belu"
-          description="Viví la experiencia San Blas a bordo de nuestro velero."
-          buttonText="Conocer Barco"
-          buttonHref = "/charters/1"
-        />
-      </section>
-      <section id="categories">
-        <Categorias />        
-      </section>
-      <section id="experiences">
-        <Experiencias />
-      </section>
-      
-      <section id="catalogo">
-        <ScrollCharters 
-        title="Veleros Recomendados"
-        subtitle="Tu proxima aventura navegando por el Caribe Panameño"
-        category="Sailboat"
-      />  
-      <ScrollCharters 
-        title="Catamaranes Exclusivos"
-        subtitle="Espacio y confort superior para navegar el Caribe"
-        category="Catamaran"
-      />
-      <ActivitiesPromoWidget buttonHref="/actividades" />
-      </section>
-      <section id="faqs">
-        <FAQ />
-      </section>
-      <section id="asistencia-viajero">
-        <AsistenciaViajeroWidget />
-      </section>
-      <Reseñas />
-      
-      
-      <WhatsAppButton 
-        phoneNumber="+50766302038" 
-        message="(H)Hola, me gustaría conocer mas sobre su servicio."
-        tooltipText="¿Dudas?¡Escríbenos por WhatsApp!"
-      />
-    </article>
+    < >
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }}
+      />    
+      <HomeClient />
+    </>
     
   );
 }

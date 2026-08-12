@@ -1,37 +1,61 @@
-"use client";
 
-import Catalogo from "@/components/boatdetail/Catalogo";
-import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-import AsistenciaViajeroWidget from "@/components/ui/AsistenciaViajeroWidget";
-import { INITIAL_CATALOG_ITEMS } from "@/data/catalogData";
-import { useRouter } from "next/navigation";
-import { Suspense } from 'react';  
+
+
+import { Metadata } from 'next';
+import ChartersClient from "@/components/urls/ChartersClient";
+
+export const metadata: Metadata = {
+  title: 'Catálogo de Catamaranes, Veleros y Cabañas en San Blas | Sailing the World',
+  description: 'Explora nuestras opciones de hospedaje en San Blas: Catamaranes de lujo, veleros de expedición y cabañas en islas privadas. Precios desde $220/día.',
+  keywords: [
+    'alquiler catamaran san blas',
+    'veleros en san blas panama',
+    'san blas sailboat charter options',
+    'cabanas islas san blas',
+    'precios charter guna yala'
+  ],
+  alternates: {
+    canonical: 'https://sailingtheworld.net/charters',
+  },
+  openGraph: {
+    title: 'Hospedajes en Catamarán y Velero en San Blas | Sailing the World',
+    description: 'Encuentra la embarcación ideal para explorar las Islas San Blas. Tripulación y atención personalizada incluida.',
+    url: 'https://sailingtheworld.net/charters',
+    siteName: 'Sailing the World',
+    locale: 'es_PA',
+    type: 'website',
+    images: [
+      {
+        url: 'https://sailingtheworld.net/contenido/catamaranes/Zenith/catalogo/1.png',
+        width: 1200,
+        height: 630,
+        alt: 'Catamarán en las Islas San Blas',
+      },
+    ],
+  },
+};
 
 export default function Charters() {
-  const router = useRouter();
-  //let barcos = console.log(INITIAL_CATALOG_ITEMS);
-
-  const handleSelectBoat = (boatId: number) => {
-    router.push(`/charters/${boatId}`);
+  
+  const chartersSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': 'Flota de Catamaranes, Veleros y Hospedajes en San Blas',
+    'description': 'Catálogo de opciones de alojamiento navegable y terrestre en el archipiélago de Guna Yala.',
+    'url': 'https://sailingtheworld.net/charters',
+    'provider': {
+      '@type': 'TravelAgency',
+      'name': 'Sailing the World'
+    }
   };
 
   return (
-    <article>
-      <Suspense fallback={<div className="p-12 text-center text-neutral-500">Cargando catálogo...</div>}>
-        <Catalogo 
-          items={INITIAL_CATALOG_ITEMS} 
-          onSelectBoat={handleSelectBoat} 
-        />
-      </Suspense>
-      <section id="asistencia-viajero">
-              <AsistenciaViajeroWidget />
-            </section>
-     
-      <WhatsAppButton 
-        phoneNumber="+50766302038" 
-        message="(CH)Hola, necesito ayuda para elegir un barco."
-        tooltipText="Te ayudamos a elegir tu barco ideal.¡Escríbenos!"
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(chartersSchema) }}
       />
-    </article>
+      <ChartersClient/>
+    </>
   );
 }
