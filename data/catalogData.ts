@@ -43,6 +43,19 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Lupa/catalogo/5.png",
           "/contenido/veleros/Lupa/catalogo/6.png",
           "/contenido/veleros/Lupa/catalogo/7.png",
+          "/contenido/veleros/Lupa/catalogo/8.png",
+          "/contenido/veleros/Lupa/catalogo/9.png",
+          "/contenido/veleros/Lupa/catalogo/10.png",
+          "/contenido/veleros/Lupa/catalogo/11.png",
+          "/contenido/veleros/Lupa/catalogo/12.png",
+          "/contenido/veleros/Lupa/catalogo/13.png",
+          "/contenido/veleros/Lupa/catalogo/14.png",
+          "/contenido/veleros/Lupa/catalogo/15.png",
+          "/contenido/veleros/Lupa/catalogo/16.png",
+          "/contenido/veleros/Lupa/catalogo/17.png",
+          "/contenido/veleros/Lupa/catalogo/18.png",
+          "/contenido/veleros/Lupa/catalogo/19.png",
+          "/contenido/veleros/Lupa/catalogo/20.png",
         ],
       },
     },
@@ -56,13 +69,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       "/contenido/veleros/Lupa/catalogo/5.png",
       "/contenido/veleros/Lupa/catalogo/6.png",
       "/contenido/veleros/Lupa/catalogo/7.png",
+      "/contenido/veleros/Lupa/catalogo/8.png",
+      "/contenido/veleros/Lupa/catalogo/9.png",
+      "/contenido/veleros/Lupa/catalogo/10.png",
+      "/contenido/veleros/Lupa/catalogo/11.png",
+      "/contenido/veleros/Lupa/catalogo/12.png",
+      "/contenido/veleros/Lupa/catalogo/13.png",
+      "/contenido/veleros/Lupa/catalogo/14.png",
+      "/contenido/veleros/Lupa/catalogo/15.png",
+      "/contenido/veleros/Lupa/catalogo/16.png",
+      "/contenido/veleros/Lupa/catalogo/17.png",
+      "/contenido/veleros/Lupa/catalogo/18.png",
+      "/contenido/veleros/Lupa/catalogo/19.png",
+      "/contenido/veleros/Lupa/catalogo/20.png",
     ],
     boatDescription: {
       es: "Expedición guiada por biólogos marinos en San Blas a bordo de un acogedor Jeanneau Sun Odyssey de 40 pies.",
       en: "Biologist-led San Blas expedition aboard a comfortable 40ft Jeanneau Sun Odyssey sailboat.",
     },
     boatLongDescription: {
-      es: "¡Bienvenidos a bordo! Somos Nico y Belu, tus anfitriones y biólogos marinos profesionales argentinos que dejamos la rutina hace más de 3 años para vivir a bordo. Diseñamos una experiencia en el archipiélago de San Blas que va mucho más allá de un paseo en barco, con snorkel guiado e incluso uso de microscopio a bordo.",
+      es: "Nuestro Jeanneau Sun Odyssey de 40 pies está impecable, es superespacioso y está pensado para el relax absoluto de un grupo exclusivo de hasta 4 personas (en 2 camarotes con cama doble). \n \n 🍹 Servicio todo incluido: Desayuno, almuerzo y cena con bebidas** (gaseosas, jugos, vino, cerveza y ron). Además tenemos máquina para hacer hielo a bordo!  \n 🚀 Conectividad y confort: Salón interno amplio con Smart TV, cocina equipada e Internet satelital Starlink de alta velocidad para que trabajes o compartas tu viaje con la mejor vista del mundo.  \n 🌎 Idiomas: Hablamos español, inglés y un fluido portuñol.  ",
       en: "Welcome aboard! We are Nico and Belu, your hosts and professional Argentine biologists who left the routine over 3 years ago to live aboard our sailboat. Explore San Blas guided by experts who know and love marine life, complete with guided snorkeling and an onboard microscope.",
     },
     specs: {
@@ -79,30 +105,33 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       },
       photoUrl: "/contenido/veleros/Lupa/capitan/1.png",
       description: {
-        es: "Biólogos marinos profesionales y navegantes expertos que han recorrido desde el Caribe hasta la Polinesia Francesa.",
+        es: "Somos dos biólogos argentinos que hace más de tres años dejamos la rutina para vivir y navegar en nuestro velero. En este tiempo, hemos recorrido lugares increíbles, desde el Caribe hasta la Polinesia Francesa, y hoy diseñamos una experiencia a bordo que va mucho más allá de un simple paseo en barco. Te invitamos a nuestra casa flotante El Lupa, para explorar juntos San Blas, un archipiélago de 365 islas en el Caribe panameño.",
         en: "Professional marine biologists and expert sailors who have navigated from the Caribbean to French Polynesia.",
       },
       languages: ["Español", "English", "Português"],
     },
     dining: {
       description: {
-        es: "Gastronomía basada en marisco fresco del día o productos adquiridos directamente a los pescadores locales Guna. Incluye 3 comidas diarias, snacks y bebidas.",
+        es: "🎣 Gastronomía de mar: Platos frescos todos los días con la pesca del día o mariscos comprados directamente a los pescadores locales. ",
         en: "Fresh daily seafood gastronomy featuring the catch of the day or direct purchases from local Guna fishermen. Includes 3 daily meals, snacks, and drinks.",
       },
       photoUrl: "/contenido/veleros/Lupa/comidas/1.png",
     },
     activities: {
       description: {
-        es: "Snorkel guiado con enfoque biológico, sesiones interactivas con microscopio a bordo e island hopping diario por Guna Yala.",
+        es: "Aventura asegurada: Tabla de SUP, equipos de snorkel completos y dinghy con motor para bajar a las playas más exclusivas.  \nRelax al sol: Cockpit y cubierta amplia con hamaca para tus siestas y ducha externa. ",
         en: "Biologist-guided snorkeling, interactive onboard microscope sessions, and daily island hopping across Guna Yala.",
       },
       photoUrls: [
         "/contenido/veleros/Lupa/experiencia/1.png",
+        "/contenido/veleros/Lupa/experiencia/2.png",
+        "/contenido/veleros/Lupa/experiencia/3.png",
+        "/contenido/veleros/Lupa/experiencia/4.png",
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 300,
+      basePricePerPersonPerDay: 200,
       tiers: [
         {
           seasonOrType: { es: "2 Huéspedes (Camarote Popa)", en: "2 Guests (Aft Cabin)" },
@@ -129,36 +158,43 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             <thead>
               <tr class="bg-slate-100">
                 <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td class="p-3 border">2 Huéspedes (Camarote Popa)</td>
-                <td class="p-3 border">Camarote Privado</td>
-                <td class="p-3 border font-bold text-green-600">$600 USD</td>
+                <td class="p-3 border font-bold">$460 USD</td>
+                <td class="p-3 border font-bold text-green-600">$400 USD</td>
               </tr>
               <tr>
                 <td class="p-3 border">3 Huéspedes (2 Camarotes)</td>
-                <td class="p-3 border">Charter Privado</td>
-                <td class="p-3 border font-bold text-green-600">$790 USD</td>
+                <td class="p-3 border font-bold">$620 USD</td>
+                <td class="p-3 border font-bold text-green-600">$540 USD</td>
               </tr>
               <tr>
                 <td class="p-3 border">4 Huéspedes (2 Camarotes)</td>
-                <td class="p-3 border">Charter Privado</td>
-                <td class="p-3 border font-bold text-green-600">$990 USD</td>
+                <td class="p-3 border font-bold">$830 USD</td>
+                <td class="p-3 border font-bold text-green-600">$720 USD</td>
               </tr>
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada Alta</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada Baja:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
                 <th class="p-3 border">Occupancy & Setup</th>
-                <th class="p-3 border">Mode</th>
-                <th class="p-3 border">Price (USD / Night)</th>
+                <th class="p-3 border">High Season (USD / Night)</th>
+                <th class="p-3 border">Low Season (USD / Night)</th>
               </tr>
             </thead>
             <tbody>
@@ -183,15 +219,16 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       },
     },
     includes: [
-      { es: "Anfitriones y guía biológica profesional (Nico & Belu)", en: "Hosting and guidance by professional biologist crew (Nico & Belu)" },
-      { es: "Pensión completa: 3 comidas, marisco fresco diario, snacks y bebidas", en: "All-inclusive meals, daily fresh seafood, snacks, and drinks" },
+      { es: "Tripulacion ", en: "Hosting and guidance by professional biologist crew (Nico & Belu)" },
+      { es: "Pensión completa: 3 comidas, snacks y bebidas moderadas", en: "All-inclusive meals, daily fresh seafood, snacks, and drinks" },
       { es: "Equipamiento del barco, snorkel y microscopio a bordo", en: "Use of vessel equipment, snorkeling gear, and onboard microscope" },
       { es: "Limpieza del barco y agua dulce", en: "Vessel cleaning and fresh water" },
+      { es: "Sabanas + toalla", en: "White clothing and towels" },
     ],
     excludes: [
       { es: "Seguro personal de viaje", en: "Personal travel insurance" },
       { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuestos de entrada a Guna Yala (pago en efectivo local)", en: "Guna Yala Entrance Fees (local cash tax)" },
+      { es: "Impuestos de entrada a Guna Yala", en: "Guna Yala Entrance Fees (local cash tax)" },
       { es: "Gastos personales en las islas", en: "Personal expenses on the islands" },
     ],
     relatedExperienceIds: [2, 3, 4],
