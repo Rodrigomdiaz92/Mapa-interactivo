@@ -292,7 +292,7 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
             {/* Tarifas */}
             {item.pricing?.htmlTableContent?.[lang] && (
               <div className="bg-white p-6 sm:p-8 rounded-2xl border border-neutral-200/80 shadow-sm space-y-4">
-                <h2 className="text-xl font-serif font-semibold text-neutral-900">Estructura de Tarifas / Temporada baja</h2>
+                <h2 className="text-xl font-serif font-semibold text-neutral-900">Estructura de Tarifasa</h2>
                 <div className="w-full overflow-x-auto rounded-xl border border-neutral-200/60 p-2 sm:p-4 bg-neutral-50/50">
                   <div 
                     className="prose prose-sm max-w-none 
