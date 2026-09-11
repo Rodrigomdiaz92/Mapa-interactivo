@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import FooterCustom from "@/components/layout/FooterCustom";
 import NavbarCustom from "@/components/layout/NavBarCustom";
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,7 +34,7 @@ export default function RootLayout({
          <NavbarCustom />
          <main className="flex-1 w-full pt-0">{children}</main>        
         <FooterCustom /> 
-        
+        <Analytics />
       </body>
     </html>
   );

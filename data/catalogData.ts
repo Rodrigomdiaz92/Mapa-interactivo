@@ -131,7 +131,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 200,
+      basePricePerPersonPerDay: 220,
       tiers: [
         {
           seasonOrType: { es: "2 Huéspedes (Camarote Popa)", en: "2 Guests (Aft Cabin)" },
@@ -165,18 +165,18 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             <tbody>
               <tr>
                 <td class="p-3 border">2 Huéspedes (Camarote Popa)</td>
-                <td class="p-3 border font-bold">$460 USD</td>
-                <td class="p-3 border font-bold text-green-600">$400 USD</td>
+                <td class="p-3 border font-bold">$510 USD</td>
+                <td class="p-3 border font-bold text-green-600">$440 USD</td>
               </tr>
               <tr>
                 <td class="p-3 border">3 Huéspedes (2 Camarotes)</td>
-                <td class="p-3 border font-bold">$620 USD</td>
-                <td class="p-3 border font-bold text-green-600">$540 USD</td>
+                <td class="p-3 border font-bold">$690 USD</td>
+                <td class="p-3 border font-bold text-green-600">$590 USD</td>
               </tr>
               <tr>
                 <td class="p-3 border">4 Huéspedes (2 Camarotes)</td>
-                <td class="p-3 border font-bold">$830 USD</td>
-                <td class="p-3 border font-bold text-green-600">$720 USD</td>
+                <td class="p-3 border font-bold">$915 USD</td>
+                <td class="p-3 border font-bold text-green-600">$790 USD</td>
               </tr>
             </tbody>
           </table>
