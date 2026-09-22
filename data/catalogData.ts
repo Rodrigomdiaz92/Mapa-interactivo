@@ -182,8 +182,8 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           </table>
           <ul>
           <br>
-            <li><strong>Temporada Alta</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada Baja:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
             <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
           
           </ul>
