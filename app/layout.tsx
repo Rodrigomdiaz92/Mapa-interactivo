@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased min-h-screen`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
          <NavbarCustom />
          <main className="flex-1 w-full pt-0">{children}</main>        
         <FooterCustom /> 
