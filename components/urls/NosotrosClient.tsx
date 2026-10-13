@@ -57,7 +57,7 @@ Nuestro compromiso es brindar una experiencia náutica genuina y responsable. Co
               alt: "navegando en velero",
             },
             {
-              src: "/contenido/otros/2.jpg",
+              src: "/contenido/otros/2.png",
               alt: "diversion en catamaran",
             },
             {
