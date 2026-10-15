@@ -13,6 +13,7 @@ import { InteractiveMapWidget } from "@/components/map/InteractiveMapWidget";
 import { CardCarousel } from "@/components/ui/CardCarrousel";
 import Reseñas from "@/components/boatdetail/Reseñas";
 import DestacadoBarcoReelWidget from "@/components/boatsale/DestacadoBarcoReelWidget";
+import CharterPromoWidget from "@/components/navegacionynaturaleza/CharterPromoWidget";
 
 interface PageProps {
   params: Promise<{ id: string }> | { id: string };
@@ -108,7 +109,7 @@ export default async function BoatDetailPage({ params, searchParams }: PageProps
       }
     }
   };
-
+/*
   const barcoDestacadoReel = {
   id: "Franca Austral",
   titulo: "Franca Austral a la Venta (Dufour 4800)",
@@ -133,7 +134,7 @@ export default async function BoatDetailPage({ params, searchParams }: PageProps
     "Mantenimiento al día",
     "Consultanos por mas especificaciones y fotos de la embarcación",
   ],
-};
+};*/
 
   return (
     <>
@@ -188,7 +189,13 @@ export default async function BoatDetailPage({ params, searchParams }: PageProps
                       },
                     ]}
                   />
-                  <DestacadoBarcoReelWidget {...barcoDestacadoReel} />
+                  <CharterPromoWidget
+                            title="Conoce nuestra flota amiga de catamaranes y veleros"
+                            description="Viví la experiencia San Blas a bordo de nuestra flota amiga."
+                            buttonText="Ver opciones"
+                            buttonHref = "/charters"
+                          />
+                  
       <FloatingCTA
         text = 'Consultar disponibilidad'
         phoneNumber = '+50766302038'

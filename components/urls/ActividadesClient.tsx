@@ -10,6 +10,7 @@ import DecisionButtons from "@/components/ui/DecisionButtons";
 import Experiencias from "@/components/ui/Experiencias";
 import FAQ from "@/components/ui/FAQ";
 import { Anchor, Sparkles } from "lucide-react";
+import CharterPromoWidget from "../navegacionynaturaleza/CharterPromoWidget";
 
 
 
@@ -84,7 +85,12 @@ export default function ActividadesClient() {
         <Reseñas/>
       </section>
       <section id="destacado-barco">
-        <DestacadoBarcoReelWidget {...barcoDestacadoReel} /> 
+        <CharterPromoWidget
+                  title="Conoce nuestra flota amiga de catamaranes y veleros"
+                  description="Viví la experiencia San Blas a bordo de nuestra flota amiga."
+                  buttonText="Ver opciones"
+                  buttonHref = "/charters"
+                />
       </section>
       
      <WhatsAppButton 

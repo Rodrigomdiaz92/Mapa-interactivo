@@ -192,7 +192,7 @@ export default async function ExperienceDetailPage({ params }: PageProps) {
                 buttonText="Ver Flota"
               />
       <Reseñas/>
-           <DestacadoBarcoReelWidget {...barcoDestacadoReel} />
+           
       <WhatsAppButton 
               phoneNumber="+50766302038" 
               message="(EF)Hola, me gustaría recibir más información sobre esta experiencias en San Blas."

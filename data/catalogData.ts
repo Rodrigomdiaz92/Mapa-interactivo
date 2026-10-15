@@ -240,11 +240,241 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: false,
   },
 
-  // ---------------------------------------------------------------------------
-  // 2. THYRA
-  // ---------------------------------------------------------------------------
+  //---------------------------------------------------------------------------
+  // 2. FRANCA AUSTRAL
+  //-----------------------------------------------------------------------------
   {
     id: 2,
+    slug: "franca-austral-dufour-34ft",
+    category: "Sailboat",
+    isAvailable: true,
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Franca Austral (Dufour 34FT) en San Blas | Sailing the World",
+        en: "Charter Franca Austral (Dufour 34FT) Sailboat in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Expedición por San Blas a bordo del velero Franca Austral (Dufour 34ft) con Federico Y Rodrigo. Pensión completa y snorkel guiado.",
+        en: "San Blas expedition aboard Franca Austral (Dufour 34ft) with hosts Federico & Rodrigo. All-inclusive meals and guided snorkeling.",
+      },
+      keywords: [
+        { es: "velero Franca Austral san blas", en: "Franca Austral sailboat san blas" },
+        { es: "expedicion y nevegacion por san blas", en: "sailing charter san blas" },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Franca Austral en San Blas - Expedición y Navegacion por San Blas",
+          en: "Franca Austral Sailboat in San Blas - Sailing Expedition",
+        },
+        description: {
+          es: "Explora San Blas con Federico y Rodrigo a bordo del Franca Austral de 34 pies.",
+          en: "Explore San Blas sailing with Federico & Rodrigo aboard the Franca Austral 34ft.",
+        },
+        images: [
+          "/contenido/veleros/FrancaAustral/catalogo/1.png",
+          "/contenido/veleros/FrancaAustral/catalogo/2.png",
+          "/contenido/veleros/FrancaAustral/catalogo/3.png",
+          "/contenido/veleros/FrancaAustral/catalogo/4.png",
+          "/contenido/veleros/FrancaAustral/catalogo/5.png",
+          "/contenido/veleros/FrancaAustral/catalogo/6.png",
+          "/contenido/veleros/FrancaAustral/catalogo/7.png",
+          "/contenido/veleros/FrancaAustral/catalogo/8.png",
+          "/contenido/veleros/FrancaAustral/catalogo/9.png",
+          "/contenido/veleros/FrancaAustral/catalogo/10.png",
+          "/contenido/veleros/FrancaAustral/catalogo/11.png",
+          "/contenido/veleros/FrancaAustral/catalogo/12.png",
+          "/contenido/veleros/FrancaAustral/catalogo/13.png",
+          "/contenido/veleros/FrancaAustral/catalogo/14.png",
+          "/contenido/veleros/FrancaAustral/catalogo/15.png",
+          "/contenido/veleros/FrancaAustral/catalogo/16.png",
+          "/contenido/veleros/FrancaAustral/catalogo/17.png",
+          "/contenido/veleros/FrancaAustral/catalogo/18.png",
+          "/contenido/veleros/FrancaAustral/catalogo/19.png",
+          "/contenido/veleros/FrancaAustral/catalogo/20.png",
+        ],
+      },
+    },
+    boatName: "FRANCA AUSTRAL (Dufour 34FT)",
+    boatCoverPhoto: "/contenido/veleros/FrancaAustral/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/veleros/FrancaAustral/catalogo/1.png",
+      "/contenido/veleros/FrancaAustral/catalogo/2.png",
+      "/contenido/veleros/FrancaAustral/catalogo/3.png",
+      "/contenido/veleros/FrancaAustral/catalogo/4.png",
+      "/contenido/veleros/FrancaAustral/catalogo/5.png",
+      "/contenido/veleros/FrancaAustral/catalogo/6.png",
+      "/contenido/veleros/FrancaAustral/catalogo/7.png",
+      "/contenido/veleros/FrancaAustral/catalogo/8.png",
+      "/contenido/veleros/FrancaAustral/catalogo/9.png",
+      "/contenido/veleros/FrancaAustral/catalogo/10.png",
+      "/contenido/veleros/FrancaAustral/catalogo/11.png",
+      "/contenido/veleros/FrancaAustral/catalogo/12.png",
+      "/contenido/veleros/FrancaAustral/catalogo/13.png",
+      "/contenido/veleros/FrancaAustral/catalogo/14.png",
+      "/contenido/veleros/FrancaAustral/catalogo/15.png",
+      "/contenido/veleros/FrancaAustral/catalogo/16.png",
+      "/contenido/veleros/FrancaAustral/catalogo/17.png",
+      "/contenido/veleros/FrancaAustral/catalogo/18.png",
+      "/contenido/veleros/FrancaAustral/catalogo/19.png",
+      "/contenido/veleros/FrancaAustral/catalogo/20.png",
+    ],
+    boatDescription: {
+      es: "Expedición guiada por San Blas a bordo de un Dufour 4800 de 34 pies.",
+      en: "San Blas expedition aboard a comfortable 34ft Dufour 4800 sailboat.",
+    },
+    boatLongDescription: {
+      es: "Nuestro Dufour 4800 de 34 pies está impecable, es espacioso y está pensado para difrutar en solitario o en grupo exclusivo de hasta 3 personas (en 1 camarote + cabina compartida con cama doble). \n \n 🍹 Servicio todo incluido: Desayuno, almuerzo y cena con bebidas** (gaseosas, jugos, vino, cerveza y ron). \n 🚀 Conectividad y confort: Salón interno, cocina equipada e Internet satelital Starlink para que trabajes o compartas tu viaje con la mejor vista del mundo.  \n 🌎 Idiomas: Hablamos español, inglés y un fluido portuñol.  ",
+      en: "Welcome aboard! We are Rodri and Fede, your hosts and professional Argentine sailors who left the routine over 2 years ago to live aboard our sailboat. Explore San Blas guided by experts who know and love marine life, complete with guided snorkeling.",
+    },
+    specs: {
+      lengthFeet: 34,
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 2,
+    },
+    captain: {
+      name: "Rodri & Fede",
+      role: {
+        es: "Navegantes y Capitanes",
+        en: "Expert Captains",
+      },
+      photoUrl: "/contenido/veleros/FrancaAustral/capitan/1.png",
+      description: {
+        es: "Somos dos amigos argentinos que hace dos años dejamos la rutina para viajar navegar y explorar el mundo ahora en nuestro velero. En este tiempo, hemos recorrido lugares increíbles, desde el machu picchu, Colombia, Panama, Guatemala y hoy diseñamos una experiencia a bordo que va mucho más allá de un simple paseo en barco. Te invitamos a nuestra casa flotante El Franca Austral, para explorar juntos San Blas, un archipiélago de 365 islas en el Caribe panameño.",
+        en: "Professional marine sailors who have travel America and now explore the world aboard their sailboat. They offer a unique sailing experience in San Blas, Panama.",
+      },
+      languages: ["Español", "English", "Português"],
+    },
+    dining: {
+      description: {
+        es: "🎣 Gastronomía de mar: Platos frescos todos los días con la pesca del día o mariscos comprados directamente a los pescadores locales. ",
+        en: "Fresh daily seafood gastronomy featuring the catch of the day or direct purchases from local Guna fishermen. Includes 3 daily meals, snacks, and drinks.",
+      },
+      photoUrl: "/contenido/veleros/FrancaAustral/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Aventura asegurada: Tabla de SUP, equipos de snorkel completos y dinghy con motor para bajar a las playas más exclusivas.  \nRelax al sol: Cockpit y cubierta amplia con hamaca para tus siestas y ducha externa. ",
+        en: "Biologist-guided snorkeling, interactive onboard microscope sessions, and daily island hopping across Guna Yala.",
+      },
+      photoUrls: [
+        "/contenido/veleros/FrancaAustral/experiencia/1.png",
+        "/contenido/veleros/FrancaAustral/experiencia/2.png",
+        "/contenido/veleros/FrancaAustral/experiencia/3.png",
+        
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 195,
+      tiers: [
+        {
+          seasonOrType: { es: "2 Huéspedes (Camarote Proa)", en: "2 Guests (Front Cabin)" },
+          guestsCount: 2,
+          pricePerNight: 390,
+          notes: { es: "Camarote Privado", en: "Private Cabin" },
+        },
+        {
+          seasonOrType: { es: "3 Huéspedes (2 Camarotes)", en: "3 Guests (2 Cabins)" },
+          guestsCount: 3,
+          pricePerNight: 760,
+          notes: { es: "Charter Privado", en: "Private Charter" },
+        },
+        
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">2 Huéspedes (Camarote Proa)</td>
+                <td class="p-3 border font-bold">$390 USD</td>
+                <td class="p-3 border font-bold text-green-600">$320 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">3 Huéspedes (2 Camarotes)</td>
+                <td class="p-3 border font-bold">$760 USD</td>
+                <td class="p-3 border font-bold text-green-600">$610 USD</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Occupancy & Setup</th>
+                <th class="p-3 border">High Season (USD / Night)</th>
+                <th class="p-3 border">Low Season (USD / Night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">2 Guests (Aft Cabin)</td>
+                <td class="p-3 border">Private Cabin</td>
+                <td class="p-3 border font-bold text-green-600">$600 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">3 Guests (2 Cabins)</td>
+                <td class="p-3 border">Private Charter</td>
+                <td class="p-3 border font-bold text-green-600">$790 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">4 Guests (2 Cabins)</td>
+                <td class="p-3 border">Private Charter</td>
+                <td class="p-3 border font-bold text-green-600">$990 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Tripulacion ", en: "Hosting and guidance by professional sailing crew." },
+      { es: "Pensión completa: 3 comidas, snacks y bebidas moderadas", en: "All-inclusive meals, daily fresh seafood, snacks, and drinks" },
+      { es: "Equipamiento del barco, snorkel + tabla SUP", en: "Use of vessel equipment, snorkeling gear + SUP table" },
+      { es: "Limpieza del barco y agua dulce", en: "Vessel cleaning and fresh water" },
+      { es: "Sabanas + toalla", en: "White clothing and towels" },
+    ],
+    excludes: [
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
+      { es: "Impuestos de entrada a Guna Yala", en: "Guna Yala Entrance Fees (local cash tax)" },
+      { es: "Gastos personales en las islas", en: "Personal expenses on the islands" },
+    ],
+    relatedExperienceIds: [2, 3, 4],
+    maxGuests: 3,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Experiencia de Navegación", en: "Sailing Experience" },
+    isFeatured: true,
+    hasDiscount: false,
+  },
+
+  // ---------------------------------------------------------------------------
+  // 3. THYRA
+  // ---------------------------------------------------------------------------
+  {
+    id: 3,
     slug: "thyra-danish-handcrafted-monohull",
     category: "Sailboat",
     isAvailable: true, 
@@ -403,7 +633,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 3. BlueMarys
   // ---------------------------------------------------------------------------
   {
-    id: 3,
+    id: 4,
     slug: "bluemarys-beneteau-oceanis",
     category: "Sailboat",
     isAvailable: true, 
@@ -587,7 +817,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 4. Naboa
   // ---------------------------------------------------------------------------
   {
-    id: 4,
+    id: 5,
     slug: "naboa-bavaria-39-cruiser",
     category: "Sailboat",
     isAvailable: true, 
@@ -755,7 +985,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 5. Splendid
   // ---------------------------------------------------------------------------
   {
-    id: 5,
+    id: 6,
     slug: "splendid-cheoy-lee-classic-yawl",
     category: "Sailboat",
     isAvailable: true,
@@ -916,7 +1146,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 6. Youth
   // ---------------------------------------------------------------------------
   {
-    id: 6,
+    id: 7,
     slug: "youth-jeanneau-sun-odyssey-45",
     category: "Sailboat",
     isAvailable: true, 
@@ -1099,7 +1329,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 7. Mola Mola
   // ---------------------------------------------------------------------------
   {
-    id: 7,
+    id: 8,
     slug: "mola-mola-beneteau-411",
     category: "Sailboat",
     isAvailable: true, 
@@ -1268,7 +1498,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 8. Zenith - Deluxe Catamaran
   // ---------------------------------------------------------------------------
   {
-    id: 8,
+    id: 9,
     slug: "zenith-deluxe-catamaran",
     category: "Catamaran",
     isAvailable: true, 
@@ -1436,7 +1666,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 9. MBR - Lagoon 42 ft
   // ---------------------------------------------------------------------------
   {
-    id: 9,
+    id: 10,
     slug: "mbr-lagoon-42ft",
     category: "Catamaran",
     isAvailable: true, 
@@ -1615,7 +1845,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 10. YOYO
   // ---------------------------------------------------------------------------
   {
-    id: 10,
+    id: 11,
     slug: "yoyo-catamaran-guna-yala",
     category: "Catamaran",
     isAvailable: true, 
@@ -1772,7 +2002,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 11. Yoli - Lagoon 440
   // ---------------------------------------------------------------------------
   {
-    id: 11,
+    id: 12,
     slug: "yoli-lagoon-440",
     category: "Catamaran",
     isAvailable: true, 
@@ -1943,7 +2173,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 12. Don C - Lagoon 400S2
   // ---------------------------------------------------------------------------
   {
-    id: 12,
+    id: 13,
     slug: "don-c-lagoon-400s2",
     category: "Catamaran",
     isAvailable: true,
@@ -2118,12 +2348,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: true,
     hasDiscount: false,
   },
-/*
+
   // ---------------------------------------------------------------------------
   // 13. Coolcat
   // ---------------------------------------------------------------------------
   {
-    id: 13,
+    id: 14,
     slug: "coolcat-catamaran-40ft",
     category: "Catamaran",
     isAvailable: true, 
@@ -2306,12 +2536,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: false,
     hasDiscount: false,
   },
-*/
+
   // ---------------------------------------------------------------------------
   // 14. Nomade - Lagoon 570 Owner's Edition
   // ---------------------------------------------------------------------------
   {
-    id: 14,
+    id: 15,
     slug: "nomade-lagoon-570-owners-edition",
     category: "Catamaran",
     isAvailable: true, 
@@ -2490,7 +2720,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 15. KAYA
   // ---------------------------------------------------------------------------
   {
-    id: 15,
+    id: 16,
     slug: "kaya-caribbean-catamaran",
     category: "Catamaran",
     isAvailable: true,
@@ -2662,7 +2892,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 16. Berenice - Leopard 40
   // ---------------------------------------------------------------------------
   {
-    id: 16,
+    id: 17,
     slug: "berenice-leopard-40-2018",
     category: "Catamaran",
     isAvailable: true, 

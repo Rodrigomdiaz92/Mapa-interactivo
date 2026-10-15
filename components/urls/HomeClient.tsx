@@ -72,12 +72,18 @@ export default function HomeClient() {
         />       
 
         {/* Widget 2 */}
-        
+        <HistoryGridCard
+          title="Explorá San Blas a bordo del Franca Austral"
+          text={`Rodri y Fede te esperan en el velero Franca Austral para recorrer el archipiélago de San Blas, descubrir sus playas vírgenes, disfrutar de su gastronomía fresca y establecer una conexión real con la cultura local.\n \n ** ¿Buscás otra fecha o un barco diferente? ** \n Si este barco no tiene disponibilidad, trabajamos junto a una red de embarcaciones y capitanes aliados de total confianza, garantizando los mismos estándares de seguridad, confort y atención personalizada que definen a Sailing the World.`}
+          instagramUrl="https://www.instagram.com/p/DTqhFlJCTjF/"
+          badge="ANFITRIONES & FLOTA"
+        /> 
         
         
 
         {/* Widget 3 */}
-        <DestacadoBarcoReelWidget {...barcoDestacadoReel} />
+        
+        
         
       </WidgetCarousel>
       <CharterPromoWidget
@@ -86,6 +92,7 @@ export default function HomeClient() {
           buttonText="Conocer Barco"
           buttonHref = "/charters/1"
         />
+        
       </section>
       <section id="categories">
         <Categorias />        
