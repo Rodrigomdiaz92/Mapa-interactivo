@@ -234,10 +234,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     relatedExperienceIds: [2, 3, 4],
     maxGuests: 4,
     isPrivate: true,
-    isSharedAllowed: true,
+    isSharedAllowed: false,
     featureBadge: { es: "Expedición Biológica", en: "Biologist-Led Charter" },
     isFeatured: true,
-    hasDiscount: false,
+    hasDiscount: true,
   },
 
   //---------------------------------------------------------------------------
@@ -467,7 +467,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isSharedAllowed: false,
     featureBadge: { es: "Experiencia de Navegación", en: "Sailing Experience" },
     isFeatured: true,
-    hasDiscount: false,
+    hasDiscount: true,
   },
 
   // ---------------------------------------------------------------------------
