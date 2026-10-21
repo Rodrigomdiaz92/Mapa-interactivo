@@ -586,20 +586,20 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 250,
+      basePricePerPersonPerDay: 340,
       tiers: [
         {
           seasonOrType: { es: "Charter Compartido (Por Persona)", en: "Shared Boat Charter (Per Person)" },
-          pricePerNight: 250,
+          pricePerNight: 340,
         },
         {
           seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
           guestsCount: 2,
-          pricePerNight: 850,
+          pricePerNight: 770,
         },
         {
           seasonOrType: { es: "Charter Privado (3 o más Huéspedes)", en: "Private Charter (3+ Guests)" },
-          pricePerNight: 1200,
+          pricePerNight: 1100,
         },
       ],
       htmlTableContent: {
@@ -607,25 +607,36 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">Charter Compartido (Por Persona)</td>
-                <td class="p-3 border font-bold text-green-600">$250 USD / persona</td>
+                <td class="p-3 border">2 Huéspedes (Camarote Popa)</td>
+                <td class="p-3 border font-bold">$770 USD</td>
+                <td class="p-3 border font-bold text-green-600">$ -- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">Charter Privado (2 Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$850 USD</td>
+                <td class="p-3 border">+ 3 Huéspedes </td>
+                <td class="p-3 border font-bold">$1100 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">Charter Privado (3 o más Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$1,200 USD</td>
+                <td class="p-3 border">Compartido (cabina x huesped)</td>
+                <td class="p-3 border font-bold">$340 USD</td>
+                <td class="p-3 border font-bold text-green-600">$ -- USD</td>
               </tr>
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
