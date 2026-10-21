@@ -469,12 +469,732 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: true,
     hasDiscount: true,
   },
-
   // ---------------------------------------------------------------------------
-  // 3. THYRA
+  // 3. Youth
   // ---------------------------------------------------------------------------
   {
     id: 3,
+    slug: "youth-jeanneau-sun-odyssey-45",
+    category: "Sailboat",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Experiencia de pesca y navegación abordo del Youth en San Blas | Sailing the World",
+        en: "Fishing and Sailing Experience onboard Youth in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Hospedate abordo del velero moderno Youth (Jeanneau 45) en San Blas. Capacidad para 6 personas, 3 camarotes, 2 baños, paddleboard, snorkel y bebidas incluidas.",
+        en: "Stay onboard the modern Youth sailboat (Jeanneau 45) in San Blas. Capacity for 6 guests, 3 cabins, 2 bathrooms, paddleboard, snorkel, and drinks included.",
+      },
+      keywords: [
+        { es: "velero Youth san blas", en: "Youth sailboat san blas" },
+        { es: "jeanneau 45 charter panama", en: "jeanneau 45 san blas" },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Youth en San Blas - Experiencia de pesca y Navegación",
+          en: "Youth Sailboat in San Blas - Dynamic & Modern Charter",
+        },
+        description: {
+          es: "Navegación moderna y dinámica por el archipiélago Guna Yala para hasta 6 personas.",
+          en: "Modern and dynamic sailing across Guna Yala archipelago for up to 6 guests.",
+        },
+        images: [
+          "/contenido/veleros/Youth/catalogo/1.png",
+          "/contenido/veleros/Youth/catalogo/2.png",
+          "/contenido/veleros/Youth/catalogo/3.png",
+          "/contenido/veleros/Youth/catalogo/4.png", 
+          "/contenido/veleros/Youth/catalogo/5.png",
+          "/contenido/veleros/Youth/catalogo/6.png",
+          "/contenido/veleros/Youth/catalogo/7.png",
+          "/contenido/veleros/Youth/catalogo/8.png",
+          "/contenido/veleros/Youth/catalogo/9.png",
+          "/contenido/veleros/Youth/catalogo/10.png",
+          "/contenido/veleros/Youth/catalogo/11.png",
+          "/contenido/veleros/Youth/catalogo/12.png",
+          "/contenido/veleros/Youth/catalogo/13.png",
+          "/contenido/veleros/Youth/catalogo/14.png",
+          "/contenido/veleros/Youth/catalogo/15.png",
+          
+        ],
+      },
+    },
+    boatName: "Youth (Jeanneau Sun Odyssey 45)",
+    boatCoverPhoto: "/contenido/veleros/Youth/catalogo/1.png",
+    boatGalleryPhotos: [
+          "/contenido/veleros/Youth/catalogo/1.png",
+          "/contenido/veleros/Youth/catalogo/2.png",
+          "/contenido/veleros/Youth/catalogo/3.png",
+          "/contenido/veleros/Youth/catalogo/4.png", 
+          "/contenido/veleros/Youth/catalogo/5.png",
+          "/contenido/veleros/Youth/catalogo/6.png",
+          "/contenido/veleros/Youth/catalogo/7.png",
+          "/contenido/veleros/Youth/catalogo/8.png",
+          "/contenido/veleros/Youth/catalogo/9.png",
+          "/contenido/veleros/Youth/catalogo/10.png",
+          "/contenido/veleros/Youth/catalogo/11.png",
+          "/contenido/veleros/Youth/catalogo/12.png",
+          "/contenido/veleros/Youth/catalogo/13.png",
+          "/contenido/veleros/Youth/catalogo/14.png",
+          "/contenido/veleros/Youth/catalogo/15.png",
+    ],
+    boatDescription: {
+      es: "Velero de 45 pies, con capacidad para 6 personas, ideal para grupos o familias. ",
+      en: "Modern 45ft sailboat with vibrant social deck spaces, ideal for groups or families.",
+    },
+    boatLongDescription: {
+      es: "Youth es una embarcación pensada para quienes buscan aventura y recuerdos inolvidables. Con capacidad para 6 personas, ofrece actividades de pesca, snorkel, navegacion y mucho mas ademas de recorrer el paraiso de las islas de San Blas en tu propio velero privado.",
+      en: "Youth is a modern, high-energy vessel designed for travelers who want fun, speed, and vibrant memories. Features social deck spaces and contemporary interiors ideal for small groups or families.",
+    },
+    specs: {
+      lengthFeet: 45,
+      cabins: 3,
+      bathrooms: 2,
+      doubleBeds: 3,
+    },
+    captain: {
+      name: "NICO & VIKI",
+      role: { es: "Tus guías en San Blas", en: "Captain and Crew" },
+      photoUrl: "/contenido/veleros/Youth/capitan/1.png",
+      description: {
+        es: "Nuestros queridos amigos de @flotandoando_ te esperan abordo para ofrecerte una experiencia de navegación segura y divertida. ",
+        en: "Dynamic crew focused on providing a fun, high-energy, and comfortable sailing tour.",
+      },
+    },
+    dining: {
+      description: {
+        es: "Tres comidas diarias junto con bebidas alcohólicas y no alcohólicas incluidas (bebidas con alcohol servidas bajo consumo moderado).",
+        en: "Three daily meals with alcoholic and non-alcoholic beverages included (alcoholic drinks provided for moderate consumption).",
+      },
+      photoUrl: "/contenido/veleros/Youth/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Island hopping dinámico, snorkel en los mejores arrecifes, Stand Up Paddleboard y espacio para relajarse abordo.",
+        en: "High-energy island hopping, snorkeling in top reef spots, Stand-Up Paddleboard, and sunbathing deck.",
+      },
+      photoUrls: [
+        "/contenido/veleros/Youth/experiencia/1.png",
+        "/contenido/veleros/Youth/experiencia/2.png",
+        "/contenido/veleros/Youth/experiencia/3.png",
+
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 250,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Compartido (Por Persona)", en: "Shared Boat Charter (Per Person)" },
+          pricePerNight: 250,
+        },
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          guestsCount: 2,
+          pricePerNight: 850,
+        },
+        {
+          seasonOrType: { es: "Charter Privado (3 o más Huéspedes)", en: "Private Charter (3+ Guests)" },
+          pricePerNight: 1200,
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Modalidad</th>
+                <th class="p-3 border">Precio (USD / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Charter Compartido (Por Persona)</td>
+                <td class="p-3 border font-bold text-green-600">$250 USD / persona</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Charter Privado (2 Huéspedes)</td>
+                <td class="p-3 border font-bold text-green-600">$850 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Charter Privado (3 o más Huéspedes)</td>
+                <td class="p-3 border font-bold text-green-600">$1,200 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Price (USD / Night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Shared Boat Charter (Per Person)</td>
+                <td class="p-3 border font-bold text-green-600">$250 USD / person</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Private Charter (2 Guests)</td>
+                <td class="p-3 border font-bold text-green-600">$850 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Private Charter (3+ Guests)</td>
+                <td class="p-3 border font-bold text-green-600">$1,200 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Tres comidas diarias y bebidas (alcohólicas con moderación)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
+      { es: "Uso de equipo de snorkel y paddleboard (SUP)", en: "Use of Snorkel Gear and Paddleboard" },
+      { es: "Espacioso solárium y amplias zonas sociales", en: "Spacious sun deck and social areas" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
+      { es: "Entrada obligatoria al territorio Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [1, 3, 4],
+    maxGuests: 6,
+    isPrivate: true,
+    isSharedAllowed: true,
+    featureBadge: { es: "Espacioso Solárium", en: "Spacious Sun Deck" },
+    isFeatured: false,
+    hasDiscount: false,
+  },
+
+  // ---------------------------------------------------------------------------
+  // 14. Nomade - Lagoon 570 Owner's Edition
+  // ---------------------------------------------------------------------------
+  {
+    id: 4,
+    slug: "nomade-lagoon-570-owners-edition",
+    category: "Catamaran",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Catamarán Nomade (Lagoon 570 Kevlar) en San Blas | Sailing the World",
+        en: "Charter Nomade (Lagoon 570 Owner's Edition) in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Mega catamarán de 57 pies Nomade en San Blas (Casco Kevlar). 4 camarotes con A/C, Starlink, karaoke, máquinas de helado y trago congelado, scooters subacuáticos.",
+        en: "Mega 57ft Nomade Catamaran in San Blas (Kevlar hull). 4 A/C cabins, Starlink, karaoke, ice cream & frozen drink machines, underwater scooters.",
+      },
+      keywords: [
+        { es: "catamaran Nomade lagoon 570", en: "Nomade lagoon 570 san blas" },
+        { es: "megacatamaran de lujo san blas", en: "luxury mega catamaran charter panama" },
+      ],
+      openGraph: {
+        title: {
+          es: "Catamarán Nomade (Lagoon 570) - Lujo y Diversión de Clase Mundial",
+          en: "Nomade Catamaran (Lagoon 570) - World-Class Luxury Yacht",
+        },
+        description: {
+          es: "El catamarán más equipado de San Blas: A/C en todos los camarotes, desalinizador, Starlink y scooters subacuáticos.",
+          en: "San Blas's premier yacht: A/C in every cabin, unlimited watermaker, Starlink, and underwater scooters.",
+        },
+        images: [
+          "/contenido/catamaranes/Nomade/catalogo/1.png",
+          "/contenido/catamaranes/Nomade/catalogo/2.png",
+          "/contenido/catamaranes/Nomade/catalogo/3.png",
+          "/contenido/catamaranes/Nomade/catalogo/4.png", 
+          "/contenido/catamaranes/Nomade/catalogo/5.png",
+          "/contenido/catamaranes/Nomade/catalogo/6.png",
+
+        ],
+      },
+    },
+    boatName: "Nomade (Lagoon 570 Owner's Edition)",
+    boatCoverPhoto: "/contenido/catamaranes/Nomade/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/catamaranes/Nomade/catalogo/1.png",
+          "/contenido/catamaranes/Nomade/catalogo/2.png",
+          "/contenido/catamaranes/Nomade/catalogo/3.png",
+          "/contenido/catamaranes/Nomade/catalogo/4.png", 
+          "/contenido/catamaranes/Nomade/catalogo/5.png",
+          "/contenido/catamaranes/Nomade/catalogo/6.png",
+    ],
+    boatDescription: {
+      es: "Exclusivo Lagoon 570 con casco de Kevlar, aire acondicionado en cada camarote, máquinas de helado y juguetes de alta tecnología.",
+      en: "Exclusive Lagoon 570 with Kevlar hull, A/C in all cabins, ice cream machine, and high-tech water toys.",
+    },
+    boatLongDescription: {
+      es: "Nomade es la definición de lujo flotante en San Blas. Un super catamarán Lagoon 570 con casco de Kevlar, diseñado para brindar entretenimiento ilimitado. Cuenta con A/C en sus 4 camarotes dobles, Starlink Satelital, desalinizador para agua dulce ilimitada, Karaoke, máquina de helados, máquina de tragos congelados y scooters subacuáticos.",
+      en: "Nomade defines floating luxury in San Blas. A Lagoon 570 mega-catamaran with Kevlar hull built for maximum comfort. Features A/C in all 4 double cabins, Starlink Satellite Internet, unlimited fresh watermaker, Karaoke system, ice cream machine, frozen drink machine, and underwater water scooters.",
+    },
+    specs: {
+      lengthFeet: 57,
+      cabins: 4,
+      bathrooms: 4,
+      doubleBeds: 4,
+    },
+    captain: {
+      name: "Nomade Trilingual Crew",
+      role: { es: "Tripulación Trilingüe VIP", en: "Trilingual VIP Crew" },
+      photoUrl: "/contenido/catamaranes/Nomade/capitan/1.png",
+      description: {
+        es: "Tripulación trilingüe (Español, Inglés, Portugués) dedicada a ofrecer una experiencia impecable de nivel resort.",
+        en: "Trilingual crew (English, Spanish, Portuguese) delivering resort-level hospitality.",
+      },
+      languages: ["English", "Español", "Português"],
+    },
+    dining: {
+      description: {
+        es: "Gastronomía gourmet All-Inclusive: carnes rojas, pescados y mariscos frescos, jugos naturales, menú infantil personalizado y barra libre. Incluye máquina de helados y tragos congelados.",
+        en: "Gourmet All-Inclusive: red meats, fresh local fish/seafood, natural juices, custom kids menu, open bar, plus ice cream & frozen drink machines.",
+      },
+      photoUrl: "/contenido/catamaranes/Nomade/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "2 Scooters subacuáticos, 2 Paddleboards, 2 Kayaks, equipo completo de pesca (caña y pesca submarina), Karaoke, TV y Starlink.",
+        en: "2 Underwater water scooters, 2 SUPs, 2 Kayaks, rod & spear fishing equipment, Karaoke, TV, and Starlink.",
+      },
+      photoUrls: [
+        "/contenido/catamaranes/Nomade/experiencia/1.png",
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 400,
+      tiers: [
+        {
+          seasonOrType: { es: "Camarote Compartido (Por Persona)", en: "Shared Cabin Charter (Per Person)" },
+          pricePerNight: 400,
+        },
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          guestsCount: 2,
+          pricePerNight: 1325,
+          notes: { es: "Huésped adicional: +$250 USD/noche", en: "Extra guest: +$250 USD/night" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Modalidad</th>
+                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Camarote Compartido</td>
+                <td class="p-3 border font-bold text-green-600">$400 USD / pers.</td>
+                <td class="p-3 border">Por persona por noche</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Charter Privado (2 personas)</td>
+                <td class="p-3 border font-bold text-green-600">$1,325 USD</td>
+                <td class="p-3 border">Huésped extra: +$250 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Price (USD / Night)</th>
+                <th class="p-3 border">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Shared Cabin Charter</td>
+                <td class="p-3 border font-bold text-green-600">$400 USD / guest</td>
+                <td class="p-3 border">Per person per night</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Private Charter (2 guests)</td>
+                <td class="p-3 border font-bold text-green-600">$1,325 USD</td>
+                <td class="p-3 border">Extra guest: +$250 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Aire Acondicionado en cada camarote y agua dulce ilimitada", en: "Air Conditioning in every cabin and unlimited fresh watermaker" },
+      { es: "Gastronomía gourmet, barra libre, máquina de helados y slushies", en: "Gourmet dining, open bar, ice cream & slushie machines" },
+      { es: "2 Scooters subacuáticos, 2 SUP, 2 Kayaks, Karaoke y Starlink", en: "2 Underwater scooters, 2 SUPs, 2 Kayaks, Karaoke, Starlink" },
+      { es: "Tripulación VIP trilingüe dedicada", en: "Dedicated trilingual VIP crew" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
+      { es: "Entrada en efectivo a Guna Yala", en: "Guna Yala entrance fees" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [8, 9, 12],
+    maxGuests: 8,
+    isPrivate: true,
+    isSharedAllowed: true,
+    featureBadge: { es: "A/C & Scooters Subacuáticos", en: "A/C & Underwater Scooters" },
+    isFeatured: true,
+    hasDiscount: false,
+  },
+  // ---------------------------------------------------------------------------
+  // 8. Zenith - Deluxe Catamaran
+  // ---------------------------------------------------------------------------
+  {
+    id: 5,
+    slug: "zenith-deluxe-catamaran",
+    category: "Catamaran",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Catamarán de Lujo Zenith en San Blas | Sailing the World",
+        en: "Charter Zenith Deluxe Catamaran in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Disfruta del catamarán ultra lujo Zenith en San Blas. All-Inclusive exclusivo para hasta 8 personas, 4 camarotes, tripulación privada (Capitán, Chef, Azafata) y permisos insulares incluidos.",
+        en: "Experience ultimate luxury aboard Zenith Catamaran in San Blas. Exclusive all-inclusive charter for up to 8 guests, 4 cabins, private crew & island permits included.",
+      },
+      keywords: [
+        { es: "catamaran de lujo san blas", en: "deluxe catamaran charter san blas" },
+        { es: "charter lujo zenith panama", en: "zenith luxury yacht san blas" },
+      ],
+      openGraph: {
+        title: {
+          es: "Catamarán Zenith en San Blas - Lujo y Confort All-Inclusive",
+          en: "Zenith Catamaran in San Blas - Ultimate All-Inclusive Luxury",
+        },
+        description: {
+          es: "Navegación exclusiva por el archipiélago Guna Yala a bordo del Zenith con tripulación de 3 personas y servicio 5 estrellas.",
+          en: "Exclusive sailing across Guna Yala archipelago aboard Zenith with 3-person crew and 5-star service.",
+        },
+        images: [
+          "/contenido/catamaranes/Zenith/catalogo/1.png",
+          "/contenido/catamaranes/Zenith/catalogo/2.png",
+          "/contenido/catamaranes/Zenith/catalogo/3.png",
+          "/contenido/catamaranes/Zenith/catalogo/4.png", 
+          "/contenido/catamaranes/Zenith/catalogo/5.png",
+          "/contenido/catamaranes/Zenith/catalogo/6.png",
+          "/contenido/catamaranes/Zenith/catalogo/7.png",
+
+        ],
+      },
+    },
+    boatName: "Zenith Deluxe Catamaran",
+    boatCoverPhoto: "/contenido/catamaranes/Zenith/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/catamaranes/Zenith/catalogo/1.png",
+          "/contenido/catamaranes/Zenith/catalogo/2.png",
+          "/contenido/catamaranes/Zenith/catalogo/3.png",
+          "/contenido/catamaranes/Zenith/catalogo/4.png", 
+          "/contenido/catamaranes/Zenith/catalogo/5.png",
+          "/contenido/catamaranes/Zenith/catalogo/6.png",
+          "/contenido/catamaranes/Zenith/catalogo/7.png",
+    ],
+    boatDescription: {
+      es: "Catamarán deluxe all-inclusive diseñado para grandes grupos y familias con servicio vip de 3 tripulantes.",
+      en: "Deluxe all-inclusive catamaran designed for large groups and families with 3-person crew.",
+    },
+    boatLongDescription: {
+      es: "Zenith ofrece una experiencia náutica de ultra lujo en el archipiélago de San Blas. Tripulado por un equipo profesional de 3 a 4 personas (Capitán, Chef y Azafata), garantiza máxima estabilidad, privacidad y confort. Incluye todas las tasas insulares, permisos de fondeo y licencias comerciales de Guna Yala en el precio final.",
+      en: "Zenith delivers an ultimate luxury cruising experience in San Blas. Crewed by 3 to 4 professionals (Captain, Chef, Stewardess), it guarantees stability, privacy, and high-end comfort. All island fees and Guna Yala commercial charter permits are fully included in the price.",
+    },
+    specs: {
+      cabins: 4,
+      bathrooms: 4,
+      doubleBeds: 4,
+    },
+    captain: {
+      name: "Zenith VIP Crew (Captain, Chef, Stewardess)",
+      role: { es: "Tripulación Profesional VIP", en: "Professional VIP Crew" },
+      photoUrl: "/contenido/catamaranes/Zenith/capitan/1.png",
+      description: {
+        es: "Tripulación completa dedicada a brindar servicio gastronómico, hospitalidad de primera clase y gestión náutica sin preocupaciones.",
+        en: "Full crew dedicated to providing fine dining, first-class hospitality, and seamless sailing.",
+      },
+      languages: ["English", "Español"],
+    },
+    dining: {
+      description: {
+        es: "Pensión completa deluxe (4 comidas diarias): desayuno, almuerzo, merienda y cena gourmet elaborada por chef a bordo. Opciones Kosher, No Alcohol o No Food con ajuste de precio.",
+        en: "Deluxe full board (4 meals per day): breakfast, lunch, afternoon snack, and chef-prepared gourmet dinner. Kosher, No Alcohol, or No Food options available with price adjustments.",
+      },
+      photoUrl: "/contenido/catamaranes/Zenith/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Exploración de islas privadas, snorkel de alta gama, paddleboarding y asistencia integral en traslados dentro de Guna Yala.",
+        en: "Private island hopping, premium snorkeling, paddleboarding, and full transfer assistance in Guna Yala.",
+      },
+      photoUrls: [
+        "/contenido/catamaranes/Zenith/experiencias/1.png",
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 1292,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          guestsCount: 2,
+          pricePerNight: 2585,
+          notes: { es: "Huésped adicional: $345 USD/noche. Niños 4-12 años: 50% desc. Niños 0-3 años: Gratis.", en: "Extra guest: $345 USD/night. Children 4-12 yrs: 50% off. Under 3 yrs: Free." },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Modalidad / Ocupación</th>
+                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Huésped Adicional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Charter Privado Exclusivo (2 Huéspedes)</td>
+                <td class="p-3 border font-bold text-green-600">$2,585 USD</td>
+                <td class="p-3 border">+$345 USD / Noche</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="text-xs text-slate-500 mt-2">* Descuento especial niños: 4-12 años pagan 50%. Niños de 3 años o menos viajan gratis. Permisos de islas comerciales incluidos.</p>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Type / Occupancy</th>
+                <th class="p-3 border">Price (USD / Night)</th>
+                <th class="p-3 border">Extra Guest</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Exclusive Private Charter (2 Guests)</td>
+                <td class="p-3 border font-bold text-green-600">$2,585 USD</td>
+                <td class="p-3 border">+$345 USD / Night</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="text-xs text-slate-500 mt-2">* Child discounts: Ages 4-12 charged 50%. Age 3 and under sail free. Commercial island permits included.</p>
+        `,
+      },
+    },
+    includes: [
+      { es: "Tripulación VIP completa (Capitán, Chef, Azafata)", en: "Full VIP crew (Captain, Chef, Stewardess)" },
+      { es: "4 comidas diarias gourmet y servicio de bar", en: "4 daily gourmet meals and beverage service" },
+      { es: "Todas las tasas de islas, fondeadero y permisos comerciales de Guna Yala", en: "All island fees, anchorage fees, and Guna Yala commercial permits" },
+      { es: "Uso completo de equipos de agua y confort a bordo", en: "Full use of water sports equipment and onboard amenities" },
+    ],
+    excludes: [
+      { es: "Transporte terrestre/marítimo hacia/desde San Blas", en: "Ground/water transport to/from San Blas" },
+      { es: "Compras de artesanías nativas o consumos fuera del barco", en: "Native craft purchases or food/drinks purchased off the boat" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [9, 14, 16],
+    maxGuests: 8,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Catamarán Deluxe All-Inclusive", en: "Deluxe All-Inclusive Catamaran" },
+    isFeatured: true,
+    hasDiscount: true,
+  },
+   // ---------------------------------------------------------------------------
+  // 11. Yoli - Lagoon 440
+  // ---------------------------------------------------------------------------
+  {
+    id: 6,
+    slug: "yoli-lagoon-440",
+    category: "Catamaran",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Catamarán Yoli (Lagoon 440) en San Blas | Sailing the World",
+        en: "Charter Yoli (Lagoon 440) Catamaran in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Navega con el Capitán argentino Gabriel a bordo del Lagoon 440 Yoli en San Blas. Wi-Fi Starlink, 4 camarotes, barra libre completa y ambiente relajado.",
+        en: "Sail with Argentine Captain Gabriel aboard Lagoon 440 Yoli in San Blas. Features Starlink Wi-Fi, 4 cabins, full open bar, and relaxed vibes.",
+      },
+      keywords: [
+        { es: "catamaran Yoli lagoon 440", en: "Yoli lagoon 440 san blas" },
+        { es: "capitan gabriel san blas", en: "lagoon 440 charter panama" },
+      ],
+      openGraph: {
+        title: {
+          es: "Catamarán Yoli (Lagoon 440) - Elegancia y Capitán Argentino",
+          en: "Yoli Catamaran (Lagoon 440) - Classic Comfort & Argentine Captain",
+        },
+        description: {
+          es: "Espacioso Lagoon 440 con Starlink, áreas de descanso panorámicas y cocina deliciosa.",
+          en: "Spacious Lagoon 440 featuring Starlink, panoramic lounge deck, and delicious cuisine.",
+        },
+        images: [
+          "/contenido/catamaranes/Yoli/catalogo/1.png",
+          "/contenido/catamaranes/Yoli/catalogo/2.png",
+          "/contenido/catamaranes/Yoli/catalogo/3.png",
+          "/contenido/catamaranes/Yoli/catalogo/4.png", 
+          "/contenido/catamaranes/Yoli/catalogo/5.png",
+          "/contenido/catamaranes/Yoli/catalogo/6.png",
+          "/contenido/catamaranes/Yoli/catalogo/7.png",
+          "/contenido/catamaranes/Yoli/catalogo/8.png",
+          "/contenido/catamaranes/Yoli/catalogo/9.png",
+
+        ],
+      },
+    },
+    boatName: "Yoli (Lagoon 440)",
+    boatCoverPhoto: "/contenido/catamaranes/Yoli/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/catamaranes/Yoli/catalogo/1.png",
+      "/contenido/catamaranes/Yoli/catalogo/2.png",
+      "/contenido/catamaranes/Yoli/catalogo/3.png",
+      "/contenido/catamaranes/Yoli/catalogo/4.png", 
+      "/contenido/catamaranes/Yoli/catalogo/5.png",
+      "/contenido/catamaranes/Yoli/catalogo/6.png",
+      "/contenido/catamaranes/Yoli/catalogo/7.png",
+      "/contenido/catamaranes/Yoli/catalogo/8.png",
+      "/contenido/catamaranes/Yoli/catalogo/9.png",
+
+    ],
+    boatDescription: {
+      es: "Clásico de gran confort y estabilidad con 4 camarotes privados, Starlink Wi-Fi y la calidez del Capitán Gabriel.",
+      en: "Classic comfort and stability featuring 4 private cabins, Starlink Wi-Fi, hosted by Argentine Captain Gabriel.",
+    },
+    boatLongDescription: {
+      es: "El Lagoon 440 'Yoli' combina un salón panorámico con amplias áreas al aire libre en proa y flybridge. Su capitán Gabriel (Argentina), con más de 3 años en San Blas, destaca por su amabilidad, maestría en la navegación y pasión por sorprender a los huéspedes con platillos deliciosos.",
+      en: "The Lagoon 440 'Yoli' blends a panoramic saloon with outdoor rest areas and flybridge views. Argentine Captain Gabriel, with over 3 years navigating San Blas, is passionate about top-tier hospitality and gourmet cooking onboard.",
+    },
+    specs: {
+      lengthFeet: 44,
+      cabins: 4,
+      bathrooms: 1,
+      doubleBeds: 4,
+    },
+    captain: {
+      name: "Capt. Gabriel (Argentina)",
+      role: { es: "Capitán y Chef", en: "Captain & Chef" },
+      photoUrl: "/contenido/catamaranes/Yoli/capitan/1.png",
+      description: {
+        es: "Apasionado del mar y la gastronomía con más de tres años capitaneando en San Blas.",
+        en: "Passionate sailor and chef with over 3 years navigating the San Blas archipelago.",
+      },
+      languages: ["Español", "English"],
+    },
+    dining: {
+      description: {
+        es: "3 comidas diarias nutritivas y sabrosas con ingredientes frescos. Barra libre completa con refrescos (Coca Zero/Reg, Ginger Ale), jugos, cervezas nacionales, vino (blanco/tinto), vodka, ron y ginebra (consumo moderado).",
+        en: "3 daily healthy and delicious meals. Full open bar including soft drinks, natural juices, national beer, wine (white/red), vodka, rum, and gin (moderate consumption).",
+      },
+      photoUrl: "/contenido/catamaranes/Yoli/comidas/1.png" ,
+    },
+    activities: {
+      description: {
+        es: "Starlink Wi-Fi de alta velocidad, Stand-Up Paddleboard, alfombra flotante, snorkel y excursiones a playas de arena blanca.",
+        en: "High-speed Starlink Wi-Fi, SUP paddleboard, floating mat, snorkeling, and beach excursions.",
+      },
+      photoUrls: [
+        "/contenido/catamaranes/Yoli/experiencia/1.png" ,
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 700,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          guestsCount: 2,
+          pricePerNight: 1400,
+          notes: { es: "Huésped adicional: +$240 USD/noche", en: "Extra guest: +$240 USD/night" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Modalidad</th>
+                <th class="p-3 border">Precio Base (2 Huéspedes)</th>
+                <th class="p-3 border">Huésped Extra</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
+                <td class="p-3 border font-bold text-green-600">$1,400 USD / Noche</td>
+                <td class="p-3 border">+$240 USD / Noche</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Base Rate (2 Guests)</th>
+                <th class="p-3 border">Extra Guest</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
+                <td class="p-3 border font-bold text-green-600">$1,400 USD / Night</td>
+                <td class="p-3 border">+$240 USD / Night</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Capitán y tripulación con pensión completa (3 comidas diarias y snacks)", en: "Captain and crew with full board (3 daily meals & snacks)" },
+      { es: "Barra libre de licores, cerveza, vinos y refrescos (consumo moderado)", en: "Open bar with spirits, beers, wines, and soft drinks (moderate consumption)" },
+      { es: "Starlink Wi-Fi, toallas de baño y playa, juguetes acuáticos", en: "Starlink Wi-Fi, bath and beach towels, water toys" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
+      { es: "Impuesto de entrada al territorio Guna Yala", en: "Guna Yala entrance fee" },
+      { es: "Seguro de viaje personal", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [9, 12, 16],
+    maxGuests: 8,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Starlink & Capitán Chef", en: "Starlink & Captain Chef" },
+    isFeatured: true,
+    hasDiscount: false,
+  },
+
+
+
+  // ---------------------------------------------------------------------------
+  // 4. THYRA
+  // ---------------------------------------------------------------------------
+  {
+    id: 7,
     slug: "thyra-danish-handcrafted-monohull",
     category: "Sailboat",
     isAvailable: true, 
@@ -629,11 +1349,513 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: false,
   },
 
+  
+
   // ---------------------------------------------------------------------------
-  // 3. BlueMarys
+  // 6. Naboa
   // ---------------------------------------------------------------------------
   {
-    id: 4,
+    id: 8,
+    slug: "naboa-bavaria-39-cruiser",
+    category: "Sailboat",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Naboa (Bavaria 39) en San Blas | Sailing the World",
+        en: "Charter Naboa (Bavaria 39 Cruiser) Sailboat in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Hospitalidad brasileña en San Blas a bordo del Naboa (Bavaria 39). Capitán Marcelo, Starlink, barra libre, snorkel y SUP incluidos.",
+        en: "Brazilian hospitality in San Blas aboard Naboa (Bavaria 39). Captain Marcelo, Starlink internet, open bar, snorkel, and SUP included.",
+      },
+      keywords: [
+        { es: "velero Naboa san blas", en: "Naboa sailboat san blas" },
+        { es: "bavaria 39 san blas marcelo", en: "bavaria 39 charter panama" },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Naboa en San Blas - Calidez Brasileña y Confort",
+          en: "Naboa Sailboat in San Blas - Brazilian Hospitality",
+        },
+        description: {
+          es: "Disfruta de la hospitalidad de Marcelo a bordo del Bavaria 39 con Starlink e itinerarios de ensueño.",
+          en: "Enjoy Brazilian hospitality with Captain Marcelo aboard a Bavaria 39 featuring Starlink.",
+        },
+        images: [
+          "/contenido/veleros/Naboa/catalogo/1.png",
+          "/contenido/veleros/Naboa/catalogo/2.png",
+          "/contenido/veleros/Naboa/catalogo/3.png",
+          "/contenido/veleros/Naboa/catalogo/4.png", 
+          "/contenido/veleros/Naboa/catalogo/5.png",
+          "/contenido/veleros/Naboa/catalogo/6.png",
+          "/contenido/veleros/Naboa/catalogo/7.png",
+          "/contenido/veleros/Naboa/catalogo/8.png",
+        ],
+      },
+    },
+    boatName: "Naboa (Bavaria 39 Cruiser)",
+    boatCoverPhoto: "/contenido/veleros/Naboa/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/veleros/Naboa/catalogo/1.png",
+          "/contenido/veleros/Naboa/catalogo/2.png",
+          "/contenido/veleros/Naboa/catalogo/3.png",
+          "/contenido/veleros/Naboa/catalogo/4.png", 
+          "/contenido/veleros/Naboa/catalogo/5.png",
+          "/contenido/veleros/Naboa/catalogo/6.png",
+          "/contenido/veleros/Naboa/catalogo/7.png",
+          "/contenido/veleros/Naboa/catalogo/8.png",
+    ],
+    boatDescription: {
+      es: "Velero de alta estabilidad y confort operado con cálida hospitalidad brasileña por el Capitán Marcelo.",
+      en: "A stable and comfortable monohull hosted with warm Brazilian hospitality by Captain Marcelo.",
+    },
+    boatLongDescription: {
+      es: "¡Prepárate para desconectar! Naboa ofrece una experiencia de navegación guiada por el capitán Marcelo, ideal para quienes buscan tranquilidad, exploración y el espíritu acogedor brasileño. Equipado con Starlink, barra libre y equipamiento de deportes acuáticos.",
+      en: "Prepare to disconnect! Naboa offers a delightful sailing experience hosted by Captain Marcelo. Perfect for those seeking tranquility, exploration, and warm Brazilian hospitality in San Blas.",
+    },
+    specs: {
+      lengthFeet: 39,
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 2,
+    },
+    captain: {
+      name: "Capt. Marcelo & First Mate",
+      role: { es: "Capitán y Primer Oficial", en: "Captain and First Mate" },
+      photoUrl: "/contenido/veleros/Naboa/capitan/1.png",
+      description: {
+        es: "Capitán Marcelo y su primer oficial brindan una atención personalizada y alegre al estilo brasileño.",
+        en: "Captain Marcelo and his first mate offer personalized, warm Brazilian hospitality.",
+      },
+      languages: ["Português", "Español", "English"],
+    },
+    dining: {
+      description: {
+        es: "Menú gourmet con mariscos, pescado fresco, arroces, pastas, aperitivos y frutas tropicales. Incluye barra libre con bebidas y cócteles (consumo moderado).",
+        en: "Gourmet menu featuring seafood, fresh fish, rice, pasta, appetizers, and tropical fruits. Open bar with drinks and cocktails included (moderate consumption).",
+      },
+      photoUrl: "/contenido/veleros/Naboa/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Navegación diaria entre islas, snorkel, Stand Up Paddle (SUP), pesca deportiva ligera y conexión con Internet Starlink a bordo.",
+        en: "Daily island navigation, snorkeling, Stand Up Paddle (SUP), fishing gear, and Starlink internet onboard.",
+      },
+      photoUrls: [
+        "/contenido/veleros/Naboa/experiencia/1.png",
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 345,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          guestsCount: 2,
+          pricePerNight: 690,
+          notes: { es: "Huésped adicional: $150 USD", en: "Extra guest: $150 USD" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Tipo de Alojamiento</th>
+                <th class="p-3 border">Precio Base (2 Personas)</th>
+                <th class="p-3 border">Persona Adicional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
+                <td class="p-3 border font-bold text-green-600">$690 USD / Noche</td>
+                <td class="p-3 border">+$150 USD / Noche</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Base Price (2 Guests)</th>
+                <th class="p-3 border">Extra Guest</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
+                <td class="p-3 border font-bold text-green-600">$690 USD / Night</td>
+                <td class="p-3 border">+$150 USD / Night</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Servicio de tripulación privada (Capitán y Primer Oficial)", en: "Private boat with crew (Captain and First Mate)" },
+      { es: "Menú gourmet y barra libre con cócteles (consumo moderado)", en: "Gourmet menu and open bar (moderate consumption)" },
+      { es: "Sábanas, toallas de baño, equipo de pesca, snorkel y SUP", en: "Bed linen, bath towels, fishing gear, snorkel equipment, and SUP" },
+      { es: "Internet Starlink, combustible y tanque de agua dulce", en: "Starlink Internet, fuel, and fresh water tank" },
+    ],
+    excludes: [
+      { es: "Transporte hacia el barco", en: "Transport to the boat" },
+      { es: "Seguro de viaje personal", en: "Personal travel insurance" },
+      { es: "Impuestos obligatorios de entrada a Guna Yala", en: "Mandatory entrance fees to Guna Yala" },
+    ],
+    relatedExperienceIds: [1, 3, 6],
+    maxGuests: 4,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Internet Starlink Incluido", en: "Starlink Internet Onboard" },
+    isFeatured: false,
+    hasDiscount: false,
+  },
+
+  // ---------------------------------------------------------------------------
+  // 7. Splendid
+  // ---------------------------------------------------------------------------
+  {
+    id: 9,
+    slug: "splendid-cheoy-lee-classic-yawl",
+    category: "Sailboat",
+    isAvailable: true,
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Clásico Splendid (Cheoy Lee 1973) en San Blas | Sailing the World",
+        en: "Charter Classic Sailboat Splendid (Cheoy Lee 1973) in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Navega en la joya de madera Cheoy Lee Yawl 1973 en San Blas. Charter exclusivo de lujo clásico para 2 personas con pensión completa.",
+        en: "Sail on the 1973 Cheoy Lee Yawl classic masterpiece in San Blas. Exclusive private charter for 2 guests with full board.",
+      },
+      keywords: [
+        { es: "velero Splendid cheoy lee", en: "Splendid cheoy lee yawl san blas" },
+        { es: "velero madera clasico panama", en: "classic wooden sailboat san blas" },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Clásico Splendid en San Blas - Elegancia Atemporal",
+          en: "Splendid Classic Yawl in San Blas - Timeless Elegance",
+        },
+        description: {
+          es: "Una obra maestra de la náutica con detalles en madera teca construida en 1973.",
+          en: "A marine masterpiece with classic teak wood detailing built in 1973.",
+        },
+        images: [
+          "/contenido/veleros/Splendid/catalogo/1.png",
+          "/contenido/veleros/Splendid/catalogo/2.png",
+          "/contenido/veleros/Splendid/catalogo/3.png",
+          "/contenido/veleros/Splendid/catalogo/4.png", 
+          "/contenido/veleros/Splendid/catalogo/5.png",
+          "/contenido/veleros/Splendid/catalogo/6.png",
+          "/contenido/veleros/Splendid/catalogo/7.png",
+          "/contenido/veleros/Splendid/catalogo/8.png",
+        ],
+      },
+    },
+    boatName: "Splendid (Cheoy Lee Classic Yawl 1973)",
+    boatCoverPhoto: "/contenido/veleros/Splendid/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/veleros/Splendid/catalogo/1.png",
+          "/contenido/veleros/Splendid/catalogo/2.png",
+          "/contenido/veleros/Splendid/catalogo/3.png",
+          "/contenido/veleros/Splendid/catalogo/4.png", 
+          "/contenido/veleros/Splendid/catalogo/5.png",
+          "/contenido/veleros/Splendid/catalogo/6.png",
+          "/contenido/veleros/Splendid/catalogo/7.png",
+          "/contenido/veleros/Splendid/catalogo/8.png",
+    ],
+    boatDescription: {
+      es: "Joya náutica de estilo Yawl (1973) en madera teca que combina elegancia atemporal y navegación suave.",
+      en: "A 1973 classic yawl marine masterpiece combining teak wood elegance and smooth navigation.",
+    },
+    boatLongDescription: {
+      es: "Construido en 1973, este velero tipo Yawl destaca por su casco robusto y líneas refinadas, convirtiéndolo en una pieza única en el Caribe. Su interior detallado en madera de teca ofrece un ambiente sumamente acogedor e íntimo, ideal para 2 personas.",
+      en: "Built in 1973, this yawl-style sailboat stands out for its robust hull and refined lines, making it a unique jewel on the Caribbean Sea. Renowned for smooth and stable navigation, perfect for a romantic couple escape.",
+    },
+    specs: {
+      cabins: 1,
+      bathrooms: 1,
+      doubleBeds: 1,
+    },
+    captain: {
+      name: "Splendid Host",
+      role: { es: "Capitán y Anfitrión", en: "Captain & Host" },
+      photoUrl:"/contenido/veleros/Splendid/capitan/1.png",
+      description: {
+        es: "Capitán experto dedicado a preservar el estilo clásico y la navegación auténtica a vela.",
+        en: "Expert captain passionate about classic sailing tradition and hospitality.",
+      },
+    },
+    dining: {
+      description: {
+        es: "Incluye 3 comidas preparadas a bordo diariamente con ingredientes frescos locales.",
+        en: "Includes 3 daily meals prepared onboard featuring fresh local ingredients.",
+      },
+      photoUrl:"/contenido/veleros/Splendid/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Navegación diaria a vela, equipo de snorkel, visita a piscinas naturales e islas vírgenes.",
+        en: "Daily sailing, snorkeling, visits to natural swimming pools and untouched islands.",
+      },
+      photoUrls: [
+        "/contenido/veleros/Splendid/experiencia/1.png"
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 240,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (Barco Exclusivo)", en: "Private Charter (Exclusive Boat)" },
+          pricePerNight: 240,
+          notes: { es: "Precio por persona por noche", en: "Price per person per night" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Tipo de Alojamiento</th>
+                <th class="p-3 border">Precio (USD / Persona / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
+                <td class="p-3 border font-bold text-green-600">$240 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Price (USD / Person / Night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
+                <td class="p-3 border font-bold text-green-600">$240 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "3 comidas diarias", en: "3 meals per day" },
+      { es: "Uso de equipo de snorkel", en: "Use of Snorkel equipment" },
+      { es: "Navegación a vela por las islas y piscinas naturales", en: "Sailboat navigation and visits to natural pools and islands" },
+      { es: "Hospitalidad y atención personalizada", en: "Exceptional hospitality and guidance" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
+      { es: "Impuestos de entrada a Guna Yala y tasas insulares", en: "Guna Yala entrance fees and island taxes" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [2, 7],
+    maxGuests: 2,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Clásico de Colección (1973)", en: "Classic 1973 Yawl" },
+    isFeatured: false,
+    hasDiscount: false,
+  },
+
+  
+
+  // ---------------------------------------------------------------------------
+  // 7. Mola Mola
+  // ---------------------------------------------------------------------------
+  {
+    id: 10,
+    slug: "mola-mola-beneteau-411",
+    category: "Sailboat",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Mola Mola (Beneteau 411) en San Blas | Sailing the World",
+        en: "Charter Mola Mola (Beneteau 411) Sailboat in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Siente el espíritu de Guna Yala a bordo del velero Mola Mola (Beneteau 411). Red de hamacas, guía local Guna, snorkel y comidas incluidas.",
+        en: "Experience the Guna Yala spirit aboard Mola Mola (Beneteau 411). Hammock net, local Guna guide, snorkeling, and meals included.",
+      },
+      keywords: [
+        { es: "velero Mola Mola san blas", en: "Mola Mola sailboat san blas" },
+        { es: "beneteau 411 san blas panama", en: "beneteau 411 charter guna yala" },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Mola Mola en San Blas - Espíritu y Cultura Local",
+          en: "Mola Mola Sailboat in San Blas - Cultural & Relaxing Experience",
+        },
+        description: {
+          es: "Inspirado en el arte textil tradicional Guna. Conexión auténtica y red de hamacas para relajarse.",
+          en: "Inspired by traditional Guna textiles. Authentic cultural connection and hammock lounging area.",
+        },
+        images: [
+          "/contenido/veleros/Mola mola/catalogo/1.png",
+          "/contenido/veleros/Mola mola/catalogo/2.png",
+          "/contenido/veleros/Mola mola/catalogo/3.png",
+          "/contenido/veleros/Mola mola/catalogo/4.png", 
+          "/contenido/veleros/Mola mola/catalogo/5.png",
+          "/contenido/veleros/Mola mola/catalogo/6.png",
+          "/contenido/veleros/Mola mola/catalogo/7.png",
+          "/contenido/veleros/Mola mola/catalogo/8.png",
+        ],
+      },
+    },
+    boatName: "Mola Mola (Beneteau 411)",
+    boatCoverPhoto: "/contenido/veleros/Mola mola/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/veleros/Mola mola/catalogo/1.png",
+          "/contenido/veleros/Mola mola/catalogo/2.png",
+          "/contenido/veleros/Mola mola/catalogo/3.png",
+          "/contenido/veleros/Mola mola/catalogo/4.png", 
+          "/contenido/veleros/Mola mola/catalogo/5.png",
+          "/contenido/veleros/Mola mola/catalogo/6.png",
+          "/contenido/veleros/Mola mola/catalogo/7.png",
+          "/contenido/veleros/Mola mola/catalogo/8.png",
+    ],
+    boatDescription: {
+      es: "Velero relajado y conectado con la cultura autóctona Guna, equipado con zona de red hamaca para descanso.",
+      en: "Relaxed sailboat with local cultural connection, featuring a hammock netting lounging area.",
+    },
+    boatLongDescription: {
+      es: "Bautizado en honor al colorido textil tradicional de la comarca Guna Yala, Mola Mola ofrece un viaje sereno y conectado con el entorno. Diseñado para quienes buscan descanso absoluto, intercambio cultural respetuoso y la belleza natural del archipiélago.",
+      en: "Named after the colorful traditional textile of the Guna people, Mola Mola offers a relaxed and culturally connected journey. Ideal for guests who want tranquility, natural beauty, and authentic cultural connection.",
+    },
+    specs: {
+      lengthFeet: 41,
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 2,
+    },
+    captain: {
+      name: "Mola Mola Captain & Local Guide",
+      role: { es: "Capitán y Guía Local Guna", en: "Captain and Local Guna Guide" },
+      photoUrl: "/contenido/veleros/Mola mola/capitan/1.png",
+      description: {
+        es: "Anfitriones locales con profundo conocimiento del mar y las tradiciones del pueblo Guna.",
+        en: "Local hosts with deep knowledge of the sea and local Guna traditions.",
+      },
+    },
+    dining: {
+      description: {
+        es: "Pensión completa: 3 comidas al día más bebidas alcohólicas (consumo moderado) y no alcohólicas.",
+        en: "Three daily meals, alcoholic and non-alcoholic beverages included (moderate consumption).",
+      },
+      photoUrl: "/contenido/veleros/Mola mola/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Uso de equipo de snorkel, servicios de guía local para intercambio cultural y descanso en la zona de hamaca en proa.",
+        en: "Snorkel gear, local guide services for cultural exchange, and lounging in the hammock netting.",
+      },
+      photoUrls: [
+        "/contenido/veleros/Mola mola/experiencia/1.png"
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 335,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (Two Guests)" },
+          guestsCount: 2,
+          pricePerNight: 670,
+          notes: { es: "Huésped adicional: $220 USD", en: "Extra guest: $220 USD" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Tipo de Ocupación</th>
+                <th class="p-3 border">Precio (USD / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Charter Privado (Dos Huéspedes)</td>
+                <td class="p-3 border font-bold text-green-600">$670 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Huésped Adicional</td>
+                <td class="p-3 border font-bold text-green-600">+$220 USD / Noche</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Price (USD / Night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Private Charter (Two Guests)</td>
+                <td class="p-3 border font-bold text-green-600">$670 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Extra Guest</td>
+                <td class="p-3 border font-bold text-green-600">+$220 USD / Night</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Tres comidas diarias, bebidas alcohólicas y no alcohólicas (moderado)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
+      { es: "Uso de equipo de snorkel y servicios de guía local Guna", en: "Use of Snorkel Gear and Local Guide Services" },
+      { es: "Área de relax con red hamaca", en: "Hammock Netting / Lounging Area" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
+      { es: "Tasa obligatoria de entrada a Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [2, 4, 5],
+    maxGuests: 4,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Red Hamaca & Guía Guna", en: "Hammock Net & Local Guide" },
+    isFeatured: false,
+    hasDiscount: false,
+  },
+  // ---------------------------------------------------------------------------
+  // 5. BlueMarys
+  // ---------------------------------------------------------------------------
+  {
+    id: 11,
     slug: "bluemarys-beneteau-oceanis",
     category: "Sailboat",
     isAvailable: true, 
@@ -812,861 +2034,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: true,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 4. Naboa
-  // ---------------------------------------------------------------------------
-  {
-    id: 5,
-    slug: "naboa-bavaria-39-cruiser",
-    category: "Sailboat",
-    isAvailable: true, 
-    location: {
-      es: "Islas San Blas, Guna Yala, Panamá",
-      en: "San Blas Islands, Guna Yala, Panama",
-    },
-    seo: {
-      title: {
-        es: "Alquiler Velero Naboa (Bavaria 39) en San Blas | Sailing the World",
-        en: "Charter Naboa (Bavaria 39 Cruiser) Sailboat in San Blas | Sailing the World",
-      },
-      description: {
-        es: "Hospitalidad brasileña en San Blas a bordo del Naboa (Bavaria 39). Capitán Marcelo, Starlink, barra libre, snorkel y SUP incluidos.",
-        en: "Brazilian hospitality in San Blas aboard Naboa (Bavaria 39). Captain Marcelo, Starlink internet, open bar, snorkel, and SUP included.",
-      },
-      keywords: [
-        { es: "velero Naboa san blas", en: "Naboa sailboat san blas" },
-        { es: "bavaria 39 san blas marcelo", en: "bavaria 39 charter panama" },
-      ],
-      openGraph: {
-        title: {
-          es: "Velero Naboa en San Blas - Calidez Brasileña y Confort",
-          en: "Naboa Sailboat in San Blas - Brazilian Hospitality",
-        },
-        description: {
-          es: "Disfruta de la hospitalidad de Marcelo a bordo del Bavaria 39 con Starlink e itinerarios de ensueño.",
-          en: "Enjoy Brazilian hospitality with Captain Marcelo aboard a Bavaria 39 featuring Starlink.",
-        },
-        images: [
-          "/contenido/veleros/Naboa/catalogo/1.png",
-          "/contenido/veleros/Naboa/catalogo/2.png",
-          "/contenido/veleros/Naboa/catalogo/3.png",
-          "/contenido/veleros/Naboa/catalogo/4.png", 
-          "/contenido/veleros/Naboa/catalogo/5.png",
-          "/contenido/veleros/Naboa/catalogo/6.png",
-          "/contenido/veleros/Naboa/catalogo/7.png",
-          "/contenido/veleros/Naboa/catalogo/8.png",
-        ],
-      },
-    },
-    boatName: "Naboa (Bavaria 39 Cruiser)",
-    boatCoverPhoto: "/contenido/veleros/Naboa/catalogo/1.png",
-    boatGalleryPhotos: [
-      "/contenido/veleros/Naboa/catalogo/1.png",
-          "/contenido/veleros/Naboa/catalogo/2.png",
-          "/contenido/veleros/Naboa/catalogo/3.png",
-          "/contenido/veleros/Naboa/catalogo/4.png", 
-          "/contenido/veleros/Naboa/catalogo/5.png",
-          "/contenido/veleros/Naboa/catalogo/6.png",
-          "/contenido/veleros/Naboa/catalogo/7.png",
-          "/contenido/veleros/Naboa/catalogo/8.png",
-    ],
-    boatDescription: {
-      es: "Velero de alta estabilidad y confort operado con cálida hospitalidad brasileña por el Capitán Marcelo.",
-      en: "A stable and comfortable monohull hosted with warm Brazilian hospitality by Captain Marcelo.",
-    },
-    boatLongDescription: {
-      es: "¡Prepárate para desconectar! Naboa ofrece una experiencia de navegación guiada por el capitán Marcelo, ideal para quienes buscan tranquilidad, exploración y el espíritu acogedor brasileño. Equipado con Starlink, barra libre y equipamiento de deportes acuáticos.",
-      en: "Prepare to disconnect! Naboa offers a delightful sailing experience hosted by Captain Marcelo. Perfect for those seeking tranquility, exploration, and warm Brazilian hospitality in San Blas.",
-    },
-    specs: {
-      lengthFeet: 39,
-      cabins: 2,
-      bathrooms: 1,
-      doubleBeds: 2,
-    },
-    captain: {
-      name: "Capt. Marcelo & First Mate",
-      role: { es: "Capitán y Primer Oficial", en: "Captain and First Mate" },
-      photoUrl: "/contenido/veleros/Naboa/capitan/1.png",
-      description: {
-        es: "Capitán Marcelo y su primer oficial brindan una atención personalizada y alegre al estilo brasileño.",
-        en: "Captain Marcelo and his first mate offer personalized, warm Brazilian hospitality.",
-      },
-      languages: ["Português", "Español", "English"],
-    },
-    dining: {
-      description: {
-        es: "Menú gourmet con mariscos, pescado fresco, arroces, pastas, aperitivos y frutas tropicales. Incluye barra libre con bebidas y cócteles (consumo moderado).",
-        en: "Gourmet menu featuring seafood, fresh fish, rice, pasta, appetizers, and tropical fruits. Open bar with drinks and cocktails included (moderate consumption).",
-      },
-      photoUrl: "/contenido/veleros/Naboa/comidas/1.png",
-    },
-    activities: {
-      description: {
-        es: "Navegación diaria entre islas, snorkel, Stand Up Paddle (SUP), pesca deportiva ligera y conexión con Internet Starlink a bordo.",
-        en: "Daily island navigation, snorkeling, Stand Up Paddle (SUP), fishing gear, and Starlink internet onboard.",
-      },
-      photoUrls: [
-        "/contenido/veleros/Naboa/experiencia/1.png",
-      ],
-    },
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 345,
-      tiers: [
-        {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
-          guestsCount: 2,
-          pricePerNight: 690,
-          notes: { es: "Huésped adicional: $150 USD", en: "Extra guest: $150 USD" },
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Alojamiento</th>
-                <th class="p-3 border">Precio Base (2 Personas)</th>
-                <th class="p-3 border">Persona Adicional</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$690 USD / Noche</td>
-                <td class="p-3 border">+$150 USD / Noche</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Base Price (2 Guests)</th>
-                <th class="p-3 border">Extra Guest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$690 USD / Night</td>
-                <td class="p-3 border">+$150 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-      },
-    },
-    includes: [
-      { es: "Servicio de tripulación privada (Capitán y Primer Oficial)", en: "Private boat with crew (Captain and First Mate)" },
-      { es: "Menú gourmet y barra libre con cócteles (consumo moderado)", en: "Gourmet menu and open bar (moderate consumption)" },
-      { es: "Sábanas, toallas de baño, equipo de pesca, snorkel y SUP", en: "Bed linen, bath towels, fishing gear, snorkel equipment, and SUP" },
-      { es: "Internet Starlink, combustible y tanque de agua dulce", en: "Starlink Internet, fuel, and fresh water tank" },
-    ],
-    excludes: [
-      { es: "Transporte hacia el barco", en: "Transport to the boat" },
-      { es: "Seguro de viaje personal", en: "Personal travel insurance" },
-      { es: "Impuestos obligatorios de entrada a Guna Yala", en: "Mandatory entrance fees to Guna Yala" },
-    ],
-    relatedExperienceIds: [1, 3, 6],
-    maxGuests: 4,
-    isPrivate: true,
-    isSharedAllowed: false,
-    featureBadge: { es: "Internet Starlink Incluido", en: "Starlink Internet Onboard" },
-    isFeatured: false,
-    hasDiscount: false,
-  },
-
-  // ---------------------------------------------------------------------------
-  // 5. Splendid
-  // ---------------------------------------------------------------------------
-  {
-    id: 6,
-    slug: "splendid-cheoy-lee-classic-yawl",
-    category: "Sailboat",
-    isAvailable: true,
-    location: {
-      es: "Islas San Blas, Guna Yala, Panamá",
-      en: "San Blas Islands, Guna Yala, Panama",
-    },
-    seo: {
-      title: {
-        es: "Alquiler Velero Clásico Splendid (Cheoy Lee 1973) en San Blas | Sailing the World",
-        en: "Charter Classic Sailboat Splendid (Cheoy Lee 1973) in San Blas | Sailing the World",
-      },
-      description: {
-        es: "Navega en la joya de madera Cheoy Lee Yawl 1973 en San Blas. Charter exclusivo de lujo clásico para 2 personas con pensión completa.",
-        en: "Sail on the 1973 Cheoy Lee Yawl classic masterpiece in San Blas. Exclusive private charter for 2 guests with full board.",
-      },
-      keywords: [
-        { es: "velero Splendid cheoy lee", en: "Splendid cheoy lee yawl san blas" },
-        { es: "velero madera clasico panama", en: "classic wooden sailboat san blas" },
-      ],
-      openGraph: {
-        title: {
-          es: "Velero Clásico Splendid en San Blas - Elegancia Atemporal",
-          en: "Splendid Classic Yawl in San Blas - Timeless Elegance",
-        },
-        description: {
-          es: "Una obra maestra de la náutica con detalles en madera teca construida en 1973.",
-          en: "A marine masterpiece with classic teak wood detailing built in 1973.",
-        },
-        images: [
-          "/contenido/veleros/Splendid/catalogo/1.png",
-          "/contenido/veleros/Splendid/catalogo/2.png",
-          "/contenido/veleros/Splendid/catalogo/3.png",
-          "/contenido/veleros/Splendid/catalogo/4.png", 
-          "/contenido/veleros/Splendid/catalogo/5.png",
-          "/contenido/veleros/Splendid/catalogo/6.png",
-          "/contenido/veleros/Splendid/catalogo/7.png",
-          "/contenido/veleros/Splendid/catalogo/8.png",
-        ],
-      },
-    },
-    boatName: "Splendid (Cheoy Lee Classic Yawl 1973)",
-    boatCoverPhoto: "/contenido/veleros/Splendid/catalogo/1.png",
-    boatGalleryPhotos: [
-      "/contenido/veleros/Splendid/catalogo/1.png",
-          "/contenido/veleros/Splendid/catalogo/2.png",
-          "/contenido/veleros/Splendid/catalogo/3.png",
-          "/contenido/veleros/Splendid/catalogo/4.png", 
-          "/contenido/veleros/Splendid/catalogo/5.png",
-          "/contenido/veleros/Splendid/catalogo/6.png",
-          "/contenido/veleros/Splendid/catalogo/7.png",
-          "/contenido/veleros/Splendid/catalogo/8.png",
-    ],
-    boatDescription: {
-      es: "Joya náutica de estilo Yawl (1973) en madera teca que combina elegancia atemporal y navegación suave.",
-      en: "A 1973 classic yawl marine masterpiece combining teak wood elegance and smooth navigation.",
-    },
-    boatLongDescription: {
-      es: "Construido en 1973, este velero tipo Yawl destaca por su casco robusto y líneas refinadas, convirtiéndolo en una pieza única en el Caribe. Su interior detallado en madera de teca ofrece un ambiente sumamente acogedor e íntimo, ideal para 2 personas.",
-      en: "Built in 1973, this yawl-style sailboat stands out for its robust hull and refined lines, making it a unique jewel on the Caribbean Sea. Renowned for smooth and stable navigation, perfect for a romantic couple escape.",
-    },
-    specs: {
-      cabins: 1,
-      bathrooms: 1,
-      doubleBeds: 1,
-    },
-    captain: {
-      name: "Splendid Host",
-      role: { es: "Capitán y Anfitrión", en: "Captain & Host" },
-      photoUrl:"/contenido/veleros/Splendid/capitan/1.png",
-      description: {
-        es: "Capitán experto dedicado a preservar el estilo clásico y la navegación auténtica a vela.",
-        en: "Expert captain passionate about classic sailing tradition and hospitality.",
-      },
-    },
-    dining: {
-      description: {
-        es: "Incluye 3 comidas preparadas a bordo diariamente con ingredientes frescos locales.",
-        en: "Includes 3 daily meals prepared onboard featuring fresh local ingredients.",
-      },
-      photoUrl:"/contenido/veleros/Splendid/comidas/1.png",
-    },
-    activities: {
-      description: {
-        es: "Navegación diaria a vela, equipo de snorkel, visita a piscinas naturales e islas vírgenes.",
-        en: "Daily sailing, snorkeling, visits to natural swimming pools and untouched islands.",
-      },
-      photoUrls: [
-        "/contenido/veleros/Splendid/experiencia/1.png"
-      ],
-    },
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 240,
-      tiers: [
-        {
-          seasonOrType: { es: "Charter Privado (Barco Exclusivo)", en: "Private Charter (Exclusive Boat)" },
-          pricePerNight: 240,
-          notes: { es: "Precio por persona por noche", en: "Price per person per night" },
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Alojamiento</th>
-                <th class="p-3 border">Precio (USD / Persona / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$240 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$240 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-      },
-    },
-    includes: [
-      { es: "3 comidas diarias", en: "3 meals per day" },
-      { es: "Uso de equipo de snorkel", en: "Use of Snorkel equipment" },
-      { es: "Navegación a vela por las islas y piscinas naturales", en: "Sailboat navigation and visits to natural pools and islands" },
-      { es: "Hospitalidad y atención personalizada", en: "Exceptional hospitality and guidance" },
-    ],
-    excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuestos de entrada a Guna Yala y tasas insulares", en: "Guna Yala entrance fees and island taxes" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-    ],
-    relatedExperienceIds: [2, 7],
-    maxGuests: 2,
-    isPrivate: true,
-    isSharedAllowed: false,
-    featureBadge: { es: "Clásico de Colección (1973)", en: "Classic 1973 Yawl" },
-    isFeatured: false,
-    hasDiscount: false,
-  },
-
-  // ---------------------------------------------------------------------------
-  // 6. Youth
-  // ---------------------------------------------------------------------------
-  {
-    id: 7,
-    slug: "youth-jeanneau-sun-odyssey-45",
-    category: "Sailboat",
-    isAvailable: true, 
-    location: {
-      es: "Islas San Blas, Guna Yala, Panamá",
-      en: "San Blas Islands, Guna Yala, Panama",
-    },
-    seo: {
-      title: {
-        es: "Alquiler Velero Youth (Jeanneau 45) en San Blas | Sailing the World",
-        en: "Charter Youth (Jeanneau 45) Sailboat in San Blas | Sailing the World",
-      },
-      description: {
-        es: "Alquila el velero moderno Youth (Jeanneau 45) en San Blas. Capacidad para 6 personas, 3 camarotes, 2 baños, paddleboard, snorkel y bebidas incluidas.",
-        en: "Rent the modern Youth sailboat (Jeanneau 45) in San Blas. Capacity for 6 guests, 3 cabins, 2 bathrooms, paddleboard, snorkel, and drinks included.",
-      },
-      keywords: [
-        { es: "velero Youth san blas", en: "Youth sailboat san blas" },
-        { es: "jeanneau 45 charter panama", en: "jeanneau 45 san blas" },
-      ],
-      openGraph: {
-        title: {
-          es: "Velero Youth en San Blas - Experiencia Dinámica y Moderna",
-          en: "Youth Sailboat in San Blas - Dynamic & Modern Charter",
-        },
-        description: {
-          es: "Navegación moderna y dinámica por el archipiélago Guna Yala para hasta 6 personas.",
-          en: "Modern and dynamic sailing across Guna Yala archipelago for up to 6 guests.",
-        },
-        images: [
-          "/contenido/veleros/Youth/catalogo/1.png",
-          "/contenido/veleros/Youth/catalogo/2.png",
-          "/contenido/veleros/Youth/catalogo/3.png",
-          "/contenido/veleros/Youth/catalogo/4.png", 
-          "/contenido/veleros/Youth/catalogo/5.png",
-          "/contenido/veleros/Youth/catalogo/6.png",
-          
-        ],
-      },
-    },
-    boatName: "Youth (Jeanneau Sun Odyssey 45)",
-    boatCoverPhoto: "/contenido/veleros/Youth/catalogo/1.png",
-    boatGalleryPhotos: [
-          "/contenido/veleros/Youth/catalogo/1.png",
-          "/contenido/veleros/Youth/catalogo/2.png",
-          "/contenido/veleros/Youth/catalogo/3.png",
-          "/contenido/veleros/Youth/catalogo/4.png", 
-          "/contenido/veleros/Youth/catalogo/5.png",
-          "/contenido/veleros/Youth/catalogo/6.png",
-          "/contenido/veleros/Youth/catalogo/7.png",
-    ],
-    boatDescription: {
-      es: "Velero moderno de 45 pies con amplio solárium de cubierta, ideal para grupos sociales o familias.",
-      en: "Modern 45ft sailboat with vibrant social deck spaces, ideal for groups or families.",
-    },
-    boatLongDescription: {
-      es: "Youth es una embarcación moderna de alta energía pensada para quienes buscan diversión, velocidad y recuerdos inolvidables. Con líneas limpias y espacios sociales en cubierta, ofrece una forma dinámica y sumamente cómoda de recorrer las islas de San Blas.",
-      en: "Youth is a modern, high-energy vessel designed for travelers who want fun, speed, and vibrant memories. Features social deck spaces and contemporary interiors ideal for small groups or families.",
-    },
-    specs: {
-      lengthFeet: 45,
-      cabins: 3,
-      bathrooms: 2,
-      doubleBeds: 3,
-    },
-    captain: {
-      name: "Youth Crew",
-      role: { es: "Capitán y Tripulación", en: "Captain and Crew" },
-      photoUrl: "/contenido/veleros/Youth/capitan/1.png",
-      description: {
-        es: "Tripulación joven y enérgica comprometida con una experiencia segura, divertida y confortable.",
-        en: "Dynamic crew focused on providing a fun, high-energy, and comfortable sailing tour.",
-      },
-    },
-    dining: {
-      description: {
-        es: "Tres comidas diarias junto con bebidas alcohólicas y no alcohólicas incluidas (bebidas con alcohol servidas bajo consumo moderado).",
-        en: "Three daily meals with alcoholic and non-alcoholic beverages included (alcoholic drinks provided for moderate consumption).",
-      },
-      photoUrl: "/contenido/veleros/Youth/comidas/1.png",
-    },
-    activities: {
-      description: {
-        es: "Island hopping dinámico, snorkel en los mejores arrecifes, Stand Up Paddleboard y amplio solárium para relajarse.",
-        en: "High-energy island hopping, snorkeling in top reef spots, Stand-Up Paddleboard, and sunbathing deck.",
-      },
-      photoUrls: [
-        "/contenido/veleros/Youth/experiencia/1.png",
-      ],
-    },
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 250,
-      tiers: [
-        {
-          seasonOrType: { es: "Charter Compartido (Por Persona)", en: "Shared Boat Charter (Per Person)" },
-          pricePerNight: 250,
-        },
-        {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
-          guestsCount: 2,
-          pricePerNight: 850,
-        },
-        {
-          seasonOrType: { es: "Charter Privado (3 o más Huéspedes)", en: "Private Charter (3+ Guests)" },
-          pricePerNight: 1200,
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Compartido (Por Persona)</td>
-                <td class="p-3 border font-bold text-green-600">$250 USD / persona</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Charter Privado (2 Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$850 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Charter Privado (3 o más Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$1,200 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Shared Boat Charter (Per Person)</td>
-                <td class="p-3 border font-bold text-green-600">$250 USD / person</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (2 Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$850 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (3+ Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$1,200 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-      },
-    },
-    includes: [
-      { es: "Tres comidas diarias y bebidas (alcohólicas con moderación)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
-      { es: "Uso de equipo de snorkel y paddleboard (SUP)", en: "Use of Snorkel Gear and Paddleboard" },
-      { es: "Espacioso solárium y amplias zonas sociales", en: "Spacious sun deck and social areas" },
-    ],
-    excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Entrada obligatoria al territorio Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-    ],
-    relatedExperienceIds: [1, 3, 4],
-    maxGuests: 6,
-    isPrivate: true,
-    isSharedAllowed: true,
-    featureBadge: { es: "Espacioso Solárium", en: "Spacious Sun Deck" },
-    isFeatured: false,
-    hasDiscount: false,
-  },
-
-  // ---------------------------------------------------------------------------
-  // 7. Mola Mola
-  // ---------------------------------------------------------------------------
-  {
-    id: 8,
-    slug: "mola-mola-beneteau-411",
-    category: "Sailboat",
-    isAvailable: true, 
-    location: {
-      es: "Islas San Blas, Guna Yala, Panamá",
-      en: "San Blas Islands, Guna Yala, Panama",
-    },
-    seo: {
-      title: {
-        es: "Alquiler Velero Mola Mola (Beneteau 411) en San Blas | Sailing the World",
-        en: "Charter Mola Mola (Beneteau 411) Sailboat in San Blas | Sailing the World",
-      },
-      description: {
-        es: "Siente el espíritu de Guna Yala a bordo del velero Mola Mola (Beneteau 411). Red de hamacas, guía local Guna, snorkel y comidas incluidas.",
-        en: "Experience the Guna Yala spirit aboard Mola Mola (Beneteau 411). Hammock net, local Guna guide, snorkeling, and meals included.",
-      },
-      keywords: [
-        { es: "velero Mola Mola san blas", en: "Mola Mola sailboat san blas" },
-        { es: "beneteau 411 san blas panama", en: "beneteau 411 charter guna yala" },
-      ],
-      openGraph: {
-        title: {
-          es: "Velero Mola Mola en San Blas - Espíritu y Cultura Local",
-          en: "Mola Mola Sailboat in San Blas - Cultural & Relaxing Experience",
-        },
-        description: {
-          es: "Inspirado en el arte textil tradicional Guna. Conexión auténtica y red de hamacas para relajarse.",
-          en: "Inspired by traditional Guna textiles. Authentic cultural connection and hammock lounging area.",
-        },
-        images: [
-          "/contenido/veleros/Mola mola/catalogo/1.png",
-          "/contenido/veleros/Mola mola/catalogo/2.png",
-          "/contenido/veleros/Mola mola/catalogo/3.png",
-          "/contenido/veleros/Mola mola/catalogo/4.png", 
-          "/contenido/veleros/Mola mola/catalogo/5.png",
-          "/contenido/veleros/Mola mola/catalogo/6.png",
-          "/contenido/veleros/Mola mola/catalogo/7.png",
-          "/contenido/veleros/Mola mola/catalogo/8.png",
-        ],
-      },
-    },
-    boatName: "Mola Mola (Beneteau 411)",
-    boatCoverPhoto: "/contenido/veleros/Mola mola/catalogo/1.png",
-    boatGalleryPhotos: [
-      "/contenido/veleros/Mola mola/catalogo/1.png",
-          "/contenido/veleros/Mola mola/catalogo/2.png",
-          "/contenido/veleros/Mola mola/catalogo/3.png",
-          "/contenido/veleros/Mola mola/catalogo/4.png", 
-          "/contenido/veleros/Mola mola/catalogo/5.png",
-          "/contenido/veleros/Mola mola/catalogo/6.png",
-          "/contenido/veleros/Mola mola/catalogo/7.png",
-          "/contenido/veleros/Mola mola/catalogo/8.png",
-    ],
-    boatDescription: {
-      es: "Velero relajado y conectado con la cultura autóctona Guna, equipado con zona de red hamaca para descanso.",
-      en: "Relaxed sailboat with local cultural connection, featuring a hammock netting lounging area.",
-    },
-    boatLongDescription: {
-      es: "Bautizado en honor al colorido textil tradicional de la comarca Guna Yala, Mola Mola ofrece un viaje sereno y conectado con el entorno. Diseñado para quienes buscan descanso absoluto, intercambio cultural respetuoso y la belleza natural del archipiélago.",
-      en: "Named after the colorful traditional textile of the Guna people, Mola Mola offers a relaxed and culturally connected journey. Ideal for guests who want tranquility, natural beauty, and authentic cultural connection.",
-    },
-    specs: {
-      lengthFeet: 41,
-      cabins: 2,
-      bathrooms: 1,
-      doubleBeds: 2,
-    },
-    captain: {
-      name: "Mola Mola Captain & Local Guide",
-      role: { es: "Capitán y Guía Local Guna", en: "Captain and Local Guna Guide" },
-      photoUrl: "/contenido/veleros/Mola mola/capitan/1.png",
-      description: {
-        es: "Anfitriones locales con profundo conocimiento del mar y las tradiciones del pueblo Guna.",
-        en: "Local hosts with deep knowledge of the sea and local Guna traditions.",
-      },
-    },
-    dining: {
-      description: {
-        es: "Pensión completa: 3 comidas al día más bebidas alcohólicas (consumo moderado) y no alcohólicas.",
-        en: "Three daily meals, alcoholic and non-alcoholic beverages included (moderate consumption).",
-      },
-      photoUrl: "/contenido/veleros/Mola mola/comidas/1.png",
-    },
-    activities: {
-      description: {
-        es: "Uso de equipo de snorkel, servicios de guía local para intercambio cultural y descanso en la zona de hamaca en proa.",
-        en: "Snorkel gear, local guide services for cultural exchange, and lounging in the hammock netting.",
-      },
-      photoUrls: [
-        "/contenido/veleros/Mola mola/experiencia/1.png"
-      ],
-    },
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 335,
-      tiers: [
-        {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (Two Guests)" },
-          guestsCount: 2,
-          pricePerNight: 670,
-          notes: { es: "Huésped adicional: $220 USD", en: "Extra guest: $220 USD" },
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Ocupación</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Dos Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$670 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Huésped Adicional</td>
-                <td class="p-3 border font-bold text-green-600">+$220 USD / Noche</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Two Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$670 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Extra Guest</td>
-                <td class="p-3 border font-bold text-green-600">+$220 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-      },
-    },
-    includes: [
-      { es: "Tres comidas diarias, bebidas alcohólicas y no alcohólicas (moderado)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
-      { es: "Uso de equipo de snorkel y servicios de guía local Guna", en: "Use of Snorkel Gear and Local Guide Services" },
-      { es: "Área de relax con red hamaca", en: "Hammock Netting / Lounging Area" },
-    ],
-    excludes: [
-      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
-      { es: "Tasa obligatoria de entrada a Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-    ],
-    relatedExperienceIds: [2, 4, 5],
-    maxGuests: 4,
-    isPrivate: true,
-    isSharedAllowed: false,
-    featureBadge: { es: "Red Hamaca & Guía Guna", en: "Hammock Net & Local Guide" },
-    isFeatured: false,
-    hasDiscount: false,
-  },
-  // ---------------------------------------------------------------------------
-  // 8. Zenith - Deluxe Catamaran
-  // ---------------------------------------------------------------------------
-  {
-    id: 9,
-    slug: "zenith-deluxe-catamaran",
-    category: "Catamaran",
-    isAvailable: true, 
-    location: {
-      es: "Islas San Blas, Guna Yala, Panamá",
-      en: "San Blas Islands, Guna Yala, Panama",
-    },
-    seo: {
-      title: {
-        es: "Alquiler Catamarán de Lujo Zenith en San Blas | Sailing the World",
-        en: "Charter Zenith Deluxe Catamaran in San Blas | Sailing the World",
-      },
-      description: {
-        es: "Disfruta del catamarán ultra lujo Zenith en San Blas. All-Inclusive exclusivo para hasta 8 personas, 4 camarotes, tripulación privada (Capitán, Chef, Azafata) y permisos insulares incluidos.",
-        en: "Experience ultimate luxury aboard Zenith Catamaran in San Blas. Exclusive all-inclusive charter for up to 8 guests, 4 cabins, private crew & island permits included.",
-      },
-      keywords: [
-        { es: "catamaran de lujo san blas", en: "deluxe catamaran charter san blas" },
-        { es: "charter lujo zenith panama", en: "zenith luxury yacht san blas" },
-      ],
-      openGraph: {
-        title: {
-          es: "Catamarán Zenith en San Blas - Lujo y Confort All-Inclusive",
-          en: "Zenith Catamaran in San Blas - Ultimate All-Inclusive Luxury",
-        },
-        description: {
-          es: "Navegación exclusiva por el archipiélago Guna Yala a bordo del Zenith con tripulación de 3 personas y servicio 5 estrellas.",
-          en: "Exclusive sailing across Guna Yala archipelago aboard Zenith with 3-person crew and 5-star service.",
-        },
-        images: [
-          "/contenido/catamaranes/Zenith/catalogo/1.png",
-          "/contenido/catamaranes/Zenith/catalogo/2.png",
-          "/contenido/catamaranes/Zenith/catalogo/3.png",
-          "/contenido/catamaranes/Zenith/catalogo/4.png", 
-          "/contenido/catamaranes/Zenith/catalogo/5.png",
-          "/contenido/catamaranes/Zenith/catalogo/6.png",
-          "/contenido/catamaranes/Zenith/catalogo/7.png",
-
-        ],
-      },
-    },
-    boatName: "Zenith Deluxe Catamaran",
-    boatCoverPhoto: "/contenido/catamaranes/Zenith/catalogo/1.png",
-    boatGalleryPhotos: [
-      "/contenido/catamaranes/Zenith/catalogo/1.png",
-          "/contenido/catamaranes/Zenith/catalogo/2.png",
-          "/contenido/catamaranes/Zenith/catalogo/3.png",
-          "/contenido/catamaranes/Zenith/catalogo/4.png", 
-          "/contenido/catamaranes/Zenith/catalogo/5.png",
-          "/contenido/catamaranes/Zenith/catalogo/6.png",
-          "/contenido/catamaranes/Zenith/catalogo/7.png",
-    ],
-    boatDescription: {
-      es: "Catamarán deluxe all-inclusive diseñado para grandes grupos y familias con servicio vip de 3 tripulantes.",
-      en: "Deluxe all-inclusive catamaran designed for large groups and families with 3-person crew.",
-    },
-    boatLongDescription: {
-      es: "Zenith ofrece una experiencia náutica de ultra lujo en el archipiélago de San Blas. Tripulado por un equipo profesional de 3 a 4 personas (Capitán, Chef y Azafata), garantiza máxima estabilidad, privacidad y confort. Incluye todas las tasas insulares, permisos de fondeo y licencias comerciales de Guna Yala en el precio final.",
-      en: "Zenith delivers an ultimate luxury cruising experience in San Blas. Crewed by 3 to 4 professionals (Captain, Chef, Stewardess), it guarantees stability, privacy, and high-end comfort. All island fees and Guna Yala commercial charter permits are fully included in the price.",
-    },
-    specs: {
-      cabins: 4,
-      bathrooms: 4,
-      doubleBeds: 4,
-    },
-    captain: {
-      name: "Zenith VIP Crew (Captain, Chef, Stewardess)",
-      role: { es: "Tripulación Profesional VIP", en: "Professional VIP Crew" },
-      photoUrl: "/contenido/catamaranes/Zenith/capitan/1.png",
-      description: {
-        es: "Tripulación completa dedicada a brindar servicio gastronómico, hospitalidad de primera clase y gestión náutica sin preocupaciones.",
-        en: "Full crew dedicated to providing fine dining, first-class hospitality, and seamless sailing.",
-      },
-      languages: ["English", "Español"],
-    },
-    dining: {
-      description: {
-        es: "Pensión completa deluxe (4 comidas diarias): desayuno, almuerzo, merienda y cena gourmet elaborada por chef a bordo. Opciones Kosher, No Alcohol o No Food con ajuste de precio.",
-        en: "Deluxe full board (4 meals per day): breakfast, lunch, afternoon snack, and chef-prepared gourmet dinner. Kosher, No Alcohol, or No Food options available with price adjustments.",
-      },
-      photoUrl: "/contenido/catamaranes/Zenith/comidas/1.png",
-    },
-    activities: {
-      description: {
-        es: "Exploración de islas privadas, snorkel de alta gama, paddleboarding y asistencia integral en traslados dentro de Guna Yala.",
-        en: "Private island hopping, premium snorkeling, paddleboarding, and full transfer assistance in Guna Yala.",
-      },
-      photoUrls: [
-        "/contenido/catamaranes/Zenith/experiencias/1.png",
-      ],
-    },
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 1292,
-      tiers: [
-        {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
-          guestsCount: 2,
-          pricePerNight: 2585,
-          notes: { es: "Huésped adicional: $345 USD/noche. Niños 4-12 años: 50% desc. Niños 0-3 años: Gratis.", en: "Extra guest: $345 USD/night. Children 4-12 yrs: 50% off. Under 3 yrs: Free." },
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad / Ocupación</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-                <th class="p-3 border">Huésped Adicional</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado Exclusivo (2 Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$2,585 USD</td>
-                <td class="p-3 border">+$345 USD / Noche</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="text-xs text-slate-500 mt-2">* Descuento especial niños: 4-12 años pagan 50%. Niños de 3 años o menos viajan gratis. Permisos de islas comerciales incluidos.</p>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Type / Occupancy</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-                <th class="p-3 border">Extra Guest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Exclusive Private Charter (2 Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$2,585 USD</td>
-                <td class="p-3 border">+$345 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="text-xs text-slate-500 mt-2">* Child discounts: Ages 4-12 charged 50%. Age 3 and under sail free. Commercial island permits included.</p>
-        `,
-      },
-    },
-    includes: [
-      { es: "Tripulación VIP completa (Capitán, Chef, Azafata)", en: "Full VIP crew (Captain, Chef, Stewardess)" },
-      { es: "4 comidas diarias gourmet y servicio de bar", en: "4 daily gourmet meals and beverage service" },
-      { es: "Todas las tasas de islas, fondeadero y permisos comerciales de Guna Yala", en: "All island fees, anchorage fees, and Guna Yala commercial permits" },
-      { es: "Uso completo de equipos de agua y confort a bordo", en: "Full use of water sports equipment and onboard amenities" },
-    ],
-    excludes: [
-      { es: "Transporte terrestre/marítimo hacia/desde San Blas", en: "Ground/water transport to/from San Blas" },
-      { es: "Compras de artesanías nativas o consumos fuera del barco", en: "Native craft purchases or food/drinks purchased off the boat" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-    ],
-    relatedExperienceIds: [9, 14, 16],
-    maxGuests: 8,
-    isPrivate: true,
-    isSharedAllowed: false,
-    featureBadge: { es: "Catamarán Deluxe All-Inclusive", en: "Deluxe All-Inclusive Catamaran" },
-    isFeatured: true,
-    hasDiscount: true,
-  },
-
+  
   // ---------------------------------------------------------------------------
   // 9. MBR - Lagoon 42 ft
   // ---------------------------------------------------------------------------
   {
-    id: 10,
+    id: 12,
     slug: "mbr-lagoon-42ft",
     category: "Catamaran",
     isAvailable: true, 
@@ -1845,7 +2218,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 10. YOYO
   // ---------------------------------------------------------------------------
   {
-    id: 11,
+    id: 13,
     slug: "yoyo-catamaran-guna-yala",
     category: "Catamaran",
     isAvailable: true, 
@@ -1998,182 +2371,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: false,
   },
 
-  // ---------------------------------------------------------------------------
-  // 11. Yoli - Lagoon 440
-  // ---------------------------------------------------------------------------
-  {
-    id: 12,
-    slug: "yoli-lagoon-440",
-    category: "Catamaran",
-    isAvailable: true, 
-    location: {
-      es: "Islas San Blas, Guna Yala, Panamá",
-      en: "San Blas Islands, Guna Yala, Panama",
-    },
-    seo: {
-      title: {
-        es: "Alquiler Catamarán Yoli (Lagoon 440) en San Blas | Sailing the World",
-        en: "Charter Yoli (Lagoon 440) Catamaran in San Blas | Sailing the World",
-      },
-      description: {
-        es: "Navega con el Capitán argentino Gabriel a bordo del Lagoon 440 Yoli en San Blas. Wi-Fi Starlink, 4 camarotes, barra libre completa y ambiente relajado.",
-        en: "Sail with Argentine Captain Gabriel aboard Lagoon 440 Yoli in San Blas. Features Starlink Wi-Fi, 4 cabins, full open bar, and relaxed vibes.",
-      },
-      keywords: [
-        { es: "catamaran Yoli lagoon 440", en: "Yoli lagoon 440 san blas" },
-        { es: "capitan gabriel san blas", en: "lagoon 440 charter panama" },
-      ],
-      openGraph: {
-        title: {
-          es: "Catamarán Yoli (Lagoon 440) - Elegancia y Capitán Argentino",
-          en: "Yoli Catamaran (Lagoon 440) - Classic Comfort & Argentine Captain",
-        },
-        description: {
-          es: "Espacioso Lagoon 440 con Starlink, áreas de descanso panorámicas y cocina deliciosa.",
-          en: "Spacious Lagoon 440 featuring Starlink, panoramic lounge deck, and delicious cuisine.",
-        },
-        images: [
-          "/contenido/catamaranes/Yoli/catalogo/1.png",
-          "/contenido/catamaranes/Yoli/catalogo/2.png",
-          "/contenido/catamaranes/Yoli/catalogo/3.png",
-          "/contenido/catamaranes/Yoli/catalogo/4.png", 
-          "/contenido/catamaranes/Yoli/catalogo/5.png",
-          "/contenido/catamaranes/Yoli/catalogo/6.png",
-          "/contenido/catamaranes/Yoli/catalogo/7.png",
-          "/contenido/catamaranes/Yoli/catalogo/8.png",
-          "/contenido/catamaranes/Yoli/catalogo/9.png",
-
-        ],
-      },
-    },
-    boatName: "Yoli (Lagoon 440)",
-    boatCoverPhoto: "/contenido/catamaranes/Yoli/catalogo/1.png",
-    boatGalleryPhotos: [
-      "/contenido/catamaranes/Yoli/catalogo/1.png",
-      "/contenido/catamaranes/Yoli/catalogo/2.png",
-      "/contenido/catamaranes/Yoli/catalogo/3.png",
-      "/contenido/catamaranes/Yoli/catalogo/4.png", 
-      "/contenido/catamaranes/Yoli/catalogo/5.png",
-      "/contenido/catamaranes/Yoli/catalogo/6.png",
-      "/contenido/catamaranes/Yoli/catalogo/7.png",
-      "/contenido/catamaranes/Yoli/catalogo/8.png",
-      "/contenido/catamaranes/Yoli/catalogo/9.png",
-
-    ],
-    boatDescription: {
-      es: "Clásico de gran confort y estabilidad con 4 camarotes privados, Starlink Wi-Fi y la calidez del Capitán Gabriel.",
-      en: "Classic comfort and stability featuring 4 private cabins, Starlink Wi-Fi, hosted by Argentine Captain Gabriel.",
-    },
-    boatLongDescription: {
-      es: "El Lagoon 440 'Yoli' combina un salón panorámico con amplias áreas al aire libre en proa y flybridge. Su capitán Gabriel (Argentina), con más de 3 años en San Blas, destaca por su amabilidad, maestría en la navegación y pasión por sorprender a los huéspedes con platillos deliciosos.",
-      en: "The Lagoon 440 'Yoli' blends a panoramic saloon with outdoor rest areas and flybridge views. Argentine Captain Gabriel, with over 3 years navigating San Blas, is passionate about top-tier hospitality and gourmet cooking onboard.",
-    },
-    specs: {
-      lengthFeet: 44,
-      cabins: 4,
-      bathrooms: 1,
-      doubleBeds: 4,
-    },
-    captain: {
-      name: "Capt. Gabriel (Argentina)",
-      role: { es: "Capitán y Chef", en: "Captain & Chef" },
-      photoUrl: "/contenido/catamaranes/Yoli/capitan/1.png",
-      description: {
-        es: "Apasionado del mar y la gastronomía con más de tres años capitaneando en San Blas.",
-        en: "Passionate sailor and chef with over 3 years navigating the San Blas archipelago.",
-      },
-      languages: ["Español", "English"],
-    },
-    dining: {
-      description: {
-        es: "3 comidas diarias nutritivas y sabrosas con ingredientes frescos. Barra libre completa con refrescos (Coca Zero/Reg, Ginger Ale), jugos, cervezas nacionales, vino (blanco/tinto), vodka, ron y ginebra (consumo moderado).",
-        en: "3 daily healthy and delicious meals. Full open bar including soft drinks, natural juices, national beer, wine (white/red), vodka, rum, and gin (moderate consumption).",
-      },
-      photoUrl: "/contenido/catamaranes/Yoli/comidas/1.png" ,
-    },
-    activities: {
-      description: {
-        es: "Starlink Wi-Fi de alta velocidad, Stand-Up Paddleboard, alfombra flotante, snorkel y excursiones a playas de arena blanca.",
-        en: "High-speed Starlink Wi-Fi, SUP paddleboard, floating mat, snorkeling, and beach excursions.",
-      },
-      photoUrls: [
-        "/contenido/catamaranes/Yoli/experiencia/1.png" ,
-      ],
-    },
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 700,
-      tiers: [
-        {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
-          guestsCount: 2,
-          pricePerNight: 1400,
-          notes: { es: "Huésped adicional: +$240 USD/noche", en: "Extra guest: +$240 USD/night" },
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio Base (2 Huéspedes)</th>
-                <th class="p-3 border">Huésped Extra</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$1,400 USD / Noche</td>
-                <td class="p-3 border">+$240 USD / Noche</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Base Rate (2 Guests)</th>
-                <th class="p-3 border">Extra Guest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$1,400 USD / Night</td>
-                <td class="p-3 border">+$240 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-      },
-    },
-    includes: [
-      { es: "Capitán y tripulación con pensión completa (3 comidas diarias y snacks)", en: "Captain and crew with full board (3 daily meals & snacks)" },
-      { es: "Barra libre de licores, cerveza, vinos y refrescos (consumo moderado)", en: "Open bar with spirits, beers, wines, and soft drinks (moderate consumption)" },
-      { es: "Starlink Wi-Fi, toallas de baño y playa, juguetes acuáticos", en: "Starlink Wi-Fi, bath and beach towels, water toys" },
-    ],
-    excludes: [
-      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
-      { es: "Impuesto de entrada al territorio Guna Yala", en: "Guna Yala entrance fee" },
-      { es: "Seguro de viaje personal", en: "Personal travel insurance" },
-    ],
-    relatedExperienceIds: [9, 12, 16],
-    maxGuests: 8,
-    isPrivate: true,
-    isSharedAllowed: false,
-    featureBadge: { es: "Starlink & Capitán Chef", en: "Starlink & Captain Chef" },
-    isFeatured: true,
-    hasDiscount: false,
-  },
-
+ 
   // ---------------------------------------------------------------------------
   // 12. Don C - Lagoon 400S2
   // ---------------------------------------------------------------------------
   {
-    id: 13,
+    id: 14,
     slug: "don-c-lagoon-400s2",
     category: "Catamaran",
     isAvailable: true,
@@ -2353,7 +2556,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 13. Coolcat
   // ---------------------------------------------------------------------------
   {
-    id: 14,
+    id: 15,
     slug: "coolcat-catamaran-40ft",
     category: "Catamaran",
     isAvailable: true, 
@@ -2537,184 +2740,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: false,
   },
 
-  // ---------------------------------------------------------------------------
-  // 14. Nomade - Lagoon 570 Owner's Edition
-  // ---------------------------------------------------------------------------
-  {
-    id: 15,
-    slug: "nomade-lagoon-570-owners-edition",
-    category: "Catamaran",
-    isAvailable: true, 
-    location: {
-      es: "Islas San Blas, Guna Yala, Panamá",
-      en: "San Blas Islands, Guna Yala, Panama",
-    },
-    seo: {
-      title: {
-        es: "Alquiler Catamarán Nomade (Lagoon 570 Kevlar) en San Blas | Sailing the World",
-        en: "Charter Nomade (Lagoon 570 Owner's Edition) in San Blas | Sailing the World",
-      },
-      description: {
-        es: "Mega catamarán de 57 pies Nomade en San Blas (Casco Kevlar). 4 camarotes con A/C, Starlink, karaoke, máquinas de helado y trago congelado, scooters subacuáticos.",
-        en: "Mega 57ft Nomade Catamaran in San Blas (Kevlar hull). 4 A/C cabins, Starlink, karaoke, ice cream & frozen drink machines, underwater scooters.",
-      },
-      keywords: [
-        { es: "catamaran Nomade lagoon 570", en: "Nomade lagoon 570 san blas" },
-        { es: "megacatamaran de lujo san blas", en: "luxury mega catamaran charter panama" },
-      ],
-      openGraph: {
-        title: {
-          es: "Catamarán Nomade (Lagoon 570) - Lujo y Diversión de Clase Mundial",
-          en: "Nomade Catamaran (Lagoon 570) - World-Class Luxury Yacht",
-        },
-        description: {
-          es: "El catamarán más equipado de San Blas: A/C en todos los camarotes, desalinizador, Starlink y scooters subacuáticos.",
-          en: "San Blas's premier yacht: A/C in every cabin, unlimited watermaker, Starlink, and underwater scooters.",
-        },
-        images: [
-          "/contenido/catamaranes/Nomade/catalogo/1.png",
-          "/contenido/catamaranes/Nomade/catalogo/2.png",
-          "/contenido/catamaranes/Nomade/catalogo/3.png",
-          "/contenido/catamaranes/Nomade/catalogo/4.png", 
-          "/contenido/catamaranes/Nomade/catalogo/5.png",
-          "/contenido/catamaranes/Nomade/catalogo/6.png",
-
-        ],
-      },
-    },
-    boatName: "Nomade (Lagoon 570 Owner's Edition)",
-    boatCoverPhoto: "/contenido/catamaranes/Nomade/catalogo/1.png",
-    boatGalleryPhotos: [
-      "/contenido/catamaranes/Nomade/catalogo/1.png",
-          "/contenido/catamaranes/Nomade/catalogo/2.png",
-          "/contenido/catamaranes/Nomade/catalogo/3.png",
-          "/contenido/catamaranes/Nomade/catalogo/4.png", 
-          "/contenido/catamaranes/Nomade/catalogo/5.png",
-          "/contenido/catamaranes/Nomade/catalogo/6.png",
-    ],
-    boatDescription: {
-      es: "Exclusivo Lagoon 570 con casco de Kevlar, aire acondicionado en cada camarote, máquinas de helado y juguetes de alta tecnología.",
-      en: "Exclusive Lagoon 570 with Kevlar hull, A/C in all cabins, ice cream machine, and high-tech water toys.",
-    },
-    boatLongDescription: {
-      es: "Nomade es la definición de lujo flotante en San Blas. Un super catamarán Lagoon 570 con casco de Kevlar, diseñado para brindar entretenimiento ilimitado. Cuenta con A/C en sus 4 camarotes dobles, Starlink Satelital, desalinizador para agua dulce ilimitada, Karaoke, máquina de helados, máquina de tragos congelados y scooters subacuáticos.",
-      en: "Nomade defines floating luxury in San Blas. A Lagoon 570 mega-catamaran with Kevlar hull built for maximum comfort. Features A/C in all 4 double cabins, Starlink Satellite Internet, unlimited fresh watermaker, Karaoke system, ice cream machine, frozen drink machine, and underwater water scooters.",
-    },
-    specs: {
-      lengthFeet: 57,
-      cabins: 4,
-      bathrooms: 4,
-      doubleBeds: 4,
-    },
-    captain: {
-      name: "Nomade Trilingual Crew",
-      role: { es: "Tripulación Trilingüe VIP", en: "Trilingual VIP Crew" },
-      photoUrl: "/contenido/catamaranes/Nomade/capitan/1.png",
-      description: {
-        es: "Tripulación trilingüe (Español, Inglés, Portugués) dedicada a ofrecer una experiencia impecable de nivel resort.",
-        en: "Trilingual crew (English, Spanish, Portuguese) delivering resort-level hospitality.",
-      },
-      languages: ["English", "Español", "Português"],
-    },
-    dining: {
-      description: {
-        es: "Gastronomía gourmet All-Inclusive: carnes rojas, pescados y mariscos frescos, jugos naturales, menú infantil personalizado y barra libre. Incluye máquina de helados y tragos congelados.",
-        en: "Gourmet All-Inclusive: red meats, fresh local fish/seafood, natural juices, custom kids menu, open bar, plus ice cream & frozen drink machines.",
-      },
-      photoUrl: "/contenido/catamaranes/Nomade/comidas/1.png",
-    },
-    activities: {
-      description: {
-        es: "2 Scooters subacuáticos, 2 Paddleboards, 2 Kayaks, equipo completo de pesca (caña y pesca submarina), Karaoke, TV y Starlink.",
-        en: "2 Underwater water scooters, 2 SUPs, 2 Kayaks, rod & spear fishing equipment, Karaoke, TV, and Starlink.",
-      },
-      photoUrls: [
-        "/contenido/catamaranes/Nomade/experiencia/1.png",
-      ],
-    },
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 400,
-      tiers: [
-        {
-          seasonOrType: { es: "Camarote Compartido (Por Persona)", en: "Shared Cabin Charter (Per Person)" },
-          pricePerNight: 400,
-        },
-        {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
-          guestsCount: 2,
-          pricePerNight: 1325,
-          notes: { es: "Huésped adicional: +$250 USD/noche", en: "Extra guest: +$250 USD/night" },
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-                <th class="p-3 border">Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Camarote Compartido</td>
-                <td class="p-3 border font-bold text-green-600">$400 USD / pers.</td>
-                <td class="p-3 border">Por persona por noche</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Charter Privado (2 personas)</td>
-                <td class="p-3 border font-bold text-green-600">$1,325 USD</td>
-                <td class="p-3 border">Huésped extra: +$250 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-                <th class="p-3 border">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Shared Cabin Charter</td>
-                <td class="p-3 border font-bold text-green-600">$400 USD / guest</td>
-                <td class="p-3 border">Per person per night</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (2 guests)</td>
-                <td class="p-3 border font-bold text-green-600">$1,325 USD</td>
-                <td class="p-3 border">Extra guest: +$250 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-      },
-    },
-    includes: [
-      { es: "Aire Acondicionado en cada camarote y agua dulce ilimitada", en: "Air Conditioning in every cabin and unlimited fresh watermaker" },
-      { es: "Gastronomía gourmet, barra libre, máquina de helados y slushies", en: "Gourmet dining, open bar, ice cream & slushie machines" },
-      { es: "2 Scooters subacuáticos, 2 SUP, 2 Kayaks, Karaoke y Starlink", en: "2 Underwater scooters, 2 SUPs, 2 Kayaks, Karaoke, Starlink" },
-      { es: "Tripulación VIP trilingüe dedicada", en: "Dedicated trilingual VIP crew" },
-    ],
-    excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Entrada en efectivo a Guna Yala", en: "Guna Yala entrance fees" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-    ],
-    relatedExperienceIds: [8, 9, 12],
-    maxGuests: 8,
-    isPrivate: true,
-    isSharedAllowed: true,
-    featureBadge: { es: "A/C & Scooters Subacuáticos", en: "A/C & Underwater Scooters" },
-    isFeatured: true,
-    hasDiscount: false,
-  },
+  
 
   // ---------------------------------------------------------------------------
   // 15. KAYA
