@@ -3095,182 +3095,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: true,
     hasDiscount: false,
   },
-  // ---------------------------------------------------------------------------
-  // 17. Cayos Holandeses - Hospedaje en Isla
-  // ---------------------------------------------------------------------------
-  /*{
-    id: 17,
-    slug: "cayos-holandeses-private-bungalows",
-    category: "IslandLodge",
-    isAvailable: true, 
-    location: {
-      es: "Cayos Holandeses, Islas San Blas, Panamá",
-      en: "Dutch Cays, San Blas Islands, Panama",
-    },
-
-    // 🔍 SEO & Metadata
-    seo: {
-      title: {
-        es: "Hospedaje en Isla Cayos Holandeses | Cabañas de Lujo en San Blas",
-        en: "Dutch Cays Island Lodge | Private Bungalows in San Blas",
-      },
-      description: {
-        es: "Reserva cabañas de lujo frente al mar en Cayos Holandeses, San Blas. Pensión completa, cóctel de bienvenida, snorkel y la mejor experiencia de descanso.",
-        en: "Book luxury beachfront bungalows in Dutch Cays, San Blas. Full board, welcome drinks, snorkeling, and the ultimate island retreat.",
-      },
-      keywords: [
-        { es: "hospedaje en isla san blas", en: "island lodge san blas" },
-        { es: "cabanas cayos holandeses", en: "dutch cays bungalows" },
-      ],
-      openGraph: {
-        title: {
-          es: "Cayos Holandeses - Private Bungalows & Lux Cabañas",
-          en: "Dutch Cays - Private Bungalows & Lux Cabañas",
-        },
-        description: {
-          es: "Hospedaje de lujo frente al mar en una de las zonas más exclusivas de San Blas con pensión completa incluida.",
-          en: "Luxury beachfront lodging in one of the most exclusive areas of San Blas with full board included.",
-        },
-        images: [
-          "/contenido/islas/Ibin/catalogo/1.png",
-          "/contenido/islas/Ibin/catalogo/2.png",
-          "/contenido/islas/Ibin/catalogo/3.png",
-          "/contenido/islas/Ibin/catalogo/4.png", 
-        ],
-      },
-    },
-
-    // 🚢 Datos del Hospedaje en Isla
-    boatName: "Cayos Holandeses - Private Bungalows & Lux Cabañas",
-    boatCoverPhoto: "/contenido/islas/Ibin/catalogo/1.png",
-    boatGalleryPhotos: [
-      "/contenido/islas/Ibin/catalogo/1.png",
-          "/contenido/islas/Ibin/catalogo/2.png",
-          "/contenido/islas/Ibin/catalogo/3.png",
-          "/contenido/islas/Ibin/catalogo/4.png",
-    ],
-    boatDescription: {
-      es: "Cabañas de lujo frente al mar en Cayos Holandeses con pensión completa y experiencia insular exclusiva.",
-      en: "Luxury beachfront bungalows in Dutch Cays with full board and an exclusive island experience.",
-    },
-    boatLongDescription: {
-      es: "Disfruta de una estadía inolvidable en Cayos Holandeses, uno de los sectores más vírgenes y alejados de San Blas. Nuestras cabañas privadas frente al mar ofrecen comodidad, brisa marina constante y pensión completa gourmet con marisco fresco local.",
-      en: "Enjoy an unforgettable stay in Dutch Cays, one of the most pristine and remote areas of San Blas. Our private beachfront bungalows offer comfort, ocean breezes, and full-board gourmet dining featuring fresh local seafood.",
-    },
-    specs: {
-      cabins: 4,
-      bathrooms: 4,
-      doubleBeds: 4,
-    },
-
-    // 👨‍✈️ Anfitrión / Staff
-    captain: {
-      name: "Staff Cayos Holandeses",
-      role: { es: "Anfitriones y Guías Locales Guna", en: "Hosts & Local Guna Guides" },
-      photoUrl: "/contenido/islas/Ibin/capitan/1.png",
-      description: {
-        es: "Anfitriones locales comprometidos con brindar hospitalidad de primera clase y guiado en la isla.",
-        en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
-      },
-      languages: ["Español", "English"],
-    },
-
-    // 🍽️ Comida
-    dining: {
-      description: {
-        es: "Pensión completa incluida: desayunos tropicales, almuerzos y cenas a base de pesca fresca del día, mariscos y opciones locales, además de cóctel de bienvenida.",
-        en: "Full board included: tropical breakfasts, lunches, and dinners featuring daily catch seafood, local dishes, and a welcome cocktail.",
-      },
-      photoUrl: "/contenido/islas/Ibin/comidas/1.png",
-    },
-
-    // 🏄‍♂️ Actividades
-    activities: {
-      description: {
-        es: "Snorkel en arrecifes de coral virgen, caminatas por la playa, relax en hamacas frente al mar y excursiones adicionales.",
-        en: "Pristine reef snorkeling, beach walks, oceanfront hammock lounging, and optional island tours.",
-      },
-      photoUrls: [
-        "/contenido/islas/Ibin/experiencia/1.png",
-      ],
-    },
-
-    // 💰 Precios y Tabla HTML
-    pricing: {
-      currency: "USD",
-      basePricePerPersonPerDay: 225,
-      tiers: [
-        {
-          seasonOrType: { es: "Cabaña Estándar (Por Persona)", en: "Standard Bungalow (Per Person)" },
-          pricePerNight: 225,
-          notes: { es: "Incluye comidas y actividades", en: "Includes meals and activities" },
-        },
-      ],
-      htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Cabaña</th>
-                <th class="p-3 border">Precio (USD / Persona / Noche)</th>
-                <th class="p-3 border">Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Cabaña Estándar Frente al Mar</td>
-                <td class="p-3 border font-bold text-green-600">$225 USD</td>
-                <td class="p-3 border">Pensión completa e impuestos incluidos</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Bungalow Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-                <th class="p-3 border">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Standard Oceanfront Bungalow</td>
-                <td class="p-3 border font-bold text-green-600">$225 USD</td>
-                <td class="p-3 border">Full board & island taxes included</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-      },
-    },
-
-    // ✅ Incluye / No Incluye
-    includes: [
-      { es: "Hospedaje en cabaña privada frente al mar", en: "Private oceanfront bungalow accommodation" },
-      { es: "Pensión completa (Desayuno, Almuerzo, Cena)", en: "Full board meals (Breakfast, Lunch, Dinner)" },
-      { es: "Cóctel de bienvenida y bebidas de cortesía", en: "Welcome cocktail and complimentary drinks" },
-      { es: "Uso de equipo de snorkel y actividades en la isla", en: "Use of snorkeling gear and island activities" },
-    ],
-    excludes: [
-      { es: "Traslado terrestre/marítimo hacia la isla", en: "Ground/boat transfers to the island" },
-      { es: "Tasa de entrada al territorio Guna Yala", en: "Guna Yala territory entry fee" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-    ],
-
-    // 🔗 Experiencias Relacionadas
-    relatedExperienceIds: [8, 9, 10],
-
-    // Capacidad y Flags
-    maxGuests: 8,
-    isPrivate: true,
-    isSharedAllowed: false,
-    featureBadge: { es: "Cabañas de Lujo Frente al Mar", en: "Luxury Beachfront Bungalows" },
-
-    isFeatured: true,
-    hasDiscount: false,
-  },*/
+  
   // ---------------------------------------------------------------------------
   // 18. Falkor
   // ---------------------------------------------------------------------------
@@ -3437,4 +3262,593 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: false,
     hasDiscount: false,
   },*/
+  // ---------------------------------------------------------------------------
+  // 30. Cayos Holandeses - LAYAN
+  // ---------------------------------------------------------------------------
+  {
+    id: 30,
+    slug: "layans-cayos-holandeses-san-blas",
+    category: "IslandLodge",
+    isAvailable: true, 
+    location: {
+      es: "Layan's cabañas del Mar en Cayos Holandeses, San Blas, Panamá",
+      en: "Holandeses Cays, San Blas Islands, Panama",
+    },
+
+    // 🔍 SEO & Metadata
+    seo: {
+      title: {
+        es: "Hospedaje en Isla Cayos Holandeses | Cabañas en San Blas",
+        en: "Dutch Cays Island Lodge | Private Bungalows in San Blas",
+      },
+      description: {
+        es: "Reserva cabañas frente al mar en Cayos Holandeses, San Blas. Pensión completa y bebidas, kayac, ping pong y la mejor experiencia de descanso.",
+        en: "Book luxury beachfront bungalows in Dutch Cays, San Blas. Full board, welcome drinks, snorkeling, and the ultimate island retreat.",
+      },
+      keywords: [
+        { es: "hospedaje en isla san blas", en: "island lodge san blas" },
+        { es: "cabanas cayos holandeses", en: "dutch cays bungalows" },
+      ],
+      openGraph: {
+        title: {
+          es: "Cayos Holandeses - Private Bungalows & Cabañas",
+          en: "Dutch Cays - Private Bungalows & Lux Cabañas",
+        },
+        description: {
+          es: "Hospedaje frente al mar en Cayos holandese una de las zonas más exclusivas de San Blas con pensión completa incluida.",
+          en: "Luxury beachfront lodging in one of the most exclusive areas of San Blas with full board included.",
+        },
+        images: [
+          "/contenido/islas/layan/catalogo/1.png",
+          "/contenido/islas/layan/catalogo/2.png",
+          "/contenido/islas/layan/catalogo/3.png",
+          "/contenido/islas/layan/catalogo/4.png",
+          "/contenido/islas/layan/catalogo/5.png",
+          "/contenido/islas/layan/catalogo/6.png",
+          "/contenido/islas/layan/catalogo/7.png",
+          "/contenido/islas/layan/catalogo/8.png",
+          "/contenido/islas/layan/catalogo/9.png",
+          "/contenido/islas/layan/catalogo/10.png", 
+        ],
+      },
+    },
+
+    // 🚢 Datos del Hospedaje en Isla
+    boatName: "Layan's cabañas del Mar en Cayos Holandeses, San Blas",
+    boatCoverPhoto: "/contenido/islas/layan/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/islas/layan/catalogo/1.png",
+          "/contenido/islas/layan/catalogo/2.png",
+          "/contenido/islas/layan/catalogo/3.png",
+          "/contenido/islas/layan/catalogo/4.png",
+          "/contenido/islas/layan/catalogo/5.png",
+          "/contenido/islas/layan/catalogo/6.png",
+          "/contenido/islas/layan/catalogo/7.png",
+          "/contenido/islas/layan/catalogo/8.png",
+          "/contenido/islas/layan/catalogo/9.png",
+          "/contenido/islas/layan/catalogo/10.png", 
+    ],
+    boatDescription: {
+      es: "Cabañas frente al mar en Cayos Holandeses con pensión completa y experiencia exclusiva.",
+      en: "Luxury beachfront bungalows in Dutch Cays with full board and an exclusive island experience.",
+    },
+    boatLongDescription: {
+      es: "Disfruta de tu estadia en las cabañas de Layan en Cayos Holandeses, uno de los sectores más buscados y alejados de San Blas. Estas cabañas privadas frente al mar ofrecen pensión completa, amenities, ademas de bebidas con las comidas, snacks y agua potable.",
+      en: "Enjoy an unforgettable stay in Dutch Cays, one of the most pristine and remote areas of San Blas. Our private beachfront bungalows offer comfort, ocean breezes, and full-board gourmet dining featuring fresh local seafood.",
+    },
+    specs: {
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 4,
+    },
+
+    // 👨‍✈️ Anfitrión / Staff
+    captain: {
+      name: "Layan's Guna Host",
+      role: { es: "Anfitrion Local", en: "Hosts & Local Guna Guides" },
+      photoUrl: "/contenido/islas/ibins/capitan/1.png",
+      description: {
+        es: "Layan te espera en su isla privada para ofrecerte una experiencia local auténtica de Guna Yala con hospitalidad y guía local.",
+        en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
+      },
+      languages: ["Español",],
+    },
+
+    // 🍽️ Comida
+    dining: {
+      description: {
+        es: "Pensión completa incluida: desayunos, almuerzos y cenas a base de pesca del día y opciones locales, acompañado de bebida y postre. ",
+        en: "Full board included: tropical breakfasts, lunches, and dinners featuring daily catch seafood, local dishes, and a welcome cocktail.",
+      },
+      photoUrl: "/contenido/islas/layan/comidas/1.png",
+    },
+
+    // 🏄‍♂️ Actividades
+    activities: {
+      description: {
+        es: "En su isla contaran con Kayaks, paddleboards, equipo de snorkel, mesa de pin pong y paseos por la playa. Tours opcionales: Cayó de Arena, snorkel guiado, comunidades Guna y piscina natural.",
+        en: "Pristine reef snorkeling, beach walks, oceanfront hammock lounging, and optional island tours.",
+      },
+      photoUrls: [
+        "/contenido/islas/layan/experiencias/1.png",
+        "/contenido/islas/layan/experiencias/2.png",
+        "/contenido/islas/layan/experiencias/3.png",
+      ],
+    },
+
+    // 💰 Precios y Tabla HTML
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 870,
+      tiers: [
+        {
+          seasonOrType: { es: "Cabaña Estándar (Por Persona)", en: "Standard Bungalow (Per Person)" },
+          pricePerNight: 440,
+          notes: { es: "Incluye comidas", en: "Includes meals and activities" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Tipo de Cabaña</th>
+                <th class="p-3 border">Precio (USD)</th>
+                <th class="p-3 border">Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Cabaña del mar Mar x 2 pasajeros</td>
+                <td class="p-3 border font-bold text-green-600"><strong>1 Noche:</strong> $870 USD<br><strong>2 Noches:</strong> $1270 USD </td>
+                <td class="p-3 border">Incluye transporte de entrada y salida hacia la isla</td>
+              </tr>
+              
+              <tr>
+                <td class="p-3 border">Cabaña Familiar x4 o x6 pasajeros </td>
+                <td class="p-3 border font-bold text-green-600"><strong>X4:</strong> $200 USD<br> <strong>X6:</strong> $180 USD</td>
+                <td class="p-3 border">Precio por dia y por pasajero. </td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Bungalow Type</th>
+                <th class="p-3 border">Price (USD / Person / Night)</th>
+                <th class="p-3 border">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Standard Oceanfront Bungalow</td>
+                <td class="p-3 border font-bold text-green-600">$225 USD</td>
+                <td class="p-3 border">Full board & island taxes included</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+
+    // ✅ Incluye / No Incluye
+    includes: [
+      { es: "Hospedaje en cabaña privada frente al mar", en: "Private oceanfront bungalow accommodation" },
+      { es: "Pensión completa (Desayuno, Almuerzo, Cena)", en: "Full board meals (Breakfast, Lunch, Dinner)" },
+      { es: "Agua potable y bebidas con las comidas", en: "Welcome cocktail and complimentary drinks" },
+      { es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla", en: "Use of snorkeling gear and island activities" },
+    ],
+    excludes: [
+      { es: "Traslado terrestre/marítimo hacia la isla", en: "Ground/boat transfers to the island" },
+      { es: "Tasa de entrada al territorio Guna Yala", en: "Guna Yala territory entry fee" },
+      { es: "Tours privados en islas", en: "Personal travel insurance" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+
+    // 🔗 Experiencias Relacionadas
+    relatedExperienceIds: [8, 9, 10],
+
+    // Capacidad y Flags
+    maxGuests: 6,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Cabañas Frente al Mar", en: "Luxury Beachfront Bungalows" },
+
+    isFeatured: true,
+    hasDiscount: false,
+  },
+  // ---------------------------------------------------------------------------
+  // 31. Cayos Holandeses - IBINS
+  // ---------------------------------------------------------------------------
+  {
+    id: 31,
+    slug: "ibins-cayos-holandeses-san-blas",
+    category: "IslandLodge",
+    isAvailable: true, 
+    location: {
+      es: "Ibins's Lodge Cayos Holandeses, San Blas, Panamá",
+      en: "Holandeses Cays, San Blas Islands, Panama",
+    },
+
+    // 🔍 SEO & Metadata
+    seo: {
+      title: {
+        es: "Hospedaje Lodge en Cayos Holandeses | Cabañas en San Blas",
+        en: "Dutch Cays Island Lodge | Private Bungalows in San Blas",
+      },
+      description: {
+        es: "Reserva cabañas frente al mar en Cayos Holandeses, San Blas. Pensión completa y bebidas, kayac, ping pong y la mejor experiencia de descanso.",
+        en: "Book luxury beachfront bungalows in Dutch Cays, San Blas. Full board, welcome drinks, snorkeling, and the ultimate island retreat.",
+      },
+      keywords: [
+        { es: "hospedaje en isla san blas", en: "island lodge san blas" },
+        { es: "cabanas cayos holandeses", en: "dutch cays bungalows" },
+      ],
+      openGraph: {
+        title: {
+          es: "Cayos Holandeses - Private Bungalows & Cabañas",
+          en: "Dutch Cays - Private Bungalows & Lux Cabañas",
+        },
+        description: {
+          es: "Hospedaje frente al mar en Cayos holandese una de las zonas más exclusivas de San Blas con pensión completa incluida.",
+          en: "Luxury beachfront lodging in one of the most exclusive areas of San Blas with full board included.",
+        },
+        images: [
+          "/contenido/islas/ibins/catalogo/1.png",
+          "/contenido/islas/ibins/catalogo/2.png",
+          "/contenido/islas/ibins/catalogo/3.png",
+          "/contenido/islas/ibins/catalogo/4.png",
+          "/contenido/islas/ibins/catalogo/5.png",
+          "/contenido/islas/ibins/catalogo/6.png",
+          "/contenido/islas/ibins/catalogo/7.png",
+          "/contenido/islas/ibins/catalogo/8.png",
+          "/contenido/islas/ibins/catalogo/9.png",
+          "/contenido/islas/ibins/catalogo/10.png", 
+        ],
+      },
+    },
+
+    // 🚢 Datos del Hospedaje en Isla
+    boatName: "Ibins Lodge en Cayos Holandeses, San Blas",
+    boatCoverPhoto: "/contenido/islas/ibins/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/islas/ibins/catalogo/1.png",
+          "/contenido/islas/ibins/catalogo/2.png",
+          "/contenido/islas/ibins/catalogo/3.png",
+          "/contenido/islas/ibins/catalogo/4.png",
+          "/contenido/islas/ibins/catalogo/5.png",
+          "/contenido/islas/ibins/catalogo/6.png",
+          "/contenido/islas/ibins/catalogo/7.png",
+          "/contenido/islas/ibins/catalogo/8.png",
+          "/contenido/islas/ibins/catalogo/9.png",
+          "/contenido/islas/ibins/catalogo/10.png", 
+    ],
+    boatDescription: {
+      es: "Cabañas en Cayos Holandeses con pensión completa y experiencia exclusiva.",
+      en: "Luxury beachfront bungalows in Dutch Cays with full board and an exclusive island experience.",
+    },
+    boatLongDescription: {
+      es: "Disfruta de tu estadia en las cabañas de Ibins en Cayos Holandeses, uno de los sectores más buscados y alejados de San Blas. Estas cabañas privadas frente al mar ofrecen pensión completa, amenities, ademas de bebidas con las comidas y agua potable.",
+      en: "Enjoy an unforgettable stay in Dutch Cays, one of the most pristine and remote areas of San Blas. Our private beachfront bungalows offer comfort, ocean breezes, and full-board gourmet dining featuring fresh local seafood.",
+    },
+    specs: {
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 4,
+    },
+
+    // 👨‍✈️ Anfitrión / Staff
+    captain: {
+      name: "Ibins's Guna Host",
+      role: { es: "Anfitrion Local", en: "Hosts & Local Guna Guides" },
+      photoUrl: "/contenido/islas/ibins/capitan/1.png",
+      description: {
+        es: "Ibins te espera en su isla privada para ofrecerte una experiencia local auténtica de Guna Yala con hospitalidad y guía local.",
+        en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
+      },
+      languages: ["Español",],
+    },
+
+    // 🍽️ Comida
+    dining: {
+      description: {
+        es: "Pensión completa incluida: desayunos, almuerzos y cenas a base de pesca del día y opciones locales, acompañado de bebida. ",
+        en: "Full board included: tropical breakfasts, lunches, and dinners featuring daily catch seafood, local dishes, and a welcome cocktail.",
+      },
+      photoUrl: "/contenido/islas/ibins/comidas/1.png",
+    },
+
+    // 🏄‍♂️ Actividades
+    activities: {
+      description: {
+        es: "En su isla contaran con Kayaks, paddleboards, equipo de snorkel y paseos por la playa. Tours privados opcionales: islas cercanas, isla tigre + trecking + danza Guna.",
+        en: "Pristine reef snorkeling, beach walks, oceanfront hammock lounging, and optional island tours.",
+      },
+      photoUrls: [
+        "/contenido/islas/ibins/experiencias/1.png",
+        "/contenido/islas/ibins/experiencias/2.png",
+        "/contenido/islas/ibins/experiencias/3.png",
+      ],
+    },
+
+    // 💰 Precios y Tabla HTML
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 500,
+      tiers: [
+        {
+          seasonOrType: { es: "Cabaña Estándar (Por Persona)", en: "Standard Bungalow (Per Person)" },
+          pricePerNight: 500,
+          notes: { es: "Incluye comidas", en: "Includes meals and activities" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Tipo de Cabaña</th>
+                <th class="p-3 border">Precio (USD)</th>
+                <th class="p-3 border">Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Cabaña Pareja x2</td>
+                <td class="p-3 border font-bold text-green-600"> $500 USD<strong>x noche:</strong></td>
+                <td class="p-3 border">No incluye transporte de entrada y salida hacia la isla.</td>
+              </tr>
+              
+              <tr>
+                <td class="p-3 border">Cabaña Familiar x4 </td>
+                <td class="p-3 border font-bold text-green-600">$1000 USD<strong>x noche:</strong></td>
+                <td class="p-3 border">No incluye transporte de entrada y salida hacia la isla. </td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Bungalow Type</th>
+                <th class="p-3 border">Price (USD / Person / Night)</th>
+                <th class="p-3 border">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Standard Oceanfront Bungalow</td>
+                <td class="p-3 border font-bold text-green-600">$225 USD</td>
+                <td class="p-3 border">Full board & island taxes included</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+
+    // ✅ Incluye / No Incluye
+    includes: [
+      { es: "Hospedaje en cabaña privada", en: "Private oceanfront bungalow accommodation" },
+      { es: "Pensión completa (Desayuno, Almuerzo, Cena)", en: "Full board meals (Breakfast, Lunch, Dinner)" },
+      { es: "Agua potable y bebidas con las comidas", en: "Welcome cocktail and complimentary drinks" },
+      { es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla", en: "Use of snorkeling gear and island activities" },
+    ],
+    excludes: [
+      { es: "Traslado terrestre/marítimo hacia la isla", en: "Ground/boat transfers to the island" },
+      { es: "Tasa de entrada al territorio Guna Yala", en: "Guna Yala territory entry fee" },
+      { es: "Tours privados en islas", en: "Personal travel insurance" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+
+    // 🔗 Experiencias Relacionadas
+    relatedExperienceIds: [8, 9, 10],
+
+    // Capacidad y Flags
+    maxGuests: 4,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Cabañas Frente al Mar", en: "Luxury Beachfront Bungalows" },
+
+    isFeatured: true,
+    hasDiscount: false,
+  },
+  // ---------------------------------------------------------------------------
+  // 31. Cayos Limones - Nugnudub
+  // ---------------------------------------------------------------------------
+  {
+    id: 32,
+    slug: "nugnudub-san-blas",
+    category: "IslandLodge",
+    isAvailable: true, 
+    location: {
+      es: "Camping en Cayos Limones, San Blas, Panamá",
+      en: "Holandeses Cays, San Blas Islands, Panama",
+    },
+
+    // 🔍 SEO & Metadata
+    seo: {
+      title: {
+        es: "Carpas en alquiles Nugnudub | Carpas en San Blas",
+        en: "Dutch Cays Island Lodge | Private Bungalows in San Blas",
+      },
+      description: {
+        es: "Reserva carpa frente al mar en Cayos Limones, San Blas. Pensión completa y bebidas, kayack, wifi y la mejor experiencia de descanso.",
+        en: "Book luxury beachfront bungalows in Dutch Cays, San Blas. Full board, welcome drinks, snorkeling, and the ultimate island retreat.",
+      },
+      keywords: [
+        { es: "hospedaje en isla san blas", en: "island lodge san blas" },
+        { es: "cabanas cayos holandeses", en: "dutch cays bungalows" },
+      ],
+      openGraph: {
+        title: {
+          es: "Cayos Limones - Isla privada con camping",
+          en: "Dutch Cays - Private Bungalows & Lux Cabañas",
+        },
+        description: {
+          es: "Hospedaje en carpa frente al mar en Cayos Limones, San Blas. Pensión completa incluida.",
+          en: "Luxury beachfront lodging in one of the most exclusive areas of San Blas with full board included.",
+        },
+        images: [
+          "/contenido/islas/nugnudub/catalogo/1.png",
+          "/contenido/islas/nugnudub/catalogo/2.png",
+          "/contenido/islas/nugnudub/catalogo/3.png",
+          "/contenido/islas/nugnudub/catalogo/4.png",
+           "/contenido/islas/nugnudub/catalogo/4.png", 
+            "/contenido/islas/nugnudub/catalogo/5.png", 
+             "/contenido/islas/nugnudub/catalogo/6.png", 
+              "/contenido/islas/nugnudub/catalogo/7.png", 
+               "/contenido/islas/nugnudub/catalogo/8.png", 
+                "/contenido/islas/nugnudub/catalogo/9.png", 
+                 "/contenido/islas/nugnudub/catalogo/10.png",  
+        ],
+      },
+    },
+
+    // 🚢 Datos del Hospedaje en Isla
+    boatName: "Camping Guna Nugnudub, Cayos Limones, San Blas",
+    boatCoverPhoto: "/contenido/islas/nugnudub/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/islas/nugnudub/catalogo/1.png",
+          "/contenido/islas/nugnudub/catalogo/2.png",
+          "/contenido/islas/nugnudub/catalogo/3.png",
+          "/contenido/islas/nugnudub/catalogo/4.png",
+           "/contenido/islas/nugnudub/catalogo/4.png", 
+            "/contenido/islas/nugnudub/catalogo/5.png", 
+             "/contenido/islas/nugnudub/catalogo/6.png", 
+              "/contenido/islas/nugnudub/catalogo/7.png", 
+               "/contenido/islas/nugnudub/catalogo/8.png", 
+                "/contenido/islas/nugnudub/catalogo/9.png", 
+                 "/contenido/islas/nugnudub/catalogo/10.png",  
+    ],
+    boatDescription: {
+      es: "Carpas en Cayos Limones con pensión completa y experiencia exclusiva.",
+      en: "Luxury beachfront bungalows in Dutch Cays with full board and an exclusive island experience.",
+    },
+    boatLongDescription: {
+      es: "Disfruta de tu estadia en las carpas de Nugnudub en Cayos Limones, uno de los sectores más alejados de San Blas. Este campamento privado frente al mar ofrecen, baños y pensión completa, ademas de bebidas con las comidas .",
+      en: "Enjoy an unforgettable stay in Dutch Cays, one of the most pristine and remote areas of San Blas. Our private beachfront bungalows offer comfort, ocean breezes, and full-board gourmet dining featuring fresh local seafood.",
+    },
+    specs: {
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 4,
+    },
+
+    // 👨‍✈️ Anfitrión / Staff
+    captain: {
+      name: "Nugnudub's Guna Host",
+      role: { es: "Anfitrion Local", en: "Hosts & Local Guna Guides" },
+      photoUrl: "/contenido/islas/nugnudub/capitan/1.png",
+      description: {
+        es: "Nugnudub te espera en su camping en isla privada para ofrecerte una experiencia local auténtica de Guna Yala con hospitalidad y guía local.",
+        en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
+      },
+      languages: ["Español",],
+    },
+
+    // 🍽️ Comida
+    dining: {
+      description: {
+        es: "Pensión completa incluida: desayunos, almuerzos y cenas a base de pesca del día y opciones locales, acompañado de bebida. ",
+        en: "Full board included: tropical breakfasts, lunches, and dinners featuring daily catch seafood, local dishes, and a welcome cocktail.",
+      },
+      photoUrl: "/contenido/islas/nugnudub/comidas/1.png",
+    },
+
+    // 🏄‍♂️ Actividades
+    activities: {
+      description: {
+        es: "En su isla contaran con Kayaks, paddleboards, equipo de snorkel y paseos por la playa. Tours privados opcionales.",
+        en: "Pristine reef snorkeling, beach walks, oceanfront hammock lounging, and optional island tours.",
+      },
+      photoUrls: [
+        "/contenido/islas/nugnudub/experiencias/1.png",
+        "/contenido/islas/nugnudub/experiencias/2.png",
+        "/contenido/islas/nugnudub/experiencias/3.png",
+      ],
+    },
+
+    // 💰 Precios y Tabla HTML
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 225,
+      tiers: [
+        {
+          seasonOrType: { es: "Cabaña Estándar (Por Persona)", en: "Standard Bungalow (Per Person)" },
+          pricePerNight: 225,
+          notes: { es: "Incluye comidas", en: "Includes meals and activities" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Tipo de Carpa</th>
+                <th class="p-3 border">Precio (USD)</th>
+                <th class="p-3 border">Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Carpa x1</td>
+                <td class="p-3 border font-bold text-green-600"> $225 USD<strong>x noche:</strong></td>
+                <td class="p-3 border">Incluye transporte de entrada y salida hacia la isla. Noche adicional $70 USD</td>
+              </tr>
+              
+              
+            </tbody>
+          </table>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Bungalow Type</th>
+                <th class="p-3 border">Price (USD / Person / Night)</th>
+                <th class="p-3 border">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Standard Oceanfront Bungalow</td>
+                <td class="p-3 border font-bold text-green-600">$225 USD</td>
+                <td class="p-3 border">Full board & island taxes included</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+
+    // ✅ Incluye / No Incluye
+    includes: [
+      { es: "Hospedaje en Carpa", en: "Private oceanfront bungalow accommodation" },
+      { es: "Pensión completa (Desayuno, Almuerzo, Cena)", en: "Full board meals (Breakfast, Lunch, Dinner)" },
+      { es: "Agua potable y bebidas con las comidas", en: "Welcome cocktail and complimentary drinks" },
+      { es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla", en: "Use of snorkeling gear and island activities" },
+    ],
+    excludes: [
+      //{ es: "Traslado terrestre/marítimo hacia la isla", en: "Ground/boat transfers to the island" },
+      { es: "Tasa de entrada al territorio Guna Yala", en: "Guna Yala territory entry fee" },
+      { es: "Tours privados en islas", en: "Personal travel insurance" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+
+    // 🔗 Experiencias Relacionadas
+    relatedExperienceIds: [8, 9, 10],
+
+    // Capacidad y Flags
+    maxGuests: 4,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Carpa Frente al Mar", en: "Luxury Beachfront Bungalows" },
+
+    isFeatured: true,
+    hasDiscount: false,
+  },
 ];
