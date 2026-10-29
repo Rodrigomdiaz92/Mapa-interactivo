@@ -2292,18 +2292,18 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       doubleBeds: 2,
     },
     captain: {
-      name: "YOYO Host & Captain",
-      role: { es: "Capitán y Anfitrión", en: "Captain & Host" },
+      name: "Ignacio & Crew",
+      role: { es: "Capitán Host", en: "Captain & Host" },
       photoUrl: "/contenido/catamaranes/YOYO/capitan/1.png",
       description: {
-        es: "Atención cálida y personalizada para hacerte sentir como en casa en medio del mar.",
+        es: "Navego desde los 15 años; exploré Brasil, Estados Unidos y Colombia. Esta experiencia no solo me convirtió en un capitán, sino que también moldeó mi visión del mundo y mi respeto por la naturaleza. Mi carrera culinaria se ha consolidado en exigentes cocinas de hoteles internacionales, donde perfeccioné mis técnicas y aprendí a fusionar la disciplina de la hotelería con la riqueza de la cocina costera y multicultural. Hoy, combino la pasión por navegar con la gastronomia, creando esta experiencia única inspirada en la tradición Guna.",
         en: "Warm, personalized attention to ensure a seamless home-away-from-home feel.",
       },
       languages: ["Español", "English"],
     },
     dining: {
       description: {
-        es: "Gastronomía All-Inclusive: desayunos frescos, snacks tropicales, almuerzos y cenas elaboradas con insumos locales. Barra libre completa de bebidas incluida.",
+        es: "Desayunos frescos, snacks tropicales, almuerzos y cenas elaboradas con productos locales. Barra libre completa de bebidas incluida.",
         en: "All-Inclusive Dining: fresh breakfast, daily tropical snacks, delicious lunch and dinner prepared with local ingredients. Full open bar included.",
       },
       photoUrl: "/contenido/catamaranes/YOYO/comidas/1.png",
@@ -2314,12 +2314,15 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Daily sailing between secluded islands, coral reef snorkeling, kayaks/SUPs, and Guna community visits.",
       },
       photoUrls: [
-        "/contenido/catamaranes/YOYO/experiencias/1.png"
+        "/contenido/catamaranes/YOYO/experiencia/2.png",
+        "/contenido/islas/nugnudub/experiencias/1.png",
+        
+        "/contenido/islas/nugnudub/experiencias/3.png",
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 475,
+      basePricePerPersonPerDay: 900,
       tiers: [
         {
           seasonOrType: { es: "Camarote / Charter Privado (Pareja)", en: "Private Cabin / Charter (Couple)" },
@@ -2332,17 +2335,32 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">Charter / Camarote Privado (2 Personas / Pareja)</td>
-                <td class="p-3 border font-bold text-green-600">$950 USD</td>
+                <td class="p-3 border"> <strong>Privado: </strong> 2 Huéspedes (</td>
+                <td class="p-3 border font-bold">$900 USD</td>
+                <td class="p-3 border font-bold text-green-600">- USD</td>
               </tr>
+              <tr>
+                <td class="p-3 border"> <strong>Privado: </strong> +1 Huésped (</td>
+                <td class="p-3 border font-bold">$180 USD</td>
+                <td class="p-3 border font-bold text-green-600"> - USD</td>
+              </tr>
+              
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
@@ -2377,7 +2395,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Ideal Parejas All-Inclusive", en: "Perfect for Couples All-Inclusive" },
+    featureBadge: { es: "Ideal Parejas", en: "Perfect for Couples All-Inclusive" },
     isFeatured: false,
     hasDiscount: false,
   },
@@ -2568,7 +2586,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // ---------------------------------------------------------------------------
   {
     id: 15,
-    slug: "coolcat-catamaran-40ft",
+    slug: "coolcat-catamaran",
     category: "Catamaran",
     isAvailable: true, 
     location: {
@@ -2577,11 +2595,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     seo: {
       title: {
-        es: "Alquiler Catamarán Coolcat (40ft) en San Blas | Sailing the World",
+        es: "Alquiler Catamarán Coolcat en San Blas | Sailing the World",
         en: "Charter Coolcat Catamaran (40ft) in San Blas | Sailing the World",
       },
       description: {
-        es: "Navega en el catamarán Coolcat de 40 pies en San Blas. Opción económica por camarote privado ($255 USD/pers) o barco completo hasta 6 personas.",
+        es: "Navega en el catamarán Coolcat de 40 pies en San Blas. Opción  por camarote privado en compartido o barco privado completo hasta 6 personas.",
         en: "Charter the 40ft Coolcat catamaran in San Blas. Budget-friendly option for shared private cabin ($255 USD/person) or private charter up to 6 guests.",
       },
       keywords: [
@@ -2612,7 +2630,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         ],
       },
     },
-    boatName: "Coolcat (40 FT)",
+    boatName: "COOLCAT",
     boatCoverPhoto: "/contenido/catamaranes/coolcat/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/coolcat/catalogo/1.png",
@@ -2627,11 +2645,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/coolcat/catalogo/10.png",
     ],
     boatDescription: {
-      es: "Catamarán de 40 pies con opciones flexibles de reserva por camarote o barco completo para hasta 6 personas.",
+      es: "Catamarán de 40 pies con opciones flexibles de reserva compartido por camarote o barco privado hasta 6 personas.",
       en: "40ft catamaran offering flexible charter options by cabin or full private boat for up to 6 guests.",
     },
     boatLongDescription: {
-      es: "Coolcat brinda el equilibrio perfecto entre aventura y confort en San Blas. Permite reservar camarotes dobles privados en modalidad compartida (ideal para parejas/viajeros solos) o alquilar la embarcación entera para grupos reducidos.",
+      es: "Nuestra propuesta a bordo consta de menos horarios y más libertad. Nos ocupamos de la navegación y de que tengan todo lo necesario, mientras ustedes eligen cómo disfrutar cada día. Descubrir una isla, hacer snorkel, nadar, explorar una playa o simplemente descansar bajo el sol. Sin itinerarios rígidos y sin apuros. CoolCat no es solamente nuestro barco, es nuestra casa, y durante unos días queremos que también se sienta como la de ustedes. Brindamos el equilibrio perfecto entre aventura y confort en San Blas. Permite reservar camarotes dobles privados en modalidad compartida (ideal para parejas/viajeros solos) o alquilar la embarcación en privado para grupos de hasta 6 personas.",
       en: "Coolcat delivers a balanced sailing experience in San Blas. Perfect for booking a private double cabin in shared mode or reserving the entire yacht for an intimate group of up to 6 guests.",
     },
     specs: {
@@ -2641,28 +2659,30 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       doubleBeds: 3,
     },
     captain: {
-      name: "Coolcat Crew",
-      role: { es: "Capitán y Tripulación", en: "Captain & Crew" },
+      name: "Cati & Mariano",
+      role: { es: "Capitánes", en: "Captain & Crew" },
       photoUrl: "/contenido/catamaranes/coolcat/capitan/1.png",
       description: {
-        es: "Tripulación atenta enfocada en una navegación amigable, segura y relajada.",
+        es: "Pareja argentina. Crecimos a orillas del río Uruguay navegando desde niños. Vivimos a bordo, explorando las aguas, islas y arrecifes de Guna Yala. Cati es profesora de danza y artes visuales; Mariano es guardaparque y un apasionado por la naturaleza. Juntos compartimos un gran respeto e interés por la cultura Guna y por el entorno extraordinario que hoy llamamos hogar.",
         en: "Attentive crew focused on friendly, safe, and relaxing sailing.",
       },
       languages: ["Español", "English"],
     },
     dining: {
       description: {
-        es: "3 comidas diarias (desayuno, almuerzo, cena) y snacks. Barra libre de bebidas no alcohólicas y alcohólicas (con consumo moderado y cócteles especiales).",
+        es: "Incluye desayuno, almuerzo y cena. Barra libre de bebidas no alcohólicas y alcohólicas (con consumo moderado).",
         en: "3 daily meals (breakfast, lunch, dinner) and snacks. Open bar with non-alcoholic and alcoholic beverages (moderate consumption and special cocktails).",
       },
-      photoUrl: "/contenido/catamaranes/coolcat/comidas/1.png",
+      photoUrl: "/contenido/islas/nugnudub/comidas/1.png",
     },
     activities: {
       description: {
         es: "Equipamiento de snorkel, Stand-Up Paddleboard y traslados en dinghy a playas e islas de San Blas.",
         en: "Snorkeling gear, SUP paddleboard, and dinghy rides to San Blas beaches and islets.",
       },
-      photoUrls: [
+      photoUrls: [        
+         "/contenido/islas/nugnudub/experiencias/1.png",        
+        "/contenido/islas/nugnudub/experiencias/3.png",
         "/contenido/catamaranes/coolcat/experiencia/1.png",
       ],
     },
@@ -2686,25 +2706,37 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">Charter Compartido (Camarote Doble Privado)</td>
-                <td class="p-3 border font-bold text-green-600">$255 USD / persona</td>
+                <td class="p-3 border"> <strong>Privado: </strong> 2 Huéspedes </td>
+                <td class="p-3 border font-bold">$1010 USD</td>
+                <td class="p-3 border font-bold text-green-600"> - USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">Charter Privado (2 personas)</td>
-                <td class="p-3 border font-bold text-green-600">$1,200 USD / noche</td>
+                <td class="p-3 border"> <strong>Privado: </strong> +1 Huésped </td>
+                <td class="p-3 border font-bold">$115 USD</td>
+                <td class="p-3 border font-bold text-green-600"> - USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">Huésped Extra en Charter Privado</td>
-                <td class="p-3 border font-bold text-green-600">+$100 USD / noche</td>
+                <td class="p-3 border"> <strong>Compartido: </strong> 1 Huésped  </td>
+                <td class="p-3 border font-bold">$255 USD</td>
+                <td class="p-3 border font-bold text-green-600">- USD</td>
               </tr>
+              
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
@@ -2746,7 +2778,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: true,
-    featureBadge: { es: "Opción Camarote Compartido", en: "Shared Cabin Available" },
+    featureBadge: { es: "Opción Compartido", en: "Shared Cabin Available" },
     isFeatured: false,
     hasDiscount: false,
   },
@@ -2926,11 +2958,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   },
 
   // ---------------------------------------------------------------------------
-  // 16. Berenice - Leopard 40
+  // 16. Brittany Wind
   // ---------------------------------------------------------------------------
   {
     id: 17,
-    slug: "berenice-leopard-40-2018",
+    slug: "brittany-wind-40-2018",
     category: "Catamaran",
     isAvailable: true, 
     location: {
@@ -2939,28 +2971,28 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     seo: {
       title: {
-        es: "Alquiler Catamarán Berenice (Leopard 40 2018) en San Blas | Sailing the World",
-        en: "Charter Berenice (Leopard 40 2018) Catamaran in San Blas | Sailing the World",
+        es: "Alquiler Catamarán Brittany Wind en San Blas | Sailing the World",
+        en: "Charter Brittany Wind (Leopard 40 2018) Catamaran in San Blas | Sailing the World",
       },
       description: {
-        es: "Alquila el catamarán francés Leopard 40 Berenice (2018) en San Blas. A/C silencioso, puerta frontal a proa, tripulación francesa y capacidad hasta 9 huéspedes.",
-        en: "Charter French Leopard 40 Berenice (2018) in San Blas. Silent A/C generator, forward cockpit door, French crew, capacity for up to 9 guests.",
+        es: "Alquila el catamarán francés Leopard 40 Brittany Wind (2018) en San Blas. A/C silencioso, puerta frontal a proa, tripulación francesa y capacidad hasta 9 huéspedes.",
+        en: "Charter French Leopard 40 Brittany Wind (2018) in San Blas. Silent A/C generator, forward cockpit door, French crew, capacity for up to 9 guests.",
       },
       keywords: [
-        { es: "catamaran Berenice leopard 40", en: "Berenice leopard 40 san blas" },
+        { es: "catamaran Brittany Wind leopard 40", en: "Brittany Wind leopard 40 san blas" },
         { es: "tripulacion francesa san blas", en: "french crew catamaran charter panama" },
       ],
       openGraph: {
         title: {
-          es: "Catamarán Berenice (Leopard 40) - Excelencia Francesa & Confort",
-          en: "Berenice Catamaran (Leopard 40) - French Sailing Excellence",
+          es: "Catamarán Brittany Wind - Excelencia Francesa & Confort",
+          en: "Brittany Wind Catamaran (Leopard 40) - French Sailing Excellence",
         },
         description: {
           es: "Diseño moderno con puerta de proa, solárium superior, A/C con generador silencioso y tripulación de capitanes franceses.",
           en: "Modern layout with front door, upper deck sunpads, silent A/C generator, and French captains.",
         },
         images: [
-          "/contenido/catamaranes/Berenice/catalogo/1.png",
+          "/contenido/catamaranes/Brittanywind/catalogo/1.png",
           "/contenido/catamaranes/Berenice/catalogo/2.png",
           "/contenido/catamaranes/Berenice/catalogo/3.png",
           "/contenido/catamaranes/Berenice/catalogo/4.png", 
@@ -2972,19 +3004,19 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         ],
       },
     },
-    boatName: "Berenice (Leopard 40 2018)",
-    boatCoverPhoto: "/contenido/catamaranes/Berenice/catalogo/1.png",
+    boatName: "Brittany Wind (Leopard 40 2018)",
+    boatCoverPhoto: "/contenido/catamaranes/Brittanywind/catalogo/1.png",
     boatGalleryPhotos: [
-          "/contenido/catamaranes/Berenice/catalogo/1.png",
-          "/contenido/catamaranes/Berenice/catalogo/2.png",
-          "/contenido/catamaranes/Berenice/catalogo/3.png",
-          "/contenido/catamaranes/Berenice/catalogo/4.png", 
-          "/contenido/catamaranes/Berenice/catalogo/5.png",
-          "/contenido/catamaranes/Berenice/catalogo/6.png",
-          "/contenido/catamaranes/Berenice/catalogo/7.png",
-          "/contenido/catamaranes/Berenice/catalogo/8.png",    ],
+          "/contenido/catamaranes/Brittanywind/catalogo/1.png",
+          "/contenido/catamaranes/Brittanywind/catalogo/2.png",
+          "/contenido/catamaranes/Brittanywind/catalogo/3.png",
+          "/contenido/catamaranes/Brittanywind/catalogo/4.png", 
+          "/contenido/catamaranes/Brittanywind/catalogo/5.png",
+          "/contenido/catamaranes/Brittanywind/catalogo/6.png",
+          "/contenido/catamaranes/Brittanywind/catalogo/7.png",
+          "/contenido/catamaranes/Brittanywind/catalogo/8.png",    ],
     boatDescription: {
-      es: "Leopard 40 del 2018 con acceso frontal directo a proa, A/C con generador silencioso y tripulación francesa experimentada.",
+      es: "Leopard 40 del 2018 con acceso frontal directo a proa, A/C con generador silencioso y tripulación experimentada.",
       en: "2018 Leopard 40 featuring forward cockpit door, silent generator A/C, and experienced French crew.",
     },
     boatLongDescription: {
@@ -2999,21 +3031,21 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       singleBeds: 2,
     },
     captain: {
-      name: "Captain Thomas & Captain JC",
-      role: { es: "Capitanes Franceses Certificados", en: "Certified French Captains" },
-      photoUrl: "/contenido/catamaranes/Berenice/capitan/1.png",
+      name: "Thomas",
+      role: { es: "Capitan Certificado", en: "Certified French Captains" },
+      photoUrl: "/contenido/catamaranes/Brittanywind/capitan/1.png",
       description: {
-        es: "Capt. Thomas (Bretania, Capitaine 200, 5 años en San Blas) y Capt. JC (Veterano de la Marina Francesa, políglota habla 6 idiomas).",
+        es: "Thomas navega por el archipiélago de San Blas desde hace más de cinco años, tanto en veleros monocasco como en catamaranes. Combina sólidos conocimientos técnicos con un enfoque centrado en el cliente, asegurándose de que los huéspedes disfruten de una experiencia segura, cómoda e inolvidable.",
         en: "Capt. Thomas (Capitaine 200 certified, 5 yrs in San Blas) & Capt. JC (French Navy veteran, speaks 6 languages).",
       },
-      languages: ["Français", "Español", "English", "Português", "Mandarin", "Cantonese"],
+      languages: ["Français", "Español", "English"],
     },
     dining: {
       description: {
         es: "Comidas gourmet caribeñas preparadas por la tripulación. Barra libre incluida (refrescos, cervezas, vinos y licores bajo consumo moderado).",
         en: "Gourmet Caribbean meals prepared by crew. Open bar included (soft drinks, beers, wines, and spirits in moderation).",
       },
-      photoUrl: "/contenido/catamaranes/Berenice/comidas/1.png",
+      photoUrl: "/contenido/catamaranes/Brittanywind/comidas/1.png",
     },
     activities: {
       description: {
@@ -3021,12 +3053,18 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Front deck sunbeds, bean bags, upper deck sunpads, snorkeling gear, kayaks/SUPs, and fishing gear.",
       },
       photoUrls: [
-        "/contenido/catamaranes/Berenice/experiencia/1.png",
+        "/contenido/catamaranes/Brittanywind/experiencia/1.png",
+                "/contenido/catamaranes/Brittanywind/experiencia/2.png",
+
+                        "/contenido/catamaranes/Brittanywind/experiencia/3.png",
+
+                                "/contenido/catamaranes/Brittanywind/experiencia/4.png",
+
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 630,
+      basePricePerPersonPerDay: 1500,
       tiers: [
         { seasonOrType: { es: "2 Huéspedes", en: "2 Guests" }, guestsCount: 2, pricePerNight: 1260 },
         { seasonOrType: { es: "4 Huéspedes", en: "4 Guests" }, guestsCount: 4, pricePerNight: 1720 },
@@ -3038,21 +3076,31 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Huéspedes</th>
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td class="p-3 border">2 Huéspedes</td><td class="p-3 border">Charter Privado Exclusivo</td><td class="p-3 border font-bold text-green-600">$1,260 USD</td></tr>
-              <tr><td class="p-3 border">3 Huéspedes</td><td class="p-3 border">Charter Privado Exclusivo</td><td class="p-3 border font-bold text-green-600">$1,490 USD</td></tr>
-              <tr><td class="p-3 border">4 Huéspedes</td><td class="p-3 border">Charter Privado Exclusivo</td><td class="p-3 border font-bold text-green-600">$1,720 USD</td></tr>
-              <tr><td class="p-3 border">5 Huéspedes</td><td class="p-3 border">Charter Privado Exclusivo</td><td class="p-3 border font-bold text-green-600">$1,830 USD</td></tr>
-              <tr><td class="p-3 border">6 Huéspedes</td><td class="p-3 border">Charter Privado Exclusivo</td><td class="p-3 border font-bold text-green-600">$2,060 USD</td></tr>
-              <tr><td class="p-3 border">7 Huéspedes</td><td class="p-3 border">Charter Privado Exclusivo</td><td class="p-3 border font-bold text-green-600">$2,290 USD</td></tr>
-              <tr><td class="p-3 border">8 Huéspedes</td><td class="p-3 border">Charter Privado Exclusivo</td><td class="p-3 border font-bold text-green-600">$2,640 USD</td></tr>
+              <tr>
+                <td class="p-3 border"> <strong>Privado: </strong> 1 Huésped </td>
+                <td class="p-3 border font-bold">$1500 USD</td>
+                <td class="p-3 border font-bold text-green-600"> - USD</td>
+              </tr>
+               <tr>
+                <td class="p-3 border"> <strong>Privado: </strong> +1 Huésped </td>
+                <td class="p-3 border font-bold">$230 USD</td>
+                <td class="p-3 border font-bold text-green-600"> - USD</td>
+              </tr>              
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
@@ -3088,7 +3136,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       { es: "Seguro personal de viaje", en: "Personal travel insurance" },
     ],
     relatedExperienceIds: [8, 9, 11],
-    maxGuests: 9,
+    maxGuests: 7,
     isPrivate: true,
     isSharedAllowed: false,
     featureBadge: { es: "A/C Silencioso & Tripulación Francesa", en: "Silent A/C & French Crew" },
@@ -3851,4 +3899,5 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     isFeatured: true,
     hasDiscount: false,
   },
+  
 ];
