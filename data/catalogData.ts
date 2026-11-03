@@ -2176,7 +2176,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 2185,
+      basePricePerPersonPerDay: 1900,
       tiers: [
         {
           seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
@@ -2206,8 +2206,8 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">2 Huéspedes </td>
-                <td class="p-3 border font-bold">$2185 USD</td>
+                <td class="p-3 border">1 Huésped </td>
+                <td class="p-3 border font-bold">$1900 USD</td>
                 <td class="p-3 border font-bold text-green-600">$- USD</td>
               </tr>
               <tr>
