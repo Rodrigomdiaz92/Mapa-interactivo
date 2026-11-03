@@ -1992,12 +1992,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border"><strong>Compartido: </strong>1 o 2 Huéspedes (Camarote KING)</td>
+                <td class="p-3 border"><strong>Compartido: </strong>2 Huéspedes (Camarote KING)</td>
                 <td class="p-3 border font-bold">$690 USD</td>
                 <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border"><strong>Compartido: </strong>1 o 2 Huéspedes (Camarote STANDARD)</td>
+                <td class="p-3 border"><strong>Compartido: </strong>2 Huéspedes (Camarote STANDARD)</td>
                 <td class="p-3 border font-bold">$600 USD</td>
                 <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
@@ -2013,7 +2013,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
               </tr>
               <tr>
                 <td class="p-3 border"><strong>Privado: </strong> 6 Huéspedes</td>
-                <td class="p-3 border font-bold">$-- USD</td>
+                <td class="p-3 border font-bold">$1900 USD</td>
                 <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
               
