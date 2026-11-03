@@ -131,7 +131,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 220,
+      basePricePerPersonPerDay: 510,
       tiers: [
         {
           seasonOrType: { es: "2 Huéspedes (Camarote Popa)", en: "2 Guests (Aft Cabin)" },
@@ -164,7 +164,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">2 Huéspedes (Camarote Popa)</td>
+                <td class="p-3 border">1 o 2 Huéspedes (1 Camarote)</td>
                 <td class="p-3 border font-bold">$510 USD</td>
                 <td class="p-3 border font-bold text-green-600">$440 USD</td>
               </tr>
@@ -370,7 +370,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 195,
+      basePricePerPersonPerDay: 390,
       tiers: [
         {
           seasonOrType: { es: "2 Huéspedes (Camarote Proa)", en: "2 Guests (Front Cabin)" },
@@ -398,7 +398,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">2 Huéspedes (Camarote Proa)</td>
+                <td class="p-3 border">1 o 2 Huéspedes (1 Camarote)</td>
                 <td class="p-3 border font-bold">$390 USD</td>
                 <td class="p-3 border font-bold text-green-600">$320 USD</td>
               </tr>
@@ -561,7 +561,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       role: { es: "Tus guías en San Blas", en: "Captain and Crew" },
       photoUrl: "/contenido/veleros/Youth/capitan/1.png",
       description: {
-        es: "Nuestros queridos amigos de @flotandoando_ te esperan abordo para ofrecerte una experiencia de navegación segura y divertida. ",
+        es: "Nuestros queridos amigos de @flotandoando_ te esperan. Ellos son dos biólogos argentinos que encontraron en el mar su hogar. Aman profundamente la naturaleza y creen que no hay mejor forma de conocerla que viviéndola desde adentro, con respeto, curiosidad y conexión real. Nico es un apasionado del mar, experto en snorkel y pesca, siempre listo para guiarte y mostrarte la vida que se esconde bajo el agua. Con él, cada salida se convierte en una experiencia cercana, auténtica y llena de descubrimientos. Vicky es la capitana, quien lleva el timón y el alma del velero. Será la encargada de guiarte con seguridad y calidez a través de las islas de San Blas, compartiendo no solo el viaje, sino también la magia de navegar. Más que un paseo, ofrecen una experiencia: días de mar, viento, islas y momentos simples que quedan para siempre",
         en: "Dynamic crew focused on providing a fun, high-energy, and comfortable sailing tour.",
       },
     },
@@ -614,12 +614,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">2 Huéspedes (Camarote Popa)</td>
+                <td class="p-3 border">Privado: 1 o 2 Huéspedes ( 1 Camarote)</td>
                 <td class="p-3 border font-bold">$770 USD</td>
                 <td class="p-3 border font-bold text-green-600">$ -- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">+ 3 Huéspedes </td>
+                <td class="p-3 border">Privado: + 3 Huéspedes (2 Camarotes) </td>
                 <td class="p-3 border font-bold">$1100 USD</td>
                 <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
@@ -1696,7 +1696,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // ---------------------------------------------------------------------------
   // 7. Mola Mola
   // ---------------------------------------------------------------------------
-  {
+  /*{
     id: 10,
     slug: "mola-mola-beneteau-411",
     category: "Sailboat",
@@ -1861,7 +1861,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     featureBadge: { es: "Red Hamaca & Guía Guna", en: "Hammock Net & Local Guide" },
     isFeatured: false,
     hasDiscount: false,
-  },
+  },*/
   // ---------------------------------------------------------------------------
   // 5. BlueMarys
   // ---------------------------------------------------------------------------
@@ -1915,13 +1915,18 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/BlueMarys/catalogo/4.png", 
           "/contenido/veleros/BlueMarys/catalogo/5.png",
           "/contenido/veleros/BlueMarys/catalogo/6.png",
+          "/contenido/veleros/BlueMarys/catalogo/8.png",
+          "/contenido/veleros/BlueMarys/catalogo/7.png",
+          "/contenido/veleros/BlueMarys/catalogo/8.png",
+          "/contenido/veleros/BlueMarys/catalogo/9.png",
+          "/contenido/veleros/BlueMarys/catalogo/10.png",
     ],
     boatDescription: {
-      es: "Espacioso velero Beneteau Oceanis de 58 pies con 3 camarotes dobles, cada uno con su propio baño privado.",
+      es: "Espacioso velero Beneteau Oceanis de 58 pies con 3 camarotes dobles.",
       en: "Spacious 58ft Beneteau Oceanis monohull featuring 3 double cabins, each with its own private bathroom.",
     },
     boatLongDescription: {
-      es: "BlueMarys ofrece amplios espacios interiores y exteriores, incluyendo dos salones comedor y una extensa cubierta. Ya sea en modalidad compartida o charter privado, navegarás San Blas con una cálida tripulación familiar (Capitán, Chef/Marinero y su hija Franchesca de 8 años) dedicada a tu comodidad.",
+      es: " Blue Marys es un velero monocasco marca Beneteau modelo Oceanis 58 pies. Se trata de una embarcación confortable, de moderno diseño y con amplios espacios para una cómoda navegación y vida a bordo. Cuenta con tres habitaciones dobles con baño privado, un living comedor interior y otro exterior, más una amplia cubierta.",
       en: "BlueMarys offers spacious indoor and outdoor living areas, including two dining saloons and a sprawling deck. Guided by a welcoming family crew (Captain, Chef/Sailor, and their 8-year-old daughter Franchesca), it is perfect for a refined Caribbean getaway.",
     },
     specs: {
@@ -1931,33 +1936,35 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       doubleBeds: 3,
     },
     captain: {
-      name: "Captain & Family Crew",
-      role: { es: "Capitán Profesional y Chef", en: "Professional Captain & Chef" },
+      name: "Manuel, María Ángela & Franchesca",
+      role: { es: "Familia de Anfitriones", en: "Professional Captain & Chef" },
       photoUrl: "/contenido/veleros/BlueMarys/capitan/1.png",
       description: {
-        es: "Capitán profesional y chef/marinera junto a su hija Franchesca de 8 años, creando un ambiente familiar cálido y seguro.",
+        es: "Una pareja argentina, junto a su hija de 9 años. Manuel, María Ángela y Franchesca son la tripulación a cargo del Blue Marys. Disfrutarás de una experiencia de navegación exclusiva en la comarca de Guna Yala, uno de los entornos naturales más preservados del Caribe. A bordo encontraras una propuesta gastronómica variada con pesca fresca del día, opciones vegetarianas y especialidades de la cocina argentina. Disfrutarás de una estancia de máximo confort que combina navegación a vela, ambiente relajado y un entorno de ensueño.",
         en: "Professional captain and chef/sailor accompanied by their 8-year-old daughter Franchesca, creating a warm family atmosphere.",
       },
     },
     dining: {
       description: {
-        es: "Tres comidas diarias a base de pescado y marisco fresco local. Incluye barra libre moderada (refrescos, cerveza, vino y agua). Se adaptan restricciones dietéticas.",
+        es: "Cuatro comidas diarias (desayuno, almuerzo, snack y cena). Incluye bebidas con consumo moderado: gaseosas, cerveza, vino, agua. Bebida extra tiene costo adicional.- Platos basados en pescado fresco y frutos de mar de la zona. En caso de existir alguna restricción dietaria deberá avisar con anticipación para adaptar el menú.",
         en: "Three daily meals centered around fresh local fish and seafood. Moderate open bar included (soft drinks, beer, wine, water). Dietary needs accommodated.",
       },
       photoUrl: "/contenido/veleros/BlueMarys/comidas/1.png",
     },
     activities: {
       description: {
-        es: "Navegación diaria flexible, snorkel, Stand-Up Paddleboard (SUP) y paseos en bote auxiliar para acceder a playas y arrecifes.",
+        es: "El servicio de chárter modalidad barco compartido o privado, incluye:  3 habitaciones dobles con baño privado, tripulación a cargo de la embarcación, acceso a lugares comunes del velero: comedor exterior y cubierta, navegación diaria con acceso a una nuevas islas con playas paradisíacas(sin itinerario fijo ya que la elección de la isla a la cual se navegará, depende del clima), equipo de snorkel y tabla de paddleboard, bote auxiliar a cargo de la tripulación para acceder a la playa y a las zonas de snorkel, wifi libre, ducha exterior con set de baño: toallas y shampoo apto agua salada. Ofrecemos un set de toallas para la ducha, pero no ofrecemos toallas de playa.",
         en: "Flexible daily sailing, snorkeling, Stand-Up Paddleboard (SUP), and dinghy rides to beaches and reefs.",
       },
       photoUrls: [
         "/contenido/veleros/BlueMarys/experiencias/1.png" ,
+        "/contenido/veleros/BlueMarys/experiencias/2.png",
+        "/contenido/veleros/BlueMarys/experiencias/3.png"
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 490,
+      basePricePerPersonPerDay: 300,
       tiers: [
         {
           seasonOrType: { es: "Habitación King Size (Compartido)", en: "King Size Room (Shared)" },
@@ -1975,29 +1982,51 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       ],
       htmlTableContent: {
         es: `
-          <div class="space-y-4 text-sm">
-            <h4 class="font-bold">Opción A: Barco Compartido</h4>
-            <table class="w-full border-collapse border border-slate-200 text-left">
-              <thead>
-                <tr class="bg-slate-100">
-                  <th class="p-3 border">Tipo de Camarote</th>
-                  <th class="p-3 border">Precio (USD / Noche)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="p-3 border">Habitación King Size (con baño privado)</td>
-                  <td class="p-3 border font-bold text-green-600">$570 USD</td>
-                </tr>
-                <tr>
-                  <td class="p-3 border">Habitación Standard (con baño privado)</td>
-                  <td class="p-3 border font-bold text-green-600">$490 USD</td>
-                </tr>
-              </tbody>
-            </table>
-            <h4 class="font-bold">Opción B: Barco Privado</h4>
-            <p><strong>Tarifa Base:</strong> $900 USD / Noche | <strong>Persona adicional:</strong> +$165 USD / Noche</p>
-          </div>
+        <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border"><strong>Compartido: </strong>1 o 2 Huéspedes (Camarote KING)</td>
+                <td class="p-3 border font-bold">$690 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border"><strong>Compartido: </strong>1 o 2 Huéspedes (Camarote STANDARD)</td>
+                <td class="p-3 border font-bold">$600 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border"><strong>Privado: </strong>2 Huéspedes</td>
+                <td class="p-3 border font-bold">$1300 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border"><strong>Privado: </strong> 4 Huéspedes</td>
+                <td class="p-3 border font-bold">$1900 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border"><strong>Privado: </strong> 6 Huéspedes</td>
+                <td class="p-3 border font-bold">$-- USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              
+            </tbody>
+          </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
+          
         `,
         en: `
           <div class="space-y-4 text-sm">
@@ -2038,10 +2067,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       { es: "Toallas de playa y gastos personales", en: "Beach towels and personal expenses" },
     ],
     relatedExperienceIds: [1, 4, 6],
-    maxGuests: 5,
+    maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: true,
-    featureBadge: { es: "3 Baños Privados", en: "3 Private Bathrooms" },
+    featureBadge: { es: "OPCION COMPARTIDO", en: "3 Private Bathrooms" },
     isFeatured: true,
     hasDiscount: false,
   },
@@ -2064,7 +2093,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Charter MBR (Lagoon 42) Catamaran in San Blas | Sailing the World",
       },
       description: {
-        es: "Alquila el refinado Lagoon 42 MBR en San Blas. Con Starlink, proyector de cine, alfombra flotante de 10x10 pies, A/C y suite Owner's Version para hasta 6 personas.",
+        es: "Alquila catamaran Lagoon 42 MBR en San Blas. Con Starlink, proyector de cine, alfombra flotante de 10x10 pies, A/C y suite Owner's Version para hasta 6 personas.",
         en: "Rent the refined Lagoon 42 MBR in San Blas. Features Starlink, movie projector, 10x10ft floating water mat, A/C, and Owner's Suite for up to 6 guests.",
       },
       keywords: [
@@ -2104,11 +2133,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/mbr/catalogo/7.png",
     ],
     boatDescription: {
-      es: "Lagoon 42 Owner's Version remodelado con Suite VIP, Starlink High-Speed, proyector de cine y alfombra flotante gigante.",
+      es: "Lagoon 42 Owner's Version remodelado con Suite VIP, Starlink, aire acondicionado y proyector de cine.",
       en: "Refurbished Owner's Version Lagoon 42 featuring VIP Suite, Starlink Internet, movie projector, and giant water mat.",
     },
     boatLongDescription: {
-      es: "El catamarán MBR (Lagoon 42) representa la combinación perfecta entre lujo y tecnología moderna. Al ser versión de armador (Owner's Version), ofrece un amplio camarote VIP Suite con cama King y salón privado, además de 2 camarotes dobles Queen. Equipado con Starlink, A/C (6h/día), máquina de espresso, alfombra flotante de 10x10ft y proyector de cine para noches bajo las estrellas.",
+      es: "El catamarán MBR representa la combinación perfecta entre lujo y tecnología moderna. Ofrece un amplio camarote Suite con cama King y salón privado, además de 2 camarotes dobles Queen. Equipado con Starlink, A/C (6h/día), máquina de espresso y proyector de cine para noches bajo las estrellas.",
       en: "MBR (Lagoon 42) represents the ultimate blend of luxury and modern technology. As an Owner's Version, it boasts a huge VIP Suite with a King bed and private lounge, plus 2 Queen cabins. Features Starlink, A/C (6h/day), espresso machine, giant 10x10ft floating water mat, and movie projector.",
     },
     specs: {
@@ -2118,11 +2147,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       doubleBeds: 3,
     },
     captain: {
-      name: "Capt. & First Mate (MBR Crew)",
-      role: { es: "Capitán y Primer Oficial", en: "Captain & First Mate" },
+      name: "Bobby & crew",
+      role: { es: "Capitán y tripulacion", en: "Captain & First Mate" },
       photoUrl: "/contenido/catamaranes/mbr/capitan/1.png",
       description: {
-        es: "Tripulación profesional dedicada a llevarte a los mejores arrecifes de Guna Yala con servicio de primera.",
+        es: "Capitan Canadiense y dueño del catamaran dedicado a guiarte a los mejores arrecifes de Guna Yala con servicio premium. Acompañado por su tripulación profesional.",
         en: "Professional crew dedicated to guiding you to Guna Yala's top reefs with premium service.",
       },
       languages: ["English", "Español"],
@@ -2136,16 +2165,18 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     activities: {
       description: {
-        es: "Starlink Satelital, proyector de cine a bordo, Stand-Up Paddleboards (SUP), alfombra de agua flotante de 10x10ft, equipo de snorkel profesional y pesca deportiva.",
+        es: "Proyector de cine a bordo, Stand-Up Paddleboards (SUP), alfombra de agua flotante de 10x10ft, equipo de snorkel profesional y pesca deportiva.",
         en: "Starlink Satellite Internet, onboard movie projector, SUPs, giant 10x10ft floating water mat, pro snorkeling gear, and fishing gear.",
       },
       photoUrls: [
         "/contenido/catamaranes/mbr/experiencias/1.png",
+        "/contenido/catamaranes/mbr/experiencias/2.png",
+        "/contenido/catamaranes/mbr/experiencias/3.png",
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 725,
+      basePricePerPersonPerDay: 2185,
       tiers: [
         {
           seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
@@ -2165,24 +2196,36 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+        es: ` <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Número de Huéspedes</th>
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td class="p-3 border">2 Huéspedes</td><td class="p-3 border">Charter Privado</td><td class="p-3 border font-bold text-green-600">$1,450 USD</td></tr>
-              <tr><td class="p-3 border">3 Huéspedes</td><td class="p-3 border">Charter Privado</td><td class="p-3 border font-bold text-green-600">$1,700 USD</td></tr>
-              <tr><td class="p-3 border">4 Huéspedes</td><td class="p-3 border">Charter Privado</td><td class="p-3 border font-bold text-green-600">$1,950 USD</td></tr>
-              <tr><td class="p-3 border">5 Huéspedes</td><td class="p-3 border">Charter Privado</td><td class="p-3 border font-bold text-green-600">$2,200 USD</td></tr>
-              <tr><td class="p-3 border">6 Huéspedes</td><td class="p-3 border">Charter Privado</td><td class="p-3 border font-bold text-green-600">$2,450 USD</td></tr>
-              <tr><td class="p-3 border">Persona Adicional</td><td class="p-3 border">Extra Guest</td><td class="p-3 border font-bold text-green-600">+$250 USD</td></tr>
+              <tr>
+                <td class="p-3 border">2 Huéspedes </td>
+                <td class="p-3 border font-bold">$2185 USD</td>
+                <td class="p-3 border font-bold text-green-600">$- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">+1 Huésped </td>
+                <td class="p-3 border font-bold">$290 USD</td>
+                <td class="p-3 border font-bold text-green-600">$- USD</td>
+              </tr>
+              
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
+          
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
@@ -2213,6 +2256,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     ],
     excludes: [
       { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
+      { es: "Uso de Aire Acondicionado fuera de horario", en: "Use of Air Conditioning" },
       { es: "Impuestos de entrada a Guna Yala (pago en efectivo)", en: "Guna Yala entrance fees (cash payment)" },
       { es: "Seguro médico/viaje", en: "Personal travel insurance" },
     ],
@@ -2342,12 +2386,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border"> <strong>Privado: </strong> 2 Huéspedes (</td>
+                <td class="p-3 border"> 1 o 2 Huéspedes </td>
                 <td class="p-3 border font-bold">$900 USD</td>
                 <td class="p-3 border font-bold text-green-600">- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border"> <strong>Privado: </strong> +1 Huésped (</td>
+                <td class="p-3 border">  +1 Huésped</td>
                 <td class="p-3 border font-bold">$180 USD</td>
                 <td class="p-3 border font-bold text-green-600"> - USD</td>
               </tr>
@@ -2713,7 +2757,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border"> <strong>Privado: </strong> 2 Huéspedes </td>
+                <td class="p-3 border"> <strong>Privado: </strong> 1 o 2 Huéspedes </td>
                 <td class="p-3 border font-bold">$1010 USD</td>
                 <td class="p-3 border font-bold text-green-600"> - USD</td>
               </tr>
@@ -3083,12 +3127,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border"> <strong>Privado: </strong> 1 Huésped </td>
+                <td class="p-3 border">1 Huésped </td>
                 <td class="p-3 border font-bold">$1500 USD</td>
                 <td class="p-3 border font-bold text-green-600"> - USD</td>
               </tr>
                <tr>
-                <td class="p-3 border"> <strong>Privado: </strong> +1 Huésped </td>
+                <td class="p-3 border"> <strong>+1 Huésped </td>
                 <td class="p-3 border font-bold">$230 USD</td>
                 <td class="p-3 border font-bold text-green-600"> - USD</td>
               </tr>              

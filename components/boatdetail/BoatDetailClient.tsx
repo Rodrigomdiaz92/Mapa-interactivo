@@ -350,15 +350,17 @@ export default function BoatDetailClient({ item, lang }: { item: CatalogItem; la
                   {hasPromo && item.pricing?.basePricePerPersonPerDay && (
                     <span className="text-sm text-neutral-400 line-through">${item.pricing.basePricePerPersonPerDay}</span>
                   )}
-                  <span className="text-xs font-semibold text-neutral-600">USD / día / persona</span>
+                  {item.isSharedAllowed ? (
+                  <span className="text-xs font-semibold text-neutral-600">USD / por persona en compartido</span>):(<span className="text-xs font-semibold text-neutral-600">USD / por persona</span>)}
                 </div>
+                
               </div>
 
               <div className="space-y-3 border-y border-neutral-100 py-4 text-xs text-neutral-600">
                 <div className="flex justify-between">
                   <span>Modalidad:</span>
                   <span className="font-semibold text-neutral-900">
-                    {item.isPrivate ? "Privado / Exclusivo" : "Opción Compartida"}
+                    {item.isSharedAllowed ? "Privado / Compartido" : "Privado / Exclusivo"}
                   </span>
                 </div>
 

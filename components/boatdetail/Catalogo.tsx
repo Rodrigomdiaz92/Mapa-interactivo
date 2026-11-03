@@ -300,7 +300,8 @@ export default function Catalogo({
                 <div className="px-5 sm:px-6 pb-5 pt-3 border-t border-neutral-100 mt-2 bg-neutral-50/40">
                   <div className="flex items-baseline justify-between mb-3">
                     <div>
-                      <span className="text-xs text-neutral-500 block">Precio est. por persona</span>
+                      {item.isSharedAllowed ? (<span className="text-xs text-neutral-500 block">Precio por persona en compartido</span>) : <span className="text-xs text-neutral-500 block">Precio est. por persona</span>}
+                      
                       <div className="flex items-baseline gap-1.5">
                         <span className="text-lg font-bold text-emerald-950">${effectivePrice}</span>
                         {hasPromo && (
