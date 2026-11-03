@@ -131,7 +131,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 510,
+      basePricePerPersonPerDay: 255,
       tiers: [
         {
           seasonOrType: { es: "2 Huéspedes (Camarote Popa)", en: "2 Guests (Aft Cabin)" },
@@ -164,7 +164,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">1 o 2 Huéspedes (1 Camarote)</td>
+                <td class="p-3 border">2 Huéspedes (1 Camarote)</td>
                 <td class="p-3 border font-bold">$510 USD</td>
                 <td class="p-3 border font-bold text-green-600">$440 USD</td>
               </tr>
@@ -370,7 +370,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 390,
+      basePricePerPersonPerDay: 195,
       tiers: [
         {
           seasonOrType: { es: "2 Huéspedes (Camarote Proa)", en: "2 Guests (Front Cabin)" },
@@ -398,7 +398,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">1 o 2 Huéspedes (1 Camarote)</td>
+                <td class="p-3 border"> 2 Huéspedes (1 Camarote)</td>
                 <td class="p-3 border font-bold">$390 USD</td>
                 <td class="p-3 border font-bold text-green-600">$320 USD</td>
               </tr>
@@ -879,7 +879,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Charter Zenith Deluxe Catamaran in San Blas | Sailing the World",
       },
       description: {
-        es: "Disfruta del catamarán ultra lujo Zenith en San Blas. All-Inclusive exclusivo para hasta 8 personas, 4 camarotes, tripulación privada (Capitán, Chef, Azafata) y permisos insulares incluidos.",
+        es: "Disfruta del catamarán de lujo Zenith en San Blas. All-Inclusive exclusivo para hasta 8 personas, 4 camarotes, tripulación privada (Capitán, Chef, Azafata) todo incluido.",
         en: "Experience ultimate luxury aboard Zenith Catamaran in San Blas. Exclusive all-inclusive charter for up to 8 guests, 4 cabins, private crew & island permits included.",
       },
       keywords: [
@@ -907,7 +907,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         ],
       },
     },
-    boatName: "Zenith Deluxe Catamaran",
+    boatName: "Zenith Deluxe Catamaran (Salina Plus 48FT)",
     boatCoverPhoto: "/contenido/catamaranes/Zenith/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/Zenith/catalogo/1.png",
@@ -917,13 +917,16 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/Zenith/catalogo/5.png",
           "/contenido/catamaranes/Zenith/catalogo/6.png",
           "/contenido/catamaranes/Zenith/catalogo/7.png",
+          "/contenido/catamaranes/Zenith/catalogo/8.png",
+          "/contenido/catamaranes/Zenith/catalogo/9.png",
+          "/contenido/catamaranes/Zenith/catalogo/10.png",
     ],
     boatDescription: {
       es: "Catamarán deluxe all-inclusive diseñado para grandes grupos y familias con servicio vip de 3 tripulantes.",
       en: "Deluxe all-inclusive catamaran designed for large groups and families with 3-person crew.",
     },
     boatLongDescription: {
-      es: "Zenith ofrece una experiencia náutica de ultra lujo en el archipiélago de San Blas. Tripulado por un equipo profesional de 3 a 4 personas (Capitán, Chef y Azafata), garantiza máxima estabilidad, privacidad y confort. Incluye todas las tasas insulares, permisos de fondeo y licencias comerciales de Guna Yala en el precio final.",
+      es: "Construido por Fountaine-Pajot en Francia y totalmente renovado en 2026, este catamarán Salina Plus de 48 pies, es cómodo, está bien equipado y cuenta con operación profesional. ZENITH combina el confort contemporáneo con el encanto náutico clásico francés, ofreciendo al mismo tiempo algo especialmente importante en la remota región de San Blas: fiabilidad. Con más de 8 años de operación continua de chárter, ZENITH ha sido configurado específicamente con sistemas robustos y redundantes para garantizar un funcionamiento confiable en este paraíso remoto\nCada camarote incluye:\n-Baño privado en suite.\n-Ducha separada con controles de agua independientes.\n-Inodoros eléctricos automáticos que admiten papel higiénico.\n-Aire acondicionado con control digital individual.\n-Wi-Fi de alta velocidad Starlink.\n-Carga USB de alta velocidad.\n-Cuatro enchufes de 120 voltios, con enchufes de 240 voltios disponibles.\n\nZENITH también proporciona toallas y ropa de cama 100% de algodón de primera calidad, cuatro almohadas estilo hotel por cama, artículos de tocador de calidad, protector solar, repelente de insectos y un botiquín de primeros auxilios completo.\nHay disponibles hasta 4 camarotes, ideales para 4 parejas, además de dos literas individuales en el pasillo para grupos más grandes con adolescentes o adultos atléticos.\n\nPara cruceros privados de una sola pareja, ZENITH ofrece lo que consideramos la disposición más cómoda y espaciosa en San Blas. En lugar de asignar un camarote estándar, preparamos una suite de dos habitaciones excepcionalmente generosa que incluye un dormitorio con cama tamaño queen, además de una sala de descanso separada con sofá cama XL completo, ideal para relajarse, leer o simplemente disfrutar del crucero con comodidad. La suite incluye dos baños privados, cada uno con duchas cerradas independientes\n\nEl catamaran cuenta con:\n- Gran salón climatizado con visibilidad panorámica.\n- Bañera (cockpit) exterior cubierta de lado a lado con ventilación de brisa continua.\n- Único solárium trasero que garantiza vistas despejadas hacia popa.\n- Puesto de mando elevado y cubierto con asientos para tres personas.\n- Trampolín de proa de una sola pieza con tela cómoda para relajarse.\n- Plataformas de baño a babor y estribor con fácil acceso al mar.\n- Bote auxiliar motorizado para 8 personas con escalera de embarque, asientos de banco dobles y capacidad para esquí acuático.\n\nEXPERIENCIA TODO INCLUIDO\nLos precios de ZENITH incluyen prácticamente todo desde el embarque hasta el desembarque, entre lo que se destaca:\n-Tripulación.\n-Comidas y bebidas.\n-Tarifas de uso de islas.\n-Tarifas de fondeo.\n-Permisos de operación comercial de Guna Yala.\n-Langosta, cangrejo y pulpo frescos en temporada.\n-Pescado fresco recién capturado según disponibilidad.",
       en: "Zenith delivers an ultimate luxury cruising experience in San Blas. Crewed by 3 to 4 professionals (Captain, Chef, Stewardess), it guarantees stability, privacy, and high-end comfort. All island fees and Guna Yala commercial charter permits are fully included in the price.",
     },
     specs: {
@@ -932,34 +935,40 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       doubleBeds: 4,
     },
     captain: {
-      name: "Zenith VIP Crew (Captain, Chef, Stewardess)",
+      name: "Zenith VIP Crew",
       role: { es: "Tripulación Profesional VIP", en: "Professional VIP Crew" },
       photoUrl: "/contenido/catamaranes/Zenith/capitan/1.png",
       description: {
-        es: "Tripulación completa dedicada a brindar servicio gastronómico, hospitalidad de primera clase y gestión náutica sin preocupaciones.",
+        es: "Su tripulación profesional —capitán, chef y azafata— cuenta con amplia experiencia en todo San Blas y relaciones de larga data con las comunidades indígenas Guna, lo que permite a los huéspedes disfrutar de una conexión respetuosa y auténtica con la región. A bordo siempre se habla inglés y español, junto con algo del idioma local Guna.",
         en: "Full crew dedicated to providing fine dining, first-class hospitality, and seamless sailing.",
       },
       languages: ["English", "Español"],
     },
     dining: {
       description: {
-        es: "Pensión completa deluxe (4 comidas diarias): desayuno, almuerzo, merienda y cena gourmet elaborada por chef a bordo. Opciones Kosher, No Alcohol o No Food con ajuste de precio.",
+        es: "Los víveres frescos se transportan a San Blas un día antes de su llegada, y cada comida es preparada individualmente por el chef a bordo según sus preferencias. ZENITH utiliza agua purificada embotellada comercialmente para beber, cocinar y producir hielo, lo que garantiza el más alto estándar de calidad y seguridad del agua a bordo. Los huéspedes disfrutan de: café panameño, espresso Nespresso, bebidas licuadas y congeladas, waffles frescos y especialidades de desayuno, mezcladores y cócteles prémium. La barra a bordo incluye: 10 licores populares, 5 aperitivos y licores dulces, 6 variedades de vino (blanco, rosado y tinto), selección de cervezas (lager, hielo y ligera), prosecco italiano (extra seco), vin mousseux francés (demi-sec) y vino espumoso chileno (brut), configuración completa de cócteles, incluidas margaritas congeladas.",
         en: "Deluxe full board (4 meals per day): breakfast, lunch, afternoon snack, and chef-prepared gourmet dinner. Kosher, No Alcohol, or No Food options available with price adjustments.",
       },
       photoUrl: "/contenido/catamaranes/Zenith/comidas/1.png",
     },
     activities: {
       description: {
-        es: "Exploración de islas privadas, snorkel de alta gama, paddleboarding y asistencia integral en traslados dentro de Guna Yala.",
+        es: "Cada chárter a bordo de ZENITH es privado, con un itinerario personalizado según sus intereses. Disfrute de playas bordeadas de palmeras, arrecifes de coral vibrantes, exploración de islas, esnórquel, buceo con scooter subacuático, paddleboard, kayak, navegación a vela, pesca, cultura indígena o simplemente relájese a bordo con total comodidad. O relájese en el paraíso: flote en aguas cristalinas, disfrute de la brisa desde el trampolín y observe inolvidables puestas de sol caribeñas desde el yate. ZENITH ofrece una selección amplia y de gran calidad de equipos acuáticos y de playa en San Blas, todos desinfectados y listos para usar. Lo más destacado incluye:dos scooters acuáticos eléctricos, bote auxiliar motorizado para 8 personas con configuración para esquí acuático, tres kayaks (individual, doble y triple), tres tablas de surf de remo (paddleboards) de fibra de vidrio (varias longitudes), equipo completo de esnórquel en todos los talles, tablas de boogie, flotadores y colchonetas flotantes, chalecos salvavidas deportivos para todas las edades, equipo de pesca, esterillas de yoga y hamaca grande para dos personas, sombrillas de playa, esterillas, hieleras con hielo, voleibol, frisbee y asientos portátiles, toldilla parasol para el trampolín, guitarra acústica para el disfrute de los huéspedes.",
         en: "Private island hopping, premium snorkeling, paddleboarding, and full transfer assistance in Guna Yala.",
       },
       photoUrls: [
         "/contenido/catamaranes/Zenith/experiencias/1.png",
+        "/contenido/catamaranes/Zenith/experiencias/2.png",
+        "/contenido/catamaranes/Zenith/experiencias/3.png",
+        "/contenido/catamaranes/Zenith/experiencias/4.png",
+        "/contenido/catamaranes/Zenith/experiencias/5.png",
+        "/contenido/catamaranes/Zenith/experiencias/6.png",
+        
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 1292,
+      basePricePerPersonPerDay: 1465,
       tiers: [
         {
           seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
@@ -973,19 +982,32 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad / Ocupación</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-                <th class="p-3 border">Huésped Adicional</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">Charter Privado Exclusivo (2 Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$2,585 USD</td>
-                <td class="p-3 border">+$345 USD / Noche</td>
+                <td class="p-3 border">2 Huésped</td>
+                <td class="p-3 border font-bold">$2930 USD</td>
+                <td class="p-3 border font-bold text-green-600">$2745 USD</td>
               </tr>
+              <tr>
+                <td class="p-3 border">+1 Huésped</td>
+                <td class="p-3 border font-bold">$340 USD</td>
+                <td class="p-3 border font-bold text-green-600">$305 USD</td>
+              </tr>
+              
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Consultar tarifas para semana santa, fechas festivas, carnavales, etc.  </strong></li>
+          
+          </ul>
           <p class="text-xs text-slate-500 mt-2">* Descuento especial niños: 4-12 años pagan 50%. Niños de 3 años o menos viajan gratis. Permisos de islas comerciales incluidos.</p>
         `,
         en: `
@@ -1691,7 +1713,198 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: false,
   },
 
-  
+  // ---------------------------------------------------------------------------
+  // 10. FOOTLOOSE
+  // ---------------------------------------------------------------------------
+  {
+    id: 10,
+    slug: "footloose-irwin-52-sailboat",
+    category: "Sailboat",
+    isAvailable: true, 
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Footloose (Irwin 52) en San Blas | Sailing the World",
+        en: "Charter Footloose (Irwin 52) Sailboat in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Siente el espíritu de Guna Yala a bordo del velero Footloose (Irwin 52). Guía local Guna, snorkel y comidas incluidas.",
+        en: "Experience the Guna Yala spirit aboard Footloose (Irwin 52). Hammock net, local Guna guide, snorkeling, and meals included.",
+      },
+      keywords: [
+        { es: "velero Footloose san blas", en: "Footloose sailboat san blas" },
+        { es: "irwin 52 san blas panama", en: "irwin 52 charter guna yala" },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Footloose en San Blas - Espíritu y Cultura Local",
+          en: "Footloose Sailboat in San Blas - Cultural & Relaxing Experience",
+        },
+        description: {
+          es: "Inspirado en el arte textil tradicional Guna. Conexión auténtica y red de hamacas para relajarse.",
+          en: "Inspired by traditional Guna textiles. Authentic cultural connection and hammock lounging area.",
+        },
+        images: [
+          "/contenido/veleros/Footloose/catalogo/1.png",
+          "/contenido/veleros/Footloose/catalogo/2.png",
+          "/contenido/veleros/Footloose/catalogo/3.png",
+          "/contenido/veleros/Footloose/catalogo/4.png", 
+          "/contenido/veleros/Footloose/catalogo/5.png",
+          "/contenido/veleros/Footloose/catalogo/6.png",
+          "/contenido/veleros/Footloose/catalogo/7.png",
+          "/contenido/veleros/Footloose/catalogo/8.png",
+        ],
+      },
+    },
+    boatName: "Footloose (Irwin 52)",
+    boatCoverPhoto: "/contenido/veleros/Footloose/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/veleros/Footloose/catalogo/1.png",
+          "/contenido/veleros/Footloose/catalogo/2.png",
+          "/contenido/veleros/Footloose/catalogo/3.png",
+          "/contenido/veleros/Footloose/catalogo/4.png", 
+          "/contenido/veleros/Footloose/catalogo/5.png",
+          "/contenido/veleros/Footloose/catalogo/6.png",
+          "/contenido/veleros/Footloose/catalogo/7.png",
+          "/contenido/veleros/Footloose/catalogo/8.png",
+          "/contenido/veleros/Footloose/catalogo/9.png",
+          "/contenido/veleros/Footloose/catalogo/10.png",
+          "/contenido/veleros/Footloose/catalogo/11.png",
+          "/contenido/veleros/Footloose/catalogo/12.png",
+          "/contenido/veleros/Footloose/catalogo/13.png",
+          "/contenido/veleros/Footloose/catalogo/14.png",
+    ],
+    boatDescription: {
+      es: "Velero relajado y conectado con la cultura autóctona Guna.",
+      en: "Relaxed sailboat with local cultural connection, featuring a hammock netting lounging area.",
+    },
+    boatLongDescription: {
+      es: "Descubre San Blas a bordo del Footloose, un velero clásico de 52 pies donde la tradición náutica se une con la belleza natural del Caribe panameño. Navega entre islas paradisíacas, disfruta de playas de arena blanca, explora aguas cristalinas y contempla atardeceres inolvidables desde la cubierta. Una experiencia privada para quienes buscan desconectar, descubrir y disfrutar del mar con autenticidad.\n\nLA EXPERIENCIA A BORDO\nUn chárter privado diseñado para descubrir San Blas a tu propio ritmo, rodeado de naturaleza y lejos de las multitudes.",
+      en: "Named after the colorful traditional textile of the Guna people, Footloose offers a relaxed and culturally connected journey. Ideal for guests who want tranquility, natural beauty, and authentic cultural connection.",
+    },
+    specs: {
+      lengthFeet: 41,
+      cabins: 2,
+      bathrooms: 1,
+      doubleBeds: 2,
+    },
+    captain: {
+      name: "Rudi",
+      role: { es: "Capitán & Chef", en: "Captain and Local Guna Guide" },
+      photoUrl: "/contenido/veleros/Naboa/capitan/1.png",
+      description: {
+        es: "Con más de 45 años de experiencia en el mar y licencias náuticas de Panamá e Italia, Rudi combina conocimiento marítimo, pasión por la navegación y hospitalidad. Habla italiano, alemán, español e inglés, lo que le permite recibir cómodamente a huéspedes internacionales. Su amor por la gastronomía italiana aporta un toque especial a la vida a bordo, con platos tradicionales como pasta, risotto, pizza y tiramisú. Apasionado también por la pesca y los deportes de aventura, Rudi hará de la experiencia a bordo una oportunidad para disfrutar del mar, descubrir nuevos lugares y saborear la esencia de Italia en el Caribe.",
+        en: "Local hosts with deep knowledge of the sea and local Guna traditions.",
+      },
+    },
+    dining: {
+      description: {
+        es: "Gastronomía italiana a bordo, platos tradicionales como pasta, risotto, pizza y tiramisú. Todas las comidas y bebidas incluidas (desayuno, almuerzo, snacks y cena). Bebidas alcohólicas con moderación.",
+        en: "Three daily meals, alcoholic and non-alcoholic beverages included (moderate consumption).",
+      },
+      photoUrl: "/contenido/veleros/BlueMarys/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "¿Qué ofrece el chárter? Navegación a vela: Descubre el archipiélago a bordo de este velero clásico. Exploración de islas: visita rincones paradisíacos y disfruta de la belleza de Guna Yala. Snorkel y vida marina: Contamos con equipo de snorkel para explorar las aguas del Caribe y descubrir sus fondos marinos. Actividades acuáticas, kayak y paddleboard. Atención personalizada: vive una experiencia privada, adaptada al ritmo y los intereses de tu grupo. Starlink y ventiladores en todas las cabinas",
+        en: "Snorkel gear, local guide services for cultural exchange, and lounging in the hammock netting.",
+      },
+      photoUrls: [
+        "/contenido/veleros/BlueMarys/experiencias/1.png",
+        "/contenido/veleros/BlueMarys/experiencias/2.png",
+        "/contenido/veleros/BlueMarys/experiencias/3.png"
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 402,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (Two Guests)" },
+          guestsCount: 2,
+          pricePerNight: 670,
+          notes: { es: "Huésped adicional: $220 USD", en: "Extra guest: $220 USD" },
+        },
+      ],
+      htmlTableContent: {
+        es: `<table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">2 Huéspedes (Cabina King)</td>
+                <td class="p-3 border font-bold">$920 USD</td>
+                <td class="p-3 border font-bold text-green-600">-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">2 Huéspedes (Cabina Standard)</td>
+                <td class="p-3 border font-bold">$805 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">+1 Huésped</td>
+                <td class="p-3 border font-bold">$230 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+            </tbody>
+          </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
+          
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Price (USD / Night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Private Charter (Two Guests)</td>
+                <td class="p-3 border font-bold text-green-600">$670 USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Extra Guest</td>
+                <td class="p-3 border font-bold text-green-600">+$220 USD / Night</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "Tres comidas diarias, bebidas alcohólicas y no alcohólicas (moderado)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
+      { es: "Uso de equipo de snorkel y servicios de guía local ", en: "Use of Snorkel Gear and Local Guide Services" },
+      { es: "Área de relax ", en: "Hammock Netting / Lounging Area" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
+      { es: "Tasa obligatoria de entrada a Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [2, 4, 5],
+    maxGuests: 6,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: { es: "Diseño Clásico", en: "Classic Design" },
+    isFeatured: false,
+    hasDiscount: false,
+  },
 
   // ---------------------------------------------------------------------------
   // 7. Mola Mola
@@ -2176,7 +2389,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 1900,
+      basePricePerPersonPerDay: 1095,
       tiers: [
         {
           seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
@@ -2206,8 +2419,8 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">1 Huésped </td>
-                <td class="p-3 border font-bold">$1900 USD</td>
+                <td class="p-3 border">2 Huésped </td>
+                <td class="p-3 border font-bold">$2190 USD</td>
                 <td class="p-3 border font-bold text-green-600">$- USD</td>
               </tr>
               <tr>
@@ -2366,7 +2579,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 900,
+      basePricePerPersonPerDay: 450,
       tiers: [
         {
           seasonOrType: { es: "Camarote / Charter Privado (Pareja)", en: "Private Cabin / Charter (Couple)" },
@@ -2386,7 +2599,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border"> 1 o 2 Huéspedes </td>
+                <td class="p-3 border"> 2 Huéspedes </td>
                 <td class="p-3 border font-bold">$900 USD</td>
                 <td class="p-3 border font-bold text-green-600">- USD</td>
               </tr>
@@ -3108,7 +3321,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 1500,
+      basePricePerPersonPerDay: 865,
       tiers: [
         { seasonOrType: { es: "2 Huéspedes", en: "2 Guests" }, guestsCount: 2, pricePerNight: 1260 },
         { seasonOrType: { es: "4 Huéspedes", en: "4 Guests" }, guestsCount: 4, pricePerNight: 1720 },
@@ -3127,8 +3340,8 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">1 Huésped </td>
-                <td class="p-3 border font-bold">$1500 USD</td>
+                <td class="p-3 border">2 Huésped </td>
+                <td class="p-3 border font-bold">$1730 USD</td>
                 <td class="p-3 border font-bold text-green-600"> - USD</td>
               </tr>
                <tr>
