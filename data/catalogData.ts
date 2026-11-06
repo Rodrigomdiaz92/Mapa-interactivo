@@ -3110,7 +3110,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       en: "Cozy and sturdy catamaran with expert Argentine crew (Captain Ahielen & Chef Gastón) plus Starlink.",
     },
     boatLongDescription: {
-      es: "Kaya es un catamarán ideal para familias o grupos de amigos hasta 8 personas. Ofrece 3 camarotes estándar dobles más 1 camarote familiar. La Capitana Ahielen aporta más de 8 años de experiencia en las aguas de San Blas, mientras que el Chef Gastón deleita con platillos variados con insumos locales frescos.",
+      es: "Kaya es un catamarán ideal para familias o grupos de amigos hasta 8 personas. Ofrece 3 camarotes estándar dobles más 1 camarote familiar. El capitan tiene más de 8 años de experiencia en las aguas de San Blas, mientras que el Chef deleita con platillos variados con insumos locales frescos.",
       en: "Kaya is ideal for families or friends up to 8 guests. Features 3 standard double cabins and 1 family cabin. Captain Ahielen brings over 8 years of San Blas navigation experience, paired with Chef Gastón's culinary excellence.",
     },
     specs: {
@@ -3120,11 +3120,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       singleBeds: 1,
     },
     captain: {
-      name: "Ahielen & Gastón",
-      role: { es: "Capitana y Chef Profesional", en: "Captain & Professional Chef" },
+      name: "Gastón & Abi",
+      role: { es: "Capitan y Chef", en: "Captain & Professional Chef" },
       photoUrl: "/contenido/catamaranes/KAYA/capitan/1.png",
       description: {
-        es: "Ahielen (Capitana con 8+ años en San Blas) y Gastón (Chef profesional argentino).",
+        es: "Gastón, capitán argentino. Habla español nativo, portugués fluido y conversa bien en inglés. Navega en San Blas desde el 2024. Será tu guía local y encargado de las navegaciones. Abi, cocinera argentina. Le encanta cocinar con la materia prima local (pescado y marisco fresco, así como frutas y verduras de temporada). Ambos hablan español nativo e inglés.",
         en: "Ahielen (Captain with 8+ years in San Blas) and Gastón (Professional Argentine Chef).",
       },
       languages: ["Español", "English"],
@@ -3134,7 +3134,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "3 comidas diarias preparadas por Chef profesional con productos locales frescos. Barra libre con bebidas no alcohólicas, cervezas, vinos y cócteles especiales (consumo moderado).",
         en: "3 daily gourmet meals prepared by professional chef using fresh local ingredients. Open bar with soft drinks, beer, wine, and cocktails (moderate consumption).",
       },
-      photoUrl: "/contenido/catamaranes/KAYA/comidas/1.png",
+      photoUrl: "/contenido/veleros/BlueMarys/comidas/1.png",
     },
     activities: {
       description: {
@@ -3142,12 +3142,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Starlink Wi-Fi, 2 Paddleboards, snorkeling gear, fishing rods, and dinghy excursions.",
       },
       photoUrls: [
-        "/contenido/catamaranes/KAYA/experiencia/1.png",
+        "/contenido/veleros/BlueMarys/experiencias/1.png",
+        "/contenido/veleros/BlueMarys/experiencias/2.png",
+        "/contenido/veleros/BlueMarys/experiencias/3.png",
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 575,
+      basePricePerPersonPerDay: 503,
       tiers: [
         {
           seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
@@ -3161,19 +3163,36 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio Base (2 Personas)</th>
-                <th class="p-3 border">Huésped Extra</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$1,150 USD / Noche</td>
-                <td class="p-3 border">+$175 USD / Noche</td>
+                <td class="p-3 border">2 Huéspedes</td>
+                <td class="p-3 border font-bold">$1005 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border"> + 1 Huésped</td>
+                <td class="p-3 border font-bold">$200 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Compartido 2 Huéspedes (SOLO TEMPORADA BAJA)</td>
+                <td class="p-3 border font-bold">$-- USD</td>
+                <td class="p-3 border font-bold text-green-600">$650 USD</td>
               </tr>
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
