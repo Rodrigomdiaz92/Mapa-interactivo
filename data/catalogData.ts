@@ -586,7 +586,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 340,
+      basePricePerPersonPerDay: 190,
       tiers: [
         {
           seasonOrType: { es: "Charter Compartido (Por Persona)", en: "Shared Boat Charter (Per Person)" },
@@ -614,18 +614,23 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">Privado: 1 o 2 Huéspedes ( 1 Camarote)</td>
+                <td class="p-3 border">Privado: 2 Huéspedes</td>
                 <td class="p-3 border font-bold">$770 USD</td>
                 <td class="p-3 border font-bold text-green-600">$ -- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">Privado: + 3 Huéspedes (2 Camarotes) </td>
+                <td class="p-3 border">Privado: +3 Huéspedes</td>
                 <td class="p-3 border font-bold">$1100 USD</td>
                 <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">Compartido (cabina x huesped)</td>
-                <td class="p-3 border font-bold">$340 USD</td>
+                <td class="p-3 border">Compartido: 1 Huésped </td>
+                <td class="p-3 border font-bold">$330 USD</td>
+                <td class="p-3 border font-bold text-green-600">$ -- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">Compartido: 2 Huéspedes </td>
+                <td class="p-3 border font-bold">$375 USD</td>
                 <td class="p-3 border font-bold text-green-600">$ -- USD</td>
               </tr>
             </tbody>
