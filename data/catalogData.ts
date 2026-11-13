@@ -1914,8 +1914,8 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // ---------------------------------------------------------------------------
   // 7. Mola Mola
   // ---------------------------------------------------------------------------
-  /*{
-    id: 10,
+  {
+    id: 18,
     slug: "mola-mola-beneteau-411",
     category: "Sailboat",
     isAvailable: true, 
@@ -1984,11 +1984,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       doubleBeds: 2,
     },
     captain: {
-      name: "Mola Mola Captain & Local Guide",
-      role: { es: "Capitán y Guía Local Guna", en: "Captain and Local Guna Guide" },
+      name: "Capitan Agustin",
+      role: { es: "Anfirtion y Guía Local", en: "Captain and Local Guna Guide" },
       photoUrl: "/contenido/veleros/Mola mola/capitan/1.png",
       description: {
-        es: "Anfitriones locales con profundo conocimiento del mar y las tradiciones del pueblo Guna.",
+        es: "Agustín es argentino y lleva más de 5 años viviendo a bordo de veleros, explorando mares, culturas y aventuras. Paso 3 años viviendo en Brasil, y 2 años en las paradisíacas islas de San Blas, Panamá. Tiene gran experiencia en navegación oceánica; le encanta pescar, surfear y descubrir los rincones secretos del archipiélago. Además de navegar, tiene experiencia en gastronomía, disfruta preparando platos frescos, especialmente con los pescados y mariscos de la zona. En ocasiones, cuenta con la ayuda de un tripulante/cocinero a bordo, para ofrecer un servicio más completo y atento cuando recibe a varios huéspedes. Habla español, inglés y portugués, lo que hace que la comunicación a bordo sea fácil y amena para personas de distintos países. Anímate a embarcarte y vivirás una experiencia auténtica, divertida y segura.",
         en: "Local hosts with deep knowledge of the sea and local Guna traditions.",
       },
     },
@@ -2024,21 +2024,32 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
             <thead>
               <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Ocupación</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="p-3 border">Charter Privado (Dos Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$670 USD</td>
+                <td class="p-3 border">2 Huéspedes (1 Camarote)</td>
+                <td class="p-3 border font-bold">$670 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
               <tr>
-                <td class="p-3 border">Huésped Adicional</td>
-                <td class="p-3 border font-bold text-green-600">+$220 USD / Noche</td>
+                <td class="p-3 border">+1 Huésped</td>
+                <td class="p-3 border font-bold">$220 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
               </tr>
+              
             </tbody>
           </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
         `,
         en: `
           <table class="w-full border-collapse border border-slate-200 text-left text-sm">
@@ -2079,7 +2090,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     featureBadge: { es: "Red Hamaca & Guía Guna", en: "Hammock Net & Local Guide" },
     isFeatured: false,
     hasDiscount: false,
-  },*/
+  },
   // ---------------------------------------------------------------------------
   // 5. BlueMarys
   // ---------------------------------------------------------------------------
