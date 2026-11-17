@@ -689,7 +689,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   },
 
   // ---------------------------------------------------------------------------
-  // 14. Nomade - Lagoon 570 Owner's Edition
+  // 4. Nomade - Lagoon 570 Owner's Edition
   // ---------------------------------------------------------------------------
   {
     id: 4,
@@ -867,7 +867,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: false,
   },
   // ---------------------------------------------------------------------------
-  // 8. Zenith - Deluxe Catamaran
+  // 5. Zenith - Deluxe Catamaran
   // ---------------------------------------------------------------------------
   {
     id: 5,
@@ -1056,7 +1056,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     hasDiscount: true,
   },
    // ---------------------------------------------------------------------------
-  // 11. Yoli - Lagoon 440
+  // 6. Yoli - Lagoon 440
   // ---------------------------------------------------------------------------
   {
     id: 6,
@@ -1229,7 +1229,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
 
 
   // ---------------------------------------------------------------------------
-  // 4. THYRA
+  // 7. THYRA
   // ---------------------------------------------------------------------------
   {
     id: 7,
@@ -1385,12 +1385,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     featureBadge: { es: "Diseño Artesanal Danés", en: "Danish Handcrafted" },
     isFeatured: false,
     hasDiscount: false,
-  },
-
-  
+  }, 
 
   // ---------------------------------------------------------------------------
-  // 6. Naboa
+  // 8. Naboa
   // ---------------------------------------------------------------------------
   {
     id: 8,
@@ -1558,10 +1556,194 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   },
 
   // ---------------------------------------------------------------------------
-  // 7. Splendid
+  // 9. Ocean Twins Leopard 44
   // ---------------------------------------------------------------------------
   {
     id: 9,
+    slug: "ocean-twins-leopard-44",
+    category: "Catamaran",
+    isAvailable: true,
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Catamarán OCEAN TWINS (Leopard 44) en San Blas | Sailing the World",
+        en: "Charter Classic Sailboat Splendid (Cheoy Lee 1973) in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Disfruta de un alquiler exclusivo en el catamarán OCEAN TWINS en las islas San Blas. Ideal para 2 personas con pensión completa.",
+        en: "Sail on the 1973 Cheoy Lee Yawl classic masterpiece in San Blas. Exclusive private charter for 2 guests with full board.",
+      },
+      keywords: [
+        { es: "catamarán OCEAN TWINS", en: "OCEAN TWINS catamaran san blas" },
+        { es: "velero madera clasico panama", en: "classic wooden sailboat san blas" },
+      ],
+      openGraph: {
+        title: {
+          es: "Catamarán Clásico OCEAN TWINS (Leopard 44) en San Blas - Elegancia Atemporal",
+          en: "Splendid Classic Yawl in San Blas - Timeless Elegance",
+        },
+        description: {
+          es: "Catamarán Leopard 44, cuenta con tres camarotes privados con camas tamaño queen, cada uno con capacidad para dos personas.",
+          en: "A marine masterpiece with classic teak wood detailing built in 1973.",
+        },
+        images: [
+          "/contenido/catamaranes/OCEANTWINS/catalogo/1.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/2.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/3.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/4.png", 
+          "/contenido/catamaranes/OCEANTWINS/catalogo/5.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/6.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/7.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/8.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/9.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/10.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/11.png",
+        ],
+      },
+    },
+    boatName: "OCEAN TWINS (Leopard 44)",
+    boatCoverPhoto: "/contenido/catamaranes/OCEANTWINS/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/catamaranes/OCEANTWINS/catalogo/1.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/2.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/3.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/4.png", 
+          "/contenido/catamaranes/OCEANTWINS/catalogo/5.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/6.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/7.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/8.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/9.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/10.png",
+          "/contenido/catamaranes/OCEANTWINS/catalogo/11.png",
+    ],
+    boatDescription: {
+      es: "Alójate a bordo de un catamarán Leopard 44, que cuenta con tres camarotes privados con camas tamaño queen.",
+      en: "A 1973 classic yawl marine masterpiece combining teak wood elegance and smooth navigation.",
+    },
+    boatLongDescription: {
+      es: "Alguna vez has soñado con vivir a bordo de un barco en el paraíso? San Blas es el lugar perfecto para hacerlo!\n \n  Este catamarán Leopard 44, cuenta con tres camarotes privados con camas tamaño queen, cada uno con capacidad para dos personas.\n \n  Explora las islas navegando de una a otra y disfrutando de la experiencia de la vela. Descubre la cultura local y el fascinante mundo submarino practicando snorkel y pesca. Explora playas hermosas en kayak o en tabla de paddle surf (SUP). Además, contamos con una máquina de hielo para que puedas disfrutar de bebidas frías durante los días calorosos!",
+      en: "Built in 1973, this yawl-style sailboat stands out for its robust hull and refined lines, making it a unique jewel on the Caribbean Sea. Renowned for smooth and stable navigation, perfect for a romantic couple escape.",
+    },
+    specs: {
+      cabins: 3,
+      bathrooms: 1,
+      doubleBeds: 3,
+    },
+    captain: {
+      name: "Leander & Joy",
+      role: { es: "Capitanes y anfitriones", en: "Captain & Host" },
+      photoUrl:"/contenido/catamaranes/OCEANTWINS/capitan/1.png",
+      description: {
+        es: "Con un gran amor por el océano y una pasión por el mundo submarino, Leander y Joy son una pareja Belga-Chilena que ha navegado alrededor del mundo y disfruta compartiendo su pasión por la navegación, la vida marina y la vida en el mar. Leander será tu capitán y estará encantado de compartir contigo sus conocimientos de navegación y su pasión por el océano. Joy será la marinera y cocinera, encargándose de que la vida a bordo sea cómoda y acogedora, mientras prepara deliciosas comidas.",
+        en: "Expert captain passionate about classic sailing tradition and hospitality.",
+      },
+    },
+    dining: {
+      description: {
+        es: "Podrás disfrutar de tres deliciosas comidas al día, bebidas y tasas locales, todo incluido! Empieza el día con té o café hecho en barco , fruta de temporada y pan casero. Disfruta de un almuerzo ligero y una deliciosa cena elaborada con ingredientes frescos y locales, además de pescado recién capturado siempre que esté disponible. Ofrecemos vino y cerveza, ya que es difícil encontrar otras bebidas alcohólicas en las islas.",
+        en: "Includes 3 daily meals prepared onboard featuring fresh local ingredients.",
+      },
+      photoUrl:"/contenido/catamaranes/Brittanywind/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Experiencia con todo incluido. Te gustaría sentirte más cómodo en el agua? Disfruta de clases gratuitas de apnea y descubre una nueva forma de vivir la experiencia del snorkel. Incluso un poco de entrenamiento puede transformar la manera en que exploras el mundo bajo la superficie. Descubre la cultura local y el fascinante mundo submarino practicando snorkel y pesca. Explora playas hermosas en kayak o en tabla de paddle surf (SUP). ",
+        en: "Daily sailing, snorkeling, visits to natural swimming pools and untouched islands.",
+      },
+      photoUrls: [
+        "/contenido/catamaranes/Brittanywind/experiencia/1.png",
+        "/contenido/catamaranes/Brittanywind/experiencia/2.png",
+        "/contenido/catamaranes/Brittanywind/experiencia/3.png",
+        "/contenido/catamaranes/Brittanywind/experiencia/4.png"
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 325,
+      tiers: [
+        {
+          seasonOrType: { es: "Charter Privado (Barco Exclusivo)", en: "Private Charter (Exclusive Boat)" },
+          pricePerNight: 240,
+          notes: { es: "Precio por persona por noche", en: "Price per person per night" },
+        },
+      ],
+      htmlTableContent: {
+        es: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Ocupación / Configuración</th>
+                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
+                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Hasta 4 Huéspedes</td>
+                <td class="p-3 border font-bold">$1300 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>
+              <tr>
+                <td class="p-3 border">+1 Huésped</td>
+                <td class="p-3 border font-bold">$305 USD</td>
+                <td class="p-3 border font-bold text-green-600">$-- USD</td>
+              </tr>              
+            </tbody>
+          </table>
+          <ul>
+          <br>
+            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
+            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
+            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
+          
+          </ul>
+        `,
+        en: `
+          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
+            <thead>
+              <tr class="bg-slate-100">
+                <th class="p-3 border">Accommodation Type</th>
+                <th class="p-3 border">Price (USD / Person / Night)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
+                <td class="p-3 border font-bold text-green-600">$240 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        `,
+      },
+    },
+    includes: [
+      { es: "3 comidas diarias", en: "3 meals per day" },
+      { es: "Uso de equipo de snorkel", en: "Use of Snorkel equipment" },
+      { es: "Navegación a vela por las islas y piscinas naturales", en: "Sailboat navigation and visits to natural pools and islands" },
+      { es: "Hospitalidad y atención personalizada", en: "Exceptional hospitality and guidance" },
+    ],
+    excludes: [
+      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
+      { es: "Impuestos de entrada a Guna Yala y tasas insulares", en: "Guna Yala entrance fees and island taxes" },
+      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+    ],
+    relatedExperienceIds: [2, 7],
+    maxGuests: 6,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: {es: "Descubre San Blas a vela", en: "Classic 1973 Yawl" },
+    isFeatured: false,
+    hasDiscount: false,
+  },
+
+    // ---------------------------------------------------------------------------
+  // 7. Splendid
+  // ---------------------------------------------------------------------------
+  {
+    id: 19,
     slug: "splendid-cheoy-lee-classic-yawl",
     category: "Sailboat",
     isAvailable: true,
@@ -3440,7 +3622,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
   // 18. Falkor
   // ---------------------------------------------------------------------------
   /*{
-    id: 18,
+    id: 21,
     slug: "falkor-sailboat-san-blas",
     category: "Sailboat",
     isAvailable: true, 
