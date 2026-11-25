@@ -1,9 +1,6 @@
 import { CatalogItem } from "@/types/catalog";
 
-export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
-  // ---------------------------------------------------------------------------
-  // 1. LUPA
-  // ---------------------------------------------------------------------------
+export const INITIAL_CATALOG_ITEMS: CatalogItem[]                          = [
   {
     id: 1,
     slug: "lupa-jeanneau-sun-odyssey-40ft",
@@ -23,8 +20,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Biologist-led San Blas expedition aboard Lupa (Jeanneau 40ft) with hosts Nico & Belu. All-inclusive meals and guided snorkeling.",
       },
       keywords: [
-        { es: "velero Lupa san blas", en: "Lupa sailboat san blas" },
-        { es: "expedicion biologia san blas", en: "biologist led charter san blas" },
+        {
+          es: "velero Lupa san blas",
+          en: "Lupa sailboat san blas",
+        },
+        {
+          es: "expedicion biologia san blas",
+          en: "biologist led charter san blas",
+        },
       ],
       openGraph: {
         title: {
@@ -108,7 +111,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Somos dos biólogos argentinos que hace más de tres años dejamos la rutina para vivir y navegar en nuestro velero. En este tiempo, hemos recorrido lugares increíbles, desde el Caribe hasta la Polinesia Francesa, y hoy diseñamos una experiencia a bordo que va mucho más allá de un simple paseo en barco. Te invitamos a nuestra casa flotante El Lupa, para explorar juntos San Blas, un archipiélago de 365 islas en el Caribe panameño.",
         en: "Professional marine biologists and expert sailors who have navigated from the Caribbean to French Polynesia.",
       },
-      languages: ["Español", "English", "Português"],
+      languages: [
+        "Español",
+        "English",
+        "Português",
+      ],
     },
     dining: {
       description: {
@@ -134,115 +141,102 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 255,
       tiers: [
         {
-          seasonOrType: { es: "2 Huéspedes (Camarote Popa)", en: "2 Guests (Aft Cabin)" },
+          seasonOrType: {
+            es: "2 Huéspedes (Camarote Popa)",
+            en: "2 Guests (Aft Cabin)",
+          },
           guestsCount: 2,
           pricePerNight: 600,
-          notes: { es: "Camarote Privado", en: "Private Cabin" },
+          notes: {
+            es: "Camarote Privado",
+            en: "Private Cabin",
+          },
         },
         {
-          seasonOrType: { es: "3 Huéspedes (2 Camarotes)", en: "3 Guests (2 Cabins)" },
+          seasonOrType: {
+            es: "3 Huéspedes (2 Camarotes)",
+            en: "3 Guests (2 Cabins)",
+          },
           guestsCount: 3,
           pricePerNight: 790,
-          notes: { es: "Charter Privado", en: "Private Charter" },
+          notes: {
+            es: "Charter Privado",
+            en: "Private Charter",
+          },
         },
         {
-          seasonOrType: { es: "4 Huéspedes (2 Camarotes)", en: "4 Guests (2 Cabins)" },
+          seasonOrType: {
+            es: "4 Huéspedes (2 Camarotes)",
+            en: "4 Guests (2 Cabins)",
+          },
           guestsCount: 4,
           pricePerNight: 990,
-          notes: { es: "Charter Privado", en: "Private Charter" },
+          notes: {
+            es: "Charter Privado",
+            en: "Private Charter",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Huéspedes (1 Camarote)</td>
-                <td class="p-3 border font-bold">$510 USD</td>
-                <td class="p-3 border font-bold text-green-600">$440 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">3 Huéspedes (2 Camarotes)</td>
-                <td class="p-3 border font-bold">$690 USD</td>
-                <td class="p-3 border font-bold text-green-600">$590 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">4 Huéspedes (2 Camarotes)</td>
-                <td class="p-3 border font-bold">$915 USD</td>
-                <td class="p-3 border font-bold text-green-600">$790 USD</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Occupancy & Setup</th>
-                <th class="p-3 border">High Season (USD / Night)</th>
-                <th class="p-3 border">Low Season (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Guests (Aft Cabin)</td>
-                <td class="p-3 border">Private Cabin</td>
-                <td class="p-3 border font-bold text-green-600">$600 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">3 Guests (2 Cabins)</td>
-                <td class="p-3 border">Private Charter</td>
-                <td class="p-3 border font-bold text-green-600">$790 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">4 Guests (2 Cabins)</td>
-                <td class="p-3 border">Private Charter</td>
-                <td class="p-3 border font-bold text-green-600">$990 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huéspedes (1 Camarote)</td>\n                <td class=\"p-3 border font-bold\">$510 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$440 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">3 Huéspedes (2 Camarotes)</td>\n                <td class=\"p-3 border font-bold\">$690 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$590 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">4 Huéspedes (2 Camarotes)</td>\n                <td class=\"p-3 border font-bold\">$915 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$790 USD</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Occupancy & Setup</th>\n                <th class=\"p-3 border\">High Season (USD / Night)</th>\n                <th class=\"p-3 border\">Low Season (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Guests (Aft Cabin)</td>\n                <td class=\"p-3 border\">Private Cabin</td>\n                <td class=\"p-3 border font-bold text-green-600\">$600 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">3 Guests (2 Cabins)</td>\n                <td class=\"p-3 border\">Private Charter</td>\n                <td class=\"p-3 border font-bold text-green-600\">$790 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">4 Guests (2 Cabins)</td>\n                <td class=\"p-3 border\">Private Charter</td>\n                <td class=\"p-3 border font-bold text-green-600\">$990 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tripulacion ", en: "Hosting and guidance by professional biologist crew (Nico & Belu)" },
-      { es: "Pensión completa: 3 comidas, snacks y bebidas moderadas", en: "All-inclusive meals, daily fresh seafood, snacks, and drinks" },
-      { es: "Equipamiento del barco, snorkel y microscopio a bordo", en: "Use of vessel equipment, snorkeling gear, and onboard microscope" },
-      { es: "Limpieza del barco y agua dulce", en: "Vessel cleaning and fresh water" },
-      { es: "Sabanas + toalla", en: "White clothing and towels" },
+      {
+        es: "Tripulacion ",
+        en: "Hosting and guidance by professional biologist crew (Nico & Belu)",
+      },
+      {
+        es: "Pensión completa: 3 comidas, snacks y bebidas moderadas",
+        en: "All-inclusive meals, daily fresh seafood, snacks, and drinks",
+      },
+      {
+        es: "Equipamiento del barco, snorkel y microscopio a bordo",
+        en: "Use of vessel equipment, snorkeling gear, and onboard microscope",
+      },
+      {
+        es: "Limpieza del barco y agua dulce",
+        en: "Vessel cleaning and fresh water",
+      },
+      {
+        es: "Sabanas + toalla",
+        en: "White clothing and towels",
+      },
     ],
     excludes: [
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuestos de entrada a Guna Yala", en: "Guna Yala Entrance Fees (local cash tax)" },
-      { es: "Gastos personales en las islas", en: "Personal expenses on the islands" },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Impuestos de entrada a Guna Yala",
+        en: "Guna Yala Entrance Fees (local cash tax)",
+      },
+      {
+        es: "Gastos personales en las islas",
+        en: "Personal expenses on the islands",
+      },
     ],
-    relatedExperienceIds: [2, 3, 4],
+    relatedExperienceIds: [
+      2,
+      3,
+      4,
+    ],
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Expedición Biológica", en: "Biologist-Led Charter" },
+    featureBadge: {
+      es: "Expedición Biológica",
+      en: "Biologist-Led Charter",
+    },
     isFeatured: true,
     hasDiscount: true,
   },
-
-  //---------------------------------------------------------------------------
-  // 2. FRANCA AUSTRAL
-  //-----------------------------------------------------------------------------
   {
     id: 2,
     slug: "franca-austral-dufour-34ft",
@@ -262,8 +256,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "San Blas expedition aboard Franca Austral (Dufour 34ft) with hosts Federico & Rodrigo. All-inclusive meals and guided snorkeling.",
       },
       keywords: [
-        { es: "velero Franca Austral san blas", en: "Franca Austral sailboat san blas" },
-        { es: "expedicion y nevegacion por san blas", en: "sailing charter san blas" },
+        {
+          es: "velero Franca Austral san blas",
+          en: "Franca Austral sailboat san blas",
+        },
+        {
+          es: "expedicion y nevegacion por san blas",
+          en: "sailing charter san blas",
+        },
       ],
       openGraph: {
         title: {
@@ -347,7 +347,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Somos dos amigos argentinos que hace dos años dejamos la rutina para viajar navegar y explorar el mundo ahora en nuestro velero. En este tiempo, hemos recorrido lugares increíbles, desde el machu picchu, Colombia, Panama, Guatemala y hoy diseñamos una experiencia a bordo que va mucho más allá de un simple paseo en barco. Te invitamos a nuestra casa flotante El Franca Austral, para explorar juntos San Blas, un archipiélago de 365 islas en el Caribe panameño.",
         en: "Professional marine sailors who have travel America and now explore the world aboard their sailboat. They offer a unique sailing experience in San Blas, Panama.",
       },
-      languages: ["Español", "English", "Português"],
+      languages: [
+        "Español",
+        "English",
+        "Português",
+      ],
     },
     dining: {
       description: {
@@ -365,7 +369,6 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         "/contenido/veleros/FrancaAustral/experiencia/1.png",
         "/contenido/veleros/FrancaAustral/experiencia/2.png",
         "/contenido/veleros/FrancaAustral/experiencia/3.png",
-        
       ],
     },
     pricing: {
@@ -373,110 +376,95 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 195,
       tiers: [
         {
-          seasonOrType: { es: "2 Huéspedes (Camarote Proa)", en: "2 Guests (Front Cabin)" },
+          seasonOrType: {
+            es: "2 Huéspedes (Camarote Proa)",
+            en: "2 Guests (Front Cabin)",
+          },
           guestsCount: 2,
           pricePerNight: 390,
-          notes: { es: "Camarote Privado", en: "Private Cabin" },
+          notes: {
+            es: "Camarote Privado",
+            en: "Private Cabin",
+          },
         },
         {
-          seasonOrType: { es: "3 Huéspedes (2 Camarotes)", en: "3 Guests (2 Cabins)" },
+          seasonOrType: {
+            es: "3 Huéspedes (2 Camarotes)",
+            en: "3 Guests (2 Cabins)",
+          },
           guestsCount: 3,
           pricePerNight: 760,
-          notes: { es: "Charter Privado", en: "Private Charter" },
+          notes: {
+            es: "Charter Privado",
+            en: "Private Charter",
+          },
         },
-        
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border"> 2 Huéspedes (1 Camarote)</td>
-                <td class="p-3 border font-bold">$390 USD</td>
-                <td class="p-3 border font-bold text-green-600">$320 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">3 Huéspedes (2 Camarotes)</td>
-                <td class="p-3 border font-bold">$760 USD</td>
-                <td class="p-3 border font-bold text-green-600">$610 USD</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Occupancy & Setup</th>
-                <th class="p-3 border">High Season (USD / Night)</th>
-                <th class="p-3 border">Low Season (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Guests (Aft Cabin)</td>
-                <td class="p-3 border">Private Cabin</td>
-                <td class="p-3 border font-bold text-green-600">$600 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">3 Guests (2 Cabins)</td>
-                <td class="p-3 border">Private Charter</td>
-                <td class="p-3 border font-bold text-green-600">$790 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">4 Guests (2 Cabins)</td>
-                <td class="p-3 border">Private Charter</td>
-                <td class="p-3 border font-bold text-green-600">$990 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\"> 2 Huéspedes (1 Camarote)</td>\n                <td class=\"p-3 border font-bold\">$390 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$320 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">3 Huéspedes (2 Camarotes)</td>\n                <td class=\"p-3 border font-bold\">$760 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$610 USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Occupancy & Setup</th>\n                <th class=\"p-3 border\">High Season (USD / Night)</th>\n                <th class=\"p-3 border\">Low Season (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Guests (Aft Cabin)</td>\n                <td class=\"p-3 border\">Private Cabin</td>\n                <td class=\"p-3 border font-bold text-green-600\">$600 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">3 Guests (2 Cabins)</td>\n                <td class=\"p-3 border\">Private Charter</td>\n                <td class=\"p-3 border font-bold text-green-600\">$790 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">4 Guests (2 Cabins)</td>\n                <td class=\"p-3 border\">Private Charter</td>\n                <td class=\"p-3 border font-bold text-green-600\">$990 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tripulacion ", en: "Hosting and guidance by professional sailing crew." },
-      { es: "Pensión completa: 3 comidas, snacks y bebidas moderadas", en: "All-inclusive meals, daily fresh seafood, snacks, and drinks" },
-      { es: "Equipamiento del barco, snorkel + tabla SUP", en: "Use of vessel equipment, snorkeling gear + SUP table" },
-      { es: "Limpieza del barco y agua dulce", en: "Vessel cleaning and fresh water" },
-      { es: "Sabanas + toalla", en: "White clothing and towels" },
+      {
+        es: "Tripulacion ",
+        en: "Hosting and guidance by professional sailing crew.",
+      },
+      {
+        es: "Pensión completa: 3 comidas, snacks y bebidas moderadas",
+        en: "All-inclusive meals, daily fresh seafood, snacks, and drinks",
+      },
+      {
+        es: "Equipamiento del barco, snorkel + tabla SUP",
+        en: "Use of vessel equipment, snorkeling gear + SUP table",
+      },
+      {
+        es: "Limpieza del barco y agua dulce",
+        en: "Vessel cleaning and fresh water",
+      },
+      {
+        es: "Sabanas + toalla",
+        en: "White clothing and towels",
+      },
     ],
     excludes: [
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuestos de entrada a Guna Yala", en: "Guna Yala Entrance Fees (local cash tax)" },
-      { es: "Gastos personales en las islas", en: "Personal expenses on the islands" },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Impuestos de entrada a Guna Yala",
+        en: "Guna Yala Entrance Fees (local cash tax)",
+      },
+      {
+        es: "Gastos personales en las islas",
+        en: "Personal expenses on the islands",
+      },
     ],
-    relatedExperienceIds: [2, 3, 4],
+    relatedExperienceIds: [
+      2,
+      3,
+      4,
+    ],
     maxGuests: 3,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Experiencia de Navegación", en: "Sailing Experience" },
+    featureBadge: {
+      es: "Experiencia de Navegación",
+      en: "Sailing Experience",
+    },
     isFeatured: true,
     hasDiscount: true,
   },
-  // ---------------------------------------------------------------------------
-  // 3. Youth
-  // ---------------------------------------------------------------------------
   {
     id: 3,
     slug: "youth-jeanneau-sun-odyssey-45",
     category: "Sailboat",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -491,8 +479,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Stay onboard the modern Youth sailboat (Jeanneau 45) in San Blas. Capacity for 6 guests, 3 cabins, 2 bathrooms, paddleboard, snorkel, and drinks included.",
       },
       keywords: [
-        { es: "velero Youth san blas", en: "Youth sailboat san blas" },
-        { es: "jeanneau 45 charter panama", en: "jeanneau 45 san blas" },
+        {
+          es: "velero Youth san blas",
+          en: "Youth sailboat san blas",
+        },
+        {
+          es: "jeanneau 45 charter panama",
+          en: "jeanneau 45 san blas",
+        },
       ],
       openGraph: {
         title: {
@@ -507,7 +501,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Youth/catalogo/1.png",
           "/contenido/veleros/Youth/catalogo/2.png",
           "/contenido/veleros/Youth/catalogo/3.png",
-          "/contenido/veleros/Youth/catalogo/4.png", 
+          "/contenido/veleros/Youth/catalogo/4.png",
           "/contenido/veleros/Youth/catalogo/5.png",
           "/contenido/veleros/Youth/catalogo/6.png",
           "/contenido/veleros/Youth/catalogo/7.png",
@@ -519,28 +513,27 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Youth/catalogo/13.png",
           "/contenido/veleros/Youth/catalogo/14.png",
           "/contenido/veleros/Youth/catalogo/15.png",
-          
         ],
       },
     },
     boatName: "Youth (Jeanneau Sun Odyssey 45)",
     boatCoverPhoto: "/contenido/veleros/Youth/catalogo/1.png",
     boatGalleryPhotos: [
-          "/contenido/veleros/Youth/catalogo/1.png",
-          "/contenido/veleros/Youth/catalogo/2.png",
-          "/contenido/veleros/Youth/catalogo/3.png",
-          "/contenido/veleros/Youth/catalogo/4.png", 
-          "/contenido/veleros/Youth/catalogo/5.png",
-          "/contenido/veleros/Youth/catalogo/6.png",
-          "/contenido/veleros/Youth/catalogo/7.png",
-          "/contenido/veleros/Youth/catalogo/8.png",
-          "/contenido/veleros/Youth/catalogo/9.png",
-          "/contenido/veleros/Youth/catalogo/10.png",
-          "/contenido/veleros/Youth/catalogo/11.png",
-          "/contenido/veleros/Youth/catalogo/12.png",
-          "/contenido/veleros/Youth/catalogo/13.png",
-          "/contenido/veleros/Youth/catalogo/14.png",
-          "/contenido/veleros/Youth/catalogo/15.png",
+      "/contenido/veleros/Youth/catalogo/1.png",
+      "/contenido/veleros/Youth/catalogo/2.png",
+      "/contenido/veleros/Youth/catalogo/3.png",
+      "/contenido/veleros/Youth/catalogo/4.png",
+      "/contenido/veleros/Youth/catalogo/5.png",
+      "/contenido/veleros/Youth/catalogo/6.png",
+      "/contenido/veleros/Youth/catalogo/7.png",
+      "/contenido/veleros/Youth/catalogo/8.png",
+      "/contenido/veleros/Youth/catalogo/9.png",
+      "/contenido/veleros/Youth/catalogo/10.png",
+      "/contenido/veleros/Youth/catalogo/11.png",
+      "/contenido/veleros/Youth/catalogo/12.png",
+      "/contenido/veleros/Youth/catalogo/13.png",
+      "/contenido/veleros/Youth/catalogo/14.png",
+      "/contenido/veleros/Youth/catalogo/15.png",
     ],
     boatDescription: {
       es: "Velero de 45 pies, con capacidad para 6 personas, ideal para grupos o familias. ",
@@ -558,7 +551,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "NICO & VIKI",
-      role: { es: "Tus guías en San Blas", en: "Captain and Crew" },
+      role: {
+        es: "Tus guías en San Blas",
+        en: "Captain and Crew",
+      },
       photoUrl: "/contenido/veleros/Youth/capitan/1.png",
       description: {
         es: "Nuestros queridos amigos de @flotandoando_ te esperan. Ellos son dos biólogos argentinos que encontraron en el mar su hogar. Aman profundamente la naturaleza y creen que no hay mejor forma de conocerla que viviéndola desde adentro, con respeto, curiosidad y conexión real. Nico es un apasionado del mar, experto en snorkel y pesca, siempre listo para guiarte y mostrarte la vida que se esconde bajo el agua. Con él, cada salida se convierte en una experiencia cercana, auténtica y llena de descubrimientos. Vicky es la capitana, quien lleva el timón y el alma del velero. Será la encargada de guiarte con seguridad y calidez a través de las islas de San Blas, compartiendo no solo el viaje, sino también la magia de navegar. Más que un paseo, ofrecen una experiencia: días de mar, viento, islas y momentos simples que quedan para siempre",
@@ -581,7 +577,6 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         "/contenido/veleros/Youth/experiencia/1.png",
         "/contenido/veleros/Youth/experiencia/2.png",
         "/contenido/veleros/Youth/experiencia/3.png",
-
       ],
     },
     pricing: {
@@ -589,113 +584,81 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 190,
       tiers: [
         {
-          seasonOrType: { es: "Charter Compartido (Por Persona)", en: "Shared Boat Charter (Per Person)" },
+          seasonOrType: {
+            es: "Charter Compartido (Por Persona)",
+            en: "Shared Boat Charter (Per Person)",
+          },
           pricePerNight: 340,
         },
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 770,
         },
         {
-          seasonOrType: { es: "Charter Privado (3 o más Huéspedes)", en: "Private Charter (3+ Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (3 o más Huéspedes)",
+            en: "Private Charter (3+ Guests)",
+          },
           pricePerNight: 1100,
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Privado: 2 Huéspedes</td>
-                <td class="p-3 border font-bold">$770 USD</td>
-                <td class="p-3 border font-bold text-green-600">$ -- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Privado: +3 Huéspedes</td>
-                <td class="p-3 border font-bold">$1100 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Compartido: 1 Huésped </td>
-                <td class="p-3 border font-bold">$330 USD</td>
-                <td class="p-3 border font-bold text-green-600">$ -- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Compartido: 2 Huéspedes </td>
-                <td class="p-3 border font-bold">$375 USD</td>
-                <td class="p-3 border font-bold text-green-600">$ -- USD</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Shared Boat Charter (Per Person)</td>
-                <td class="p-3 border font-bold text-green-600">$250 USD / person</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (2 Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$850 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (3+ Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$1,200 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Privado: 2 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$770 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$ -- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Privado: +3 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$1100 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Compartido: 1 Huésped </td>\n                <td class=\"p-3 border font-bold\">$330 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$ -- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Compartido: 2 Huéspedes </td>\n                <td class=\"p-3 border font-bold\">$375 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$ -- USD</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Shared Boat Charter (Per Person)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$250 USD / person</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (2 Guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$850 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (3+ Guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,200 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tres comidas diarias y bebidas (alcohólicas con moderación)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
-      { es: "Uso de equipo de snorkel y paddleboard (SUP)", en: "Use of Snorkel Gear and Paddleboard" },
-      { es: "Espacioso solárium y amplias zonas sociales", en: "Spacious sun deck and social areas" },
+      {
+        es: "Tres comidas diarias y bebidas (alcohólicas con moderación)",
+        en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)",
+      },
+      {
+        es: "Uso de equipo de snorkel y paddleboard (SUP)",
+        en: "Use of Snorkel Gear and Paddleboard",
+      },
+      {
+        es: "Espacioso solárium y amplias zonas sociales",
+        en: "Spacious sun deck and social areas",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Entrada obligatoria al territorio Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Entrada obligatoria al territorio Guna Yala",
+        en: "Mandatory entrance fee to Guna Yala territory",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [1, 3, 4],
+    relatedExperienceIds: [
+      1,
+      3,
+      4,
+    ],
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: true,
-    featureBadge: { es: "Espacioso Solárium", en: "Spacious Sun Deck" },
+    featureBadge: {
+      es: "Espacioso Solárium",
+      en: "Spacious Sun Deck",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 4. Nomade - Lagoon 570 Owner's Edition
-  // ---------------------------------------------------------------------------
   {
     id: 4,
     slug: "nomade-lagoon-570-owners-edition",
     category: "Catamaran",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -710,8 +673,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Mega 57ft Nomade Catamaran in San Blas (Kevlar hull). 4 A/C cabins, Starlink, karaoke, ice cream & frozen drink machines, underwater scooters.",
       },
       keywords: [
-        { es: "catamaran Nomade lagoon 570", en: "Nomade lagoon 570 san blas" },
-        { es: "megacatamaran de lujo san blas", en: "luxury mega catamaran charter panama" },
+        {
+          es: "catamaran Nomade lagoon 570",
+          en: "Nomade lagoon 570 san blas",
+        },
+        {
+          es: "megacatamaran de lujo san blas",
+          en: "luxury mega catamaran charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -726,10 +695,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/Nomade/catalogo/1.png",
           "/contenido/catamaranes/Nomade/catalogo/2.png",
           "/contenido/catamaranes/Nomade/catalogo/3.png",
-          "/contenido/catamaranes/Nomade/catalogo/4.png", 
+          "/contenido/catamaranes/Nomade/catalogo/4.png",
           "/contenido/catamaranes/Nomade/catalogo/5.png",
           "/contenido/catamaranes/Nomade/catalogo/6.png",
-
         ],
       },
     },
@@ -737,11 +705,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/catamaranes/Nomade/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/Nomade/catalogo/1.png",
-          "/contenido/catamaranes/Nomade/catalogo/2.png",
-          "/contenido/catamaranes/Nomade/catalogo/3.png",
-          "/contenido/catamaranes/Nomade/catalogo/4.png", 
-          "/contenido/catamaranes/Nomade/catalogo/5.png",
-          "/contenido/catamaranes/Nomade/catalogo/6.png",
+      "/contenido/catamaranes/Nomade/catalogo/2.png",
+      "/contenido/catamaranes/Nomade/catalogo/3.png",
+      "/contenido/catamaranes/Nomade/catalogo/4.png",
+      "/contenido/catamaranes/Nomade/catalogo/5.png",
+      "/contenido/catamaranes/Nomade/catalogo/6.png",
     ],
     boatDescription: {
       es: "Exclusivo Lagoon 570 con casco de Kevlar, aire acondicionado en cada camarote, máquinas de helado y juguetes de alta tecnología.",
@@ -759,20 +727,27 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Nomade Trilingual Crew",
-      role: { es: "Tripulación Trilingüe VIP", en: "Trilingual VIP Crew" },
-      photoUrl: "/contenido/catamaranes/Nomade/capitan/1.png",
+      role: {
+        es: "Tripulación Trilingüe VIP",
+        en: "Trilingual VIP Crew",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Tripulación trilingüe (Español, Inglés, Portugués) dedicada a ofrecer una experiencia impecable de nivel resort.",
         en: "Trilingual crew (English, Spanish, Portuguese) delivering resort-level hospitality.",
       },
-      languages: ["English", "Español", "Português"],
+      languages: [
+        "English",
+        "Español",
+        "Português",
+      ],
     },
     dining: {
       description: {
         es: "Gastronomía gourmet All-Inclusive: carnes rojas, pescados y mariscos frescos, jugos naturales, menú infantil personalizado y barra libre. Incluye máquina de helados y tragos congelados.",
         en: "Gourmet All-Inclusive: red meats, fresh local fish/seafood, natural juices, custom kids menu, open bar, plus ice cream & frozen drink machines.",
       },
-      photoUrl: "/contenido/catamaranes/Nomade/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -780,7 +755,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "2 Underwater water scooters, 2 SUPs, 2 Kayaks, rod & spear fishing equipment, Karaoke, TV, and Starlink.",
       },
       photoUrls: [
-        "/contenido/catamaranes/Nomade/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -788,92 +765,82 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 400,
       tiers: [
         {
-          seasonOrType: { es: "Camarote Compartido (Por Persona)", en: "Shared Cabin Charter (Per Person)" },
+          seasonOrType: {
+            es: "Camarote Compartido (Por Persona)",
+            en: "Shared Cabin Charter (Per Person)",
+          },
           pricePerNight: 400,
         },
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 1325,
-          notes: { es: "Huésped adicional: +$250 USD/noche", en: "Extra guest: +$250 USD/night" },
+          notes: {
+            es: "Huésped adicional: +$250 USD/noche",
+            en: "Extra guest: +$250 USD/night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-                <th class="p-3 border">Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Camarote Compartido</td>
-                <td class="p-3 border font-bold text-green-600">$400 USD / pers.</td>
-                <td class="p-3 border">Por persona por noche</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Charter Privado (2 personas)</td>
-                <td class="p-3 border font-bold text-green-600">$1,325 USD</td>
-                <td class="p-3 border">Huésped extra: +$250 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-                <th class="p-3 border">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Shared Cabin Charter</td>
-                <td class="p-3 border font-bold text-green-600">$400 USD / guest</td>
-                <td class="p-3 border">Per person per night</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (2 guests)</td>
-                <td class="p-3 border font-bold text-green-600">$1,325 USD</td>
-                <td class="p-3 border">Extra guest: +$250 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Modalidad</th>\n                <th class=\"p-3 border\">Precio (USD / Noche)</th>\n                <th class=\"p-3 border\">Notas</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Camarote Compartido</td>\n                <td class=\"p-3 border font-bold text-green-600\">$400 USD / pers.</td>\n                <td class=\"p-3 border\">Por persona por noche</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Charter Privado (2 personas)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,325 USD</td>\n                <td class=\"p-3 border\">Huésped extra: +$250 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n                <th class=\"p-3 border\">Notes</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Shared Cabin Charter</td>\n                <td class=\"p-3 border font-bold text-green-600\">$400 USD / guest</td>\n                <td class=\"p-3 border\">Per person per night</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (2 guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,325 USD</td>\n                <td class=\"p-3 border\">Extra guest: +$250 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Aire Acondicionado en cada camarote y agua dulce ilimitada", en: "Air Conditioning in every cabin and unlimited fresh watermaker" },
-      { es: "Gastronomía gourmet, barra libre, máquina de helados y slushies", en: "Gourmet dining, open bar, ice cream & slushie machines" },
-      { es: "2 Scooters subacuáticos, 2 SUP, 2 Kayaks, Karaoke y Starlink", en: "2 Underwater scooters, 2 SUPs, 2 Kayaks, Karaoke, Starlink" },
-      { es: "Tripulación VIP trilingüe dedicada", en: "Dedicated trilingual VIP crew" },
+      {
+        es: "Aire Acondicionado en cada camarote y agua dulce ilimitada",
+        en: "Air Conditioning in every cabin and unlimited fresh watermaker",
+      },
+      {
+        es: "Gastronomía gourmet, barra libre, máquina de helados y slushies",
+        en: "Gourmet dining, open bar, ice cream & slushie machines",
+      },
+      {
+        es: "2 Scooters subacuáticos, 2 SUP, 2 Kayaks, Karaoke y Starlink",
+        en: "2 Underwater scooters, 2 SUPs, 2 Kayaks, Karaoke, Starlink",
+      },
+      {
+        es: "Tripulación VIP trilingüe dedicada",
+        en: "Dedicated trilingual VIP crew",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Entrada en efectivo a Guna Yala", en: "Guna Yala entrance fees" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Entrada en efectivo a Guna Yala",
+        en: "Guna Yala entrance fees",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [8, 9, 12],
+    relatedExperienceIds: [
+      8,
+      9,
+      12,
+    ],
     maxGuests: 8,
     isPrivate: true,
     isSharedAllowed: true,
-    featureBadge: { es: "A/C & Scooters Subacuáticos", en: "A/C & Underwater Scooters" },
+    featureBadge: {
+      es: "A/C & Scooters Subacuáticos",
+      en: "A/C & Underwater Scooters",
+    },
     isFeatured: true,
     hasDiscount: false,
   },
-  // ---------------------------------------------------------------------------
-  // 5. Zenith - Deluxe Catamaran
-  // ---------------------------------------------------------------------------
   {
     id: 5,
     slug: "zenith-deluxe-catamaran",
     category: "Catamaran",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -888,8 +855,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Experience ultimate luxury aboard Zenith Catamaran in San Blas. Exclusive all-inclusive charter for up to 8 guests, 4 cabins, private crew & island permits included.",
       },
       keywords: [
-        { es: "catamaran de lujo san blas", en: "deluxe catamaran charter san blas" },
-        { es: "charter lujo zenith panama", en: "zenith luxury yacht san blas" },
+        {
+          es: "catamaran de lujo san blas",
+          en: "deluxe catamaran charter san blas",
+        },
+        {
+          es: "charter lujo zenith panama",
+          en: "zenith luxury yacht san blas",
+        },
       ],
       openGraph: {
         title: {
@@ -904,11 +877,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/Zenith/catalogo/1.png",
           "/contenido/catamaranes/Zenith/catalogo/2.png",
           "/contenido/catamaranes/Zenith/catalogo/3.png",
-          "/contenido/catamaranes/Zenith/catalogo/4.png", 
+          "/contenido/catamaranes/Zenith/catalogo/4.png",
           "/contenido/catamaranes/Zenith/catalogo/5.png",
           "/contenido/catamaranes/Zenith/catalogo/6.png",
           "/contenido/catamaranes/Zenith/catalogo/7.png",
-
         ],
       },
     },
@@ -916,15 +888,15 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/catamaranes/Zenith/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/Zenith/catalogo/1.png",
-          "/contenido/catamaranes/Zenith/catalogo/2.png",
-          "/contenido/catamaranes/Zenith/catalogo/3.png",
-          "/contenido/catamaranes/Zenith/catalogo/4.png", 
-          "/contenido/catamaranes/Zenith/catalogo/5.png",
-          "/contenido/catamaranes/Zenith/catalogo/6.png",
-          "/contenido/catamaranes/Zenith/catalogo/7.png",
-          "/contenido/catamaranes/Zenith/catalogo/8.png",
-          "/contenido/catamaranes/Zenith/catalogo/9.png",
-          "/contenido/catamaranes/Zenith/catalogo/10.png",
+      "/contenido/catamaranes/Zenith/catalogo/2.png",
+      "/contenido/catamaranes/Zenith/catalogo/3.png",
+      "/contenido/catamaranes/Zenith/catalogo/4.png",
+      "/contenido/catamaranes/Zenith/catalogo/5.png",
+      "/contenido/catamaranes/Zenith/catalogo/6.png",
+      "/contenido/catamaranes/Zenith/catalogo/7.png",
+      "/contenido/catamaranes/Zenith/catalogo/8.png",
+      "/contenido/catamaranes/Zenith/catalogo/9.png",
+      "/contenido/catamaranes/Zenith/catalogo/10.png",
     ],
     boatDescription: {
       es: "Catamarán deluxe all-inclusive diseñado para grandes grupos y familias con servicio vip de 3 tripulantes.",
@@ -941,13 +913,19 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Zenith VIP Crew",
-      role: { es: "Tripulación Profesional VIP", en: "Professional VIP Crew" },
+      role: {
+        es: "Tripulación Profesional VIP",
+        en: "Professional VIP Crew",
+      },
       photoUrl: "/contenido/catamaranes/Zenith/capitan/1.png",
       description: {
         es: "Su tripulación profesional —capitán, chef y azafata— cuenta con amplia experiencia en todo San Blas y relaciones de larga data con las comunidades indígenas Guna, lo que permite a los huéspedes disfrutar de una conexión respetuosa y auténtica con la región. A bordo siempre se habla inglés y español, junto con algo del idioma local Guna.",
         en: "Full crew dedicated to providing fine dining, first-class hospitality, and seamless sailing.",
       },
-      languages: ["English", "Español"],
+      languages: [
+        "English",
+        "Español",
+      ],
     },
     dining: {
       description: {
@@ -968,7 +946,6 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         "/contenido/catamaranes/Zenith/experiencias/4.png",
         "/contenido/catamaranes/Zenith/experiencias/5.png",
         "/contenido/catamaranes/Zenith/experiencias/6.png",
-        
       ],
     },
     pricing: {
@@ -976,93 +953,75 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 1465,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 2585,
-          notes: { es: "Huésped adicional: $345 USD/noche. Niños 4-12 años: 50% desc. Niños 0-3 años: Gratis.", en: "Extra guest: $345 USD/night. Children 4-12 yrs: 50% off. Under 3 yrs: Free." },
+          notes: {
+            es: "Huésped adicional: $345 USD/noche. Niños 4-12 años: 50% desc. Niños 0-3 años: Gratis.",
+            en: "Extra guest: $345 USD/night. Children 4-12 yrs: 50% off. Under 3 yrs: Free.",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Huésped</td>
-                <td class="p-3 border font-bold">$2930 USD</td>
-                <td class="p-3 border font-bold text-green-600">$2745 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">+1 Huésped</td>
-                <td class="p-3 border font-bold">$340 USD</td>
-                <td class="p-3 border font-bold text-green-600">$305 USD</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Consultar tarifas para semana santa, fechas festivas, carnavales, etc.  </strong></li>
-          
-          </ul>
-          <p class="text-xs text-slate-500 mt-2">* Descuento especial niños: 4-12 años pagan 50%. Niños de 3 años o menos viajan gratis. Permisos de islas comerciales incluidos.</p>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Type / Occupancy</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-                <th class="p-3 border">Extra Guest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Exclusive Private Charter (2 Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$2,585 USD</td>
-                <td class="p-3 border">+$345 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-          <p class="text-xs text-slate-500 mt-2">* Child discounts: Ages 4-12 charged 50%. Age 3 and under sail free. Commercial island permits included.</p>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huésped</td>\n                <td class=\"p-3 border font-bold\">$2930 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$2745 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">+1 Huésped</td>\n                <td class=\"p-3 border font-bold\">$340 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$305 USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Consultar tarifas para semana santa, fechas festivas, carnavales, etc.  </strong></li>\n          \n          </ul>\n          <p class=\"text-xs text-slate-500 mt-2\">* Descuento especial niños: 4-12 años pagan 50%. Niños de 3 años o menos viajan gratis. Permisos de islas comerciales incluidos.</p>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Type / Occupancy</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n                <th class=\"p-3 border\">Extra Guest</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Exclusive Private Charter (2 Guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$2,585 USD</td>\n                <td class=\"p-3 border\">+$345 USD / Night</td>\n              </tr>\n            </tbody>\n          </table>\n          <p class=\"text-xs text-slate-500 mt-2\">* Child discounts: Ages 4-12 charged 50%. Age 3 and under sail free. Commercial island permits included.</p>\n        ",
       },
     },
     includes: [
-      { es: "Tripulación VIP completa (Capitán, Chef, Azafata)", en: "Full VIP crew (Captain, Chef, Stewardess)" },
-      { es: "4 comidas diarias gourmet y servicio de bar", en: "4 daily gourmet meals and beverage service" },
-      { es: "Todas las tasas de islas, fondeadero y permisos comerciales de Guna Yala", en: "All island fees, anchorage fees, and Guna Yala commercial permits" },
-      { es: "Uso completo de equipos de agua y confort a bordo", en: "Full use of water sports equipment and onboard amenities" },
+      {
+        es: "Tripulación VIP completa (Capitán, Chef, Azafata)",
+        en: "Full VIP crew (Captain, Chef, Stewardess)",
+      },
+      {
+        es: "4 comidas diarias gourmet y servicio de bar",
+        en: "4 daily gourmet meals and beverage service",
+      },
+      {
+        es: "Todas las tasas de islas, fondeadero y permisos comerciales de Guna Yala",
+        en: "All island fees, anchorage fees, and Guna Yala commercial permits",
+      },
+      {
+        es: "Uso completo de equipos de agua y confort a bordo",
+        en: "Full use of water sports equipment and onboard amenities",
+      },
     ],
     excludes: [
-      { es: "Transporte terrestre/marítimo hacia/desde San Blas", en: "Ground/water transport to/from San Blas" },
-      { es: "Compras de artesanías nativas o consumos fuera del barco", en: "Native craft purchases or food/drinks purchased off the boat" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte terrestre/marítimo hacia/desde San Blas",
+        en: "Ground/water transport to/from San Blas",
+      },
+      {
+        es: "Compras de artesanías nativas o consumos fuera del barco",
+        en: "Native craft purchases or food/drinks purchased off the boat",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [9, 14, 16],
+    relatedExperienceIds: [
+      9,
+      14,
+      16,
+    ],
     maxGuests: 8,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Catamarán Deluxe All-Inclusive", en: "Deluxe All-Inclusive Catamaran" },
+    featureBadge: {
+      es: "Catamarán Deluxe All-Inclusive",
+      en: "Deluxe All-Inclusive Catamaran",
+    },
     isFeatured: true,
     hasDiscount: true,
   },
-   // ---------------------------------------------------------------------------
-  // 6. Yoli - Lagoon 440
-  // ---------------------------------------------------------------------------
   {
     id: 6,
     slug: "yoli-lagoon-440",
     category: "Catamaran",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1077,8 +1036,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Sail with Argentine Captain Gabriel aboard Lagoon 440 Yoli in San Blas. Features Starlink Wi-Fi, 4 cabins, full open bar, and relaxed vibes.",
       },
       keywords: [
-        { es: "catamaran Yoli lagoon 440", en: "Yoli lagoon 440 san blas" },
-        { es: "capitan gabriel san blas", en: "lagoon 440 charter panama" },
+        {
+          es: "catamaran Yoli lagoon 440",
+          en: "Yoli lagoon 440 san blas",
+        },
+        {
+          es: "capitan gabriel san blas",
+          en: "lagoon 440 charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -1093,13 +1058,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/Yoli/catalogo/1.png",
           "/contenido/catamaranes/Yoli/catalogo/2.png",
           "/contenido/catamaranes/Yoli/catalogo/3.png",
-          "/contenido/catamaranes/Yoli/catalogo/4.png", 
+          "/contenido/catamaranes/Yoli/catalogo/4.png",
           "/contenido/catamaranes/Yoli/catalogo/5.png",
           "/contenido/catamaranes/Yoli/catalogo/6.png",
           "/contenido/catamaranes/Yoli/catalogo/7.png",
           "/contenido/catamaranes/Yoli/catalogo/8.png",
           "/contenido/catamaranes/Yoli/catalogo/9.png",
-
         ],
       },
     },
@@ -1109,13 +1073,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       "/contenido/catamaranes/Yoli/catalogo/1.png",
       "/contenido/catamaranes/Yoli/catalogo/2.png",
       "/contenido/catamaranes/Yoli/catalogo/3.png",
-      "/contenido/catamaranes/Yoli/catalogo/4.png", 
+      "/contenido/catamaranes/Yoli/catalogo/4.png",
       "/contenido/catamaranes/Yoli/catalogo/5.png",
       "/contenido/catamaranes/Yoli/catalogo/6.png",
       "/contenido/catamaranes/Yoli/catalogo/7.png",
       "/contenido/catamaranes/Yoli/catalogo/8.png",
       "/contenido/catamaranes/Yoli/catalogo/9.png",
-
     ],
     boatDescription: {
       es: "Clásico de gran confort y estabilidad con 4 camarotes privados, Starlink Wi-Fi y la calidez del Capitán Gabriel.",
@@ -1133,20 +1096,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Capt. Gabriel (Argentina)",
-      role: { es: "Capitán y Chef", en: "Captain & Chef" },
-      photoUrl: "/contenido/catamaranes/Yoli/capitan/1.png",
+      role: {
+        es: "Capitán y Chef",
+        en: "Captain & Chef",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Apasionado del mar y la gastronomía con más de tres años capitaneando en San Blas.",
         en: "Passionate sailor and chef with over 3 years navigating the San Blas archipelago.",
       },
-      languages: ["Español", "English"],
+      languages: [
+        "Español",
+        "English",
+      ],
     },
     dining: {
       description: {
         es: "3 comidas diarias nutritivas y sabrosas con ingredientes frescos. Barra libre completa con refrescos (Coca Zero/Reg, Ginger Ale), jugos, cervezas nacionales, vino (blanco/tinto), vodka, ron y ginebra (consumo moderado).",
         en: "3 daily healthy and delicious meals. Full open bar including soft drinks, natural juices, national beer, wine (white/red), vodka, rum, and gin (moderate consumption).",
       },
-      photoUrl: "/contenido/catamaranes/Yoli/comidas/1.png" ,
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -1154,7 +1123,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "High-speed Starlink Wi-Fi, SUP paddleboard, floating mat, snorkeling, and beach excursions.",
       },
       photoUrls: [
-        "/contenido/catamaranes/Yoli/experiencia/1.png" ,
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -1162,80 +1133,71 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 700,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 1400,
-          notes: { es: "Huésped adicional: +$240 USD/noche", en: "Extra guest: +$240 USD/night" },
+          notes: {
+            es: "Huésped adicional: +$240 USD/noche",
+            en: "Extra guest: +$240 USD/night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio Base (2 Huéspedes)</th>
-                <th class="p-3 border">Huésped Extra</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$1,400 USD / Noche</td>
-                <td class="p-3 border">+$240 USD / Noche</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Base Rate (2 Guests)</th>
-                <th class="p-3 border">Extra Guest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$1,400 USD / Night</td>
-                <td class="p-3 border">+$240 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Modalidad</th>\n                <th class=\"p-3 border\">Precio Base (2 Huéspedes)</th>\n                <th class=\"p-3 border\">Huésped Extra</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Charter Privado (Barco Exclusivo)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,400 USD / Noche</td>\n                <td class=\"p-3 border\">+$240 USD / Noche</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Base Rate (2 Guests)</th>\n                <th class=\"p-3 border\">Extra Guest</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (Exclusive Boat)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,400 USD / Night</td>\n                <td class=\"p-3 border\">+$240 USD / Night</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Capitán y tripulación con pensión completa (3 comidas diarias y snacks)", en: "Captain and crew with full board (3 daily meals & snacks)" },
-      { es: "Barra libre de licores, cerveza, vinos y refrescos (consumo moderado)", en: "Open bar with spirits, beers, wines, and soft drinks (moderate consumption)" },
-      { es: "Starlink Wi-Fi, toallas de baño y playa, juguetes acuáticos", en: "Starlink Wi-Fi, bath and beach towels, water toys" },
+      {
+        es: "Capitán y tripulación con pensión completa (3 comidas diarias y snacks)",
+        en: "Captain and crew with full board (3 daily meals & snacks)",
+      },
+      {
+        es: "Barra libre de licores, cerveza, vinos y refrescos (consumo moderado)",
+        en: "Open bar with spirits, beers, wines, and soft drinks (moderate consumption)",
+      },
+      {
+        es: "Starlink Wi-Fi, toallas de baño y playa, juguetes acuáticos",
+        en: "Starlink Wi-Fi, bath and beach towels, water toys",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
-      { es: "Impuesto de entrada al territorio Guna Yala", en: "Guna Yala entrance fee" },
-      { es: "Seguro de viaje personal", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde el barco",
+        en: "Transport to/from the boat",
+      },
+      {
+        es: "Impuesto de entrada al territorio Guna Yala",
+        en: "Guna Yala entrance fee",
+      },
+      {
+        es: "Seguro de viaje personal",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [9, 12, 16],
+    relatedExperienceIds: [
+      9,
+      12,
+      16,
+    ],
     maxGuests: 8,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Starlink & Capitán Chef", en: "Starlink & Captain Chef" },
+    featureBadge: {
+      es: "Starlink & Capitán Chef",
+      en: "Starlink & Captain Chef",
+    },
     isFeatured: true,
     hasDiscount: false,
   },
-
-
-
-  // ---------------------------------------------------------------------------
-  // 7. THYRA
-  // ---------------------------------------------------------------------------
   {
     id: 7,
     slug: "thyra-danish-handcrafted-monohull",
     category: "Sailboat",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1250,8 +1212,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Book the Danish handcrafted THYRA sailboat in San Blas. Mahogany interior, ideal for couples or small groups. Includes 3 daily meals and SUP.",
       },
       keywords: [
-        { es: "velero clasico THYRA san blas", en: "THYRA sailboat san blas" },
-        { es: "charter privado caoba san blas", en: "private classic boat charter panama" },
+        {
+          es: "velero clasico THYRA san blas",
+          en: "THYRA sailboat san blas",
+        },
+        {
+          es: "charter privado caoba san blas",
+          en: "private classic boat charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -1267,22 +1235,22 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Thyra/catalogo/2.png",
           "/contenido/veleros/Thyra/catalogo/3.png",
           "/contenido/veleros/Thyra/catalogo/4.png",
-           "/contenido/veleros/Thyra/catalogo/5.png",
-           "/contenido/veleros/Thyra/catalogo/6.png",
-           "/contenido/veleros/Thyra/catalogo/7.png",
+          "/contenido/veleros/Thyra/catalogo/5.png",
+          "/contenido/veleros/Thyra/catalogo/6.png",
+          "/contenido/veleros/Thyra/catalogo/7.png",
         ],
       },
     },
     boatName: "THYRA (Danish Handcrafted Monohull)",
     boatCoverPhoto: "/contenido/veleros/Thyra/catalogo/1.png",
     boatGalleryPhotos: [
-          "/contenido/veleros/Thyra/catalogo/1.png",
-          "/contenido/veleros/Thyra/catalogo/2.png",
-          "/contenido/veleros/Thyra/catalogo/3.png",
-          "/contenido/veleros/Thyra/catalogo/4.png",
-          "/contenido/veleros/Thyra/catalogo/5.png",
-          "/contenido/veleros/Thyra/catalogo/6.png",
-          "/contenido/veleros/Thyra/catalogo/7.png",
+      "/contenido/veleros/Thyra/catalogo/1.png",
+      "/contenido/veleros/Thyra/catalogo/2.png",
+      "/contenido/veleros/Thyra/catalogo/3.png",
+      "/contenido/veleros/Thyra/catalogo/4.png",
+      "/contenido/veleros/Thyra/catalogo/5.png",
+      "/contenido/veleros/Thyra/catalogo/6.png",
+      "/contenido/veleros/Thyra/catalogo/7.png",
     ],
     boatDescription: {
       es: "Embarcación artesanal danesa con elegantes interiores en caoba. Ideal para parejas o grupos reducidos.",
@@ -1300,8 +1268,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Leo",
-      role: { es: "Anfitrión y Capitán", en: "Host & Captain" },
-      photoUrl: "/contenido/veleros/Thyra/capitan/1.png",
+      role: {
+        es: "Anfitrión y Capitán",
+        en: "Host & Captain",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Anfitrión dedicado a ofrecer hospitalidad excepcional y una navegación auténtica por el Caribe.",
         en: "Dedicated host offering exceptional hospitality and an authentic Caribbean sailing experience.",
@@ -1312,7 +1283,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Tres comidas diarias incluidas (desayuno, almuerzo y cena) preparadas a bordo.",
         en: "Three daily meals included (breakfast, lunch, dinner) served onboard.",
       },
-      photoUrl: "/contenido/veleros/Thyra/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -1320,7 +1291,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Snorkel and Paddleboard (SUP) equipment available to explore pristine reefs and islands.",
       },
       photoUrls: [
-        "/contenido/veleros/Thyra/experiencia/1.png"
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -1328,73 +1301,70 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 220,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (Exclusivo)", en: "Private Charter (Exclusive Boat)" },
+          seasonOrType: {
+            es: "Charter Privado (Exclusivo)",
+            en: "Private Charter (Exclusive Boat)",
+          },
           pricePerNight: 220,
-          notes: { es: "Precio por persona por noche", en: "Price per person per night" },
+          notes: {
+            es: "Precio por persona por noche",
+            en: "Price per person per night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Alojamiento</th>
-                <th class="p-3 border">Precio (USD / Persona / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$220 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$220 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Tipo de Alojamiento</th>\n                <th class=\"p-3 border\">Precio (USD / Persona / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Charter Privado (Barco Exclusivo)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$220 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Person / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (Exclusive Boat)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$220 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tres comidas diarias (desayuno, almuerzo, cena)", en: "Three daily meals (breakfast, lunch, dinner)" },
-      { es: "Uso de equipo de snorkel y paddleboard", en: "Use of Snorkel and Paddleboard equipment" },
-      { es: "Navegación y hospitalidad del capitán", en: "Sailing and captain hospitality" },
+      {
+        es: "Tres comidas diarias (desayuno, almuerzo, cena)",
+        en: "Three daily meals (breakfast, lunch, dinner)",
+      },
+      {
+        es: "Uso de equipo de snorkel y paddleboard",
+        en: "Use of Snorkel and Paddleboard equipment",
+      },
+      {
+        es: "Navegación y hospitalidad del capitán",
+        en: "Sailing and captain hospitality",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuesto de entrada a Guna Yala", en: "Mandatory entrance fee to Guna Yala" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Impuesto de entrada a Guna Yala",
+        en: "Mandatory entrance fee to Guna Yala",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [1, 5, 7],
+    relatedExperienceIds: [
+      1,
+      5,
+      7,
+    ],
     maxGuests: 3,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Diseño Artesanal Danés", en: "Danish Handcrafted" },
+    featureBadge: {
+      es: "Diseño Artesanal Danés",
+      en: "Danish Handcrafted",
+    },
     isFeatured: false,
     hasDiscount: false,
-  }, 
-
-  // ---------------------------------------------------------------------------
-  // 8. Naboa
-  // ---------------------------------------------------------------------------
+  },
   {
     id: 8,
     slug: "naboa-bavaria-39-cruiser",
     category: "Sailboat",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1409,8 +1379,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Brazilian hospitality in San Blas aboard Naboa (Bavaria 39). Captain Marcelo, Starlink internet, open bar, snorkel, and SUP included.",
       },
       keywords: [
-        { es: "velero Naboa san blas", en: "Naboa sailboat san blas" },
-        { es: "bavaria 39 san blas marcelo", en: "bavaria 39 charter panama" },
+        {
+          es: "velero Naboa san blas",
+          en: "Naboa sailboat san blas",
+        },
+        {
+          es: "bavaria 39 san blas marcelo",
+          en: "bavaria 39 charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -1425,7 +1401,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Naboa/catalogo/1.png",
           "/contenido/veleros/Naboa/catalogo/2.png",
           "/contenido/veleros/Naboa/catalogo/3.png",
-          "/contenido/veleros/Naboa/catalogo/4.png", 
+          "/contenido/veleros/Naboa/catalogo/4.png",
           "/contenido/veleros/Naboa/catalogo/5.png",
           "/contenido/veleros/Naboa/catalogo/6.png",
           "/contenido/veleros/Naboa/catalogo/7.png",
@@ -1437,13 +1413,15 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/veleros/Naboa/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/veleros/Naboa/catalogo/1.png",
-          "/contenido/veleros/Naboa/catalogo/2.png",
-          "/contenido/veleros/Naboa/catalogo/3.png",
-          "/contenido/veleros/Naboa/catalogo/4.png", 
-          "/contenido/veleros/Naboa/catalogo/5.png",
-          "/contenido/veleros/Naboa/catalogo/6.png",
-          "/contenido/veleros/Naboa/catalogo/7.png",
-          "/contenido/veleros/Naboa/catalogo/8.png",
+      "/contenido/veleros/Naboa/catalogo/2.png",
+      "/contenido/veleros/Naboa/catalogo/3.png",
+      "/contenido/veleros/Naboa/catalogo/4.png",
+      "/contenido/veleros/Naboa/catalogo/5.png",
+      "/contenido/veleros/Naboa/catalogo/6.png",
+      "/contenido/veleros/Naboa/catalogo/7.png",
+      "/contenido/veleros/Naboa/catalogo/8.png",
+      "/contenido/veleros/Naboa/catalogo/9.png",
+      "/contenido/veleros/Naboa/catalogo/10.png",
     ],
     boatDescription: {
       es: "Velero de alta estabilidad y confort operado con cálida hospitalidad brasileña por el Capitán Marcelo.",
@@ -1461,13 +1439,20 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Capt. Marcelo & First Mate",
-      role: { es: "Capitán y Primer Oficial", en: "Captain and First Mate" },
-      photoUrl: "/contenido/veleros/Naboa/capitan/1.png",
+      role: {
+        es: "Capitán y Primer Oficial",
+        en: "Captain and First Mate",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Capitán Marcelo y su primer oficial brindan una atención personalizada y alegre al estilo brasileño.",
         en: "Captain Marcelo and his first mate offer personalized, warm Brazilian hospitality.",
       },
-      languages: ["Português", "Español", "English"],
+      languages: [
+        "Português",
+        "Español",
+        "English",
+      ],
     },
     dining: {
       description: {
@@ -1487,77 +1472,73 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 345,
+      basePricePerPersonPerDay: 300,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 690,
-          notes: { es: "Huésped adicional: $150 USD", en: "Extra guest: $150 USD" },
+          notes: {
+            es: "Huésped adicional: $150 USD",
+            en: "Extra guest: $150 USD",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Alojamiento</th>
-                <th class="p-3 border">Precio Base (2 Personas)</th>
-                <th class="p-3 border">Persona Adicional</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$690 USD / Noche</td>
-                <td class="p-3 border">+$150 USD / Noche</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Base Price (2 Guests)</th>
-                <th class="p-3 border">Extra Guest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$690 USD / Night</td>
-                <td class="p-3 border">+$150 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">1 Huésped </td>\n                <td class=\"p-3 border font-bold\">$600 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n<tr>\n                <td class=\"p-3 border\">2 Huéspedes </td>\n                <td class=\"p-3 border font-bold\">$700 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n<tr>\n                <td class=\"p-3 border\">3 Huéspedes </td>\n                <td class=\"p-3 border font-bold\">$800 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n<tr>\n                <td class=\"p-3 border\">4 Huéspedes </td>\n                <td class=\"p-3 border font-bold\">$900 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA:</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20%</strong></li>\n          </ul>\n        ",
+        en: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Occupancy & Setup</th>\n                <th class=\"p-3 border\">High Season (USD / Night)</th>\n                <th class=\"p-3 border\">Low Season (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter: 1 Guests </td>\n                <td class=\"p-3 border font-bold\">$600 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n<tr>\n                <td class=\"p-3 border\">Private Charter: 2 Guests </td>\n                <td class=\"p-3 border font-bold\">$700 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n<tr>\n                <td class=\"p-3 border\">Private Charter: 3 Guests </td>\n                <td class=\"p-3 border font-bold\">$800 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n<tr>\n                <td class=\"p-3 border\">Private Charter: 4 Guests </td>\n                <td class=\"p-3 border font-bold\">$900 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>LOW Season:</strong> MAY - NOVEMBER</li>\n            <li><strong>HIGH Season:</strong> DECEMBER - APRIL</li>\n            <li><strong>Easter, holidays, and carnivals +20%</strong></li>\n          </ul>",
       },
     },
     includes: [
-      { es: "Servicio de tripulación privada (Capitán y Primer Oficial)", en: "Private boat with crew (Captain and First Mate)" },
-      { es: "Menú gourmet y barra libre con cócteles (consumo moderado)", en: "Gourmet menu and open bar (moderate consumption)" },
-      { es: "Sábanas, toallas de baño, equipo de pesca, snorkel y SUP", en: "Bed linen, bath towels, fishing gear, snorkel equipment, and SUP" },
-      { es: "Internet Starlink, combustible y tanque de agua dulce", en: "Starlink Internet, fuel, and fresh water tank" },
+      {
+        es: "Servicio de tripulación privada (Capitán y Primer Oficial)",
+        en: "Private boat with crew (Captain and First Mate)",
+      },
+      {
+        es: "Menú gourmet y barra libre con cócteles (consumo moderado)",
+        en: "Gourmet menu and open bar (moderate consumption)",
+      },
+      {
+        es: "Sábanas, toallas de baño, equipo de pesca, snorkel y SUP",
+        en: "Bed linen, bath towels, fishing gear, snorkel equipment, and SUP",
+      },
+      {
+        es: "Internet Starlink, combustible y tanque de agua dulce",
+        en: "Starlink Internet, fuel, and fresh water tank",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia el barco", en: "Transport to the boat" },
-      { es: "Seguro de viaje personal", en: "Personal travel insurance" },
-      { es: "Impuestos obligatorios de entrada a Guna Yala", en: "Mandatory entrance fees to Guna Yala" },
+      {
+        es: "Transporte hacia el barco",
+        en: "Transport to the boat",
+      },
+      {
+        es: "Seguro de viaje personal",
+        en: "Personal travel insurance",
+      },
+      {
+        es: "Impuestos obligatorios de entrada a Guna Yala",
+        en: "Mandatory entrance fees to Guna Yala",
+      },
     ],
-    relatedExperienceIds: [1, 3, 6],
+    relatedExperienceIds: [
+      1,
+      3,
+      6,
+    ],
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Internet Starlink Incluido", en: "Starlink Internet Onboard" },
+    featureBadge: {
+      es: "Internet Starlink Incluido",
+      en: "Starlink Internet Onboard",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 9. Ocean Twins Leopard 44
-  // ---------------------------------------------------------------------------
   {
     id: 9,
     slug: "ocean-twins-leopard-44",
@@ -1577,8 +1558,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Sail on the 1973 Cheoy Lee Yawl classic masterpiece in San Blas. Exclusive private charter for 2 guests with full board.",
       },
       keywords: [
-        { es: "catamarán OCEAN TWINS", en: "OCEAN TWINS catamaran san blas" },
-        { es: "velero madera clasico panama", en: "classic wooden sailboat san blas" },
+        {
+          es: "catamarán OCEAN TWINS",
+          en: "OCEAN TWINS catamaran san blas",
+        },
+        {
+          es: "velero madera clasico panama",
+          en: "classic wooden sailboat san blas",
+        },
       ],
       openGraph: {
         title: {
@@ -1593,7 +1580,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/OCEANTWINS/catalogo/1.png",
           "/contenido/catamaranes/OCEANTWINS/catalogo/2.png",
           "/contenido/catamaranes/OCEANTWINS/catalogo/3.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/4.png", 
+          "/contenido/catamaranes/OCEANTWINS/catalogo/4.png",
           "/contenido/catamaranes/OCEANTWINS/catalogo/5.png",
           "/contenido/catamaranes/OCEANTWINS/catalogo/6.png",
           "/contenido/catamaranes/OCEANTWINS/catalogo/7.png",
@@ -1608,16 +1595,16 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/catamaranes/OCEANTWINS/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/OCEANTWINS/catalogo/1.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/2.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/3.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/4.png", 
-          "/contenido/catamaranes/OCEANTWINS/catalogo/5.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/6.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/7.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/8.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/9.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/10.png",
-          "/contenido/catamaranes/OCEANTWINS/catalogo/11.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/2.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/3.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/4.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/5.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/6.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/7.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/8.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/9.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/10.png",
+      "/contenido/catamaranes/OCEANTWINS/catalogo/11.png",
     ],
     boatDescription: {
       es: "Alójate a bordo de un catamarán Leopard 44, que cuenta con tres camarotes privados con camas tamaño queen.",
@@ -1634,8 +1621,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Leander & Joy",
-      role: { es: "Capitanes y anfitriones", en: "Captain & Host" },
-      photoUrl:"/contenido/catamaranes/OCEANTWINS/capitan/1.png",
+      role: {
+        es: "Capitanes y anfitriones",
+        en: "Captain & Host",
+      },
+      photoUrl: "/contenido/catamaranes/OCEANTWINS/capitan/1.png",
       description: {
         es: "Con un gran amor por el océano y una pasión por el mundo submarino, Leander y Joy son una pareja Belga-Chilena que ha navegado alrededor del mundo y disfruta compartiendo su pasión por la navegación, la vida marina y la vida en el mar. Leander será tu capitán y estará encantado de compartir contigo sus conocimientos de navegación y su pasión por el océano. Joy será la marinera y cocinera, encargándose de que la vida a bordo sea cómoda y acogedora, mientras prepara deliciosas comidas.",
         en: "Expert captain passionate about classic sailing tradition and hospitality.",
@@ -1646,7 +1636,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Podrás disfrutar de tres deliciosas comidas al día, bebidas y tasas locales, todo incluido! Empieza el día con té o café hecho en barco , fruta de temporada y pan casero. Disfruta de un almuerzo ligero y una deliciosa cena elaborada con ingredientes frescos y locales, además de pescado recién capturado siempre que esté disponible. Ofrecemos vino y cerveza, ya que es difícil encontrar otras bebidas alcohólicas en las islas.",
         en: "Includes 3 daily meals prepared onboard featuring fresh local ingredients.",
       },
-      photoUrl:"/contenido/catamaranes/Brittanywind/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -1654,10 +1644,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Daily sailing, snorkeling, visits to natural swimming pools and untouched islands.",
       },
       photoUrls: [
-        "/contenido/catamaranes/Brittanywind/experiencia/1.png",
-        "/contenido/catamaranes/Brittanywind/experiencia/2.png",
-        "/contenido/catamaranes/Brittanywind/experiencia/3.png",
-        "/contenido/catamaranes/Brittanywind/experiencia/4.png"
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -1665,83 +1654,68 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 325,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (Barco Exclusivo)", en: "Private Charter (Exclusive Boat)" },
+          seasonOrType: {
+            es: "Charter Privado (Barco Exclusivo)",
+            en: "Private Charter (Exclusive Boat)",
+          },
           pricePerNight: 240,
-          notes: { es: "Precio por persona por noche", en: "Price per person per night" },
+          notes: {
+            es: "Precio por persona por noche",
+            en: "Price per person per night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Hasta 4 Huéspedes</td>
-                <td class="p-3 border font-bold">$1300 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">+1 Huésped</td>
-                <td class="p-3 border font-bold">$305 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$240 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Hasta 4 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$1300 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">+1 Huésped</td>\n                <td class=\"p-3 border font-bold\">$305 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Person / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (Exclusive Boat)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$240 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "3 comidas diarias", en: "3 meals per day" },
-      { es: "Uso de equipo de snorkel", en: "Use of Snorkel equipment" },
-      { es: "Navegación a vela por las islas y piscinas naturales", en: "Sailboat navigation and visits to natural pools and islands" },
-      { es: "Hospitalidad y atención personalizada", en: "Exceptional hospitality and guidance" },
+      {
+        es: "3 comidas diarias",
+        en: "3 meals per day",
+      },
+      {
+        es: "Uso de equipo de snorkel",
+        en: "Use of Snorkel equipment",
+      },
+      {
+        es: "Navegación a vela por las islas y piscinas naturales",
+        en: "Sailboat navigation and visits to natural pools and islands",
+      },
+      {
+        es: "Hospitalidad y atención personalizada",
+        en: "Exceptional hospitality and guidance",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuestos de entrada a Guna Yala y tasas insulares", en: "Guna Yala entrance fees and island taxes" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Impuestos de entrada a Guna Yala y tasas insulares",
+        en: "Guna Yala entrance fees and island taxes",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [2, 7],
+    relatedExperienceIds: [
+      2,
+      7,
+    ],
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: {es: "Descubre San Blas a vela", en: "Classic 1973 Yawl" },
+    featureBadge: {
+      es: "Descubre San Blas a vela",
+      en: "Classic 1973 Yawl",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
-    // ---------------------------------------------------------------------------
-  // 7. Splendid
-  // ---------------------------------------------------------------------------
   {
     id: 19,
     slug: "splendid-cheoy-lee-classic-yawl",
@@ -1761,8 +1735,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Sail on the 1973 Cheoy Lee Yawl classic masterpiece in San Blas. Exclusive private charter for 2 guests with full board.",
       },
       keywords: [
-        { es: "velero Splendid cheoy lee", en: "Splendid cheoy lee yawl san blas" },
-        { es: "velero madera clasico panama", en: "classic wooden sailboat san blas" },
+        {
+          es: "velero Splendid cheoy lee",
+          en: "Splendid cheoy lee yawl san blas",
+        },
+        {
+          es: "velero madera clasico panama",
+          en: "classic wooden sailboat san blas",
+        },
       ],
       openGraph: {
         title: {
@@ -1777,7 +1757,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Splendid/catalogo/1.png",
           "/contenido/veleros/Splendid/catalogo/2.png",
           "/contenido/veleros/Splendid/catalogo/3.png",
-          "/contenido/veleros/Splendid/catalogo/4.png", 
+          "/contenido/veleros/Splendid/catalogo/4.png",
           "/contenido/veleros/Splendid/catalogo/5.png",
           "/contenido/veleros/Splendid/catalogo/6.png",
           "/contenido/veleros/Splendid/catalogo/7.png",
@@ -1789,13 +1769,13 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/veleros/Splendid/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/veleros/Splendid/catalogo/1.png",
-          "/contenido/veleros/Splendid/catalogo/2.png",
-          "/contenido/veleros/Splendid/catalogo/3.png",
-          "/contenido/veleros/Splendid/catalogo/4.png", 
-          "/contenido/veleros/Splendid/catalogo/5.png",
-          "/contenido/veleros/Splendid/catalogo/6.png",
-          "/contenido/veleros/Splendid/catalogo/7.png",
-          "/contenido/veleros/Splendid/catalogo/8.png",
+      "/contenido/veleros/Splendid/catalogo/2.png",
+      "/contenido/veleros/Splendid/catalogo/3.png",
+      "/contenido/veleros/Splendid/catalogo/4.png",
+      "/contenido/veleros/Splendid/catalogo/5.png",
+      "/contenido/veleros/Splendid/catalogo/6.png",
+      "/contenido/veleros/Splendid/catalogo/7.png",
+      "/contenido/veleros/Splendid/catalogo/8.png",
     ],
     boatDescription: {
       es: "Joya náutica de estilo Yawl (1973) en madera teca que combina elegancia atemporal y navegación suave.",
@@ -1812,8 +1792,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Splendid Host",
-      role: { es: "Capitán y Anfitrión", en: "Captain & Host" },
-      photoUrl:"/contenido/veleros/Splendid/capitan/1.png",
+      role: {
+        es: "Capitán y Anfitrión",
+        en: "Captain & Host",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Capitán experto dedicado a preservar el estilo clásico y la navegación auténtica a vela.",
         en: "Expert captain passionate about classic sailing tradition and hospitality.",
@@ -1824,7 +1807,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Incluye 3 comidas preparadas a bordo diariamente con ingredientes frescos locales.",
         en: "Includes 3 daily meals prepared onboard featuring fresh local ingredients.",
       },
-      photoUrl:"/contenido/veleros/Splendid/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -1832,7 +1815,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Daily sailing, snorkeling, visits to natural swimming pools and untouched islands.",
       },
       photoUrls: [
-        "/contenido/veleros/Splendid/experiencia/1.png"
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -1840,74 +1825,73 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 240,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (Barco Exclusivo)", en: "Private Charter (Exclusive Boat)" },
+          seasonOrType: {
+            es: "Charter Privado (Barco Exclusivo)",
+            en: "Private Charter (Exclusive Boat)",
+          },
           pricePerNight: 240,
-          notes: { es: "Precio por persona por noche", en: "Price per person per night" },
+          notes: {
+            es: "Precio por persona por noche",
+            en: "Price per person per night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Alojamiento</th>
-                <th class="p-3 border">Precio (USD / Persona / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (Barco Exclusivo)</td>
-                <td class="p-3 border font-bold text-green-600">$240 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$240 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Tipo de Alojamiento</th>\n                <th class=\"p-3 border\">Precio (USD / Persona / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Charter Privado (Barco Exclusivo)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$240 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Person / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (Exclusive Boat)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$240 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "3 comidas diarias", en: "3 meals per day" },
-      { es: "Uso de equipo de snorkel", en: "Use of Snorkel equipment" },
-      { es: "Navegación a vela por las islas y piscinas naturales", en: "Sailboat navigation and visits to natural pools and islands" },
-      { es: "Hospitalidad y atención personalizada", en: "Exceptional hospitality and guidance" },
+      {
+        es: "3 comidas diarias",
+        en: "3 meals per day",
+      },
+      {
+        es: "Uso de equipo de snorkel",
+        en: "Use of Snorkel equipment",
+      },
+      {
+        es: "Navegación a vela por las islas y piscinas naturales",
+        en: "Sailboat navigation and visits to natural pools and islands",
+      },
+      {
+        es: "Hospitalidad y atención personalizada",
+        en: "Exceptional hospitality and guidance",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuestos de entrada a Guna Yala y tasas insulares", en: "Guna Yala entrance fees and island taxes" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Impuestos de entrada a Guna Yala y tasas insulares",
+        en: "Guna Yala entrance fees and island taxes",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [2, 7],
+    relatedExperienceIds: [
+      2,
+      7,
+    ],
     maxGuests: 2,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Clásico de Colección (1973)", en: "Classic 1973 Yawl" },
+    featureBadge: {
+      es: "Clásico de Colección (1973)",
+      en: "Classic 1973 Yawl",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 10. FOOTLOOSE
-  // ---------------------------------------------------------------------------
   {
     id: 10,
     slug: "footloose-irwin-52-sailboat",
     category: "Sailboat",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -1922,8 +1906,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Experience the Guna Yala spirit aboard Footloose (Irwin 52). Hammock net, local Guna guide, snorkeling, and meals included.",
       },
       keywords: [
-        { es: "velero Footloose san blas", en: "Footloose sailboat san blas" },
-        { es: "irwin 52 san blas panama", en: "irwin 52 charter guna yala" },
+        {
+          es: "velero Footloose san blas",
+          en: "Footloose sailboat san blas",
+        },
+        {
+          es: "irwin 52 san blas panama",
+          en: "irwin 52 charter guna yala",
+        },
       ],
       openGraph: {
         title: {
@@ -1938,7 +1928,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Footloose/catalogo/1.png",
           "/contenido/veleros/Footloose/catalogo/2.png",
           "/contenido/veleros/Footloose/catalogo/3.png",
-          "/contenido/veleros/Footloose/catalogo/4.png", 
+          "/contenido/veleros/Footloose/catalogo/4.png",
           "/contenido/veleros/Footloose/catalogo/5.png",
           "/contenido/veleros/Footloose/catalogo/6.png",
           "/contenido/veleros/Footloose/catalogo/7.png",
@@ -1950,19 +1940,19 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/veleros/Footloose/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/veleros/Footloose/catalogo/1.png",
-          "/contenido/veleros/Footloose/catalogo/2.png",
-          "/contenido/veleros/Footloose/catalogo/3.png",
-          "/contenido/veleros/Footloose/catalogo/4.png", 
-          "/contenido/veleros/Footloose/catalogo/5.png",
-          "/contenido/veleros/Footloose/catalogo/6.png",
-          "/contenido/veleros/Footloose/catalogo/7.png",
-          "/contenido/veleros/Footloose/catalogo/8.png",
-          "/contenido/veleros/Footloose/catalogo/9.png",
-          "/contenido/veleros/Footloose/catalogo/10.png",
-          "/contenido/veleros/Footloose/catalogo/11.png",
-          "/contenido/veleros/Footloose/catalogo/12.png",
-          "/contenido/veleros/Footloose/catalogo/13.png",
-          "/contenido/veleros/Footloose/catalogo/14.png",
+      "/contenido/veleros/Footloose/catalogo/2.png",
+      "/contenido/veleros/Footloose/catalogo/3.png",
+      "/contenido/veleros/Footloose/catalogo/4.png",
+      "/contenido/veleros/Footloose/catalogo/5.png",
+      "/contenido/veleros/Footloose/catalogo/6.png",
+      "/contenido/veleros/Footloose/catalogo/7.png",
+      "/contenido/veleros/Footloose/catalogo/8.png",
+      "/contenido/veleros/Footloose/catalogo/9.png",
+      "/contenido/veleros/Footloose/catalogo/10.png",
+      "/contenido/veleros/Footloose/catalogo/11.png",
+      "/contenido/veleros/Footloose/catalogo/12.png",
+      "/contenido/veleros/Footloose/catalogo/13.png",
+      "/contenido/veleros/Footloose/catalogo/14.png",
     ],
     boatDescription: {
       es: "Velero relajado y conectado con la cultura autóctona Guna.",
@@ -1980,8 +1970,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Rudi",
-      role: { es: "Capitán & Chef", en: "Captain and Local Guna Guide" },
-      photoUrl: "/contenido/veleros/Naboa/capitan/1.png",
+      role: {
+        es: "Capitán & Chef",
+        en: "Captain and Local Guna Guide",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Con más de 45 años de experiencia en el mar y licencias náuticas de Panamá e Italia, Rudi combina conocimiento marítimo, pasión por la navegación y hospitalidad. Habla italiano, alemán, español e inglés, lo que le permite recibir cómodamente a huéspedes internacionales. Su amor por la gastronomía italiana aporta un toque especial a la vida a bordo, con platos tradicionales como pasta, risotto, pizza y tiramisú. Apasionado también por la pesca y los deportes de aventura, Rudi hará de la experiencia a bordo una oportunidad para disfrutar del mar, descubrir nuevos lugares y saborear la esencia de Italia en el Caribe.",
         en: "Local hosts with deep knowledge of the sea and local Guna traditions.",
@@ -1992,7 +1985,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Gastronomía italiana a bordo, platos tradicionales como pasta, risotto, pizza y tiramisú. Todas las comidas y bebidas incluidas (desayuno, almuerzo, snacks y cena). Bebidas alcohólicas con moderación.",
         en: "Three daily meals, alcoholic and non-alcoholic beverages included (moderate consumption).",
       },
-      photoUrl: "/contenido/veleros/BlueMarys/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -2000,9 +1993,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Snorkel gear, local guide services for cultural exchange, and lounging in the hammock netting.",
       },
       photoUrls: [
-        "/contenido/veleros/BlueMarys/experiencias/1.png",
-        "/contenido/veleros/BlueMarys/experiencias/2.png",
-        "/contenido/veleros/BlueMarys/experiencias/3.png"
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -2010,97 +2003,71 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 402,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (Two Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (Two Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 670,
-          notes: { es: "Huésped adicional: $220 USD", en: "Extra guest: $220 USD" },
+          notes: {
+            es: "Huésped adicional: $220 USD",
+            en: "Extra guest: $220 USD",
+          },
         },
       ],
       htmlTableContent: {
-        es: `<table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Huéspedes (Cabina King)</td>
-                <td class="p-3 border font-bold">$920 USD</td>
-                <td class="p-3 border font-bold text-green-600">-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">2 Huéspedes (Cabina Standard)</td>
-                <td class="p-3 border font-bold">$805 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">+1 Huésped</td>
-                <td class="p-3 border font-bold">$230 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-          
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Two Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$670 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Extra Guest</td>
-                <td class="p-3 border font-bold text-green-600">+$220 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huéspedes (Cabina King)</td>\n                <td class=\"p-3 border font-bold\">$920 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">2 Huéspedes (Cabina Standard)</td>\n                <td class=\"p-3 border font-bold\">$805 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">+1 Huésped</td>\n                <td class=\"p-3 border font-bold\">$230 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n          \n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (Two Guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$670 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Extra Guest</td>\n                <td class=\"p-3 border font-bold text-green-600\">+$220 USD / Night</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tres comidas diarias, bebidas alcohólicas y no alcohólicas (moderado)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
-      { es: "Uso de equipo de snorkel y servicios de guía local ", en: "Use of Snorkel Gear and Local Guide Services" },
-      { es: "Área de relax ", en: "Hammock Netting / Lounging Area" },
+      {
+        es: "Tres comidas diarias, bebidas alcohólicas y no alcohólicas (moderado)",
+        en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)",
+      },
+      {
+        es: "Uso de equipo de snorkel y servicios de guía local ",
+        en: "Use of Snorkel Gear and Local Guide Services",
+      },
+      {
+        es: "Área de relax ",
+        en: "Hammock Netting / Lounging Area",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
-      { es: "Tasa obligatoria de entrada a Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde el barco",
+        en: "Transport to/from the boat",
+      },
+      {
+        es: "Tasa obligatoria de entrada a Guna Yala",
+        en: "Mandatory entrance fee to Guna Yala territory",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [2, 4, 5],
+    relatedExperienceIds: [
+      2,
+      4,
+      5,
+    ],
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Diseño Clásico", en: "Classic Design" },
+    featureBadge: {
+      es: "Diseño Clásico",
+      en: "Classic Design",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 7. Mola Mola
-  // ---------------------------------------------------------------------------
   {
     id: 18,
     slug: "mola-mola-beneteau-411",
     category: "Sailboat",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2115,8 +2082,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Experience the Guna Yala spirit aboard Mola Mola (Beneteau 411). Hammock net, local Guna guide, snorkeling, and meals included.",
       },
       keywords: [
-        { es: "velero Mola Mola san blas", en: "Mola Mola sailboat san blas" },
-        { es: "beneteau 411 san blas panama", en: "beneteau 411 charter guna yala" },
+        {
+          es: "velero Mola Mola san blas",
+          en: "Mola Mola sailboat san blas",
+        },
+        {
+          es: "beneteau 411 san blas panama",
+          en: "beneteau 411 charter guna yala",
+        },
       ],
       openGraph: {
         title: {
@@ -2131,7 +2104,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/Mola mola/catalogo/1.png",
           "/contenido/veleros/Mola mola/catalogo/2.png",
           "/contenido/veleros/Mola mola/catalogo/3.png",
-          "/contenido/veleros/Mola mola/catalogo/4.png", 
+          "/contenido/veleros/Mola mola/catalogo/4.png",
           "/contenido/veleros/Mola mola/catalogo/5.png",
           "/contenido/veleros/Mola mola/catalogo/6.png",
           "/contenido/veleros/Mola mola/catalogo/7.png",
@@ -2143,13 +2116,13 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/veleros/Mola mola/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/veleros/Mola mola/catalogo/1.png",
-          "/contenido/veleros/Mola mola/catalogo/2.png",
-          "/contenido/veleros/Mola mola/catalogo/3.png",
-          "/contenido/veleros/Mola mola/catalogo/4.png", 
-          "/contenido/veleros/Mola mola/catalogo/5.png",
-          "/contenido/veleros/Mola mola/catalogo/6.png",
-          "/contenido/veleros/Mola mola/catalogo/7.png",
-          "/contenido/veleros/Mola mola/catalogo/8.png",
+      "/contenido/veleros/Mola mola/catalogo/2.png",
+      "/contenido/veleros/Mola mola/catalogo/3.png",
+      "/contenido/veleros/Mola mola/catalogo/4.png",
+      "/contenido/veleros/Mola mola/catalogo/5.png",
+      "/contenido/veleros/Mola mola/catalogo/6.png",
+      "/contenido/veleros/Mola mola/catalogo/7.png",
+      "/contenido/veleros/Mola mola/catalogo/8.png",
     ],
     boatDescription: {
       es: "Velero relajado y conectado con la cultura autóctona Guna, equipado con zona de red hamaca para descanso.",
@@ -2167,7 +2140,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Capitan Agustin",
-      role: { es: "Anfirtion y Guía Local", en: "Captain and Local Guna Guide" },
+      role: {
+        es: "Anfirtion y Guía Local",
+        en: "Captain and Local Guna Guide",
+      },
       photoUrl: "/contenido/veleros/Mola mola/capitan/1.png",
       description: {
         es: "Agustín es argentino y lleva más de 5 años viviendo a bordo de veleros, explorando mares, culturas y aventuras. Paso 3 años viviendo en Brasil, y 2 años en las paradisíacas islas de San Blas, Panamá. Tiene gran experiencia en navegación oceánica; le encanta pescar, surfear y descubrir los rincones secretos del archipiélago. Además de navegar, tiene experiencia en gastronomía, disfruta preparando platos frescos, especialmente con los pescados y mariscos de la zona. En ocasiones, cuenta con la ayuda de un tripulante/cocinero a bordo, para ofrecer un servicio más completo y atento cuando recibe a varios huéspedes. Habla español, inglés y portugués, lo que hace que la comunicación a bordo sea fácil y amena para personas de distintos países. Anímate a embarcarte y vivirás una experiencia auténtica, divertida y segura.",
@@ -2179,7 +2155,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Pensión completa: 3 comidas al día más bebidas alcohólicas (consumo moderado) y no alcohólicas.",
         en: "Three daily meals, alcoholic and non-alcoholic beverages included (moderate consumption).",
       },
-      photoUrl: "/contenido/veleros/Mola mola/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -2187,7 +2163,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Snorkel gear, local guide services for cultural exchange, and lounging in the hammock netting.",
       },
       photoUrls: [
-        "/contenido/veleros/Mola mola/experiencia/1.png"
+        "/contenido/veleros/Mola mola/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -2195,92 +2174,71 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 335,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (Two Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (Two Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 670,
-          notes: { es: "Huésped adicional: $220 USD", en: "Extra guest: $220 USD" },
+          notes: {
+            es: "Huésped adicional: $220 USD",
+            en: "Extra guest: $220 USD",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Huéspedes (1 Camarote)</td>
-                <td class="p-3 border font-bold">$670 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">+1 Huésped</td>
-                <td class="p-3 border font-bold">$220 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Two Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$670 USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Extra Guest</td>
-                <td class="p-3 border font-bold text-green-600">+$220 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huéspedes (1 Camarote)</td>\n                <td class=\"p-3 border font-bold\">$670 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">+1 Huésped</td>\n                <td class=\"p-3 border font-bold\">$220 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (Two Guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$670 USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Extra Guest</td>\n                <td class=\"p-3 border font-bold text-green-600\">+$220 USD / Night</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tres comidas diarias, bebidas alcohólicas y no alcohólicas (moderado)", en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)" },
-      { es: "Uso de equipo de snorkel y servicios de guía local Guna", en: "Use of Snorkel Gear and Local Guide Services" },
-      { es: "Área de relax con red hamaca", en: "Hammock Netting / Lounging Area" },
+      {
+        es: "Tres comidas diarias, bebidas alcohólicas y no alcohólicas (moderado)",
+        en: "Three daily meals, alcoholic and non-alcoholic beverages (moderate consumption)",
+      },
+      {
+        es: "Uso de equipo de snorkel y servicios de guía local Guna",
+        en: "Use of Snorkel Gear and Local Guide Services",
+      },
+      {
+        es: "Área de relax con red hamaca",
+        en: "Hammock Netting / Lounging Area",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde el barco", en: "Transport to/from the boat" },
-      { es: "Tasa obligatoria de entrada a Guna Yala", en: "Mandatory entrance fee to Guna Yala territory" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde el barco",
+        en: "Transport to/from the boat",
+      },
+      {
+        es: "Tasa obligatoria de entrada a Guna Yala",
+        en: "Mandatory entrance fee to Guna Yala territory",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [2, 4, 5],
+    relatedExperienceIds: [
+      2,
+      4,
+      5,
+    ],
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Red Hamaca & Guía Guna", en: "Hammock Net & Local Guide" },
+    featureBadge: {
+      es: "Red Hamaca & Guía Guna",
+      en: "Hammock Net & Local Guide",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-  // ---------------------------------------------------------------------------
-  // 5. BlueMarys
-  // ---------------------------------------------------------------------------
   {
     id: 11,
     slug: "bluemarys-beneteau-oceanis",
     category: "Sailboat",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2295,8 +2253,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Charter the 58ft BlueMarys sailboat in San Blas. 3 double cabins with private bathrooms, Starlink Wi-Fi, moderate open bar, and family vibe.",
       },
       keywords: [
-        { es: "velero BlueMarys san blas", en: "BlueMarys sailboat san blas" },
-        { es: "beneteau oceanis san blas", en: "beneteau oceanis charter panama" },
+        {
+          es: "velero BlueMarys san blas",
+          en: "BlueMarys sailboat san blas",
+        },
+        {
+          es: "beneteau oceanis san blas",
+          en: "beneteau oceanis charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -2311,9 +2275,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/veleros/BlueMarys/catalogo/1.png",
           "/contenido/veleros/BlueMarys/catalogo/2.png",
           "/contenido/veleros/BlueMarys/catalogo/3.png",
-          "/contenido/veleros/BlueMarys/catalogo/4.png", 
+          "/contenido/veleros/BlueMarys/catalogo/4.png",
           "/contenido/veleros/BlueMarys/catalogo/5.png",
-          "/contenido/veleros/BlueMarys/catalogo/6.png", 
+          "/contenido/veleros/BlueMarys/catalogo/6.png",
         ],
       },
     },
@@ -2321,16 +2285,16 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/veleros/BlueMarys/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/veleros/BlueMarys/catalogo/1.png",
-          "/contenido/veleros/BlueMarys/catalogo/2.png",
-          "/contenido/veleros/BlueMarys/catalogo/3.png",
-          "/contenido/veleros/BlueMarys/catalogo/4.png", 
-          "/contenido/veleros/BlueMarys/catalogo/5.png",
-          "/contenido/veleros/BlueMarys/catalogo/6.png",
-          "/contenido/veleros/BlueMarys/catalogo/8.png",
-          "/contenido/veleros/BlueMarys/catalogo/7.png",
-          "/contenido/veleros/BlueMarys/catalogo/8.png",
-          "/contenido/veleros/BlueMarys/catalogo/9.png",
-          "/contenido/veleros/BlueMarys/catalogo/10.png",
+      "/contenido/veleros/BlueMarys/catalogo/2.png",
+      "/contenido/veleros/BlueMarys/catalogo/3.png",
+      "/contenido/veleros/BlueMarys/catalogo/4.png",
+      "/contenido/veleros/BlueMarys/catalogo/5.png",
+      "/contenido/veleros/BlueMarys/catalogo/6.png",
+      "/contenido/veleros/BlueMarys/catalogo/8.png",
+      "/contenido/veleros/BlueMarys/catalogo/7.png",
+      "/contenido/veleros/BlueMarys/catalogo/8.png",
+      "/contenido/veleros/BlueMarys/catalogo/9.png",
+      "/contenido/veleros/BlueMarys/catalogo/10.png",
     ],
     boatDescription: {
       es: "Espacioso velero Beneteau Oceanis de 58 pies con 3 camarotes dobles.",
@@ -2348,7 +2312,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Manuel, María Ángela & Franchesca",
-      role: { es: "Familia de Anfitriones", en: "Professional Captain & Chef" },
+      role: {
+        es: "Familia de Anfitriones",
+        en: "Professional Captain & Chef",
+      },
       photoUrl: "/contenido/veleros/BlueMarys/capitan/1.png",
       description: {
         es: "Una pareja argentina, junto a su hija de 9 años. Manuel, María Ángela y Franchesca son la tripulación a cargo del Blue Marys. Disfrutarás de una experiencia de navegación exclusiva en la comarca de Guna Yala, uno de los entornos naturales más preservados del Caribe. A bordo encontraras una propuesta gastronómica variada con pesca fresca del día, opciones vegetarianas y especialidades de la cocina argentina. Disfrutarás de una estancia de máximo confort que combina navegación a vela, ambiente relajado y un entorno de ensueño.",
@@ -2360,7 +2327,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         es: "Cuatro comidas diarias (desayuno, almuerzo, snack y cena). Incluye bebidas con consumo moderado: gaseosas, cerveza, vino, agua. Bebida extra tiene costo adicional.- Platos basados en pescado fresco y frutos de mar de la zona. En caso de existir alguna restricción dietaria deberá avisar con anticipación para adaptar el menú.",
         en: "Three daily meals centered around fresh local fish and seafood. Moderate open bar included (soft drinks, beer, wine, water). Dietary needs accommodated.",
       },
-      photoUrl: "/contenido/veleros/BlueMarys/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -2368,9 +2335,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Flexible daily sailing, snorkeling, Stand-Up Paddleboard (SUP), and dinghy rides to beaches and reefs.",
       },
       photoUrls: [
-        "/contenido/veleros/BlueMarys/experiencias/1.png" ,
-        "/contenido/veleros/BlueMarys/experiencias/2.png",
-        "/contenido/veleros/BlueMarys/experiencias/3.png"
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -2378,122 +2345,88 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 300,
       tiers: [
         {
-          seasonOrType: { es: "Habitación King Size (Compartido)", en: "King Size Room (Shared)" },
+          seasonOrType: {
+            es: "Habitación King Size (Compartido)",
+            en: "King Size Room (Shared)",
+          },
           pricePerNight: 570,
         },
         {
-          seasonOrType: { es: "Habitación Standard (Compartido)", en: "Standard Room (Shared)" },
+          seasonOrType: {
+            es: "Habitación Standard (Compartido)",
+            en: "Standard Room (Shared)",
+          },
           pricePerNight: 490,
         },
         {
-          seasonOrType: { es: "Charter Privado (Tarifa Base)", en: "Private Charter (Base Rate)" },
+          seasonOrType: {
+            es: "Charter Privado (Tarifa Base)",
+            en: "Private Charter (Base Rate)",
+          },
           pricePerNight: 900,
-          notes: { es: "Base incluye primeros huéspedes + $165/noche por persona adicional", en: "Base includes first guests + $165/night extra guest" },
+          notes: {
+            es: "Base incluye primeros huéspedes + $165/noche por persona adicional",
+            en: "Base includes first guests + $165/night extra guest",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-        <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border"><strong>Compartido: </strong>2 Huéspedes (Camarote KING)</td>
-                <td class="p-3 border font-bold">$690 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border"><strong>Compartido: </strong>2 Huéspedes (Camarote STANDARD)</td>
-                <td class="p-3 border font-bold">$600 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border"><strong>Privado: </strong>2 Huéspedes</td>
-                <td class="p-3 border font-bold">$1300 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border"><strong>Privado: </strong> 4 Huéspedes</td>
-                <td class="p-3 border font-bold">$1900 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border"><strong>Privado: </strong> 6 Huéspedes</td>
-                <td class="p-3 border font-bold">$1900 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-          
-        `,
-        en: `
-          <div class="space-y-4 text-sm">
-            <h4 class="font-bold">Option A: Shared Boat Mode</h4>
-            <table class="w-full border-collapse border border-slate-200 text-left">
-              <thead>
-                <tr class="bg-slate-100">
-                  <th class="p-3 border">Cabin Type</th>
-                  <th class="p-3 border">Price (USD / Night)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="p-3 border">King Size Room (private bathroom)</td>
-                  <td class="p-3 border font-bold text-green-600">$570 USD</td>
-                </tr>
-                <tr>
-                  <td class="p-3 border">Standard Room (private bathroom)</td>
-                  <td class="p-3 border font-bold text-green-600">$490 USD</td>
-                </tr>
-              </tbody>
-            </table>
-            <h4 class="font-bold">Option B: Private Boat Mode</h4>
-            <p><strong>Base Rate:</strong> $900 USD / Night | <strong>Additional Guest Fee:</strong> +$165 USD / Night</p>
-          </div>
-        `,
+        es: "\n        <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\"><strong>Compartido: </strong>2 Huéspedes (Camarote KING)</td>\n                <td class=\"p-3 border font-bold\">$690 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Compartido: </strong>2 Huéspedes (Camarote STANDARD)</td>\n                <td class=\"p-3 border font-bold\">$600 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Privado: </strong>2 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$1300 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Privado: </strong> 4 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$1900 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Privado: </strong> 6 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$1900 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n          \n        ",
+        en: "\n          <div class=\"space-y-4 text-sm\">\n            <h4 class=\"font-bold\">Option A: Shared Boat Mode</h4>\n            <table class=\"w-full border-collapse border border-slate-200 text-left\">\n              <thead>\n                <tr class=\"bg-slate-100\">\n                  <th class=\"p-3 border\">Cabin Type</th>\n                  <th class=\"p-3 border\">Price (USD / Night)</th>\n                </tr>\n              </thead>\n              <tbody>\n                <tr>\n                  <td class=\"p-3 border\">King Size Room (private bathroom)</td>\n                  <td class=\"p-3 border font-bold text-green-600\">$570 USD</td>\n                </tr>\n                <tr>\n                  <td class=\"p-3 border\">Standard Room (private bathroom)</td>\n                  <td class=\"p-3 border font-bold text-green-600\">$490 USD</td>\n                </tr>\n              </tbody>\n            </table>\n            <h4 class=\"font-bold\">Option B: Private Boat Mode</h4>\n            <p><strong>Base Rate:</strong> $900 USD / Night | <strong>Additional Guest Fee:</strong> +$165 USD / Night</p>\n          </div>\n        ",
       },
     },
     includes: [
-      { es: "Servicio de tripulación profesional y navegación diaria", en: "Professional crew service and daily navigation" },
-      { es: "3 comidas gourmet diarias y barra libre moderada", en: "3 daily gourmet meals and moderate open bar" },
-      { es: "Wi-Fi, equipo de snorkel, paddleboard y traslados en dinghy", en: "Wi-Fi, snorkeling equipment, paddleboard, and dinghy rides" },
-      { es: "Amenidades de baño, sábanas limpias y toallas de ducha", en: "Bathroom amenities, fresh linens, and shower towels" },
+      {
+        es: "Servicio de tripulación profesional y navegación diaria",
+        en: "Professional crew service and daily navigation",
+      },
+      {
+        es: "3 comidas gourmet diarias y barra libre moderada",
+        en: "3 daily gourmet meals and moderate open bar",
+      },
+      {
+        es: "Wi-Fi, equipo de snorkel, paddleboard y traslados en dinghy",
+        en: "Wi-Fi, snorkeling equipment, paddleboard, and dinghy rides",
+      },
+      {
+        es: "Amenidades de baño, sábanas limpias y toallas de ducha",
+        en: "Bathroom amenities, fresh linens, and shower towels",
+      },
     ],
     excludes: [
-      { es: "Transporte desde Ciudad de Panamá al barco", en: "Transport from Panama City to the boat" },
-      { es: "Impuestos de entrada a Guna Yala ($23 USD por persona en efectivo)", en: "Guna Yala Entrance Fees ($23 USD per person in cash)" },
-      { es: "Toallas de playa y gastos personales", en: "Beach towels and personal expenses" },
+      {
+        es: "Transporte desde Ciudad de Panamá al barco",
+        en: "Transport from Panama City to the boat",
+      },
+      {
+        es: "Impuestos de entrada a Guna Yala ($23 USD por persona en efectivo)",
+        en: "Guna Yala Entrance Fees ($23 USD per person in cash)",
+      },
+      {
+        es: "Toallas de playa y gastos personales",
+        en: "Beach towels and personal expenses",
+      },
     ],
-    relatedExperienceIds: [1, 4, 6],
+    relatedExperienceIds: [
+      1,
+      4,
+      6,
+    ],
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: true,
-    featureBadge: { es: "OPCION COMPARTIDO", en: "3 Private Bathrooms" },
-    isFeatured: true,
+    featureBadge: {
+      es: "OPCION COMPARTIDO",
+      en: "3 Private Bathrooms",
+    },
+    isFeatured: false,
     hasDiscount: false,
   },
-  
-  // ---------------------------------------------------------------------------
-  // 9. MBR - Lagoon 42 ft
-  // ---------------------------------------------------------------------------
   {
     id: 12,
     slug: "mbr-lagoon-42ft",
     category: "Catamaran",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2508,8 +2441,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Rent the refined Lagoon 42 MBR in San Blas. Features Starlink, movie projector, 10x10ft floating water mat, A/C, and Owner's Suite for up to 6 guests.",
       },
       keywords: [
-        { es: "catamaran MBR lagoon 42", en: "MBR lagoon 42 san blas" },
-        { es: "alquiler lagoon 42 panama starlink", en: "lagoon 42 charter starlink panama" },
+        {
+          es: "catamaran MBR lagoon 42",
+          en: "MBR lagoon 42 san blas",
+        },
+        {
+          es: "alquiler lagoon 42 panama starlink",
+          en: "lagoon 42 charter starlink panama",
+        },
       ],
       openGraph: {
         title: {
@@ -2524,11 +2463,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/mbr/catalogo/1.png",
           "/contenido/catamaranes/mbr/catalogo/2.png",
           "/contenido/catamaranes/mbr/catalogo/3.png",
-          "/contenido/catamaranes/mbr/catalogo/4.png", 
+          "/contenido/catamaranes/mbr/catalogo/4.png",
           "/contenido/catamaranes/mbr/catalogo/5.png",
           "/contenido/catamaranes/mbr/catalogo/6.png",
           "/contenido/catamaranes/mbr/catalogo/7.png",
-
         ],
       },
     },
@@ -2536,12 +2474,12 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/catamaranes/mbr/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/mbr/catalogo/1.png",
-          "/contenido/catamaranes/mbr/catalogo/2.png",
-          "/contenido/catamaranes/mbr/catalogo/3.png",
-          "/contenido/catamaranes/mbr/catalogo/4.png", 
-          "/contenido/catamaranes/mbr/catalogo/5.png",
-          "/contenido/catamaranes/mbr/catalogo/6.png",
-          "/contenido/catamaranes/mbr/catalogo/7.png",
+      "/contenido/catamaranes/mbr/catalogo/2.png",
+      "/contenido/catamaranes/mbr/catalogo/3.png",
+      "/contenido/catamaranes/mbr/catalogo/4.png",
+      "/contenido/catamaranes/mbr/catalogo/5.png",
+      "/contenido/catamaranes/mbr/catalogo/6.png",
+      "/contenido/catamaranes/mbr/catalogo/7.png",
     ],
     boatDescription: {
       es: "Lagoon 42 Owner's Version remodelado con Suite VIP, Starlink, aire acondicionado y proyector de cine.",
@@ -2559,20 +2497,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Bobby & crew",
-      role: { es: "Capitán y tripulacion", en: "Captain & First Mate" },
+      role: {
+        es: "Capitán y tripulacion",
+        en: "Captain & First Mate",
+      },
       photoUrl: "/contenido/catamaranes/mbr/capitan/1.png",
       description: {
         es: "Capitan Canadiense y dueño del catamaran dedicado a guiarte a los mejores arrecifes de Guna Yala con servicio premium. Acompañado por su tripulación profesional.",
         en: "Professional crew dedicated to guiding you to Guna Yala's top reefs with premium service.",
       },
-      languages: ["English", "Español"],
+      languages: [
+        "English",
+        "Español",
+      ],
     },
     dining: {
       description: {
         es: "3 comidas diarias de alta calidad con mariscos frescos, pescados locales, arroces, pastas y frutas tropicales. Barra libre incluida (consumo moderado de alcohol). Cocina equipada con espresso e hielera.",
         en: "3 high-quality daily meals with fresh seafood, local fish, pasta, and tropical fruits. Open bar included (moderate alcohol). Galley with espresso machine & ice maker.",
       },
-      photoUrl: "/contenido/catamaranes/mbr/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -2582,7 +2526,7 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       photoUrls: [
         "/contenido/catamaranes/mbr/experiencias/1.png",
         "/contenido/catamaranes/mbr/experiencias/2.png",
-        "/contenido/catamaranes/mbr/experiencias/3.png",
+        "/contenido/extracatalogo/barco/experiencia/1.png",
       ],
     },
     pricing: {
@@ -2590,104 +2534,95 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 1095,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 1450,
         },
         {
-          seasonOrType: { es: "Charter Privado (4 Huéspedes)", en: "Private Charter (4 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (4 Huéspedes)",
+            en: "Private Charter (4 Guests)",
+          },
           guestsCount: 4,
           pricePerNight: 1950,
         },
         {
-          seasonOrType: { es: "Charter Privado (6 Huéspedes)", en: "Private Charter (6 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (6 Huéspedes)",
+            en: "Private Charter (6 Guests)",
+          },
           guestsCount: 6,
           pricePerNight: 2450,
-          notes: { es: "Huésped adicional: +$250 USD", en: "Extra guest: +$250 USD" },
+          notes: {
+            es: "Huésped adicional: +$250 USD",
+            en: "Extra guest: +$250 USD",
+          },
         },
       ],
       htmlTableContent: {
-        es: ` <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Huésped </td>
-                <td class="p-3 border font-bold">$2190 USD</td>
-                <td class="p-3 border font-bold text-green-600">$- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">+1 Huésped </td>
-                <td class="p-3 border font-bold">$290 USD</td>
-                <td class="p-3 border font-bold text-green-600">$- USD</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-          
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Guests Count</th>
-                <th class="p-3 border">Mode</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="p-3 border">2 Guests</td><td class="p-3 border">Private Charter</td><td class="p-3 border font-bold text-green-600">$1,450 USD</td></tr>
-              <tr><td class="p-3 border">3 Guests</td><td class="p-3 border">Private Charter</td><td class="p-3 border font-bold text-green-600">$1,700 USD</td></tr>
-              <tr><td class="p-3 border">4 Guests</td><td class="p-3 border">Private Charter</td><td class="p-3 border font-bold text-green-600">$1,950 USD</td></tr>
-              <tr><td class="p-3 border">5 Guests</td><td class="p-3 border">Private Charter</td><td class="p-3 border font-bold text-green-600">$2,200 USD</td></tr>
-              <tr><td class="p-3 border">6 Guests</td><td class="p-3 border">Private Charter</td><td class="p-3 border font-bold text-green-600">$2,450 USD</td></tr>
-              <tr><td class="p-3 border">Extra Guest</td><td class="p-3 border">Extra Guest</td><td class="p-3 border font-bold text-green-600">+$250 USD</td></tr>
-            </tbody>
-          </table>
-        `,
+        es: " <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huésped </td>\n                <td class=\"p-3 border font-bold\">$2190 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">+1 Huésped </td>\n                <td class=\"p-3 border font-bold\">$290 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$- USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n          \n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Guests Count</th>\n                <th class=\"p-3 border\">Mode</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr><td class=\"p-3 border\">2 Guests</td><td class=\"p-3 border\">Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$1,450 USD</td></tr>\n              <tr><td class=\"p-3 border\">3 Guests</td><td class=\"p-3 border\">Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$1,700 USD</td></tr>\n              <tr><td class=\"p-3 border\">4 Guests</td><td class=\"p-3 border\">Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$1,950 USD</td></tr>\n              <tr><td class=\"p-3 border\">5 Guests</td><td class=\"p-3 border\">Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$2,200 USD</td></tr>\n              <tr><td class=\"p-3 border\">6 Guests</td><td class=\"p-3 border\">Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$2,450 USD</td></tr>\n              <tr><td class=\"p-3 border\">Extra Guest</td><td class=\"p-3 border\">Extra Guest</td><td class=\"p-3 border font-bold text-green-600\">+$250 USD</td></tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Servicio completo de tripulación, combustible y agua dulce", en: "Full crew service, fuel, and fresh water" },
-      { es: "Pensión completa (3 comidas) y barra libre", en: "All meals and open bar" },
-      { es: "Internet Starlink, proyector de cine, A/C (6h/día) y juguetes acuáticos", en: "Starlink internet, movie projector, A/C (6h/day), and water sports gear" },
-      { es: "Ropa de cama y toallas de baño", en: "Bed linens and bath towels" },
+      {
+        es: "Servicio completo de tripulación, combustible y agua dulce",
+        en: "Full crew service, fuel, and fresh water",
+      },
+      {
+        es: "Pensión completa (3 comidas) y barra libre",
+        en: "All meals and open bar",
+      },
+      {
+        es: "Internet Starlink, proyector de cine, A/C (6h/día) y juguetes acuáticos",
+        en: "Starlink internet, movie projector, A/C (6h/day), and water sports gear",
+      },
+      {
+        es: "Ropa de cama y toallas de baño",
+        en: "Bed linens and bath towels",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Uso de Aire Acondicionado fuera de horario", en: "Use of Air Conditioning" },
-      { es: "Impuestos de entrada a Guna Yala (pago en efectivo)", en: "Guna Yala entrance fees (cash payment)" },
-      { es: "Seguro médico/viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Uso de Aire Acondicionado fuera de horario",
+        en: "Use of Air Conditioning",
+      },
+      {
+        es: "Impuestos de entrada a Guna Yala (pago en efectivo)",
+        en: "Guna Yala entrance fees (cash payment)",
+      },
+      {
+        es: "Seguro médico/viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [8, 11, 16],
+    relatedExperienceIds: [
+      8,
+      11,
+      16,
+    ],
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Starlink & Cine a bordo", en: "Starlink & Movie Projector" },
+    featureBadge: {
+      es: "Starlink & Cine a bordo",
+      en: "Starlink & Movie Projector",
+    },
     isFeatured: true,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 10. YOYO
-  // ---------------------------------------------------------------------------
   {
     id: 13,
     slug: "yoyo-catamaran-guna-yala",
     category: "Catamaran",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -2702,8 +2637,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Intimate San Blas escape aboard YOYO Catamaran. Perfect for couples (capacity 4 guests), 2 cabins, all-inclusive with open bar and kayak/SUP.",
       },
       keywords: [
-        { es: "catamaran YOYO san blas", en: "YOYO catamaran san blas" },
-        { es: "alquiler parejas san blas", en: "couple catamaran charter panama" },
+        {
+          es: "catamaran YOYO san blas",
+          en: "YOYO catamaran san blas",
+        },
+        {
+          es: "alquiler parejas san blas",
+          en: "couple catamaran charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -2716,10 +2657,10 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         },
         images: [
           "/contenido/catamaranes/YOYO/catalogo/1.png",
-      "/contenido/catamaranes/YOYO/catalogo/2.png",
-      "/contenido/catamaranes/YOYO/catalogo/3.png",
-      "/contenido/catamaranes/YOYO/catalogo/4.png", 
-      "/contenido/catamaranes/YOYO/catalogo/5.png",
+          "/contenido/catamaranes/YOYO/catalogo/2.png",
+          "/contenido/catamaranes/YOYO/catalogo/3.png",
+          "/contenido/catamaranes/YOYO/catalogo/4.png",
+          "/contenido/catamaranes/YOYO/catalogo/5.png",
         ],
       },
     },
@@ -2729,9 +2670,8 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       "/contenido/catamaranes/YOYO/catalogo/1.png",
       "/contenido/catamaranes/YOYO/catalogo/2.png",
       "/contenido/catamaranes/YOYO/catalogo/3.png",
-      "/contenido/catamaranes/YOYO/catalogo/4.png", 
+      "/contenido/catamaranes/YOYO/catalogo/4.png",
       "/contenido/catamaranes/YOYO/catalogo/5.png",
-
     ],
     boatDescription: {
       es: "Santuario privado e íntimo en Guna Yala ideal para parejas o grupos reducidos de hasta 4 personas.",
@@ -2748,20 +2688,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Ignacio & Crew",
-      role: { es: "Capitán Host", en: "Captain & Host" },
+      role: {
+        es: "Capitán Host",
+        en: "Captain & Host",
+      },
       photoUrl: "/contenido/catamaranes/YOYO/capitan/1.png",
       description: {
         es: "Navego desde los 15 años; exploré Brasil, Estados Unidos y Colombia. Esta experiencia no solo me convirtió en un capitán, sino que también moldeó mi visión del mundo y mi respeto por la naturaleza. Mi carrera culinaria se ha consolidado en exigentes cocinas de hoteles internacionales, donde perfeccioné mis técnicas y aprendí a fusionar la disciplina de la hotelería con la riqueza de la cocina costera y multicultural. Hoy, combino la pasión por navegar con la gastronomia, creando esta experiencia única inspirada en la tradición Guna.",
         en: "Warm, personalized attention to ensure a seamless home-away-from-home feel.",
       },
-      languages: ["Español", "English"],
+      languages: [
+        "Español",
+        "English",
+      ],
     },
     dining: {
       description: {
         es: "Desayunos frescos, snacks tropicales, almuerzos y cenas elaboradas con productos locales. Barra libre completa de bebidas incluida.",
         en: "All-Inclusive Dining: fresh breakfast, daily tropical snacks, delicious lunch and dinner prepared with local ingredients. Full open bar included.",
       },
-      photoUrl: "/contenido/catamaranes/YOYO/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -2770,9 +2716,8 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       },
       photoUrls: [
         "/contenido/catamaranes/YOYO/experiencia/2.png",
-        "/contenido/islas/nugnudub/experiencias/1.png",
-        
-        "/contenido/islas/nugnudub/experiencias/3.png",
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
       ],
     },
     pricing: {
@@ -2780,85 +2725,66 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 450,
       tiers: [
         {
-          seasonOrType: { es: "Camarote / Charter Privado (Pareja)", en: "Private Cabin / Charter (Couple)" },
+          seasonOrType: {
+            es: "Camarote / Charter Privado (Pareja)",
+            en: "Private Cabin / Charter (Couple)",
+          },
           guestsCount: 2,
           pricePerNight: 950,
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border"> 2 Huéspedes </td>
-                <td class="p-3 border font-bold">$900 USD</td>
-                <td class="p-3 border font-bold text-green-600">- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">  +1 Huésped</td>
-                <td class="p-3 border font-bold">$180 USD</td>
-                <td class="p-3 border font-bold text-green-600"> - USD</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Occupancy & Setup</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Cabin / Charter (2 Guests / Couple)</td>
-                <td class="p-3 border font-bold text-green-600">$950 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\"> 2 Huéspedes </td>\n                <td class=\"p-3 border font-bold\">$900 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">  +1 Huésped</td>\n                <td class=\"p-3 border font-bold\">$180 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\"> - USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Occupancy & Setup</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Cabin / Charter (2 Guests / Couple)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$950 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Servicio de tripulación, combustible y agua dulce", en: "Crew service, fuel, and fresh water" },
-      { es: "Comidas gourmet (Desayuno, Almuerzo, Cena), snacks y barra libre", en: "Gourmet meals (Breakfast, Lunch, Dinner), snacks, and open bar" },
-      { es: "Uso de equipos náuticos (snorkel, kayak/paddleboard)", en: "Use of onboard nautical gear (snorkel, kayak/SUP)" },
-      { es: "Limpieza profesional diaria, ropa de cama y toallas", en: "Daily cleaning service, bed linens, and towels" },
+      {
+        es: "Servicio de tripulación, combustible y agua dulce",
+        en: "Crew service, fuel, and fresh water",
+      },
+      {
+        es: "Comidas gourmet (Desayuno, Almuerzo, Cena), snacks y barra libre",
+        en: "Gourmet meals (Breakfast, Lunch, Dinner), snacks, and open bar",
+      },
+      {
+        es: "Uso de equipos náuticos (snorkel, kayak/paddleboard)",
+        en: "Use of onboard nautical gear (snorkel, kayak/SUP)",
+      },
+      {
+        es: "Limpieza profesional diaria, ropa de cama y toallas",
+        en: "Daily cleaning service, bed linens, and towels",
+      },
     ],
     excludes: [
-      { es: "Traslado en Jeep 4x4 / Lancha hacia San Blas", en: "Jeep / Water taxi transport to San Blas" },
-      { es: "Impuestos de entrada a Guna Yala", en: "Guna Yala entrance fees" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Traslado en Jeep 4x4 / Lancha hacia San Blas",
+        en: "Jeep / Water taxi transport to San Blas",
+      },
+      {
+        es: "Impuestos de entrada a Guna Yala",
+        en: "Guna Yala entrance fees",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [12, 13, 15],
+    relatedExperienceIds: [
+      12,
+      13,
+      15,
+    ],
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Ideal Parejas", en: "Perfect for Couples All-Inclusive" },
+    featureBadge: {
+      es: "Ideal Parejas",
+      en: "Perfect for Couples All-Inclusive",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
- 
-  // ---------------------------------------------------------------------------
-  // 12. Don C - Lagoon 400S2
-  // ---------------------------------------------------------------------------
   {
     id: 14,
     slug: "don-c-lagoon-400s2",
@@ -2878,8 +2804,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Sail on the upgraded Lagoon 400S2 Don C with Captain Marcos (Brazil) & Chef Melisa (Argentina). Starlink, kayak, SUP, and onboard grill.",
       },
       keywords: [
-        { es: "catamaran Don C lagoon 400S2", en: "Don C lagoon 400S2 san blas" },
-        { es: "alquiler compartido san blas", en: "shared cabin charter san blas" },
+        {
+          es: "catamaran Don C lagoon 400S2",
+          en: "Don C lagoon 400S2 san blas",
+        },
+        {
+          es: "alquiler compartido san blas",
+          en: "shared cabin charter san blas",
+        },
       ],
       openGraph: {
         title: {
@@ -2894,10 +2826,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/Don c/catalogo/1.png",
           "/contenido/catamaranes/Don c/catalogo/2.png",
           "/contenido/catamaranes/Don c/catalogo/3.png",
-          "/contenido/catamaranes/Don c/catalogo/4.png", 
+          "/contenido/catamaranes/Don c/catalogo/4.png",
           "/contenido/catamaranes/Don c/catalogo/5.png",
           "/contenido/catamaranes/Don c/catalogo/6.png",
-
         ],
       },
     },
@@ -2905,11 +2836,11 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/catamaranes/Don c/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/Don c/catalogo/1.png",
-          "/contenido/catamaranes/Don c/catalogo/2.png",
-          "/contenido/catamaranes/Don c/catalogo/3.png",
-          "/contenido/catamaranes/Don c/catalogo/4.png", 
-          "/contenido/catamaranes/Don c/catalogo/5.png",
-          "/contenido/catamaranes/Don c/catalogo/6.png",
+      "/contenido/catamaranes/Don c/catalogo/2.png",
+      "/contenido/catamaranes/Don c/catalogo/3.png",
+      "/contenido/catamaranes/Don c/catalogo/4.png",
+      "/contenido/catamaranes/Don c/catalogo/5.png",
+      "/contenido/catamaranes/Don c/catalogo/6.png",
     ],
     boatDescription: {
       es: "Lagoon 400S2 reeditado en 2024 con nueva cubierta de popa, Starlink y dúo de tripulación experto (Brasil/Argentina).",
@@ -2927,20 +2858,27 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Marcos & Melisa",
-      role: { es: "Capitán y Chef Profesional", en: "Captain & Professional Chef" },
-      photoUrl: "/contenido/catamaranes/Don c/capitan/1.png",
+      role: {
+        es: "Capitán y Chef Profesional",
+        en: "Captain & Professional Chef",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Marcos (Capitán/Buzo) y Melisa (Chef profesional con 16 años de trayectoria). Hablan español, inglés y portugués.",
         en: "Marcos (Captain/Diver) and Melisa (Pro Chef with 16 yrs experience). Trilingual in Spanish, English, Portuguese.",
       },
-      languages: ["Español", "Português", "English"],
+      languages: [
+        "Español",
+        "Português",
+        "English",
+      ],
     },
     dining: {
       description: {
         es: "Pensión completa por la Chef Melisa: parrilladas, cenas en la playa y postres gourmet. Barra libre de bebidas alcohólicas y refrescos bajo consumo moderado.",
         en: "Full board by Chef Melisa: beach BBQs, gourmet desserts, and grilled meals. Open bar with wines, spirits, and soft drinks (moderate consumption).",
       },
-      photoUrl: "/contenido/catamaranes/Don c/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -2948,102 +2886,96 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Starlink Wi-Fi, Kayak, SUP, floating water mat, snorkeling gear, and reef exploration.",
       },
       photoUrls: [
-        "/contenido/catamaranes/Don c/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 345, //REVISAR
+      basePricePerPersonPerDay: 345,
       tiers: [
         {
-          seasonOrType: { es: "Camarote Compartido (2 Personas)", en: "Shared Cabin (2 Guests)" },
+          seasonOrType: {
+            es: "Camarote Compartido (2 Personas)",
+            en: "Shared Cabin (2 Guests)",
+          },
           pricePerNight: 690,
-          notes: { es: "$345 USD por persona por noche", en: "$345 USD per person per night" },
+          notes: {
+            es: "$345 USD por persona por noche",
+            en: "$345 USD per person per night",
+          },
         },
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 1150,
-          notes: { es: "Huésped adicional: +$230 USD/noche", en: "Extra guest: +$230 USD/night" },
+          notes: {
+            es: "Huésped adicional: +$230 USD/noche",
+            en: "Extra guest: +$230 USD/night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-                <th class="p-3 border">Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Camarote Compartido (2 personas)</td>
-                <td class="p-3 border font-bold text-green-600">$690 USD</td>
-                <td class="p-3 border">$345 por persona</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Charter Privado (2 huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$1,150 USD</td>
-                <td class="p-3 border">Huésped extra: +$230 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-                <th class="p-3 border">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Shared Cabin Charter (2 guests)</td>
-                <td class="p-3 border font-bold text-green-600">$690 USD</td>
-                <td class="p-3 border">$345 per person</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (2 guests)</td>
-                <td class="p-3 border font-bold text-green-600">$1,150 USD</td>
-                <td class="p-3 border">Extra guest: +$230 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Modalidad</th>\n                <th class=\"p-3 border\">Precio (USD / Noche)</th>\n                <th class=\"p-3 border\">Notas</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Camarote Compartido (2 personas)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$690 USD</td>\n                <td class=\"p-3 border\">$345 por persona</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Charter Privado (2 huéspedes)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,150 USD</td>\n                <td class=\"p-3 border\">Huésped extra: +$230 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n                <th class=\"p-3 border\">Notes</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Shared Cabin Charter (2 guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$690 USD</td>\n                <td class=\"p-3 border\">$345 per person</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (2 guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,150 USD</td>\n                <td class=\"p-3 border\">Extra guest: +$230 USD</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Pensión completa por chef profesional (3 comidas y snacks)", en: "Full board by professional chef (3 meals & snacks)" },
-      { es: "Barra libre completa de bebidas y cócteles moderados", en: "Open bar with drinks and moderate spirits" },
-      { es: "Starlink Wi-Fi, Kayak, Paddleboard, Snorkel, alfombra flotante", en: "Starlink Wi-Fi, Kayak, SUP, Snorkel gear, floating mat" },
-      { es: "Toallas de baño y playa", en: "Bath and beach towels" },
+      {
+        es: "Pensión completa por chef profesional (3 comidas y snacks)",
+        en: "Full board by professional chef (3 meals & snacks)",
+      },
+      {
+        es: "Barra libre completa de bebidas y cócteles moderados",
+        en: "Open bar with drinks and moderate spirits",
+      },
+      {
+        es: "Starlink Wi-Fi, Kayak, Paddleboard, Snorkel, alfombra flotante",
+        en: "Starlink Wi-Fi, Kayak, SUP, Snorkel gear, floating mat",
+      },
+      {
+        es: "Toallas de baño y playa",
+        en: "Bath and beach towels",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Entrada en efectivo al territorio Guna Yala", en: "Guna Yala territory cash entrance fee" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Entrada en efectivo al territorio Guna Yala",
+        en: "Guna Yala territory cash entrance fee",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [11, 13, 14],
+    relatedExperienceIds: [
+      11,
+      13,
+      14,
+    ],
     maxGuests: 8,
     isPrivate: true,
     isSharedAllowed: true,
-    featureBadge: { es: "Chef Profesional & Starlink", en: "Pro Chef & Starlink" },
+    featureBadge: {
+      es: "Chef Profesional & Starlink",
+      en: "Pro Chef & Starlink",
+    },
     isFeatured: true,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 13. Coolcat
-  // ---------------------------------------------------------------------------
   {
     id: 15,
     slug: "coolcat-catamaran",
     category: "Catamaran",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -3058,8 +2990,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Charter the 40ft Coolcat catamaran in San Blas. Budget-friendly option for shared private cabin ($255 USD/person) or private charter up to 6 guests.",
       },
       keywords: [
-        { es: "catamaran Coolcat san blas", en: "Coolcat catamaran san blas" },
-        { es: "charter economico san blas", en: "affordable catamaran charter panama" },
+        {
+          es: "catamaran Coolcat san blas",
+          en: "Coolcat catamaran san blas",
+        },
+        {
+          es: "charter economico san blas",
+          en: "affordable catamaran charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -3074,14 +3012,13 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/coolcat/catalogo/1.png",
           "/contenido/catamaranes/coolcat/catalogo/2.png",
           "/contenido/catamaranes/coolcat/catalogo/3.png",
-          "/contenido/catamaranes/coolcat/catalogo/4.png", 
+          "/contenido/catamaranes/coolcat/catalogo/4.png",
           "/contenido/catamaranes/coolcat/catalogo/5.png",
           "/contenido/catamaranes/coolcat/catalogo/6.png",
           "/contenido/catamaranes/coolcat/catalogo/7.png",
           "/contenido/catamaranes/coolcat/catalogo/8.png",
           "/contenido/catamaranes/coolcat/catalogo/9.png",
           "/contenido/catamaranes/coolcat/catalogo/10.png",
-
         ],
       },
     },
@@ -3089,15 +3026,15 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/catamaranes/coolcat/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/coolcat/catalogo/1.png",
-          "/contenido/catamaranes/coolcat/catalogo/2.png",
-          "/contenido/catamaranes/coolcat/catalogo/3.png",
-          "/contenido/catamaranes/coolcat/catalogo/4.png", 
-          "/contenido/catamaranes/coolcat/catalogo/5.png",
-          "/contenido/catamaranes/coolcat/catalogo/6.png",
-          "/contenido/catamaranes/coolcat/catalogo/7.png",
-          "/contenido/catamaranes/coolcat/catalogo/8.png",
-          "/contenido/catamaranes/coolcat/catalogo/9.png",
-          "/contenido/catamaranes/coolcat/catalogo/10.png",
+      "/contenido/catamaranes/coolcat/catalogo/2.png",
+      "/contenido/catamaranes/coolcat/catalogo/3.png",
+      "/contenido/catamaranes/coolcat/catalogo/4.png",
+      "/contenido/catamaranes/coolcat/catalogo/5.png",
+      "/contenido/catamaranes/coolcat/catalogo/6.png",
+      "/contenido/catamaranes/coolcat/catalogo/7.png",
+      "/contenido/catamaranes/coolcat/catalogo/8.png",
+      "/contenido/catamaranes/coolcat/catalogo/9.png",
+      "/contenido/catamaranes/coolcat/catalogo/10.png",
     ],
     boatDescription: {
       es: "Catamarán de 40 pies con opciones flexibles de reserva compartido por camarote o barco privado hasta 6 personas.",
@@ -3115,30 +3052,36 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Cati & Mariano",
-      role: { es: "Capitánes", en: "Captain & Crew" },
+      role: {
+        es: "Capitánes",
+        en: "Captain & Crew",
+      },
       photoUrl: "/contenido/catamaranes/coolcat/capitan/1.png",
       description: {
         es: "Pareja argentina. Crecimos a orillas del río Uruguay navegando desde niños. Vivimos a bordo, explorando las aguas, islas y arrecifes de Guna Yala. Cati es profesora de danza y artes visuales; Mariano es guardaparque y un apasionado por la naturaleza. Juntos compartimos un gran respeto e interés por la cultura Guna y por el entorno extraordinario que hoy llamamos hogar.",
         en: "Attentive crew focused on friendly, safe, and relaxing sailing.",
       },
-      languages: ["Español", "English"],
+      languages: [
+        "Español",
+        "English",
+      ],
     },
     dining: {
       description: {
         es: "Incluye desayuno, almuerzo y cena. Barra libre de bebidas no alcohólicas y alcohólicas (con consumo moderado).",
         en: "3 daily meals (breakfast, lunch, dinner) and snacks. Open bar with non-alcoholic and alcoholic beverages (moderate consumption and special cocktails).",
       },
-      photoUrl: "/contenido/islas/nugnudub/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
         es: "Equipamiento de snorkel, Stand-Up Paddleboard y traslados en dinghy a playas e islas de San Blas.",
         en: "Snorkeling gear, SUP paddleboard, and dinghy rides to San Blas beaches and islets.",
       },
-      photoUrls: [        
-         "/contenido/islas/nugnudub/experiencias/1.png",        
-        "/contenido/islas/nugnudub/experiencias/3.png",
-        "/contenido/catamaranes/coolcat/experiencia/1.png",
+      photoUrls: [
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -3146,103 +3089,73 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 255,
       tiers: [
         {
-          seasonOrType: { es: "Camarote Doble Compartido (Por Persona)", en: "Shared Double Cabin (Per Person)" },
+          seasonOrType: {
+            es: "Camarote Doble Compartido (Por Persona)",
+            en: "Shared Double Cabin (Per Person)",
+          },
           pricePerNight: 255,
         },
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 1200,
-          notes: { es: "Huésped adicional: +$100 USD/noche", en: "Extra guest: +$100 USD/night" },
+          notes: {
+            es: "Huésped adicional: +$100 USD/noche",
+            en: "Extra guest: +$100 USD/night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border"> <strong>Privado: </strong> 1 o 2 Huéspedes </td>
-                <td class="p-3 border font-bold">$1010 USD</td>
-                <td class="p-3 border font-bold text-green-600"> - USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border"> <strong>Privado: </strong> +1 Huésped </td>
-                <td class="p-3 border font-bold">$115 USD</td>
-                <td class="p-3 border font-bold text-green-600"> - USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border"> <strong>Compartido: </strong> 1 Huésped  </td>
-                <td class="p-3 border font-bold">$255 USD</td>
-                <td class="p-3 border font-bold text-green-600">- USD</td>
-              </tr>
-              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Type / Mode</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Shared Charter (Private Double Cabin)</td>
-                <td class="p-3 border font-bold text-green-600">$255 USD / person</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Private Charter (2 guests)</td>
-                <td class="p-3 border font-bold text-green-600">$1,200 USD / night</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Extra Guest in Private Charter</td>
-                <td class="p-3 border font-bold text-green-600">+$100 USD / night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\"> <strong>Privado: </strong> 1 o 2 Huéspedes </td>\n                <td class=\"p-3 border font-bold\">$1010 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\"> - USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"> <strong>Privado: </strong> +1 Huésped </td>\n                <td class=\"p-3 border font-bold\">$115 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\"> - USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"> <strong>Compartido: </strong> 1 Huésped  </td>\n                <td class=\"p-3 border font-bold\">$255 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">- USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Type / Mode</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Shared Charter (Private Double Cabin)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$255 USD / person</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (2 guests)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,200 USD / night</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Extra Guest in Private Charter</td>\n                <td class=\"p-3 border font-bold text-green-600\">+$100 USD / night</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tres comidas diarias, snacks y barra libre con cócteles moderados", en: "Three daily meals, snacks, and open bar with moderate cocktails" },
-      { es: "Equipo de snorkel, paddleboard y bote auxiliar", en: "Snorkeling equipment, paddleboard, and dinghy" },
-      { es: "Servicio completo de tripulación", en: "Full crew service" },
+      {
+        es: "Tres comidas diarias, snacks y barra libre con cócteles moderados",
+        en: "Three daily meals, snacks, and open bar with moderate cocktails",
+      },
+      {
+        es: "Equipo de snorkel, paddleboard y bote auxiliar",
+        en: "Snorkeling equipment, paddleboard, and dinghy",
+      },
+      {
+        es: "Servicio completo de tripulación",
+        en: "Full crew service",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Tasas locales de entrada a Guna Yala", en: "Local Guna Yala entrance fees" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Tasas locales de entrada a Guna Yala",
+        en: "Local Guna Yala entrance fees",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [10, 12, 15],
+    relatedExperienceIds: [
+      10,
+      12,
+      15,
+    ],
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: true,
-    featureBadge: { es: "Opción Compartido", en: "Shared Cabin Available" },
+    featureBadge: {
+      es: "Opción Compartido",
+      en: "Shared Cabin Available",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
-  
-
-  // ---------------------------------------------------------------------------
-  // 15. KAYA
-  // ---------------------------------------------------------------------------
   {
     id: 16,
     slug: "kaya-caribbean-catamaran",
@@ -3262,8 +3175,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Enjoy authentic San Blas sailing aboard Kaya Catamaran. Captain Ahielen & Chef Gastón (Argentina). Starlink, 2 SUPs, and fishing gear.",
       },
       keywords: [
-        { es: "catamaran Kaya san blas", en: "Kaya catamaran san blas" },
-        { es: "charter ahielen gaston san blas", en: "argentine crew catamaran panama" },
+        {
+          es: "catamaran Kaya san blas",
+          en: "Kaya catamaran san blas",
+        },
+        {
+          es: "charter ahielen gaston san blas",
+          en: "argentine crew catamaran panama",
+        },
       ],
       openGraph: {
         title: {
@@ -3278,14 +3197,13 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/KAYA/catalogo/1.png",
           "/contenido/catamaranes/KAYA/catalogo/2.png",
           "/contenido/catamaranes/KAYA/catalogo/3.png",
-          "/contenido/catamaranes/KAYA/catalogo/4.png", 
+          "/contenido/catamaranes/KAYA/catalogo/4.png",
           "/contenido/catamaranes/KAYA/catalogo/5.png",
           "/contenido/catamaranes/KAYA/catalogo/6.png",
           "/contenido/catamaranes/KAYA/catalogo/7.png",
           "/contenido/catamaranes/KAYA/catalogo/8.png",
           "/contenido/catamaranes/KAYA/catalogo/9.png",
           "/contenido/catamaranes/KAYA/catalogo/10.png",
-
         ],
       },
     },
@@ -3293,15 +3211,15 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatCoverPhoto: "/contenido/catamaranes/KAYA/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/catamaranes/KAYA/catalogo/1.png",
-          "/contenido/catamaranes/KAYA/catalogo/2.png",
-          "/contenido/catamaranes/KAYA/catalogo/3.png",
-          "/contenido/catamaranes/KAYA/catalogo/4.png", 
-          "/contenido/catamaranes/KAYA/catalogo/5.png",
-          "/contenido/catamaranes/KAYA/catalogo/6.png",
-          "/contenido/catamaranes/KAYA/catalogo/7.png",
-          "/contenido/catamaranes/KAYA/catalogo/8.png",
-          "/contenido/catamaranes/KAYA/catalogo/9.png",
-          "/contenido/catamaranes/KAYA/catalogo/10.png",
+      "/contenido/catamaranes/KAYA/catalogo/2.png",
+      "/contenido/catamaranes/KAYA/catalogo/3.png",
+      "/contenido/catamaranes/KAYA/catalogo/4.png",
+      "/contenido/catamaranes/KAYA/catalogo/5.png",
+      "/contenido/catamaranes/KAYA/catalogo/6.png",
+      "/contenido/catamaranes/KAYA/catalogo/7.png",
+      "/contenido/catamaranes/KAYA/catalogo/8.png",
+      "/contenido/catamaranes/KAYA/catalogo/9.png",
+      "/contenido/catamaranes/KAYA/catalogo/10.png",
     ],
     boatDescription: {
       es: "Catamarán acogedor y robusto con tripulación argentina experta (Capitana Ahielen y Chef Gastón) y Starlink.",
@@ -3319,20 +3237,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Gastón & Abi",
-      role: { es: "Capitan y Chef", en: "Captain & Professional Chef" },
-      photoUrl: "/contenido/catamaranes/KAYA/capitan/1.png",
+      role: {
+        es: "Capitan y Chef",
+        en: "Captain & Professional Chef",
+      },
+      photoUrl: "/contenido/extracatalogo/barco/capitan/1.png",
       description: {
         es: "Gastón, capitán argentino. Habla español nativo, portugués fluido y conversa bien en inglés. Navega en San Blas desde el 2024. Será tu guía local y encargado de las navegaciones. Abi, cocinera argentina. Le encanta cocinar con la materia prima local (pescado y marisco fresco, así como frutas y verduras de temporada). Ambos hablan español nativo e inglés.",
         en: "Ahielen (Captain with 8+ years in San Blas) and Gastón (Professional Argentine Chef).",
       },
-      languages: ["Español", "English"],
+      languages: [
+        "Español",
+        "English",
+      ],
     },
     dining: {
       description: {
         es: "3 comidas diarias preparadas por Chef profesional con productos locales frescos. Barra libre con bebidas no alcohólicas, cervezas, vinos y cócteles especiales (consumo moderado).",
         en: "3 daily gourmet meals prepared by professional chef using fresh local ingredients. Open bar with soft drinks, beer, wine, and cocktails (moderate consumption).",
       },
-      photoUrl: "/contenido/veleros/BlueMarys/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
@@ -3340,9 +3264,9 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Starlink Wi-Fi, 2 Paddleboards, snorkeling gear, fishing rods, and dinghy excursions.",
       },
       photoUrls: [
-        "/contenido/veleros/BlueMarys/experiencias/1.png",
-        "/contenido/veleros/BlueMarys/experiencias/2.png",
-        "/contenido/veleros/BlueMarys/experiencias/3.png",
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
@@ -3350,95 +3274,71 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       basePricePerPersonPerDay: 503,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 1150,
-          notes: { es: "Huésped adicional: +$175 USD/noche", en: "Extra guest: +$175 USD/night" },
+          notes: {
+            es: "Huésped adicional: +$175 USD/noche",
+            en: "Extra guest: +$175 USD/night",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Huéspedes</td>
-                <td class="p-3 border font-bold">$1005 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border"> + 1 Huésped</td>
-                <td class="p-3 border font-bold">$200 USD</td>
-                <td class="p-3 border font-bold text-green-600">$-- USD</td>
-              </tr>
-              <tr>
-                <td class="p-3 border">Compartido 2 Huéspedes (SOLO TEMPORADA BAJA)</td>
-                <td class="p-3 border font-bold">$-- USD</td>
-                <td class="p-3 border font-bold text-green-600">$650 USD</td>
-              </tr>
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Accommodation Type</th>
-                <th class="p-3 border">Base Price (2 Guests)</th>
-                <th class="p-3 border">Extra Guest</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (Exclusive Boat)</td>
-                <td class="p-3 border font-bold text-green-600">$1,150 USD / Night</td>
-                <td class="p-3 border">+$175 USD / Night</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$1005 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"> + 1 Huésped</td>\n                <td class=\"p-3 border font-bold\">$200 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">Compartido 2 Huéspedes (SOLO TEMPORADA BAJA)</td>\n                <td class=\"p-3 border font-bold\">$-- USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$650 USD</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Accommodation Type</th>\n                <th class=\"p-3 border\">Base Price (2 Guests)</th>\n                <th class=\"p-3 border\">Extra Guest</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter (Exclusive Boat)</td>\n                <td class=\"p-3 border font-bold text-green-600\">$1,150 USD / Night</td>\n                <td class=\"p-3 border\">+$175 USD / Night</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Servicio de Capitana y Chef con pensión completa", en: "Captain and Chef service with full board" },
-      { es: "Barra libre completa con cócteles moderados", en: "Full open bar with moderate drinks/cocktails" },
-      { es: "Starlink Wi-Fi, ventiladores en camarotes, 2 SUP, snorkel y pesca", en: "Starlink Wi-Fi, cabin fans, 2 SUPs, snorkel & fishing gear" },
+      {
+        es: "Servicio de Capitana y Chef con pensión completa",
+        en: "Captain and Chef service with full board",
+      },
+      {
+        es: "Barra libre completa con cócteles moderados",
+        en: "Full open bar with moderate drinks/cocktails",
+      },
+      {
+        es: "Starlink Wi-Fi, ventiladores en camarotes, 2 SUP, snorkel y pesca",
+        en: "Starlink Wi-Fi, cabin fans, 2 SUPs, snorkel & fishing gear",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Entrada obligatoria a Guna Yala", en: "Mandatory Guna Yala entrance fee" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Entrada obligatoria a Guna Yala",
+        en: "Mandatory Guna Yala entrance fee",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [10, 12, 13],
+    relatedExperienceIds: [
+      10,
+      12,
+      13,
+    ],
     maxGuests: 8,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Capitana Experta & Chef", en: "Expert Captain & Chef" },
+    featureBadge: {
+      es: "Capitana Experta & Chef",
+      en: "Expert Captain & Chef",
+    },
     isFeatured: false,
     hasDiscount: false,
   },
-
-  // ---------------------------------------------------------------------------
-  // 16. Brittany Wind
-  // ---------------------------------------------------------------------------
   {
     id: 17,
     slug: "brittany-wind-40-2018",
     category: "Catamaran",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
@@ -3453,8 +3353,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Charter French Leopard 40 Brittany Wind (2018) in San Blas. Silent A/C generator, forward cockpit door, French crew, capacity for up to 9 guests.",
       },
       keywords: [
-        { es: "catamaran Brittany Wind leopard 40", en: "Brittany Wind leopard 40 san blas" },
-        { es: "tripulacion francesa san blas", en: "french crew catamaran charter panama" },
+        {
+          es: "catamaran Brittany Wind leopard 40",
+          en: "Brittany Wind leopard 40 san blas",
+        },
+        {
+          es: "tripulacion francesa san blas",
+          en: "french crew catamaran charter panama",
+        },
       ],
       openGraph: {
         title: {
@@ -3469,26 +3375,26 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/catamaranes/Brittanywind/catalogo/1.png",
           "/contenido/catamaranes/Berenice/catalogo/2.png",
           "/contenido/catamaranes/Berenice/catalogo/3.png",
-          "/contenido/catamaranes/Berenice/catalogo/4.png", 
+          "/contenido/catamaranes/Berenice/catalogo/4.png",
           "/contenido/catamaranes/Berenice/catalogo/5.png",
           "/contenido/catamaranes/Berenice/catalogo/6.png",
           "/contenido/catamaranes/Berenice/catalogo/7.png",
           "/contenido/catamaranes/Berenice/catalogo/8.png",
-
         ],
       },
     },
     boatName: "Brittany Wind (Leopard 40 2018)",
     boatCoverPhoto: "/contenido/catamaranes/Brittanywind/catalogo/1.png",
     boatGalleryPhotos: [
-          "/contenido/catamaranes/Brittanywind/catalogo/1.png",
-          "/contenido/catamaranes/Brittanywind/catalogo/2.png",
-          "/contenido/catamaranes/Brittanywind/catalogo/3.png",
-          "/contenido/catamaranes/Brittanywind/catalogo/4.png", 
-          "/contenido/catamaranes/Brittanywind/catalogo/5.png",
-          "/contenido/catamaranes/Brittanywind/catalogo/6.png",
-          "/contenido/catamaranes/Brittanywind/catalogo/7.png",
-          "/contenido/catamaranes/Brittanywind/catalogo/8.png",    ],
+      "/contenido/catamaranes/Brittanywind/catalogo/1.png",
+      "/contenido/catamaranes/Brittanywind/catalogo/2.png",
+      "/contenido/catamaranes/Brittanywind/catalogo/3.png",
+      "/contenido/catamaranes/Brittanywind/catalogo/4.png",
+      "/contenido/catamaranes/Brittanywind/catalogo/5.png",
+      "/contenido/catamaranes/Brittanywind/catalogo/6.png",
+      "/contenido/catamaranes/Brittanywind/catalogo/7.png",
+      "/contenido/catamaranes/Brittanywind/catalogo/8.png",
+    ],
     boatDescription: {
       es: "Leopard 40 del 2018 con acceso frontal directo a proa, A/C con generador silencioso y tripulación experimentada.",
       en: "2018 Leopard 40 featuring forward cockpit door, silent generator A/C, and experienced French crew.",
@@ -3506,13 +3412,20 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     },
     captain: {
       name: "Thomas",
-      role: { es: "Capitan Certificado", en: "Certified French Captains" },
+      role: {
+        es: "Capitan Certificado",
+        en: "Certified French Captains",
+      },
       photoUrl: "/contenido/catamaranes/Brittanywind/capitan/1.png",
       description: {
         es: "Thomas navega por el archipiélago de San Blas desde hace más de cinco años, tanto en veleros monocasco como en catamaranes. Combina sólidos conocimientos técnicos con un enfoque centrado en el cliente, asegurándose de que los huéspedes disfruten de una experiencia segura, cómoda e inolvidable.",
         en: "Capt. Thomas (Capitaine 200 certified, 5 yrs in San Blas) & Capt. JC (French Navy veteran, speaks 6 languages).",
       },
-      languages: ["Français", "Español", "English"],
+      languages: [
+        "Français",
+        "Español",
+        "English",
+      ],
     },
     dining: {
       description: {
@@ -3528,129 +3441,140 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       },
       photoUrls: [
         "/contenido/catamaranes/Brittanywind/experiencia/1.png",
-                "/contenido/catamaranes/Brittanywind/experiencia/2.png",
-
-                        "/contenido/catamaranes/Brittanywind/experiencia/3.png",
-
-                                "/contenido/catamaranes/Brittanywind/experiencia/4.png",
-
+        "/contenido/catamaranes/Brittanywind/experiencia/2.png",
+        "/contenido/catamaranes/Brittanywind/experiencia/3.png",
+        "/contenido/catamaranes/Brittanywind/experiencia/4.png",
       ],
     },
     pricing: {
       currency: "USD",
       basePricePerPersonPerDay: 865,
       tiers: [
-        { seasonOrType: { es: "2 Huéspedes", en: "2 Guests" }, guestsCount: 2, pricePerNight: 1260 },
-        { seasonOrType: { es: "4 Huéspedes", en: "4 Guests" }, guestsCount: 4, pricePerNight: 1720 },
-        { seasonOrType: { es: "6 Huéspedes", en: "6 Guests" }, guestsCount: 6, pricePerNight: 2060 },
-        { seasonOrType: { es: "8 Huéspedes", en: "8 Guests" }, guestsCount: 8, pricePerNight: 2640 },
+        {
+          seasonOrType: {
+            es: "2 Huéspedes",
+            en: "2 Guests",
+          },
+          guestsCount: 2,
+          pricePerNight: 1260,
+        },
+        {
+          seasonOrType: {
+            es: "4 Huéspedes",
+            en: "4 Guests",
+          },
+          guestsCount: 4,
+          pricePerNight: 1720,
+        },
+        {
+          seasonOrType: {
+            es: "6 Huéspedes",
+            en: "6 Guests",
+          },
+          guestsCount: 6,
+          pricePerNight: 2060,
+        },
+        {
+          seasonOrType: {
+            es: "8 Huéspedes",
+            en: "8 Guests",
+          },
+          guestsCount: 8,
+          pricePerNight: 2640,
+        },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Ocupación / Configuración</th>
-                <th class="p-3 border">Temporada Alta (USD / Noche)</th>
-                <th class="p-3 border">Temporada Baja (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">2 Huésped </td>
-                <td class="p-3 border font-bold">$1730 USD</td>
-                <td class="p-3 border font-bold text-green-600"> - USD</td>
-              </tr>
-               <tr>
-                <td class="p-3 border"> <strong>+1 Huésped </td>
-                <td class="p-3 border font-bold">$230 USD</td>
-                <td class="p-3 border font-bold text-green-600"> - USD</td>
-              </tr>              
-            </tbody>
-          </table>
-          <ul>
-          <br>
-            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>
-            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>
-            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>
-          
-          </ul>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Guests</th>
-                <th class="p-3 border">Mode</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="p-3 border">2 Guests</td><td class="p-3 border">Exclusive Private Charter</td><td class="p-3 border font-bold text-green-600">$1,260 USD</td></tr>
-              <tr><td class="p-3 border">3 Guests</td><td class="p-3 border">Exclusive Private Charter</td><td class="p-3 border font-bold text-green-600">$1,490 USD</td></tr>
-              <tr><td class="p-3 border">4 Guests</td><td class="p-3 border">Exclusive Private Charter</td><td class="p-3 border font-bold text-green-600">$1,720 USD</td></tr>
-              <tr><td class="p-3 border">5 Guests</td><td class="p-3 border">Exclusive Private Charter</td><td class="p-3 border font-bold text-green-600">$1,830 USD</td></tr>
-              <tr><td class="p-3 border">6 Guests</td><td class="p-3 border">Exclusive Private Charter</td><td class="p-3 border font-bold text-green-600">$2,060 USD</td></tr>
-              <tr><td class="p-3 border">7 Guests</td><td class="p-3 border">Exclusive Private Charter</td><td class="p-3 border font-bold text-green-600">$2,290 USD</td></tr>
-              <tr><td class="p-3 border">8 Guests</td><td class="p-3 border">Exclusive Private Charter</td><td class="p-3 border font-bold text-green-600">$2,640 USD</td></tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huésped </td>\n                <td class=\"p-3 border font-bold\">$1730 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\"> - USD</td>\n              </tr>\n               <tr>\n                <td class=\"p-3 border\"> <strong>+1 Huésped </td>\n                <td class=\"p-3 border font-bold\">$230 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\"> - USD</td>\n              </tr>              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20% </strong></li>\n          \n          </ul>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Guests</th>\n                <th class=\"p-3 border\">Mode</th>\n                <th class=\"p-3 border\">Price (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr><td class=\"p-3 border\">2 Guests</td><td class=\"p-3 border\">Exclusive Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$1,260 USD</td></tr>\n              <tr><td class=\"p-3 border\">3 Guests</td><td class=\"p-3 border\">Exclusive Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$1,490 USD</td></tr>\n              <tr><td class=\"p-3 border\">4 Guests</td><td class=\"p-3 border\">Exclusive Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$1,720 USD</td></tr>\n              <tr><td class=\"p-3 border\">5 Guests</td><td class=\"p-3 border\">Exclusive Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$1,830 USD</td></tr>\n              <tr><td class=\"p-3 border\">6 Guests</td><td class=\"p-3 border\">Exclusive Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$2,060 USD</td></tr>\n              <tr><td class=\"p-3 border\">7 Guests</td><td class=\"p-3 border\">Exclusive Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$2,290 USD</td></tr>\n              <tr><td class=\"p-3 border\">8 Guests</td><td class=\"p-3 border\">Exclusive Private Charter</td><td class=\"p-3 border font-bold text-green-600\">$2,640 USD</td></tr>\n            </tbody>\n          </table>\n        ",
       },
     },
     includes: [
-      { es: "Tripulación profesional francesa (Capitán y Azafata/Primer Oficial)", en: "Professional French crew (Captain & Hostess/First Mate)" },
-      { es: "Pensión completa gourmet y barra libre", en: "All-inclusive gourmet meals and open bar" },
-      { es: "Aire acondicionado con generador silencioso", en: "Silent generator A/C usage" },
-      { es: "Equipos náuticos (kayaks, paddleboards, snorkel, pesca)", en: "Nautical gear (kayaks, SUPs, snorkel, fishing)" },
+      {
+        es: "Tripulación profesional francesa (Capitán y Azafata/Primer Oficial)",
+        en: "Professional French crew (Captain & Hostess/First Mate)",
+      },
+      {
+        es: "Pensión completa gourmet y barra libre",
+        en: "All-inclusive gourmet meals and open bar",
+      },
+      {
+        es: "Aire acondicionado con generador silencioso",
+        en: "Silent generator A/C usage",
+      },
+      {
+        es: "Equipos náuticos (kayaks, paddleboards, snorkel, pesca)",
+        en: "Nautical gear (kayaks, SUPs, snorkel, fishing)",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Tasas de entrada a Guna Yala", en: "Guna Yala entrance fees" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Transporte hacia/desde San Blas",
+        en: "Transport to/from San Blas",
+      },
+      {
+        es: "Tasas de entrada a Guna Yala",
+        en: "Guna Yala entrance fees",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [8, 9, 11],
+    relatedExperienceIds: [
+      8,
+      9,
+      11,
+    ],
     maxGuests: 7,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "A/C Silencioso & Tripulación Francesa", en: "Silent A/C & French Crew" },
+    featureBadge: {
+      es: "A/C Silencioso & Tripulación Francesa",
+      en: "Silent A/C & French Crew",
+    },
     isFeatured: true,
     hasDiscount: false,
   },
-  
-  // ---------------------------------------------------------------------------
-  // 18. Falkor
-  // ---------------------------------------------------------------------------
-  /*{
+  {
     id: 21,
-    slug: "falkor-sailboat-san-blas",
+    slug: "falkor-sweden-yacht-340-san-blas",
     category: "Sailboat",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Islas San Blas, Guna Yala, Panamá",
       en: "San Blas Islands, Guna Yala, Panama",
     },
     seo: {
       title: {
-        es: "Alquiler Velero Falkor en San Blas | Sailing the World",
-        en: "Charter Falkor Sailboat in San Blas | Sailing the World",
+        es: "Expedición Velero Falkor (Sweden Yacht 340) en San Blas | Sailing the World",
+        en: "Falkor Sailboat Expeditions (Sweden Yacht 340) in San Blas | Sailing the World",
       },
       description: {
-        es: "Navega a bordo del velero Falkor en San Blas. Disfruta de una experiencia inolvidable con pensión completa, snorkel y paseos por las islas.",
-        en: "Sail aboard the Falkor sailboat in San Blas. Enjoy an unforgettable experience with full board, snorkeling, and island hopping.",
+        es: "Expediciones de vela y turismo ético en San Blas a bordo del Falkor con el antropólogo y capitán Tomás Salem. Traslados desde Panamá, comidas y guías Guna incluidos.",
+        en: "Small-group sailing and ethical tourism expeditions in San Blas aboard Falkor with anthropologist Captain Tomás Salem. Panama City transfers, meals & local Guna guides included.",
       },
       keywords: [
-        { es: "velero Falkor san blas", en: "Falkor sailboat san blas" },
-        { es: "charter velero san blas", en: "sailboat charter panama" },
+        {
+          es: "velero Falkor san blas",
+          en: "Falkor sailboat san blas",
+        },
+        {
+          es: "expedicion antropologica guna yala",
+          en: "ethical sailing expedition guna yala",
+        },
+        {
+          es: "sweden yacht 340 charter panama",
+          en: "sweden yacht 340 san blas",
+        },
       ],
       openGraph: {
         title: {
-          es: "Velero Falkor en San Blas - Experiencia Única en el Caribe",
-          en: "Falkor Sailboat in San Blas - Unique Caribbean Experience",
+          es: "Velero Falkor en San Blas - Expediciones a Vela y Cultura Guna",
+          en: "Falkor Sailboat in San Blas - Sailing Expeditions & Guna Culture",
         },
         description: {
-          es: "Explora las aguas cristalinas de Guna Yala a bordo del velero Falkor con atención personalizada.",
-          en: "Explore the crystal-clear waters of Guna Yala aboard the Falkor sailboat with personalized service.",
+          es: "Viaja al ritmo del viento en grupos de hasta 4 personas con el capitán Tomás Salem. Incluye traslados 4x4 desde Ciudad de Panamá, comidas y guías locales.",
+          en: "Travel at the pace of the wind in groups of up to 4 guests with Captain Tomás Salem. Includes 4x4 transfers from Panama City, meals, and local guides.",
         },
         images: [
           "/contenido/veleros/Falkor/catalogo/1.png",
@@ -3667,137 +3591,154 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
     boatName: "Falkor",
     boatCoverPhoto: "/contenido/veleros/Falkor/catalogo/1.png",
     boatGalleryPhotos: [
-          "/contenido/veleros/Falkor/catalogo/1.png",
-          "/contenido/veleros/Falkor/catalogo/2.png",
-          "/contenido/veleros/Falkor/catalogo/3.png",
-          "/contenido/veleros/Falkor/catalogo/4.png",
-          "/contenido/veleros/Falkor/catalogo/5.png",
-          "/contenido/veleros/Falkor/catalogo/6.png",
-          "/contenido/veleros/Falkor/catalogo/7.png",
-          "/contenido/veleros/Falkor/catalogo/8.png",
+      "/contenido/veleros/Falkor/catalogo/1.png",
+      "/contenido/veleros/Falkor/catalogo/2.png",
+      "/contenido/veleros/Falkor/catalogo/3.png",
+      "/contenido/veleros/Falkor/catalogo/4.png",
+      "/contenido/veleros/Falkor/catalogo/5.png",
+      "/contenido/veleros/Falkor/catalogo/6.png",
+      "/contenido/veleros/Falkor/catalogo/7.png",
+      "/contenido/veleros/Falkor/catalogo/8.png",
     ],
     boatDescription: {
-      es: "Acogedor velero diseñado para ofrecer comodidad, navegación fluida y una estancia inolvidable en San Blas.",
-      en: "Cozy sailboat designed to offer comfort, smooth navigation, and an unforgettable stay in San Blas.",
+      es: "Crucero oceánico sueco de 34 pies para expediciones íntimas de hasta 4 huéspedes, liderado por un capitán antropólogo con enfoque en cultura local y naturaleza.",
+      en: "Sturdy 34ft Swedish ocean cruiser for intentional small-group expeditions (up to 4 guests), led by an anthropologist captain focused on Guna culture and nature.",
     },
     boatLongDescription: {
-      es: "El velero Falkor ofrece una combinación perfecta de confort y aventura en el archipiélago de San Blas. Diseñado para quienes buscan relajarse entre islas paradisíacas con pensión completa y servicio cálido a bordo.",
-      en: "The Falkor sailboat delivers the perfect mix of comfort and adventure in the San Blas archipelago. Designed for guests seeking relaxation among paradise islands with full board and warm hospitality.",
+      es: "Falkor es un velero oceánico Sweden Yacht 340 diseñado para quienes buscan una experiencia genuina, consciente y alejada del turismo convencional en Guna Yala. No es un viaje de lujo tradicional, sino una expedición íntima de hasta 4 personas donde el viento y el clima marcan el rumbo.\\n\\n🧭 Vida sencilla y auténtica: El barco cuenta con 1 camarote doble y 2 literas individuales tipo sofá en el salón principal, Internet satelital Starlink y equipamiento completo de seguridad oceánica (balsa salvavidas, AIS, VHF y mensajería satelital). Al no tener aire acondicionado y contar con reserva limitada de agua dulce, la vida transcurre en contacto directo con el mar.\\n🚐 Logística resuelta de puerta a puerta: A diferencia de otros chárters, las expediciones incluyen recogida en Ciudad de Panamá (4x4 + lancha ida y vuelta), permisos oficiales del Congreso General Guna, comidas caseras y acompañamiento de guías locales.\\n🏳️‍🌈 Espacio inclusivo: Un barco queer-friendly donde cada viajero es bienvenido tal como es, ideal para mentes curiosas que priorizan la profundidad de la experiencia.",
+      en: "Falkor is a 1998 Sweden Yacht 340 long-distance cruiser built for curious, open-minded travelers seeking an intentional, authentic journey through Guna Yala. Rather than a traditional luxury charter, this is a small-group sailing expedition for up to 4 guests where the wind and weather shape each day.\\n\\n🧭 Simple & Intentional Life Aboard: Features 1 double cabin plus 2 sofa berths in the wooden saloon, Starlink Wi-Fi, and full offshore safety gear (life raft, AIS, VHF, and satellite messenger). There is no air conditioning and freshwater is conserved, inviting you to rinse in the sea and live close to nature.\\n🚐 Seamless Door-to-Door Logistics: Unlike standard charters, expeditions include round-trip 4x4 and boat transfers from Panama City, official Guna General Congress sailing permits, home-cooked meals, and local Guna guides.\\n🏳️‍🌈 Inclusive Space: A queer-friendly vessel where everyone can come as they are, tailored for travelers who value depth over conventional comfort.",
     },
     specs: {
-      lengthFeet: 40, // Ajustar según PDF
-      cabins: 2,
+      lengthFeet: 34,
+      cabins: 1,
       bathrooms: 1,
-      doubleBeds: 2,
+      doubleBeds: 1,
     },
     captain: {
-      name: "Falkor Captain & Crew",
+      name: "Tomás Salem",
       role: {
-        es: "Capitán y Anfitrión",
-        en: "Captain & Host",
+        es: "Capitán, Antropólogo y Guía de Expedición",
+        en: "Captain, Anthropologist & Expedition Leader",
       },
       photoUrl: "/contenido/veleros/Falkor/capitan/1.png",
       description: {
-        es: "Tripulación experimentada enfocada en brindar una navegación segura y una cálida atención.",
-        en: "Experienced crew dedicated to providing safe navigation and warm hospitality.",
+        es: "Líder de expedición, guía certificado y narrador con doctorado en antropología social e investigación en turismo ético y cosmovisiones indígenas. Con más de 18 años guiando en entornos remotos —desde la Patagonia sur hasta el Ártico y travesías por el Atlántico—, cuenta además con maestría en gestión de seguridad y rescate en zonas agrestes. Vive a bordo del Falkor desde hace 5 años y opera con permiso oficial del Congreso General de Guna Yala.",
+        en: "Expedition leader, certified guide, and storyteller holding a PhD in social anthropology with research in ethical tourism and Indigenous worldviews. With 18+ years guiding in remote environments—from southern Patagonia to the High Arctic and across the Atlantic—he also holds a master's in safety and risk management and wilderness first-aid training. He has lived aboard Falkor for 5 years and holds an official charter permit from the Guna General Congress.",
       },
-      languages: ["Español", "English"],
+      languages: [
+        "Español",
+        "English",
+      ],
     },
     dining: {
       description: {
-        es: "Pensión completa: 3 comidas diarias elaboradas a bordo con ingredientes frescos y mariscos locales, además de bebidas y snacks.",
-        en: "Full board: 3 daily meals prepared onboard with fresh local ingredients and seafood, plus drinks and snacks.",
+        es: "🍲 Cocina casera con sabor local: Todas las comidas y snacks están incluidos, preparados a bordo con pescado fresco, frutas y verduras de las islas, ofreciendo amplias opciones vegetarianas y adaptación a restricciones alimentarias. Algunos días se comparte comida preparada por familias Guna en las comunidades. Incluye vino para compartir en la cena (barco libre de drogas; no se permite traer alcohol externo).",
+        en: "🍲 Home-Cooked Island Meals: All meals and snacks are included, crafted onboard around fresh local fish, island fruits, and vegetables, with plenty of vegetarian dishes and full adaptation to dietary needs. Some days feature traditional meals cooked by local Guna families. Includes shared wine at dinner (drug-free vessel; please do not bring outside alcohol).",
       },
-      photoUrl: "/contenido/veleros/Falkor/comidas/1.png",
+      photoUrl: "/contenido/extracatalogo/barco/comidas/1.png",
     },
     activities: {
       description: {
-        es: "Navegación diaria entre islas, equipo de snorkel, paddleboard y paseos a playas vírgenes de Guna Yala.",
-        en: "Daily island hopping, snorkeling gear, paddleboard, and trips to pristine Guna Yala beaches.",
+        es: "Inmersión cultural y naturaleza: Visitas respetuosas a comunidades Guna junto a guías locales y artesanas de molas, caminatas por la selva tropical en tierra firme y salidas de pesca tradicional en cayuco con pescadores de la región. Aventura en el mar: Navegación a vela entre fondeaderos remotos (puedes participar en las maniobras y el timón), snorkel, apnea en arrecifes y 2 tablas de paddleboard (SUP).",
+        en: "Cultural Immersion & Nature: Respectful visits to Guna villages with local guides and mola artisans, mainland rainforest hikes, and traditional fishing excursions with local fishermen. Sea Adventure: Gentle sailing between remote anchorages (hands-on sailing welcome), reef snorkeling, freediving, and 2 stand-up paddleboards (SUP).",
       },
       photoUrls: [
         "/contenido/veleros/Falkor/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
       ],
     },
     pricing: {
       currency: "USD",
-      basePricePerPersonPerDay: 300,
+      basePricePerPersonPerDay: 2000,
       tiers: [
         {
-          seasonOrType: { es: "Charter Privado (2 Huéspedes)", en: "Private Charter (2 Guests)" },
+          seasonOrType: {
+            es: "Charter Privado (2 Huéspedes)",
+            en: "Private Charter (2 Guests)",
+          },
           guestsCount: 2,
           pricePerNight: 600,
-          notes: { es: "Precio por noche para 2 personas", en: "Price per night for 2 guests" },
+          notes: {
+            es: "Precio por noche para 2 personas",
+            en: "Price per night for 2 guests",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Modalidad / Ocupación</th>
-                <th class="p-3 border">Precio (USD / Noche)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Charter Privado (2 Huéspedes)</td>
-                <td class="p-3 border font-bold text-green-600">$600 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Type / Occupancy</th>
-                <th class="p-3 border">Price (USD / Night)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Private Charter (2 Guests)</td>
-                <td class="p-3 border font-bold text-green-600">$600 USD</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Modalidad de Expedición</th>\n                <th class=\"p-3 border\">Temporada Alta: Dic – Abr (USD)</th>\n                <th class=\"p-3 border\">Detalles</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\"><strong>Compartido:</strong> 6 días / 5 noches</td>\n                <td class=\"p-3 border font-bold text-green-600\">$3,500 USD / pers.</td>\n                <td class=\"p-3 border\">Fechas programadas (máx. 3 huéspedes)</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Compartido Extendido:</strong> 9 días / 8 noches</td>\n                <td class=\"p-3 border font-bold text-green-600\">$4,500 USD / pers.</td>\n                <td class=\"p-3 border\">Ritmo pausado (fechas a pedido)</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Charter Privado:</strong> 5 días</td>\n                <td class=\"p-3 border font-bold\">$10,000 USD total</td>\n                <td class=\"p-3 border\">Barco exclusivo hasta 4 huéspedes</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Charter Privado a Medida:</strong> Por día</td>\n                <td class=\"p-3 border font-bold\">$2,000 USD / día</td>\n                <td class=\"p-3 border\">Mínimo 3 días, hasta 4 huéspedes</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada de operación:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Incluye traslados 4x4 + lancha ida y vuelta desde Ciudad de Panamá y permisos Guna Yala.</strong></li>\n          </ul>\n        ",
+        en: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Expedition Format</th>\n                <th class=\"p-3 border\">High Season: Dec – Apr (USD)</th>\n                <th class=\"p-3 border\">Details</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\"><strong>Shared Trip:</strong> 6 days / 5 nights</td>\n                <td class=\"p-3 border font-bold text-green-600\">$3,500 USD / guest</td>\n                <td class=\"p-3 border\">Set departures (max 3 guests)</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Extended Shared:</strong> 9 days / 8 nights</td>\n                <td class=\"p-3 border font-bold text-green-600\">$4,500 USD / guest</td>\n                <td class=\"p-3 border\">Slower pace (dates on request)</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Private Charter:</strong> 5 days</td>\n                <td class=\"p-3 border font-bold\">$10,000 USD total</td>\n                <td class=\"p-3 border\">Whole boat for up to 4 guests</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"><strong>Custom Private Charter:</strong> Per day</td>\n                <td class=\"p-3 border font-bold\">$2,000 USD / day</td>\n                <td class=\"p-3 border\">3-day minimum, up to 4 guests</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Operating Season:</strong> DECEMBER - APRIL</li>\n            <li><strong>Includes round-trip 4x4 & boat transfers from Panama City plus Guna Yala permits.</strong></li>\n          </ul>\n        ",
       },
     },
     includes: [
-      { es: "Servicio de capitán y tripulación", en: "Captain and crew service" },
-      { es: "Pensión completa (3 comidas diarias, snacks y bebidas)", en: "Full board (3 daily meals, snacks, and drinks)" },
-      { es: "Uso de equipos de snorkel y paddleboard", en: "Use of snorkeling and paddleboard equipment" },
-      { es: "Ropa de cama y toallas de baño", en: "Bed linens and bath towels" },
+      {
+        es: "Traslados compartidos ida y vuelta desde hotel o aeropuerto en Ciudad de Panamá (4x4 + lancha)",
+        en: "Round-trip shared transfers from Panama City hotel or airport (4x4 + boat)",
+      },
+      {
+        es: "Todas las comidas, snacks y vino compartido en la cena",
+        en: "All meals, snacks, and wine with dinner",
+      },
+      {
+        es: "Guías locales Guna y salidas de pesca con pescadores de la región",
+        en: "Local Guna guides and fishing excursions with regional fishermen",
+      },
+      {
+        es: "Permisos oficiales de navegación y tasas del Congreso General Guna",
+        en: "Official sailing permits and Guna General Congress fees",
+      },
+      {
+        es: "Equipo de snorkel, 2 paddleboards (SUP), Starlink Wi-Fi y álbum de fotos del viaje",
+        en: "Snorkel gear, 2 paddleboards (SUP), Starlink Wi-Fi, and trip photo album",
+      },
     ],
     excludes: [
-      { es: "Transporte hacia/desde San Blas", en: "Transport to/from San Blas" },
-      { es: "Impuestos de entrada a Guna Yala", en: "Guna Yala entrance fees" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Vuelos internacionales o domésticos",
+        en: "Transport to/from SaFlightsn Blas",
+      },
+      {
+        es: "Hotel en Ciudad de Panamá",
+        en: "Guna Yala entraHotel in Panama Citynce fees",
+      },
+      {
+        es: "Compra de molas, artesanías y gastos personales (solo efectivo en las islas)",
+        en: "Molas, handicrafts, and personal purchases (cash only on the islands)",
+      },
+      {
+        es: "Toallas personales (debes traer tu propia toalla)",
+        en: "\"Personal towels (bring your own towel)",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-    relatedExperienceIds: [1, 4, 7],
+    relatedExperienceIds: [
+      1,
+      3,
+      2,
+    ],
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Velero Clásico", en: "Classic Sailboat" },
+    featureBadge: {
+      es: "Velero Clásico",
+      en: "Classic Sailboat",
+    },
     isFeatured: false,
     hasDiscount: false,
-  },*/
-  // ---------------------------------------------------------------------------
-  // 30. Cayos Holandeses - LAYAN
-  // ---------------------------------------------------------------------------
+  },
   {
     id: 30,
     slug: "layans-cayos-holandeses-san-blas",
     category: "IslandLodge",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Layan's cabañas del Mar en Cayos Holandeses, San Blas, Panamá",
       en: "Holandeses Cays, San Blas Islands, Panama",
     },
-
-    // 🔍 SEO & Metadata
     seo: {
       title: {
         es: "Hospedaje en Isla Cayos Holandeses | Cabañas en San Blas",
@@ -3808,8 +3749,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Book luxury beachfront bungalows in Dutch Cays, San Blas. Full board, welcome drinks, snorkeling, and the ultimate island retreat.",
       },
       keywords: [
-        { es: "hospedaje en isla san blas", en: "island lodge san blas" },
-        { es: "cabanas cayos holandeses", en: "dutch cays bungalows" },
+        {
+          es: "hospedaje en isla san blas",
+          en: "island lodge san blas",
+        },
+        {
+          es: "cabanas cayos holandeses",
+          en: "dutch cays bungalows",
+        },
       ],
       openGraph: {
         title: {
@@ -3830,25 +3777,23 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/islas/layan/catalogo/7.png",
           "/contenido/islas/layan/catalogo/8.png",
           "/contenido/islas/layan/catalogo/9.png",
-          "/contenido/islas/layan/catalogo/10.png", 
+          "/contenido/islas/layan/catalogo/10.png",
         ],
       },
     },
-
-    // 🚢 Datos del Hospedaje en Isla
     boatName: "Layan's cabañas del Mar en Cayos Holandeses, San Blas",
     boatCoverPhoto: "/contenido/islas/layan/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/islas/layan/catalogo/1.png",
-          "/contenido/islas/layan/catalogo/2.png",
-          "/contenido/islas/layan/catalogo/3.png",
-          "/contenido/islas/layan/catalogo/4.png",
-          "/contenido/islas/layan/catalogo/5.png",
-          "/contenido/islas/layan/catalogo/6.png",
-          "/contenido/islas/layan/catalogo/7.png",
-          "/contenido/islas/layan/catalogo/8.png",
-          "/contenido/islas/layan/catalogo/9.png",
-          "/contenido/islas/layan/catalogo/10.png", 
+      "/contenido/islas/layan/catalogo/2.png",
+      "/contenido/islas/layan/catalogo/3.png",
+      "/contenido/islas/layan/catalogo/4.png",
+      "/contenido/islas/layan/catalogo/5.png",
+      "/contenido/islas/layan/catalogo/6.png",
+      "/contenido/islas/layan/catalogo/7.png",
+      "/contenido/islas/layan/catalogo/8.png",
+      "/contenido/islas/layan/catalogo/9.png",
+      "/contenido/islas/layan/catalogo/10.png",
     ],
     boatDescription: {
       es: "Cabañas frente al mar en Cayos Holandeses con pensión completa y experiencia exclusiva.",
@@ -3863,20 +3808,21 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       bathrooms: 1,
       doubleBeds: 4,
     },
-
-    // 👨‍✈️ Anfitrión / Staff
     captain: {
       name: "Layan's Guna Host",
-      role: { es: "Anfitrion Local", en: "Hosts & Local Guna Guides" },
+      role: {
+        es: "Anfitrion Local",
+        en: "Hosts & Local Guna Guides",
+      },
       photoUrl: "/contenido/islas/ibins/capitan/1.png",
       description: {
         es: "Layan te espera en su isla privada para ofrecerte una experiencia local auténtica de Guna Yala con hospitalidad y guía local.",
         en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
       },
-      languages: ["Español",],
+      languages: [
+        "Español",
+      ],
     },
-
-    // 🍽️ Comida
     dining: {
       description: {
         es: "Pensión completa incluida: desayunos, almuerzos y cenas a base de pesca del día y opciones locales, acompañado de bebida y postre. ",
@@ -3884,8 +3830,6 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       },
       photoUrl: "/contenido/islas/layan/comidas/1.png",
     },
-
-    // 🏄‍♂️ Actividades
     activities: {
       description: {
         es: "En su isla contaran con Kayaks, paddleboards, equipo de snorkel, mesa de pin pong y paseos por la playa. Tours opcionales: Cayó de Arena, snorkel guiado, comunidades Guna y piscina natural.",
@@ -3897,104 +3841,87 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         "/contenido/islas/layan/experiencias/3.png",
       ],
     },
-
-    // 💰 Precios y Tabla HTML
     pricing: {
       currency: "USD",
       basePricePerPersonPerDay: 870,
       tiers: [
         {
-          seasonOrType: { es: "Cabaña Estándar (Por Persona)", en: "Standard Bungalow (Per Person)" },
+          seasonOrType: {
+            es: "Cabaña Estándar (Por Persona)",
+            en: "Standard Bungalow (Per Person)",
+          },
           pricePerNight: 440,
-          notes: { es: "Incluye comidas", en: "Includes meals and activities" },
+          notes: {
+            es: "Incluye comidas",
+            en: "Includes meals and activities",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Cabaña</th>
-                <th class="p-3 border">Precio (USD)</th>
-                <th class="p-3 border">Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Cabaña del mar Mar x 2 pasajeros</td>
-                <td class="p-3 border font-bold text-green-600"><strong>1 Noche:</strong> $870 USD<br><strong>2 Noches:</strong> $1270 USD </td>
-                <td class="p-3 border">Incluye transporte de entrada y salida hacia la isla</td>
-              </tr>
-              
-              <tr>
-                <td class="p-3 border">Cabaña Familiar x4 o x6 pasajeros </td>
-                <td class="p-3 border font-bold text-green-600"><strong>X4:</strong> $200 USD<br> <strong>X6:</strong> $180 USD</td>
-                <td class="p-3 border">Precio por dia y por pasajero. </td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Bungalow Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-                <th class="p-3 border">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Standard Oceanfront Bungalow</td>
-                <td class="p-3 border font-bold text-green-600">$225 USD</td>
-                <td class="p-3 border">Full board & island taxes included</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Tipo de Cabaña</th>\n                <th class=\"p-3 border\">Precio (USD)</th>\n                <th class=\"p-3 border\">Notas</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Cabaña del mar Mar x 2 pasajeros</td>\n                <td class=\"p-3 border font-bold text-green-600\"><strong>1 Noche:</strong> $870 USD<br><strong>2 Noches:</strong> $1270 USD </td>\n                <td class=\"p-3 border\">Incluye transporte de entrada y salida hacia la isla</td>\n              </tr>\n              \n              <tr>\n                <td class=\"p-3 border\">Cabaña Familiar x4 o x6 pasajeros </td>\n                <td class=\"p-3 border font-bold text-green-600\"><strong>X4:</strong> $200 USD<br> <strong>X6:</strong> $180 USD</td>\n                <td class=\"p-3 border\">Precio por dia y por pasajero. </td>\n              </tr>\n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Bungalow Type</th>\n                <th class=\"p-3 border\">Price (USD / Person / Night)</th>\n                <th class=\"p-3 border\">Notes</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Standard Oceanfront Bungalow</td>\n                <td class=\"p-3 border font-bold text-green-600\">$225 USD</td>\n                <td class=\"p-3 border\">Full board & island taxes included</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
-
-    // ✅ Incluye / No Incluye
     includes: [
-      { es: "Hospedaje en cabaña privada frente al mar", en: "Private oceanfront bungalow accommodation" },
-      { es: "Pensión completa (Desayuno, Almuerzo, Cena)", en: "Full board meals (Breakfast, Lunch, Dinner)" },
-      { es: "Agua potable y bebidas con las comidas", en: "Welcome cocktail and complimentary drinks" },
-      { es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla", en: "Use of snorkeling gear and island activities" },
+      {
+        es: "Hospedaje en cabaña privada frente al mar",
+        en: "Private oceanfront bungalow accommodation",
+      },
+      {
+        es: "Pensión completa (Desayuno, Almuerzo, Cena)",
+        en: "Full board meals (Breakfast, Lunch, Dinner)",
+      },
+      {
+        es: "Agua potable y bebidas con las comidas",
+        en: "Welcome cocktail and complimentary drinks",
+      },
+      {
+        es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla",
+        en: "Use of snorkeling gear and island activities",
+      },
     ],
     excludes: [
-      { es: "Traslado terrestre/marítimo hacia la isla", en: "Ground/boat transfers to the island" },
-      { es: "Tasa de entrada al territorio Guna Yala", en: "Guna Yala territory entry fee" },
-      { es: "Tours privados en islas", en: "Personal travel insurance" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Traslado terrestre/marítimo hacia la isla",
+        en: "Ground/boat transfers to the island",
+      },
+      {
+        es: "Tasa de entrada al territorio Guna Yala",
+        en: "Guna Yala territory entry fee",
+      },
+      {
+        es: "Tours privados en islas",
+        en: "Personal travel insurance",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-
-    // 🔗 Experiencias Relacionadas
-    relatedExperienceIds: [8, 9, 10],
-
-    // Capacidad y Flags
+    relatedExperienceIds: [
+      8,
+      9,
+      10,
+    ],
     maxGuests: 6,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Cabañas Frente al Mar", en: "Luxury Beachfront Bungalows" },
-
+    featureBadge: {
+      es: "Cabañas Frente al Mar",
+      en: "Luxury Beachfront Bungalows",
+    },
     isFeatured: true,
     hasDiscount: false,
   },
-  // ---------------------------------------------------------------------------
-  // 31. Cayos Holandeses - IBINS
-  // ---------------------------------------------------------------------------
   {
     id: 31,
     slug: "ibins-cayos-holandeses-san-blas",
     category: "IslandLodge",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Ibins's Lodge Cayos Holandeses, San Blas, Panamá",
       en: "Holandeses Cays, San Blas Islands, Panama",
     },
-
-    // 🔍 SEO & Metadata
     seo: {
       title: {
         es: "Hospedaje Lodge en Cayos Holandeses | Cabañas en San Blas",
@@ -4005,8 +3932,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Book luxury beachfront bungalows in Dutch Cays, San Blas. Full board, welcome drinks, snorkeling, and the ultimate island retreat.",
       },
       keywords: [
-        { es: "hospedaje en isla san blas", en: "island lodge san blas" },
-        { es: "cabanas cayos holandeses", en: "dutch cays bungalows" },
+        {
+          es: "hospedaje en isla san blas",
+          en: "island lodge san blas",
+        },
+        {
+          es: "cabanas cayos holandeses",
+          en: "dutch cays bungalows",
+        },
       ],
       openGraph: {
         title: {
@@ -4027,25 +3960,23 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/islas/ibins/catalogo/7.png",
           "/contenido/islas/ibins/catalogo/8.png",
           "/contenido/islas/ibins/catalogo/9.png",
-          "/contenido/islas/ibins/catalogo/10.png", 
+          "/contenido/islas/ibins/catalogo/10.png",
         ],
       },
     },
-
-    // 🚢 Datos del Hospedaje en Isla
     boatName: "Ibins Lodge en Cayos Holandeses, San Blas",
     boatCoverPhoto: "/contenido/islas/ibins/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/islas/ibins/catalogo/1.png",
-          "/contenido/islas/ibins/catalogo/2.png",
-          "/contenido/islas/ibins/catalogo/3.png",
-          "/contenido/islas/ibins/catalogo/4.png",
-          "/contenido/islas/ibins/catalogo/5.png",
-          "/contenido/islas/ibins/catalogo/6.png",
-          "/contenido/islas/ibins/catalogo/7.png",
-          "/contenido/islas/ibins/catalogo/8.png",
-          "/contenido/islas/ibins/catalogo/9.png",
-          "/contenido/islas/ibins/catalogo/10.png", 
+      "/contenido/islas/ibins/catalogo/2.png",
+      "/contenido/islas/ibins/catalogo/3.png",
+      "/contenido/islas/ibins/catalogo/4.png",
+      "/contenido/islas/ibins/catalogo/5.png",
+      "/contenido/islas/ibins/catalogo/6.png",
+      "/contenido/islas/ibins/catalogo/7.png",
+      "/contenido/islas/ibins/catalogo/8.png",
+      "/contenido/islas/ibins/catalogo/9.png",
+      "/contenido/islas/ibins/catalogo/10.png",
     ],
     boatDescription: {
       es: "Cabañas en Cayos Holandeses con pensión completa y experiencia exclusiva.",
@@ -4060,20 +3991,21 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       bathrooms: 1,
       doubleBeds: 4,
     },
-
-    // 👨‍✈️ Anfitrión / Staff
     captain: {
       name: "Ibins's Guna Host",
-      role: { es: "Anfitrion Local", en: "Hosts & Local Guna Guides" },
+      role: {
+        es: "Anfitrion Local",
+        en: "Hosts & Local Guna Guides",
+      },
       photoUrl: "/contenido/islas/ibins/capitan/1.png",
       description: {
         es: "Ibins te espera en su isla privada para ofrecerte una experiencia local auténtica de Guna Yala con hospitalidad y guía local.",
         en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
       },
-      languages: ["Español",],
+      languages: [
+        "Español",
+      ],
     },
-
-    // 🍽️ Comida
     dining: {
       description: {
         es: "Pensión completa incluida: desayunos, almuerzos y cenas a base de pesca del día y opciones locales, acompañado de bebida. ",
@@ -4081,8 +4013,6 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       },
       photoUrl: "/contenido/islas/ibins/comidas/1.png",
     },
-
-    // 🏄‍♂️ Actividades
     activities: {
       description: {
         es: "En su isla contaran con Kayaks, paddleboards, equipo de snorkel y paseos por la playa. Tours privados opcionales: islas cercanas, isla tigre + trecking + danza Guna.",
@@ -4094,104 +4024,87 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         "/contenido/islas/ibins/experiencias/3.png",
       ],
     },
-
-    // 💰 Precios y Tabla HTML
     pricing: {
       currency: "USD",
       basePricePerPersonPerDay: 500,
       tiers: [
         {
-          seasonOrType: { es: "Cabaña Estándar (Por Persona)", en: "Standard Bungalow (Per Person)" },
+          seasonOrType: {
+            es: "Cabaña Estándar (Por Persona)",
+            en: "Standard Bungalow (Per Person)",
+          },
           pricePerNight: 500,
-          notes: { es: "Incluye comidas", en: "Includes meals and activities" },
+          notes: {
+            es: "Incluye comidas",
+            en: "Includes meals and activities",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Cabaña</th>
-                <th class="p-3 border">Precio (USD)</th>
-                <th class="p-3 border">Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Cabaña Pareja x2</td>
-                <td class="p-3 border font-bold text-green-600"> $500 USD<strong>x noche:</strong></td>
-                <td class="p-3 border">No incluye transporte de entrada y salida hacia la isla.</td>
-              </tr>
-              
-              <tr>
-                <td class="p-3 border">Cabaña Familiar x4 </td>
-                <td class="p-3 border font-bold text-green-600">$1000 USD<strong>x noche:</strong></td>
-                <td class="p-3 border">No incluye transporte de entrada y salida hacia la isla. </td>
-              </tr>
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Bungalow Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-                <th class="p-3 border">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Standard Oceanfront Bungalow</td>
-                <td class="p-3 border font-bold text-green-600">$225 USD</td>
-                <td class="p-3 border">Full board & island taxes included</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Tipo de Cabaña</th>\n                <th class=\"p-3 border\">Precio (USD)</th>\n                <th class=\"p-3 border\">Notas</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Cabaña Pareja x2</td>\n                <td class=\"p-3 border font-bold text-green-600\"> $500 USD<strong>x noche:</strong></td>\n                <td class=\"p-3 border\">No incluye transporte de entrada y salida hacia la isla.</td>\n              </tr>\n              \n              <tr>\n                <td class=\"p-3 border\">Cabaña Familiar x4 </td>\n                <td class=\"p-3 border font-bold text-green-600\">$1000 USD<strong>x noche:</strong></td>\n                <td class=\"p-3 border\">No incluye transporte de entrada y salida hacia la isla. </td>\n              </tr>\n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Bungalow Type</th>\n                <th class=\"p-3 border\">Price (USD / Person / Night)</th>\n                <th class=\"p-3 border\">Notes</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Standard Oceanfront Bungalow</td>\n                <td class=\"p-3 border font-bold text-green-600\">$225 USD</td>\n                <td class=\"p-3 border\">Full board & island taxes included</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
-
-    // ✅ Incluye / No Incluye
     includes: [
-      { es: "Hospedaje en cabaña privada", en: "Private oceanfront bungalow accommodation" },
-      { es: "Pensión completa (Desayuno, Almuerzo, Cena)", en: "Full board meals (Breakfast, Lunch, Dinner)" },
-      { es: "Agua potable y bebidas con las comidas", en: "Welcome cocktail and complimentary drinks" },
-      { es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla", en: "Use of snorkeling gear and island activities" },
+      {
+        es: "Hospedaje en cabaña privada",
+        en: "Private oceanfront bungalow accommodation",
+      },
+      {
+        es: "Pensión completa (Desayuno, Almuerzo, Cena)",
+        en: "Full board meals (Breakfast, Lunch, Dinner)",
+      },
+      {
+        es: "Agua potable y bebidas con las comidas",
+        en: "Welcome cocktail and complimentary drinks",
+      },
+      {
+        es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla",
+        en: "Use of snorkeling gear and island activities",
+      },
     ],
     excludes: [
-      { es: "Traslado terrestre/marítimo hacia la isla", en: "Ground/boat transfers to the island" },
-      { es: "Tasa de entrada al territorio Guna Yala", en: "Guna Yala territory entry fee" },
-      { es: "Tours privados en islas", en: "Personal travel insurance" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Traslado terrestre/marítimo hacia la isla",
+        en: "Ground/boat transfers to the island",
+      },
+      {
+        es: "Tasa de entrada al territorio Guna Yala",
+        en: "Guna Yala territory entry fee",
+      },
+      {
+        es: "Tours privados en islas",
+        en: "Personal travel insurance",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-
-    // 🔗 Experiencias Relacionadas
-    relatedExperienceIds: [8, 9, 10],
-
-    // Capacidad y Flags
+    relatedExperienceIds: [
+      8,
+      9,
+      10,
+    ],
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Cabañas Frente al Mar", en: "Luxury Beachfront Bungalows" },
-
+    featureBadge: {
+      es: "Cabañas Frente al Mar",
+      en: "Luxury Beachfront Bungalows",
+    },
     isFeatured: true,
     hasDiscount: false,
   },
-  // ---------------------------------------------------------------------------
-  // 31. Cayos Limones - Nugnudub
-  // ---------------------------------------------------------------------------
   {
     id: 32,
     slug: "nugnudub-san-blas",
     category: "IslandLodge",
-    isAvailable: true, 
+    isAvailable: true,
     location: {
       es: "Camping en Cayos Limones, San Blas, Panamá",
       en: "Holandeses Cays, San Blas Islands, Panama",
     },
-
-    // 🔍 SEO & Metadata
     seo: {
       title: {
         es: "Carpas en alquiles Nugnudub | Carpas en San Blas",
@@ -4202,8 +4115,14 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         en: "Book luxury beachfront bungalows in Dutch Cays, San Blas. Full board, welcome drinks, snorkeling, and the ultimate island retreat.",
       },
       keywords: [
-        { es: "hospedaje en isla san blas", en: "island lodge san blas" },
-        { es: "cabanas cayos holandeses", en: "dutch cays bungalows" },
+        {
+          es: "hospedaje en isla san blas",
+          en: "island lodge san blas",
+        },
+        {
+          es: "cabanas cayos holandeses",
+          en: "dutch cays bungalows",
+        },
       ],
       openGraph: {
         title: {
@@ -4219,32 +4138,30 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
           "/contenido/islas/nugnudub/catalogo/2.png",
           "/contenido/islas/nugnudub/catalogo/3.png",
           "/contenido/islas/nugnudub/catalogo/4.png",
-           "/contenido/islas/nugnudub/catalogo/4.png", 
-            "/contenido/islas/nugnudub/catalogo/5.png", 
-             "/contenido/islas/nugnudub/catalogo/6.png", 
-              "/contenido/islas/nugnudub/catalogo/7.png", 
-               "/contenido/islas/nugnudub/catalogo/8.png", 
-                "/contenido/islas/nugnudub/catalogo/9.png", 
-                 "/contenido/islas/nugnudub/catalogo/10.png",  
+          "/contenido/islas/nugnudub/catalogo/4.png",
+          "/contenido/islas/nugnudub/catalogo/5.png",
+          "/contenido/islas/nugnudub/catalogo/6.png",
+          "/contenido/islas/nugnudub/catalogo/7.png",
+          "/contenido/islas/nugnudub/catalogo/8.png",
+          "/contenido/islas/nugnudub/catalogo/9.png",
+          "/contenido/islas/nugnudub/catalogo/10.png",
         ],
       },
     },
-
-    // 🚢 Datos del Hospedaje en Isla
     boatName: "Camping Guna Nugnudub, Cayos Limones, San Blas",
     boatCoverPhoto: "/contenido/islas/nugnudub/catalogo/1.png",
     boatGalleryPhotos: [
       "/contenido/islas/nugnudub/catalogo/1.png",
-          "/contenido/islas/nugnudub/catalogo/2.png",
-          "/contenido/islas/nugnudub/catalogo/3.png",
-          "/contenido/islas/nugnudub/catalogo/4.png",
-           "/contenido/islas/nugnudub/catalogo/4.png", 
-            "/contenido/islas/nugnudub/catalogo/5.png", 
-             "/contenido/islas/nugnudub/catalogo/6.png", 
-              "/contenido/islas/nugnudub/catalogo/7.png", 
-               "/contenido/islas/nugnudub/catalogo/8.png", 
-                "/contenido/islas/nugnudub/catalogo/9.png", 
-                 "/contenido/islas/nugnudub/catalogo/10.png",  
+      "/contenido/islas/nugnudub/catalogo/2.png",
+      "/contenido/islas/nugnudub/catalogo/3.png",
+      "/contenido/islas/nugnudub/catalogo/4.png",
+      "/contenido/islas/nugnudub/catalogo/4.png",
+      "/contenido/islas/nugnudub/catalogo/5.png",
+      "/contenido/islas/nugnudub/catalogo/6.png",
+      "/contenido/islas/nugnudub/catalogo/7.png",
+      "/contenido/islas/nugnudub/catalogo/8.png",
+      "/contenido/islas/nugnudub/catalogo/9.png",
+      "/contenido/islas/nugnudub/catalogo/10.png",
     ],
     boatDescription: {
       es: "Carpas en Cayos Limones con pensión completa y experiencia exclusiva.",
@@ -4259,20 +4176,21 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       bathrooms: 1,
       doubleBeds: 4,
     },
-
-    // 👨‍✈️ Anfitrión / Staff
     captain: {
       name: "Nugnudub's Guna Host",
-      role: { es: "Anfitrion Local", en: "Hosts & Local Guna Guides" },
+      role: {
+        es: "Anfitrion Local",
+        en: "Hosts & Local Guna Guides",
+      },
       photoUrl: "/contenido/islas/nugnudub/capitan/1.png",
       description: {
         es: "Nugnudub te espera en su camping en isla privada para ofrecerte una experiencia local auténtica de Guna Yala con hospitalidad y guía local.",
         en: "Local hosts dedicated to providing top-tier hospitality and island guidance.",
       },
-      languages: ["Español",],
+      languages: [
+        "Español",
+      ],
     },
-
-    // 🍽️ Comida
     dining: {
       description: {
         es: "Pensión completa incluida: desayunos, almuerzos y cenas a base de pesca del día y opciones locales, acompañado de bebida. ",
@@ -4280,8 +4198,6 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
       },
       photoUrl: "/contenido/islas/nugnudub/comidas/1.png",
     },
-
-    // 🏄‍♂️ Actividades
     activities: {
       description: {
         es: "En su isla contaran con Kayaks, paddleboards, equipo de snorkel y paseos por la playa. Tours privados opcionales.",
@@ -4293,84 +4209,426 @@ export const INITIAL_CATALOG_ITEMS: CatalogItem[] = [
         "/contenido/islas/nugnudub/experiencias/3.png",
       ],
     },
-
-    // 💰 Precios y Tabla HTML
     pricing: {
       currency: "USD",
       basePricePerPersonPerDay: 225,
       tiers: [
         {
-          seasonOrType: { es: "Cabaña Estándar (Por Persona)", en: "Standard Bungalow (Per Person)" },
+          seasonOrType: {
+            es: "Cabaña Estándar (Por Persona)",
+            en: "Standard Bungalow (Per Person)",
+          },
           pricePerNight: 225,
-          notes: { es: "Incluye comidas", en: "Includes meals and activities" },
+          notes: {
+            es: "Incluye comidas",
+            en: "Includes meals and activities",
+          },
         },
       ],
       htmlTableContent: {
-        es: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Tipo de Carpa</th>
-                <th class="p-3 border">Precio (USD)</th>
-                <th class="p-3 border">Notas</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Carpa x1</td>
-                <td class="p-3 border font-bold text-green-600"> $225 USD<strong>x noche:</strong></td>
-                <td class="p-3 border">Incluye transporte de entrada y salida hacia la isla. Noche adicional $70 USD</td>
-              </tr>
-              
-              
-            </tbody>
-          </table>
-        `,
-        en: `
-          <table class="w-full border-collapse border border-slate-200 text-left text-sm">
-            <thead>
-              <tr class="bg-slate-100">
-                <th class="p-3 border">Bungalow Type</th>
-                <th class="p-3 border">Price (USD / Person / Night)</th>
-                <th class="p-3 border">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-3 border">Standard Oceanfront Bungalow</td>
-                <td class="p-3 border font-bold text-green-600">$225 USD</td>
-                <td class="p-3 border">Full board & island taxes included</td>
-              </tr>
-            </tbody>
-          </table>
-        `,
+        es: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Tipo de Carpa</th>\n                <th class=\"p-3 border\">Precio (USD)</th>\n                <th class=\"p-3 border\">Notas</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Carpa x1</td>\n                <td class=\"p-3 border font-bold text-green-600\"> $225 USD<strong>x noche:</strong></td>\n                <td class=\"p-3 border\">Incluye transporte de entrada y salida hacia la isla. Noche adicional $70 USD</td>\n              </tr>\n              \n              \n            </tbody>\n          </table>\n        ",
+        en: "\n          <table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Bungalow Type</th>\n                <th class=\"p-3 border\">Price (USD / Person / Night)</th>\n                <th class=\"p-3 border\">Notes</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Standard Oceanfront Bungalow</td>\n                <td class=\"p-3 border font-bold text-green-600\">$225 USD</td>\n                <td class=\"p-3 border\">Full board & island taxes included</td>\n              </tr>\n            </tbody>\n          </table>\n        ",
       },
     },
-
-    // ✅ Incluye / No Incluye
     includes: [
-      { es: "Hospedaje en Carpa", en: "Private oceanfront bungalow accommodation" },
-      { es: "Pensión completa (Desayuno, Almuerzo, Cena)", en: "Full board meals (Breakfast, Lunch, Dinner)" },
-      { es: "Agua potable y bebidas con las comidas", en: "Welcome cocktail and complimentary drinks" },
-      { es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla", en: "Use of snorkeling gear and island activities" },
+      {
+        es: "Hospedaje en Carpa",
+        en: "Private oceanfront bungalow accommodation",
+      },
+      {
+        es: "Pensión completa (Desayuno, Almuerzo, Cena)",
+        en: "Full board meals (Breakfast, Lunch, Dinner)",
+      },
+      {
+        es: "Agua potable y bebidas con las comidas",
+        en: "Welcome cocktail and complimentary drinks",
+      },
+      {
+        es: "Uso de equipo de snorkel, paddelboard, kayack y actividades en la isla",
+        en: "Use of snorkeling gear and island activities",
+      },
     ],
     excludes: [
-      //{ es: "Traslado terrestre/marítimo hacia la isla", en: "Ground/boat transfers to the island" },
-      { es: "Tasa de entrada al territorio Guna Yala", en: "Guna Yala territory entry fee" },
-      { es: "Tours privados en islas", en: "Personal travel insurance" },
-      { es: "Seguro personal de viaje", en: "Personal travel insurance" },
+      {
+        es: "Tasa de entrada al territorio Guna Yala",
+        en: "Guna Yala territory entry fee",
+      },
+      {
+        es: "Tours privados en islas",
+        en: "Personal travel insurance",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
     ],
-
-    // 🔗 Experiencias Relacionadas
-    relatedExperienceIds: [8, 9, 10],
-
-    // Capacidad y Flags
+    relatedExperienceIds: [
+      8,
+      9,
+      10,
+    ],
     maxGuests: 4,
     isPrivate: true,
     isSharedAllowed: false,
-    featureBadge: { es: "Carpa Frente al Mar", en: "Luxury Beachfront Bungalows" },
-
+    featureBadge: {
+      es: "Carpa Frente al Mar",
+      en: "Luxury Beachfront Bungalows",
+    },
     isFeatured: true,
+    hasDiscount: false,
+  },
+  {
+    id: 20,
+    slug: "franana-jeanneau-sun-odyssey-44",
+    category: "Sailboat",
+    isAvailable: true,
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "Islas San Blas, Guna Yala, Panamá",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Frana (Jeanneau Sun Odyssey 44i ) en San Blas | Sailing the World",
+        en: "Charter Frana (Jeanneau Sun Odyssey 44i ) in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Expedición por San Blas a bordo del velero Frana (Jeanneau Sun Odyssey 44i) con Frank Y Ana. Pensión completa y snorkel guiado.",
+        en: "Expedition through San Blas aboard the sailboat Frana (Jeanneau Sun Odyssey 44i) with Frank and Ana. Full board and guided snorkeling included.",
+      },
+      keywords: [
+        {
+          es: "Velero Frana en San Blas",
+          en: "Frana Sailboat ",
+        },
+        {
+          es: "Expedición y Navegacion por San Blas",
+          en: "Sailing Expedition",
+        },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Frana en San Blas - Expedición y Navegacion por San Blas",
+          en: "Frana Sailboat in San Blas - Sailing Expedition",
+        },
+        description: {
+          es: "Explora San Blas con Frank y Ana a bordo de Frana de 44 pies.\n          ",
+          en: "Explore San Blas sailing with Frank & Ana aboard the Frana 44ft.",
+        },
+        images: [
+          "/contenido/veleros/Frana/catalogo/1.png",
+          "/contenido/veleros/Frana/catalogo/2.png",
+          "/contenido/veleros/Frana/catalogo/3.png",
+          "/contenido/veleros/Frana/catalogo/4.png",
+          "/contenido/veleros/Frana/catalogo/5.png",
+          "/contenido/veleros/Frana/catalogo/6.png",
+          "/contenido/veleros/Frana/catalogo/7.png",
+          "/contenido/veleros/Frana/catalogo/8.png",
+          "/contenido/veleros/Frana/catalogo/9.png",
+          "/contenido/veleros/Frana/catalogo/10.png",
+          "/contenido/veleros/Frana/catalogo/11.png",
+        ],
+      },
+    },
+    boatName: "Frana (Jeanneau Sun Odyssey 44 )",
+    boatCoverPhoto: "/contenido/veleros/Frana/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/veleros/Frana/catalogo/1.png",
+      "/contenido/veleros/Frana/catalogo/2.png",
+      "/contenido/veleros/Frana/catalogo/3.png",
+      "/contenido/veleros/Frana/catalogo/4.png",
+      "/contenido/veleros/Frana/catalogo/5.png",
+      "/contenido/veleros/Frana/catalogo/6.png",
+      "/contenido/veleros/Frana/catalogo/7.png",
+      "/contenido/veleros/Frana/catalogo/8.png",
+      "/contenido/veleros/Frana/catalogo/9.png",
+      "/contenido/veleros/Frana/catalogo/10.png",
+      "/contenido/veleros/Frana/catalogo/11.png",
+    ],
+    boatDescription: {
+      es: "Velero de 44 pies con 3 camarotes en suite, Wi-Fi Starlink y una propuesta gastronómica franco-caribeña única.",
+      en: "Comfortable 44ft sailboat with 3 ensuite cabins, Starlink Wi-Fi, and a unique French-Caribbean culinary experience.",
+    },
+    boatLongDescription: {
+      es: "Frana (Jeanneau Sun Odyssey 44i) combina elegancia náutica, privacidad y calidez humana para grupos exclusivos de hasta 4 personas. A diferencia de la mayoría de los veleros de su eslora, cuenta con 3 camarotes dobles, cada uno con su propio baño privado y ducha con agua caliente.\\n\\n🍹 Todo incluido a bordo: Desayuno, almuerzo, snack de media tarde y cena preparados al momento, acompañados de bebidas (agua, café, té, jugos naturales, vino, cerveza y ron).\\n🚀 Confort y conectividad: Ventiladores individuales en cada cama, puertos de carga USB, zona de estar exterior con sombra, ducha en cubierta e Internet satelital Starlink gratuito.\\n🌎 Idiomas: Hablamos español, francés e inglés con total fluidez.",
+      en: "Frana (Jeanneau Sun Odyssey 44i) blends sailing elegance, privacy, and warm hospitality for exclusive private groups of up to 4 guests. Uniquely equipped for its size, it features 3 double cabins—each with its own private ensuite bathroom and indoor hot shower.\\n\\n🍹 All-Inclusive Onboard: Freshly prepared breakfast, lunch, afternoon snacks, and dinner, paired with water, coffee, tea, juices, wine, beer, and rum.\\n🚀 Comfort & Connectivity: Personal fans by every bed, USB charging stations, shaded cockpit seating, outdoor deck shower, and free high-speed Starlink Wi-Fi.\\n🌎 Languages: Fluent in English, French, and Spanish.",
+    },
+    specs: {
+      lengthFeet: 44,
+      cabins: 3,
+      bathrooms: 2,
+      doubleBeds: 3,
+    },
+    captain: {
+      name: "Frank & Ana",
+      role: {
+        es: "Capitán y Chef ",
+        en: "Captain & Private Chef",
+      },
+      photoUrl: "/contenido/veleros/Frana/capitan/1.png",
+      description: {
+        es: "Francisco (Frank), capitán argentino, lleva tres años viviendo y navegando en San Blas; conoce los mejores puntos de pesca y los arrecifes más vírgenes del archipiélago. Anaëlle (Ana), de Francia, aporta su calidez y talento culinario fusionando la cocina francesa con los sabores frescos del Caribe. Juntos crean una experiencia privada, relajada y cercana para que te sientas como en casa en el paraíso.",
+        en: "Captain Francisco (Frank) from Argentina has lived and sailed in San Blas for three years, knowing the archipelago's best fishing spots and untouched reefs. Anaëlle (Ana) from France brings warmth and culinary flair, crafting French cuisine infused with local Caribbean flavors. Together, they deliver an authentic, laid-back private charter.",
+      },
+      languages: [
+        "Español",
+        "Français",
+        "English",
+      ],
+    },
+    dining: {
+      description: {
+        es: "👨‍🍳 Cocina francesa con alma caribeña: Ana prepara cada comida (desayuno, almuerzo, snack y cena) destacando pescados y mariscos frescos locales, adaptándose por completo a tus preferencias o restricciones alimentarias. Incluye bebidas no alcohólicas y selección de vinos, cervezas y ron (consumo moderado).",
+        en: "👨‍🍳 French cuisine with a Caribbean soul: Ana crafts all four daily meals (breakfast, lunch, snack, and dinner) showcasing fresh local fish and seafood, fully tailored to dietary preferences and restrictions. Includes soft drinks, juices, coffee, tea, plus wine, beer, and rum (moderate consumption).",
+      },
+      photoUrl: "/contenido/veleros/Frana/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Exploración y aventura: Tabla de paddleboard (SUP), equipo completo de snorkel, cañas de pesca y bote auxiliar con motor fuera de borda para bajar a las playas más exclusivas.\\nRelax a bordo: Amplia zona exterior sombreada, juegos de mesa y juegos de playa para disfrutar cada isla a tu propio ritmo.",
+        en: "Exploration & Adventure: Stand-up paddleboard (SUP), full snorkeling gear, fishing equipment, and a motorized dinghy for effortless access to secluded beaches.\\nOnboard Relaxation: Shaded outdoor cockpit lounge, board games, and beach games to enjoy island life at your own pace.",
+      },
+      photoUrls: [
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 395,
+      tiers: [],
+      htmlTableContent: {
+        es: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">2 Huéspedes</td>\n                <td class=\"p-3 border font-bold\">$790 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\">+1  Huésped</td>\n                <td class=\"p-3 border font-bold\">$150 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA:</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20%</strong></li>\n          </ul>",
+        en: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Occupancy & Setup</th>\n                <th class=\"p-3 border\">High Season (USD / Night)</th>\n                <th class=\"p-3 border\">Low Season (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\"> 2 Guests</td>\n                <td class=\"p-3 border font-bold\">$790 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              <tr>\n                <td class=\"p-3 border\"> +1 Guest</td>\n                <td class=\"p-3 border font-bold\">$150 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n              \n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>LOW Season:</strong> MAY - NOVEMBER</li>\n            <li><strong>HIGH Season:</strong> DECEMBER - APRIL</li>\n            <li><strong>Easter, holidays, and carnivals +20%</strong></li>\n          </ul>",
+      },
+    },
+    includes: [
+      {
+        es: "Tripulación privada: Capitán y Chef a bordo",
+        en: "Private crew: Professional Captain & Private Chef",
+      },
+      {
+        es: "Pensión completa (desayuno, almuerzo, snack y cena) y bebidas",
+        en: "All meals (breakfast, lunch, snack & dinner) and drinks",
+      },
+      {
+        es: "Combustible y traslados entre islas",
+        en: "Fuel and inter-island transfers",
+      },
+      {
+        es: "Internet Wi-Fi Starlink gratuito",
+        en: "Free Starlink Wi-Fi",
+      },
+      {
+        es: "Equipo de snorkel, paddleboard (SUP) y equipo de pesca",
+        en: "Snorkeling equipment, paddleboard (SUP), and fishing gear",
+      },
+      {
+        es: "Toallas y artículos básicos de tocador",
+        en: "Towels and basic toiletries",
+      },
+    ],
+    excludes: [
+      {
+        es: "Transporte terrestre y lancha taxi hacia/desde San Blas",
+        en: "Ground and water taxi transport to/from San Blas",
+      },
+      {
+        es: "Impuestos de entrada a la comarca Guna Yala",
+        en: "Guna Yala territory entrance fees",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
+    ],
+    relatedExperienceIds: [
+      1,
+      3,
+      2,
+    ],
+    maxGuests: 4,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: {
+      es: "Baños en Suite & Chef Francesa",
+      en: "Ensuite Cabins & French Chef",
+    },
+    isFeatured: false,
+    hasDiscount: false,
+  },
+  {
+    id: 22,
+    slug: "antigoni-sailboat-43ft-san-blas",
+    category: "Sailboat",
+    isAvailable: true,
+    location: {
+      es: "Islas San Blas, Guna Yala, Panamá",
+      en: "San Blas Islands, Guna Yala, Panama",
+    },
+    seo: {
+      title: {
+        es: "Alquiler Velero Antigoni (43FT) en San Blas | Sailing the World",
+        en: "Charter Antigoni (43FT) Sailboat in San Blas | Sailing the World",
+      },
+      description: {
+        es: "Navega en privado por San Blas a bordo del velero Antigoni (43 pies) con capitana italiana. Cabina en popa con baño privado, cocina mediterránea y Starlink.",
+        en: "Private San Blas sailing aboard Antigoni (43ft) with an Italian captain. Aft cabin with private bathroom, Mediterranean-Caribbean cuisine, and Starlink.",
+      },
+      keywords: [
+        {
+          es: "velero Antigoni san blas",
+          en: "Antigoni sailboat san blas",
+        },
+        {
+          es: "charter privado parejas san blas",
+          en: "private couple sailboat charter panama",
+        },
+      ],
+      openGraph: {
+        title: {
+          es: "Velero Antigoni en San Blas - Navegación Oceánica y Gastronomía Italiana",
+          en: "Antigoni Sailboat in San Blas - Ocean Sailing & Italian Gastronomy",
+        },
+        description: {
+          es: "Escapada privada para 2 personas en Guna Yala con una capitana con más de 25.000 millas náuticas navegadas, buen vino y cocina fresca.",
+          en: "Private escape for 2 guests in Guna Yala with a captain boasting 25,000+ nautical miles, fine wine, and fresh seafood.",
+        },
+        images: [
+          "/contenido/veleros/Antigoni/catalogo/1.png",
+          "/contenido/veleros/Antigoni/catalogo/2.png",
+          "/contenido/veleros/Antigoni/catalogo/3.png",
+          "/contenido/veleros/Antigoni/catalogo/4.png",
+          "/contenido/veleros/Antigoni/catalogo/5.png",
+          "/contenido/veleros/Antigoni/catalogo/6.png",
+        ],
+      },
+    },
+    boatName: "Antigoni ",
+    boatCoverPhoto: "/contenido/veleros/Antigoni/catalogo/1.png",
+    boatGalleryPhotos: [
+      "/contenido/veleros/Antigoni/catalogo/1.png",
+      "/contenido/veleros/Antigoni/catalogo/2.png",
+      "/contenido/veleros/Antigoni/catalogo/3.png",
+      "/contenido/veleros/Antigoni/catalogo/4.png",
+      "/contenido/veleros/Antigoni/catalogo/5.png",
+      "/contenido/veleros/Antigoni/catalogo/6.png",
+    ],
+    boatDescription: {
+      es: "Velero oceánico de 43 pies exclusivo para 2 personas con amplia cabina en popa, baño privado, Starlink y gastronomía italiana.",
+      en: "Ocean-going 43ft sailboat exclusively for 2 guests featuring a spacious aft cabin, private bathroom, Starlink, and Italian cuisine.",
+    },
+    boatLongDescription: {
+      es: "Antigoni es un velero oceánico de 43 pies pensado para quienes buscan una experiencia íntima, auténtica y sin prisas en el corazón de San Blas. Exclusivo para parejas o 2 huéspedes, ofrece una amplia y luminosa cabina en popa con baño privado y ducha exterior.\\n\\n🍷 Gastronomía con alma italiana: Pensión completa con 3 comidas diarias elaboradas con pescado fresco, mariscos, frutas y verduras locales, acompañadas de bebidas, cerveza y selección de vinos (consumo moderado).\\n🚀 Confort y conectividad en el paraíso: Internet satelital Starlink de alta velocidad para mantenerte conectado cuando lo necesites, además de hamacas y sillas de playa para disfrutar de las islas con total comodidad.",
+      en: "Antigoni is a 43ft blue-water cruiser designed for travelers seeking an intimate, authentic, and unhurried journey through San Blas. Exclusively reserved for 2 guests, it features a spacious aft cabin with a private bathroom and an outdoor deck shower.\\n\\n🍷 Gastronomy with an Italian Soul: Full board featuring 3 daily meals crafted from fresh fish, local seafood, fruits, and vegetables, paired with drinks, beer, and selected wines (moderate consumption).\\n🚀 Comfort & Connectivity in Paradise: High-speed Starlink satellite Wi-Fi, plus hammocks and beach chairs to unwind on pristine islands.\",",
+    },
+    specs: {
+      lengthFeet: 43,
+      cabins: 1,
+      bathrooms: 1,
+      doubleBeds: 1,
+    },
+    captain: {
+      name: "MIRA",
+      role: {
+        es: "Capitana Oceánica y Anfitriona",
+        en: "Ocean Captain & Host",
+      },
+      photoUrl: "/contenido/veleros/Antigoni/capitan/1.png",
+      description: {
+        es: "Capitana italiana que vive y navega a tiempo completo desde hace más de 13 años. Con unas 25.000 millas náuticas recorridas a bordo de su propio barco —desde las islas griegas y todo el Mediterráneo hasta Canarias, Cabo Verde y el cruce del Atlántico hacia el Caribe—, conoce los rincones más intactos de San Blas desde 2013. Amante de la navegación genuina, la buena mesa y el buen vino, convierte cada travesía en una experiencia cercana y memorable.",
+        en: "An Italian captain who has lived and sailed full-time for over 13 years. With roughly 25,000 nautical miles logged aboard her own yacht—from the Greek islands and across the Mediterranean to the Canaries, Cape Verde, and across the Atlantic to the Caribbean—she has known San Blas's most untouched anchorages since 2013. Passionate about genuine sailing, fine food, and good wine, she creates a warm, unforgettable private charter.",
+      },
+      languages: [
+        "Italiano",
+        "Español",
+        "English",
+      ],
+    },
+    dining: {
+      description: {
+        es: "🍝 Sabor mediterráneo en el Caribe: 3 comidas diarias preparadas a bordo con pescado fresco del día, mariscos, frutas y verduras locales, con el toque culinario de su capitana italiana. Incluye bebidas refrescantes, cerveza y vino (consumo moderado).",
+        en: "🍝 Mediterranean Flair in the Caribbean: 3 daily meals prepared onboard featuring fresh catch of the day, local seafood, fruits, and vegetables, infused with authentic Italian culinary passion. Includes soft drinks, beer, and wine (moderate consumption).",
+      },
+      photoUrl: "/contenido/veleros/Antigoni/comidas/1.png",
+    },
+    activities: {
+      description: {
+        es: "Exploración en el agua: Equipo completo de snorkel, tabla de paddle surf (SUP), equipo de pesca y bote auxiliar con motor fuera de borda para bajar cómodamente a cada isla.\\nRelax total: Hamacas a bordo y sillas de playa para disfrutar de las arenas blancas de Guna Yala.",
+        en: "Water Exploration: Full snorkeling gear, stand-up paddleboard (SUP), fishing equipment, and a motorized dinghy for effortless access to secluded islands.\\nTotal Relaxation: Onboard hammocks and beach chairs to enjoy the white sands of Guna Yala.",
+      },
+      photoUrls: [
+        "/contenido/extracatalogo/barco/experiencia/1.png",
+        "/contenido/extracatalogo/barco/experiencia/2.png",
+        "/contenido/extracatalogo/barco/experiencia/3.png",
+      ],
+    },
+    pricing: {
+      currency: "USD",
+      basePricePerPersonPerDay: 290,
+      tiers: [],
+      htmlTableContent: {
+        es: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Ocupación / Configuración</th>\n                <th class=\"p-3 border\">Temporada Alta (USD / Noche)</th>\n                <th class=\"p-3 border\">Temporada Baja (USD / Noche)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Privado: 2 Huéspedes </td>\n                <td class=\"p-3 border font-bold\">$575 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>Temporada BAJA:</strong> MAYO - NOVIEMBRE</li>\n            <li><strong>Temporada ALTA:</strong> DICIEMBRE - ABRIL</li>\n            <li><strong>Semana santa, fechas festivas, carnavales +20%</strong></li>\n          </ul>",
+        en: "<table class=\"w-full border-collapse border border-slate-200 text-left text-sm\">\n            <thead>\n              <tr class=\"bg-slate-100\">\n                <th class=\"p-3 border\">Occupancy & Setup</th>\n                <th class=\"p-3 border\">High Season (USD / Night)</th>\n                <th class=\"p-3 border\">Low Season (USD / Night)</th>\n              </tr>\n            </thead>\n            <tbody>\n              <tr>\n                <td class=\"p-3 border\">Private Charter: 2 Guests</td>\n                <td class=\"p-3 border font-bold\">$575 USD</td>\n                <td class=\"p-3 border font-bold text-green-600\">$-- USD</td>\n              </tr>\n            </tbody>\n          </table>\n          <ul>\n          <br>\n            <li><strong>LOW Season:</strong> MAY - NOVEMBER</li>\n            <li><strong>HIGH Season:</strong> DECEMBER - APRIL</li>\n            <li><strong>Easter, holidays, and carnivals +20%</strong></li>\n          </ul>",
+      },
+    },
+    includes: [
+      {
+        es: "Barco privado exclusivo con capitana oceánica",
+        en: "Exclusive private yacht with experienced ocean captain",
+      },
+      {
+        es: "Cabina amplia en popa con baño privado y ducha exterior con agua caliente ",
+        en: "Spacious aft cabin with private bathroom and outdoor hot shower",
+      },
+      {
+        es: "Pensión completa: 3 comidas diarias frescas y bebidas (agua, cerveza y vino moderado)",
+        en: "Full board: 3 fresh daily meals and drinks (water, beer & moderate wine)",
+      },
+      {
+        es: "Internet Wi-Fi Starlink",
+        en: "Starlink Wi-Fi Internet",
+      },
+      {
+        es: "Equipo de snorkel, paddle surf (SUP), pesca, hamacas y sillas de playa",
+        en: "Snorkel gear, paddleboard (SUP), fishing gear, hammocks & beach chairs",
+      },
+      {
+        es: "Sábanas, toallas de ducha y bote auxiliar con motor fuera de borda",
+        en: "Bed linens, shower towels, and motorized dinghy",
+      },
+    ],
+    excludes: [
+      {
+        es: "Toallas de playa",
+        en: "Beach towels",
+      },
+      {
+        es: "Transporte terrestre y lancha taxi hacia/desde San Blas",
+        en: "Ground and water taxi transport to/from San Blas",
+      },
+      {
+        es: "Impuestos de entrada a la comarca Guna Yala",
+        en: "Guna Yala territory entrance fees",
+      },
+      {
+        es: "Seguro personal de viaje",
+        en: "Personal travel insurance",
+      },
+    ],
+    relatedExperienceIds: [
+      1,
+      3,
+      2,
+    ],
+    maxGuests: 2,
+    isPrivate: true,
+    isSharedAllowed: false,
+    featureBadge: {
+      es: "Ideal Parejas & Cocina Italiana",
+      en: "Ideal for Couples & Italian Cuisine",
+    },
+    isFeatured: false,
     hasDiscount: false,
   },
   
